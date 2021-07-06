@@ -1,0 +1,217 @@
+------------------------------------------------------------
+La programmation orienté-objet (POO) avec le langage Python
+------------------------------------------------------------
+
+# Python #10 - programmation objet
+# https://www.youtube.com/watch?v=s2pnrMKpEp0&list=PLrSOXFDHBtfHg8fWBd7sKPxEmahwyVBkC&index=10
+# Séance d'introduction à la programmation objet. Le langage Python est composé uniquement d'objets et c'est ici l'occasion de découvrir toutes ces nouvelles notions.
+
+Vu dans cette vidéo :
+Classe          : plan de conception, genre (ex : Humain).
+Objet           : instance de classe (ex : Julien).
+
+Attribut        : variable de classe (ex : prénom, age, sexe, taille, etc).
+Propriété       : manière de manipuler les attributs (lecture seule, accès non autorisé en dehors de la classe, etc).
+
+méthode             : fonction d'une classe (ex: manger, marcher, parler, dormir, mourir).
+Méthode de classe   : fonction d'une classe (explication à venir plus tard ...).
+Méthode statique    : fonction d'une classe, mais indépendante de celle-ci.
+
+Héritage        : classe Fille qui hérite d'une classe Mère (Fille est une sorte de Mère).
+                : Classe Chat hérite de la classe Animal (Chat est une sorte d'Animal).
+
+#1# Notions vues :
+------------------
+
+- Afficher du texte : print().
+- Saisir des informations : input().
+- Variables.
+- Conditions et boucles.
+- Fonctions et modularité :
+        -> utiliser les fonctions des modules qui sont des fichiers.
+        -> Quand on a un répertoire (dossier) qui contient plusieurs modules (fichiers avec extensions .py) sur Windows, Linux ou MacOS s'appelle un Package.
+- Gestion des erreurs.
+
+Le langage Python est un langage tout objet, contrairement à d'autres langages comme le le C ou C++.
+Même lorsqu'on affiche que du texte, même lorsqu'on saisie du texte dans une variable de type int.
+Même int (integer), str (chaîne de caractères), etc sont des classes.
+On manipule en fait des objets à partir de classes natives. Ce sont des objets natifs et donc implicite.
+
+En faisant ceci : ageUtilisateur = 14  -> On crée un objet de classe integer, qui est un entier.
+En faisant ceci : type(ageUtilisateur) -> On affichait <class 'in'> dans le terminal pour dire 
+que c'est un objet de class integer et l'objet c'est ageUtilisateur.
+
+Tout est objet en Python. Il est donc impossible de se dire que l'on ne fait pas d'objet en python.
+Dans le jargon informatique, la POO/PO/le technologie orienté objet/programmation orienté objet 
+est une manière de coder, ce n'est pas propre au Python, au C++ ou encore au Java.
+
+C'est simplement ce que l'on appelle un paradigme, une manière de coder, d'organiser son code,
+de coder d'une certaines manière avec différents moyens. On a la programmation procédurale, on
+peut programmer de manière impérative, de manière fonctionnelle, par contrat, par flux, ect.
+
+Il y a donc plusieurs manière de coder et il y a la programmation orienté objet.
+C'est ainsi une autre manière d'organiser son code, qui offre des avantages et des inconvénients.
+
+Le C++ est un langage multi-paradigmes, qui permet de programmer de plusieurs manière différentes.
+Le Python, c'est tout de l'objet. On ne peux pas se dire que l'on va faire du procédurale.
+Il y a toujours des classes et des objets dérrière Python.
+
+#2# Notions de base :
+---------------------
+
+Au niveau vocabulaire, on a la partie PO qui est global à tout les langages.
+Quand on parle d'une classe, d'une méthode, c'est la même chose que l'on parle C++, Java, Csharp (C#).
+Certains termes ne sont pas forcément les mêmes d'un langage à l'autre.
+Certains langages prennent leur propres définitions, qui les déforment.
+Ce qui implique que sur les forums, les canaux de discussions, les gens ne sont jamais d'accord.
+Par exemple, une classe n'est pas pareil en Python et en C++.
+
+Pour revenir au jargon général que l'on définit ci-dessous :
+
+-1- Classe, est comme un plan de conception (pas une structure qui signifie autre chose en informatique).
+C'est un genre. Prenons l'exemple, la classe humaine. L'humain est un genre (dire que c'est une conception ne signifie pas grand chose).
+
+-2- Objet, est une instance de classe permet de produire quelque chose qui est du genre de notre classe.
+Par exemple, Julien est un objet qui est de classe humain. Julien est un humain.
+Ici le plan de conception, c'est la classe, c'est comment est conçu un humain. 
+De là, on peut créer un Julien est bien un objet de classe humain.
+Si on crée un objet Mathilde, elle sera de classe humain mais ce sera un objet différent de l'objet Julien.
+Mathilde ne sera pas Julien.
+On parle d'instance. Instancier une classe, c'est créer un objet.
+Généralement la classe et l'objet ont la même définition peut importe les langages.
+
+-3- Attribut, est une variable de classe. Dans le plan de conception de la classe, on a une variable qui est définie.
+Elle est définie, c'est à dire qu'elle appartient à la classe. A l'extérieur de la classe, cette variable n'existe pas.
+C'est un attribut de classe. Par exemple, le nom ou l'age ou le sexe ou encore la taille pour la classe humain.
+
+-4- Propriété, est un notion plus confuse. La différence entre attribut et propriété ne sont pas facile à expliquer.
+La différence est tellement subtile qu'il n'y en a pas vraiment. Un attribut est une propriété.
+Le nom, l'âge, le sexe sont des propriétés d'un être humain.
+On définit toutefois l'attribut est plus ce qui catégorise l'humain et la propriété est plus une capacité.
+Par exemple, l'âge n'est pas vraiment une capacité. C'est un attribut comme quand on parle d'attribut masculin.
+L'attribut c'est quelque chose que l'on a comme ça naturellement.
+La propriété c'est plus une compétence.
+
+Proprité en Python (cas particulier)
+------------------------------------
+Une propriété en Python (mais pas pour les autres langages, Java, C++, etc.) est un moyen, une manière de manipuler
+les attributs (lecture seule, accès non autorisé en dehors de la classe, etc.). Une propriété, on va la définir sur certains attributs.
+Admettons, l'objet Julien à le droit de modifier son nom, prénom, etc. 
+La PO est une manière de coder, ce n'est pas propre à un langage. C'est une méthode de conception.
+On estime que si on avait un objet de classe voiture, on n'as pas envie qu'une voiture modifie le prénom de Julien !
+Donc on peux définir une propriété sur l'attribut prénom de la classe humain en disant que j'interdit son accès en dehors.
+Ainsi, il n'y a que les humains qui peuvent modifier le prénom des humains.
+Ainsi on peut définir des accès, des restrictions, lecture seul, etc.
+
+En Python, l'attribut va être la variable d'une classe qui appartient à cette classe.
+La propriété va permettre de manipuler l'attribut d'une certaine manière, de dire si j'autorise son accès en dehors ou pas, c'est en lecture seul, etc.
+Dans tous les langages qui utilisent l'objet par rapport à un paradigme, il n'y a pas de distinction.
+Certains langages appelent la variable de classe une propriété et d'autres l'appele un attribut.
+
+Au niveau codage, la manière de définir des propriétés ne sera pas du tout la même manière
+que de définir des attributs. 
+
+-5- Méthode, est une fonction d'une classe. Sur des vieux langage, on parlait même de 'procédure'.
+Ces 'procédures' étaient des ensembles d'instructions qu'on pouvaient appeler rapidement.
+On les appelaient avec leur identifiant, leur nom et ça permettaient de faire tout un ensemble de traitement.
+Puis on a finis par appeler cela des fonction dans un paradigme procédurale et en objet, on appele cela des méthodes.
+Ca s'appelle simplement une fonction d'une classe.
+Dans le codage en Python, il n'y a pas de différence avec la manière dont on crée des fonctions.
+En effet, on met le mot clé 'def' et on met le nom de la méthode et ainsi elle peut prendre des paramètres, etc.
+Ca fonctionne exactement de la même manière qu'une fonction, c'est pourquoi on parle de fonction d'une classe.
+Par exemple, notre classe Humain pourra avoir une méthode manger(nourriture, quantite), avec ou sans paramètres.
+Julien en tant qu'objet instancier pourrait utiliser cette méthode.
+Ce sont un peu les service (manger, marcher, parler, dormir), ce qu'il est capable de faire.
+
+Les attributs sont les caractéristique de notre classe et les méthodes c'est ce qu'il peut faire.
+Il est capable de manger, marcher, etc.
+
+-6- Méthode de classe, est une méthode qui va fonctionner vraiment vraiment pour la classe.
+Elle a une impartenance forte au niveau de la classe (explication à voir plus tard, au niveau code).
+
+-7- Méthode statique, est une fonction d'une classe, mais indépendante de celle-ci.
+Quand on utiliser une méthode d'une classe (manger,etc), on doit créer un objet.
+Tant qu'on ne crée pas Julien, on ne pourra pas dire "Ah ben tiens ! il faut manger".
+Il faut automatiquement avoir créé un Julien pour pouvoir manger.
+En revanche, on peut créer une fonction de classe indépendante qui pourrait être utilisé en dehors de tout objet.
+
+C'est à dire un humain qui utilise une méthode. Ca ne passera pas par Julien, ca passera par l'Humain.
+L'Humain possède un service. On utilise les Méthodes statiques quand on fait des classes utilitaires.
+Une classe utilitaire, c'est une classe que l'on va jamais instancier.
+On créera jamais d'objet de cette classe.
+C'est une classe avec plusieurs méthodes (tel une bibliothèque avec plusieurs fonctions).
+A chaque fois que l'on utiliser l'une de ces fonctions, on met le nom de la classe et on précise 
+le nom de méthode utilisée (notamment une méthode statique).
+Il y a une manière de définir la méthode statique pour faire la différence avec la méthode standard.
+
+En gros, la méthode statique peut être utilisé sans créer d'objet contrairement à la méthode standard 
+nécessite de passer par un objet.
+
+-8- Héritage, classe Fille qui hérite d'une classe Mère.
+On a une classe Mère du quel on fait un Héritage pour obtenir une classe Fille.
+Par exemple Animal est la classe Mère et la classe Fille pourrait être Panda, Ours, Chat, etc.
+"Fille est une sorte de Mère".
+Classe Chat hérite de la classe Animal (Chat est une sorte d'Animal).
+L'Animal c'est quelque chose d'abstrait, de général et en le spécialisant on peut obtenir un Chat
+qui pourra faire tout ce que l'Animal connaît mais avec des choses en plus.
+Animal va concerner tous les animaux mais le chat sait faire des choses que les autres animaux ne savent pas faire.
+Ainsi on spécialise en créant une classe Fille qui serrait le Chat.
+
+#3# Intérêt de la PO :
+----------------------
+-1- Bien organiser son code : Plutôt qu'un code où on mélange tout.
+
+Quand on regarde son programme avec du recul, on est capable de définir des catégories.
+
+Par exemple, un fonction attaquer, se soigner, prendre un objet dans l'inventaire, prendre une portien
+et d'autres dans un jeu vidéo peuvent rentrer dans une catégorie 'Joueur'. Ce sont des choses que peuvent 
+faire un joueur. C'est un genre de contexte.
+
+On peux alors faire une classe joueur qui peut soigner, attaquer et mourir (c'est une méthode aussi).
+Mourir est une possibilité que peut faire un humain.
+Un paradigme comme l'objet est ainsi une autre méthode de programmer.
+Le principe c'est de voir qu'on peut mettre des choses ensemble donc on en fait une classe.
+Puis classe Brique qui hérite d'une classe Mur et qui a des méthodes spécialisés (densités de ciment, ect).
+
+-2- réutilisabilité : Une fois qu'on a une classe définie, ce fameux plan de conception.
+Le jour où l'on veux se créer plein d'Humains, on a juste besoin de faire une instance.
+On instancie un objet, on crée un Julien, Hector, Robert, etc. Tout sera basé sur le même plan de conception.
+
+Il pourront utiliser des capacités (marcher, mourir, etc), leur propre méthodes chacun et ils pourront intérragir chacun. Si on avait fait des fonctions, il aurait fallu tout réécrire à la main, tout répéter.
+
+Ici on factorise comme des fonction mais c'est plus puissant. Une classe factorise un ensemble d'attributs (variables) et de méthodes (fonctions) pour pouvoir les utiliser de manière simultanée sans devoir répéter, copier/coller du code et de devoir tout changer pour poivoir réutiliser un maximum le code.
+
+Au départ d'une classe, on preux recréer pleins d'objets de cette classe très rapidement.
+
+Ca rend également le code beaucoup plus lisible et ça rend également le code beaucoup plus maintenable lorsqu'on développe en groupe.
+
+Si on a des objets et des classes et que quelqu'un d'autre retravaille sur notre code, ce sera beaucoup plus facile, beaucoup plus lisible, beaucoup plus réutilisable et maintenable que si on avait simplement des fonctions à droite, à gauche dans des fichiers dont on ne sait pas trop comment sont organisé les choses.
+
+Par exemple, une fonction Attaquer sur un jeu vidéo ne permet pas de dire qui attaque. Est-ce que
+c'est le joueur principale, un PNG, un boss, un monstre ?. 
+
+Si la méthode Attaquer se trouvait dans une classe Monstre d'un jeu vidéo alors on comprendrait tout de suite de quoi on parle. Ce contexte donne tout de suite du sens à la programmation.
+
+#4# Chaîne de caractères :
+--------------------------
+
+Les chaîne de caractères sont également des objets de classe str. Elles ont également des attributs et 
+elles ont également des méthodes.
+
+nom = "Jason"
+texte = "Bienvenue {}".format(nom)
+print(texte)
+
+Ici nom est un objet de classe str.
+
+On utilise la méthode format, qui n'est pas une fonction.
+
+Ici un simple texte mis dans une chaîne de caractères est déjà un objet d'une classe str
+qui peut utiliser des méthodes ...
+
+A suivre : créer nos classes, instancier des objets et travailler avec, créer des petits jeux, etc.
+----------
+
+Débats :    En Python, on distingue propriété et atribut. En C++, c'est un peu la même chose.
+--------    Au final, on dit qu'un attribut est une propriétée.
+

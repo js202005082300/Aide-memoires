@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#Essentiels
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
+sudo apt install binutils
+
+#VScode
+sudo snap install --classic code
+
+#Utiles
+#sudo apt install whois #26
+#sudo apt install finger #26
+sudo apt install net-tools #27
+#sudo apt install keepassxc
+#sudo apt install youtube-dl
+sudo apt install git
+#sudo apt install vim
+#sudo apt-get install ksh
+#sudo apt install vlc-bin
+sudo apt-get install imagemagick
+
+#Formations vidéo
+sudo apt-get install make
+sudo apt-get install mysql-server
+sudo apt-get install apache2
+sudo apt-get install php libapache2-mod-php
+sudo apt-get install mysql-server
+sudo apt-get install default-jdk
+sudo apt-get install icoutils
+sudo apt install mlocate
+sudo apt-get install exfat-fuse exfat-utils
+sudo apt install nasm
+
+#Config
+git config --global user.email "js201910271836@outlook.com"
+git config --global user.name "js"

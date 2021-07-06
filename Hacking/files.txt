@@ -1,0 +1,33 @@
+@echo off
+:: NE SURTOUT PAS ACTIVER .BAT SUR DES FICHIERS DEJA EXISTANT SANS IF NOT EXIST.
+
+for /l %%V in (1, 1, 6) do IF NOT EXIST "0%%V_hacking.c" (
+        echo    /*
+        echo        Formation   : Hacking - 
+        echo        YouTube     :
+        echo        Auteur      : Jason Champagne
+        echo        Compilateur : GCC
+        echo        Date        : %DATE%
+        echo        Dernière modification    : %DATE%
+        echo    */
+        echo.
+        echo    /**
+        echo     *
+        echo     *******************/
+        echo.
+        echo.
+        echo    // 
+        echo    /*
+        echo.
+        echo    */
+        echo.
+        echo    // 
+        echo    /*
+        echo.
+        echo    */
+        echo. ) > 0%%V_hacking.c
+
+ren files.bat files.txt
+
+::(echo bonjour tout le monde!
+::echo Encore)>bonjour.txt

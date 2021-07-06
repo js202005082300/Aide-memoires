@@ -1,0 +1,1 @@
+# [[ARCHIVE] Algorithmie #6 - tri par sélection](https://www.youtube.com/watch?v=bsaT8aspIX8&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=6)

@@ -1,0 +1,1 @@
+# [[ARCHIVE] Hacking #6 - fonctionnement mémoire](https://www.youtube.com/watch?v=LwtN9yq8IOE&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=13)

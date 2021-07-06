@@ -1,0 +1,8 @@
+sam         2305  0.5  8.1 3274340 329304 ?      Sl   08:33   4:44 /usr/lib/firefox/firefox -new-window
+sam         2382  0.0  3.5 2448568 142980 ?      Sl   08:34   0:20 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 223603 -parentBuildID 20210204182252 -appdir /usr/lib/firefox/browser 2305 true tab
+sam         2391  0.1  2.9 2412512 119112 ?      Sl   08:34   0:56 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 85 -prefMapSize 223603 -parentBuildID 20210204182252 -appdir /usr/lib/firefox/browser 2305 true tab
+sam         2513  0.0  5.9 2571532 240136 ?      Sl   08:34   0:15 /usr/lib/firefox/firefox -contentproc -childID 5 -isForBrowser -prefsLen 10701 -prefMapSize 223603 -parentBuildID 20210204182252 -appdir /usr/lib/firefox/browser 2305 true tab
+sam         5686 10.9  3.9 2510648 157540 ?      Sl   21:45   0:09 /usr/lib/firefox/firefox -contentproc -childID 7 -isForBrowser -prefsLen 14424 -prefMapSize 223603 -parentBuildID 20210204182252 -appdir /usr/lib/firefox/browser 2305 true tab
+sam         5712  6.1  4.0 2463268 164748 ?      Sl   21:45   0:04 /usr/lib/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 14424 -prefMapSize 223603 -parentBuildID 20210204182252 -appdir /usr/lib/firefox/browser 2305 true tab
+sam         5737  1.9  2.1 2391332 87932 ?       Sl   21:46   0:01 /usr/lib/firefox/firefox -contentproc -childID 9 -isForBrowser -prefsLen 14424 -prefMapSize 223603 -parentBuildID 20210204182252 -appdir /usr/lib/firefox/browser 2305 true tab
+sam         5769  0.0  0.0  11476   732 pts/0    S+   21:47   0:00 grep --color=auto firefox

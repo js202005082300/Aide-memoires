@@ -1,0 +1,1 @@
+# [[ARCHIVE] Algorithmie #5 - tri bulle](https://www.youtube.com/watch?v=hNxmICW60lg&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=5)
