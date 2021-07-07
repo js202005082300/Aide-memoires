@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# :hammer_and_wrench: bientôt ... :hammer_and_wrench:
-=======
 :label: [FormationVidéo Git](https://github.com/jasonchampagne/FormationVideo) - [Ressource JavaScript](https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/Java)
 
 # Java
@@ -53,4 +50,3 @@
 # [22. Introduction collections](https://www.youtube.com/watch?v=ov3d4s5w_m0)
 # [23. Collections en liste](https://www.youtube.com/watch?v=eXYLsxQvIF4)
 -->
->>>>>>> 475e9a3 (07-07-2021 0:51:19)
