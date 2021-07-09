@@ -1,6 +1,6 @@
 @echo off
 chcp 65001
-set a=0;
+set a=1;
 set "g=https://github.com/js202005082300/Aide-memoires.git"
 set d=%date:~0,2%-%date:~3,2%-%date:~6,4%
 set t=%time:~0,2%:%time:~3,2%:%time:~6,2%
