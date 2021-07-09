@@ -111,7 +111,7 @@ A partir de là, revenons sur le schéma.
 ## Interfaces
 
 ![Interface.JPG](Interface.JPG)
-
+<!--
 ```txt 
 +--------------------------+		+-----------+
 |       Collection         |		|   Map     |
@@ -121,6 +121,7 @@ A partir de là, revenons sur le schéma.
        | SortedSet | Deque |
        +-----------+-------+
 ```
+-->
 Chaque sous interface ici (List, Set, Queue, Map) propose un contrat un peu plus spécialisé c'est-à-dire qu'elles possèdent toutes les informations de l'interface collection Mais également des méthodes qui sont peut-être un peu plus spécifiques on s'imagine bien qu'on ne va peut-être pas manipuler une file (Queue) comment on va manipuler une liste (List), on aura peut-être des choses qui vont différer où qui vont s'ajouter et ainsi de suite. 
 
 Pareil pour les Map. 
@@ -132,7 +133,7 @@ Puisque je vous parlais justement de classe pour manipuler directement nos colle
 ## Classes
 
 ![Classe.JPG](Classe.JPG)
-
+<!--
 ```txt
 +-------------+--------------+
 | Arraylist   | LinkedList   |
@@ -142,6 +143,7 @@ Puisque je vous parlais justement de classe pour manipuler directement nos colle
 | Stack  | HashMap | TreeMap |
 +--------+---------+---------+
 ```
+-->
 Voici parmi les classes pour manipuler directement nos colections, on les retrouve ici. On les retrouve ici, je vous en ai énumuré quelques-unes. 
 
 Est-ce qu'on va tous les aborder en vidéo ? Honnêtement au moment où je fais cette vidéo je n'en sais rien. Je sais qu'on va en aborder pas mal. Au moins 4 ou 5 dans le tableau ci-dessus après peut-être qu'on les fera toutes je n'en sais rien. 
