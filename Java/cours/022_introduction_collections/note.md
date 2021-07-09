@@ -109,6 +109,9 @@ Vous allez retrouver pas mal de choses qui sont similaires et qui sont même ide
 A partir de là, revenons sur le schéma.
 
 ## Interfaces
+
+![Interface.JPG](Interface.JPG)
+
 ```txt 
 +--------------------------+		+-----------+
 |       Collection         |		|   Map     |
@@ -127,6 +130,8 @@ A partir de là, si j'ai par exemple une classe plus tard qui implémente cette 
 Puisque je vous parlais justement de classe pour manipuler directement nos collections, on va les retrouver ici (nouveau schéma) : 
 
 ## Classes
+
+![Classe.JPG](Classe.JPG)
 
 ```txt
 +-------------+--------------+
