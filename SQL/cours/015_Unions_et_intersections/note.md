@@ -1,6 +1,7 @@
-/*
-SQL #15 - unions et intersections
+# [15. Unions et intersections](https://www.youtube.com/watch?v=tIP_bQeFeXg)
 02-01-20
+
+[data5.sql](data5.sql)
 
 Bonjour bienvenue sur ce cours sql.
 
@@ -12,22 +13,21 @@ Vous pourrez donc les oublier mais on verra par la suite des moyens en fait de s
 
 On va directement entrer dans le vif du sujet et on va déjà démarrer le client ce sera fait. On va importer un fichier que vous pouvez comme d'habitude retrouver dans la description de la vidéo, vous avez le lien vers le fichier sql qui va falloir importer pour pouvoir évidemment vos requête que voulez faire en même temps pour voir un peu comment ça fonctionne et surtout encore une fois si vous êtes sur d'autres systèmes que mysql, vous pourrez également tester les autres commandes qui pour le coup ne fonctionneront pas sur mysql.
 	
-	serveur
-	-------
++ serveur
+```sql
 	> mysqld --console
-	
-	client
-	------
+```
++ client
+```sql
 	> mysql -u root -p
-	SOURCE C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/015_Unions_et_intersections/data5.sql;
-
+	SOURCE C:/SQL/cours/015_Unions_et_intersections/data5.sql;
+```
 Je n'aurai pas beaucoup à vous montrer dans cette vidéo mais je tenais quand même à les aborder dans la séance.
 
 Alors on est connecté donc le fichier très simple alors j'ai repris un peu l'exemple de ce que j'avais fait dans la séance précédente c'est à dire voyez avec plusieurs utilisateurs, un âge, un pays puis une date d'enregistrement sauf que là il a cette fois ci deux tables, vous allez vous comprendre pourquoi et bien sûr des enregistrements qui sont faits pour les deux tables avec petite remarque voyez par exemple certains utilisateurs dans la table numéro 2 sont également présents dans la 1 ou inversement mais pas forcément tous.
 
-	data5.sql
-	---------
-
++ data5.sql
+```sql
 	INSERT INTO `fv_site1_users`(`user_name`, `user_age`, `user_country`, `user_registration`)
 	VALUES
 	('Bryan', 37, 'États-Unis', '2019-12-22'), 
@@ -46,16 +46,17 @@ Alors on est connecté donc le fichier très simple alors j'ai repris un peu l'e
 	('Yuna', 38, 'Japon', '2019-06-13'), 
 	('Qiao', 16, 'Chine', '2020-01-05'), 
 	('Thomas', 17, 'France', '2020-01-05');
-
+```
 Voilà donc à ce fichier à récupérer encore une fois dans la description de la vidéo pour suivre cette séance si vous voulez faire des tests 1 pour vous entraîner.
 
 Ok alors j'avais vraiment noté le nom, ça évite de remplacer les anti-slash par des slash.
-	C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/015_Unions_et_intersections/data5.sql
-
+```txt
+	C:/SQL/cours/015_Unions_et_intersections/data5.sql
+```
 On fait un petit source hop, on importe 2, 3 fois pour être sûr.
 
 On va refaire une vérification.
-
+```sql
 mysql> use fv_database;
 Database changed
 mysql> select * from fv_site1_users;
@@ -84,8 +85,7 @@ mysql> select * from fv_site2_users;
 |       6 | Thomas    |       17 | France       | 2020-01-05        |
 +---------+-----------+----------+--------------+-------------------+
 6 rows in set (0.00 sec)
-
-
+```
 Ok on a les tables qui ont été importés et les enregistrements qui ont bien été écrits.
 
 On a ce qu'il faut du coup pour suivre ce que je vais vous montrer par la suite.
@@ -98,11 +98,10 @@ Le premier fonctionne partout donc ça vous n'aurez pas de souci tout le monde p
 
 Admettons ici c'est pour ça qu'il avait besoin pour cette séance de 2 tables vous allez très vite comprendre pourquoi et si je voulais par exemple récupérer tous les utilisateurs de cette table là et ensuite tous les utilisateurs de cette table là. A l'heure où vous en êtes, au niveau actuel de ce que vous avez vu en tout cas en sql vous auriez fait ce que je viens de faire en fait directement depuis le client c'est à dire ceci.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql	
 	SELECT * FROM fv_site1_users;
-
+```
 On fait une première requête on va la copier coller donc je ne vais pas le refaire c'est exactement ce que j'ai fait. Voyez j'ai fait une première requête ça m'a affiché le résultat, une deuxième ça m'a affiché un résultat.
 
 J'ai donc deux requêtes qui ont été effectués évidemment chaque requête a un coût.
@@ -113,13 +112,12 @@ Pour faire ça c'est très simple au lieu d'avoir ici 2 requêtes différentes, 
 
 Alors attention ça ne s'utilise pas n'importe comment, je vais mettre comme ça pour que ce soit plus lisible pour vous.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql	
 	SELECT * FROM fv_site1_users
 	UNION
 	SELECT * FROM fv_site2_users;
-
+```
 Il y a des règles à respecter par rapport aux différentes commandes que je vous montrer sur cette vidéo.
 
 Première chose au niveau des exemples que vous avez là, il faut qu'il y ait déjà le même nombre de colonnes à récupérer donc là par exemple j'ai fait un * donc ça récupère tout.
@@ -133,7 +131,7 @@ C'est la première règle et c'est très important parce que sinon si vous ne pi
 Première chose, le même nombre de colonnes.
 
 Ensuite il faut que l'ordre que vous donnez aux colonnes soit le même par exemple  si je voulais récupérer le username et l'âge, il faut que pour la deuxième requête, je récupère sous ce même ordre et récupère également le même type de données donc là exceptionnellement pour cet exercice vous voyez que j'ai mis les mêmes noms ici aux différents champs des tables parce que ça viendrait simuler par exemple une table pour récupérer des utilisateurs d'un site numéro 1 d'accordet un deuxième site ou bien finalement la structure de la table est la même, ce n'est pas obligatoire. Ici j'aurais pu appeler par exemple ça en français prénom, âge ou encore ici mettre pays d'accord.
-
+```sql
 mysql> select * from fv_site1_users;
 +---------+-------------+----------+--------------+-------------------+
 | id_user | user_name   | user_age | user_country | user_registration |
@@ -143,16 +141,15 @@ mysql> select * from fv_site2_users;
 +---------+-----------+----------+--------------+-------------------+
 | id_user | user_name | user_age | user_country | user_registration |
 +---------+-----------+----------+--------------+-------------------+
-
+```
 Vous n'êtes pas obligé d'avoir évidemment le même nom.
 
 Il y a juste trois règles le même nombre de colonnes que vous voulez récupérer lors de vos requêtes, le même ordre et le même type de données.
 
 Ici comme user_name est un VARCHAR donc pas de souci, et là user_age c'est un INT donc pas de problème d'accord là user_registration on est sur un DATE donc on a bien le même type qui a été récupéré en l'occurrence le même ordre et forcément le même monde de colonne puisque voyez que j'ai fait des table qui ont finalement le même nombre de colonne donc pas de problème.
 
-
 A partir de là si ces règles sont respectées vous pouvez sans problème utiliser et UNION qui va permettre de concatener deux requêtes et encore une fois sous une seule.
-
+```sql
 	mysql> SELECT * FROM fv_site1_users
 		-> UNION
 		-> SELECT * FROM fv_site2_users;
@@ -174,7 +171,7 @@ A partir de là si ces règles sont respectées vous pouvez sans problème utili
 	|       6 | Thomas      |       17 | France       | 2020-01-05        |
 	+---------+-------------+----------+--------------+-------------------+
 	13 rows in set (0.00 sec)
-
+```
 Il s'agit pour le coup d'une seule requête c'est bien plus optimisé que de le faire séparément et surtout ça permet de récupérer tout en un.
 
 Autre pont aussi intéressant de ce type de mot clé, c'est que ça ne va pas récupérer les doublons admettons que vous ayez  deux sites internet d'accord que vous gérez pour des questions de gestion de ressources, vous n'allez pas gérer ça sur les mêmes tables d'accord vous avez une table réservé pour certains nom d'utilisateur et une autre mais ben vous pouvez très bien avoir une utilisateur qui est à la fois présent sur le premier site et le second.
@@ -185,15 +182,14 @@ Le problème c'est par rapport à ce que je voulais vous dire pour les autres co
 
 Alors là par contre ce qu'on peut faire éventuellement plutôt que de tout récupérer comme ça risquera moins de vous embrouiller c'est de juste récupérer les noms d'utilisateurs.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql	
 	SELECT user_name FROM fv_site1_users
 	UNION
 	SELECT user_name FROM fv_site2_users;
-
+```
 On fait ça et voilà.
-
+```sql
 	mysql> SELECT user_name FROM fv_site1_users
 		-> UNION
 		-> SELECT user_name FROM fv_site2_users;
@@ -212,16 +208,15 @@ On fait ça et voilà.
 	| Yuna        |
 	+-------------+
 	10 rows in set (0.00 sec)
-
+```
 Et là vous voyez que Qiao est bien une seule fois présent comme on s'est basé que que là dessus voilà on évite complètement les doublons dans les résultats qu'on fournit donc attention si vous prenez plusieurs champs il faut que tous les champs soient identiques entre plusieurs enregistrements pour qu'il considère que c'est un doublon et du coup ne vous le retourne pas dans le résultat.
 
 Donc la commande union ne retournera pas d'accord si vous utilisé ce mot clé là les doublons d'enregistrement qui sont parfaitement identiques d'accord au niveau de toutes les colonnes que vous avez demandé et là je vous monterai du coup ces petites là.
 
 Si vous avez éventuellement besoin de récupérer tous les doublons quel qu'il soit il faut simplement rajouté un ALL c'est UNION ALL du coup le mot clé qu'il faut et là ça va tout récupérer peu importe les cas.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql	
 	SELECT user_name FROM fv_site1_users
 	UNION ALL
 	SELECT user_name FROM fv_site2_users;
@@ -247,7 +242,7 @@ Si vous avez éventuellement besoin de récupérer tous les doublons quel qu'il 
 	| Thomas      |
 	+-------------+
 	13 rows in set (0.00 sec)
-
+```
 Bien et là on récupère Qiao deux fois, on récupère
 Thomas deux fois, là il récupère tous les doublons et considère qu'il n'y a pas de doublons.
 
@@ -263,8 +258,8 @@ Et ça justement au niveau de l'exemple parce qu'évidemment vous n'êtes pas fo
 
 Vous pourrez de votre côté pour le coup tester des commandes, moi je ne peux pas vous les montrer parce que je suis sur mysql ici et c'était pas bien grave alors par contre c'est pour ça que ce que j'avais montré en début de vidéo, voyez j'avais remis comme ça certains utilisateurs ici dans les deux tables.
 
-	data5.sql
-	---------
++ data5.sql
+```sql
 	INSERT INTO `fv_site1_users`(`user_name`, `user_age`, `user_country`, `user_registration`)
 	VALUES
 	('Bryan', 37, 'États-Unis', '2019-12-22'), 
@@ -283,31 +278,30 @@ Vous pourrez de votre côté pour le coup tester des commandes, moi je ne peux p
 	('Yuna', 38, 'Japon', '2019-06-13'), 
 	('Qiao', 16, 'Chine', '2020-01-05'), 
 	('Thomas', 17, 'France', '2020-01-05');
-
+```
 Tout simplement pour ne pas en fait simplement montrer si vous voulez les similitudes qu'il y a entre deux enregistrements.
 
 Alors là pareil comme ils n'ont pas le même identifiant ça peut éventuellement poser problème, je vais quand même montrer la commande c'est pas grave.
 
 Admettons je vais récupérer voilà les utilisateurs comme ça en disant je veux qu'on me retourne le nom d'utilisateur de quelqu'un qui serait à la fois présent sur le premier site et le second donc le mot clé à utiliser c'est tout simplement INTERSECT.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT user_name FROM fv_site1_users
 	INTERSECT
 	SELECT user_name FROM fv_site2_users;
-
+```
 Voilà et avec cette commande là il va faire l'intersection de vos deux requêtes et se dire bon là je sélectionne tous les noms d'utilisateurs de la table fv_site1_users et je sectionne les utilisateurs de la table fv_site2_users et si je vois qu'il y en un qui est à la fois présent sur cette table et cette table et bien ce sera le résultat qui sera envoyée en finale de toute cette requête.
 
 Ok donc ça je ne peux pas encore une fois vous montrer en exemple directement là à l'exécution parce que ça ne marchera pas sur mysql.
 
 On peut s'amuser évidemment après de toute façon je pense qu'il mettra une erreur, une syntax error a priori voilà.
-
+```sql
 	mysql> SELECT user_name FROM fv_site1_users
 		-> INTERSECT
 		-> SELECT user_name FROM fv_site2_users;
 	ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT user_name FROM fv_site2_users' at line 3
-
+```
 Syntax error, voilà c'est tout à fait normal.
 
 Si vous êtes sur postgresql, encore une fois sur oracle, vous pouvez tester ce genre de commandes et ça fonctionnera donc en l'occurrence là ça retournera tout simplement les personnes qui sont présentes dans les deux tables donc ça va renvoyer Thomas, Qiao et Fatou qui est présente dans les deux tables donc elle fera partie des résultats retournés par la requête INTERSECT ça automatiquement on l'aura voilà.
@@ -320,13 +314,12 @@ Je vais vous montrez tout simplement au niveau de la syntaxe comment ça s'écri
 
 On va reprendre la syntaxe basique MINUS.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT user_name FROM fv_site1_users
 	MINUS
 	SELECT user_name FROM fv_site2_users;
-
+```
 Comme si d'ailleurs voyez que mon éditeur ne le color absolument pas donc il ne le prend pas en compte.
 
 Alors on a ces commandes ici SELECT et là ce que ça va faire ? ça va tout simplement vous renvoyez les enregistrements de cette première requête SELECT ok mais qui ne sont pas présents en fait dans la deuxième donc vous dire si j'ai un utilisateur admettons qui est aussi présent dans la deuxième table là, je ne vais pas le renvoyer d'accord.
@@ -351,7 +344,6 @@ On peut faire en réalité un MINUS en mysql mais il n'y a pas de mots clés en 
 
 Alors en gros voilà donc par exemple ici il va récupérer dans tous les utilisateurs de la table 1 et la table 2 et il va comparer en fait il va voir.
 
-
 Par exemple, Fatou ne sera pas récupérée puisqu'elle est présente dans l'autre table d'accord et cetera.
 
 Donc tout ce qui en fait est présent dans la première requête mais n'existe pas d'accord d'accord c'est moins, MINUS ça veut dire moins en anglais, pour dire voilà je récupère tous les utilisateurs de la table 1 moins ceux qui sont présents dans la table 2 donc c'est très simple.
@@ -368,15 +360,14 @@ D'ailleurs, avant de se quitter, c'est bien de le dire parce que peut-être que 
 
 On va revenir sur l'union et par exemple quand vous faites ça, n'oubliez pas qu'après tout ça en fait c'est votre requête d'accord. C'est votre partie sélection de requêtes.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT user_name FROM fv_site1_users
 	UNION
 	SELECT user_name FROM fv_site2_users;
-
+```
 Ensuite si moi derrière, on va refaire ça proprement, je récupère plein d'utilisateurs sauf les doublons pas de problème.
-
+```sql
 	mysql> SELECT user_name FROM fv_site1_users
 		-> UNION
 		-> SELECT user_name FROM fv_site2_users;
@@ -395,17 +386,17 @@ Ensuite si moi derrière, on va refaire ça proprement, je récupère plein d'ut
 	| Yuna        |
 	+-------------+
 	10 rows in set (0.00 sec)
-
+```
 
 D'ailleurs, je peux peut être récupérer toutes les informations pour le coup, plus pratique pour ce que j'ai à vous montrer avant de finir cette vidéo.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT * FROM fv_site1_users
 	UNION
 	SELECT * FROM fv_site2_users;
-
+```
+```sql
 mysql> SELECT * FROM fv_site1_users
     -> UNION
     -> SELECT * FROM fv_site2_users;
@@ -427,37 +418,34 @@ mysql> SELECT * FROM fv_site1_users
 |       6 | Thomas      |       17 | France       | 2020-01-05        |
 +---------+-------------+----------+--------------+-------------------+
 13 rows in set (0.00 sec)
-
-
+```
 Voilà on a tout les utilisateurs-là, si vous voulez admettons changer l'ordre des résultats que vous avez bien appris à faire des clauses where ou simplement order by si on veut changer l'ordre des résultats on peut le faire.
 
 Vous pourriez être tenté de vous dire, je fais un order by sur chaque requête SELECT puis se dire on a une requête et une deuxième parce qu'on nous avait appris à mettre la clause where et order by en fin de la commande select.
 
 Là il faut vraiment partir du principe que tout ceci c'est votre requête en fait, encore c'est limites si vous voulez vous aider au niveau écriture vous pouvez la marquer comme ça.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT user_name FROM fv_site1_users UNION SELECT user_name FROM fv_site2_users;
-
+```
 Et du coup si vous voulez rajouter un ordre, vous le mettez à la toute fin et là on va mettre du coup sur ce que l'on veut donc là bon pour le coup les noms des champs des deux tables sont les mêmes donc c'est très simple donc il suffit de mettre par exemple user_name.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT user_name FROM fv_site1_users UNION SELECT user_name FROM fv_site2_users
 	ORDER BY user_name;
-
+```
 Et si vous avez par exemple sur votre table un certain nombre de champ càd que vous avez bien le même nombre de colonnes, le même ordre et le même type de données mais pas les mêmes noms que vous avez mis dans fv_site1_users et fv_site2_users d'accord c'est les noms de la première table si je dis pas de bêtises qui seront marquées au niveau des résultats d'accord il va prendre ces noms là au niveau de ce que vous aurez affiché au niveau du tableau d'accord à l'affichage.
 
 Donc c'est ce qui sera récupérée dans la requête concatenée avec un union donc là je fais ça et puis c'est tout.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT * FROM fv_site1_users UNION SELECT * FROM fv_site2_users
 	ORDER BY user_name;
-
+```
+```sql
 	mysql> SELECT * FROM fv_site1_users UNION SELECT * FROM fv_site2_users
 		-> ORDER BY user_name;
 	+---------+-------------+----------+--------------+-------------------+
@@ -478,14 +466,13 @@ Donc c'est ce qui sera récupérée dans la requête concatenée avec un union d
 	|       4 | Yuna        |       38 | Japon        | 2019-06-13        |
 	+---------+-------------+----------+--------------+-------------------+
 	13 rows in set (0.00 sec)
-
+```
 Vous voyez qu'ils sont bien triés par ordre alphabétique par contre il a renvoyé 2 Qiao et 2 Thomas parce que rappelez-vous même id_user donc comme il fait une comparaison sur tous les champs et s'il y a un seul deschamps qui diffèrent il considère que ce ne sont pas des doublons donc effectivement il vous retourne les deux.
 
 En revanche s'il avait juste par exemple fait user_name et user_country donc environ je peut même tout faire sauf récupérer l'identifiant finalement parce que c'est ça.
 
-	notes.sql
-	---------
-	
++ notes.sql
+```sql
 	SELECT user_name, user_country FROM fv_site1_users UNION SELECT user_name, user_country FROM fv_site2_users ORDER BY user_name;
 
 	mysql> SELECT user_name, user_country FROM fv_site1_users UNION SELECT user_name, user_country FROM fv_site2_users ORDER BY user_name;
@@ -504,13 +491,13 @@ En revanche s'il avait juste par exemple fait user_name et user_country donc env
 	| Yuna        | Japon        |
 	+-------------+--------------+
 	10 rows in set (0.00 sec)
-
+```
 On va faire les choses plus claires encore une fois je ne veux pas que vous soyez embrouillé et voilà là effectivement on a juste les résultats qui ne sont pas des doublons et tout est bien rangé par la ordre alaphébitue selon le user_name puisque c'est celui qu'on avait demandé avec le order by, qui est bien mis encore une fin de la requête.
 
 Je rappelle un appel toujours à la fin puisque c'est le order qui va être appliqué sur tout ça.
-
+```sql
 	SELECT user_name, user_country FROM fv_site1_users UNION SELECT user_name, user_country FROM fv_site2_users ...
-
+```
 Il s'agit bien d'une concatenation donc on applique la clause d'ordre sur la concatenation qui a été fait.
 
 On terminera du coup cette partie, c'est ce que je voulais montrer sur cet élément là.
@@ -527,5 +514,5 @@ N'hésitez pas en tout cas dans les commentaires si il y a des questions des rem
 besoin est.
 
 A bientôt tout le monde pour la prochaine vidéo.
+
 Ciao
-*/

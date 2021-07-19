@@ -1,6 +1,7 @@
-/*
-SQL #14 - grouper résultats
+# [14. Grouper résultats](https://www.youtube.com/watch?v=5RFdXGicu1o)
 01-01-21
+
+[data4.sql](data4.sql)
 
 Bonjour tout le monde et bienvenu pour notre quatorzième séance en sql.
 
@@ -12,29 +13,30 @@ La vidéo sera très simple, il n'y a pas grand chose à voir, pas beaucoup de n
 
 On va directement se connecter aux serveurs un petit rappel ça ne fait pas de mal, on connecte avec le client et nous allons pour les besoins de cette vidéo directement importer un fichier que vous pouvez retrouver dans la description de la vidéo je rappelle notamment celui là data4.sql.
 	
-	serveur
-	-------
++ serveur
+```sql
 	> mysqld --console
-	client
-	------
+```
++ client
+```sql
 	> mysql -u root -p
-
+```
 
 C'est simplement la suppression de la base de données si elle existe, on recrée cette base de données, on crée une table fv_users qui contient comme vous le voyez un utilisateur, un âge, un pays, une date d'enregistrement et ensuite quelques enregistrements qui sont ajoutés à cette table qui nous serviront pour la vidéo parce que vous verrez qu'il y a des cas spécifiques et que les tables qu'on avait créé précédemment n'aurait pas permis de vous montrer justement les quelques commandes que nous allons voir pour cette vidéo.
 
 On va importer ce fichier directement, j'avais préparé la commande dont je rappelle qu'il faut des slash au niveau de l'ajout avec la commande source rappelez-vous et pas de guillemets et pas d'espaces non plus, de caractères spéciaux, tout ça.
-
-	mysql> SOURCE C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql;
-
+```sql
+	mysql> SOURCE C:/SQL/cours/014_Grouper_resultats/data4.sql;
+```
 On prend ça, on va directement sur le client, on fait source puis le chemin, petit point virgule et on n'hésite pas à le faire deux trois fois pour être sûr voilà que l'apport c'est bien fait correctement.
 
 Une fois que ça c'est fait je peux aller sur la base de données.
-
+```sql
 	mysql> use fv_database;
 	Database changed
-
+```
 fv_database et normalement si je fais déjà describe fv_users, je dois retrouver toutes les informations qu'on avait vu dans le fichier, pas de souci à ce niveau-là.
-
+```sql
 	mysql> describe fv_users;
 	+-------------------+-------------+------+-----+---------+----------------+
 	| Field             | Type        | Null | Key | Default | Extra          |
@@ -46,9 +48,9 @@ fv_database et normalement si je fais déjà describe fv_users, je dois retrouve
 	| user_registration | date        | NO   |     | NULL    |                |
 	+-------------------+-------------+------+-----+---------+----------------+
 	5 rows in set (0.01 sec)
-
+```
 Ensuite un petit select dois me retourner tous les enregistrements.
-
+```sql
 	mysql> select * from fv_users;
 	+---------+-------------+----------+--------------+-------------------+
 	| id_user | user_name   | user_age | user_country | user_registration |
@@ -65,7 +67,7 @@ Ensuite un petit select dois me retourner tous les enregistrements.
 	|      10 | Fujiko      |       22 | Japon        | 2020-01-18        |
 	+---------+-------------+----------+--------------+-------------------+
 	10 rows in set (0.00 sec)
-
+```
 Ca c'est à vérifier, vérifier bien de votre côté que vous avez bien récupéré tous les enregistrements tel qu'ils étaient présentés dans le fichier que vous avez importé, pour être sûr qu'il n'y a pas eu de problème.
 
 Une fois que ça c'est fait on va pouvoir commencer à voir ensemble 3 choses.
@@ -80,24 +82,24 @@ Si vous essayez jusqu'à présent de faire avec tout ce que vous avez vu c'est �
 
 On pourrait penser notamment à la commande COUNT() d'accord qui permet en fait comme fonction de compter un certain nombre de choses.
 
-	notes.sql
-	---------
-	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
++ notes.sql
+```sql
+	-- C:/SQL/cours/014_Grouper_resultats/data4.sql
 	
 	SELECT COUNT
-
+```
 Là le problème c'est que vous allez pouvoir compter des âges, vous aller par exemple pouvoir faire ça car ensuite on va faire from et pourquoi pas une clause where.
 
-	notes.sql
-	---------
-	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
++ notes.sql
+```sql
+	-- C:/SQL/cours/014_Grouper_resultats/data4.sql
 	
 	SELECT COUNT(*)
 	FROM fv_users
 	WHERE user_country = 'FRANCE';
-
+```
 Donc ça à ce stade de la formation vous êtes tout à fait capable de faire ce genre de requête et là vous allez obtenir ce genre de choses d'accord.
-
+```sql
 	mysql> SELECT COUNT(*)
 		-> FROM fv_users
 		-> WHERE user_country = 'FRANCE';
@@ -107,7 +109,7 @@ Donc ça à ce stade de la formation vous êtes tout à fait capable de faire ce
 	|        3 |
 	+----------+
 	1 row in set (0.00 sec)
-
+```
 Voilà on obtient 3 effectivement si on regarde les personnes qui habitent en france vous allez vous retrouver trois personnes donc on peut dire on a réussi à récupérer cette information.
 
 Le problème c'est que moi j'aimerais faire ceci pour toutes les personnes qui sont présentes dans la table et ça vous pouvez pas vous voyez niveau de la clause where, vous n'allez pas vous amuser à vérifier, faire une requête en fait par pays d'autant que vous n'avez pas spécialement non plus envie de chercher vous même les pays qui sont présents dans la table donc on va pouvoir faire un groupement c'est à dire qu'on va récupérer tous les utilisateurs et par ses utilisateurs là d'accord on va faire un groupement selon leur pays et ont récupérera dans la foulée bien sûr le nombre de personnes pour chacun de ces pays tout simplement.
@@ -116,28 +118,28 @@ Première chose on garde le fameux select count(*), il faut bien qu'on compte qu
 
 Ensuite qu'est-ce qu'on va faire ? On a besoin de récupérer le pays d'accord parce que veut faire un groupement par rapport au pays donc ça c'est important, pas de problème, on récupère depuis cette table fv_users et de toute façon il n'y en a qu'une seule pour cette vidéo donc c'est pas compliqué.
 
-	notes.sql
-	---------
++ notes.sql
+```sql
 	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
 	
 	SELECT COUNT(*), user_country
 	FROM fv_users
 	WHERE user_country = 'FRANCE';
-
+```
 Par contre là la clause where ne sera pas utile parce que vous voyez bien qu'avec une clause where on n'aurait pas assez d'information a récupérer, on va vraiment se limiter au niveau des résultats.
 
 Pour effectuer ce groupement voici une nouvelle commande que vous avez vous allez pouvoir apprendre ici c'est la commande GROUP BY qui est très simple à retenir qui veut simplement dire grouper par quelque chose et ça tombe bien on a dit qu'on voulait récupérer le nombre de chaque résident je rappelle par rapport à chacun des pays que nous avons dans notre table donc on va regrouper par rapport à ces pays-là.
 
-	notes.sql
-	---------
++ notes.sql
+```sql
 	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
 	
 	SELECT COUNT(*), user_country
 	FROM fv_users
 	GROUP BY user_country;
-
+```
 WHERE user_country donc ça récupère tout le monde éffectivement, on aura une colonne qui va compter, une colonne qui va indiquer le pays correspondant et on va regrouper par pays en gros ça va éviter de répéter des enregistrements en double. Ils ne vont pas par exemple vous ferme en fait cet affichage-là.
-
+```sql
 	mysql> select * from fv_users;
 	+---------+-------------+----------+--------------+-------------------+
 	| id_user | user_name   | user_age | user_country | user_registration |
@@ -153,11 +155,11 @@ WHERE user_country donc ça récupère tout le monde éffectivement, on aura une
 	|       9 | Qiao        |       16 | Chine        | 2020-01-05        |
 	|      10 | Fujiko      |       22 | Japon        | 2020-01-18        |
 	+---------+-------------+----------+--------------+-------------------+
-
+```
 D'accord parce que là, on voit bon on a récupéré un français, un autre français, un autre français, un chinois, un japonais ou une japonaise, un sénégalais et une sénégalaises, etc mais tout les enregistrements sont bien distincts, ils sont séparés chacun.
 
 Nous on veut pouvoir les regrouper donc avec cette requête là, cette nouvelle requête pour le coup on fait ceci et là vous voyez on récupère bien toutes les informations.
-
+```sql
 	mysql> SELECT COUNT(*), user_country
 		-> FROM fv_users
 		-> GROUP BY user_country;
@@ -173,17 +175,18 @@ Nous on veut pouvoir les regrouper donc avec cette requête là, cette nouvelle 
 	|        1 | Chine        |
 	+----------+--------------+
 	7 rows in set (0.00 sec)
-
+```
 Là on pourrait même faire ça plus proprement, si vous voulez par exemple nommer votre collonne, vous pouvez le faire aussi et là du coup, ce qu'on observe c'est que des gens qui résident en france il y en a 3, au maroc 1, sénégal 1, japon 2, etc et si vous vérifiez évidemment dans votre table ici vous verrez que ça correspond.
 
-	notes.sql
-	---------
++ notes.sql
+```sql
 	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
 	
 	SELECT COUNT(*) AS 'Nombre de résidents', user_country
 	FROM fv_users
 	GROUP BY user_country;
-
+```
+```sql
 mysql> SELECT COUNT(*) AS 'Nombre de résidents', user_country
     -> FROM fv_users
     -> GROUP BY user_country;
@@ -216,7 +219,7 @@ mysql> select * from fv_users;
 |      10 | Fujiko      |       22 | Japon        | 2020-01-18        |
 +---------+-------------+----------+--------------+-------------------+
 10 rows in set (0.00 sec)
-
+```
 Voilà on a fait un groupement de nos résultats pour pouvoir par exemple et bien filtrer sur un certains paramètres précis là nous en l'occurence c'était de faire un groupement par pays donc on peut du coup savoir très facilement si vous avez besoin un jour de faire des statistiques.
 
 Je prends par exemple vous avez un site avec un nom d'utilisateur et vous voulez savoir quelle est la part en fait de résidents la plus importante parmi les gens de votre site eh bien vous pourrez très facilement le savoir et notamment en faisant un petit order by pour pouvoir filtrer.
@@ -240,26 +243,26 @@ On a tous les âges et on veut savoir par exemple si on compte tous les françai
 Encore une fois si on avait fait sans groupement hé bien on pourrait le faire que pour un pays en particulier par exemple dire voilà on fait la somme de tous les âges des marocains, on fait la somme de tous les âges des japonais d'accord on sera obligé de faire toujours un cas par un cas comme je vous l'ai montré en début de vidéo.
 
 L'avantagent du regroupement c'est qu'on va pouvoir appliquer ce calcul de somme à l'ensemble des pays puisqu'on fait un groupement sur ces pays donc là c'est très simple aussi, on va refaire un SELECT user_country ça on le récupère évidemment parce que c'est là dessus que se fera le regroupement.
-
+```sql
 	SELECT user_country
-
+```
 On va faire la somme de l'ensemble des âges et pas des personnes, on récupère tout ça sur notre table ici.
-
+```sql
 	SELECT user_country, sum(user_age)
 	FROM fv_users
-
+```
 Et le groupement d'accord se fera évidemment par rapport au pays ok mais vous allez rajouter un petit ROLLUP ici d'accord.
 
-	notes.sql
-	---------
++ notes.sql
+```sql
 	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
 
 	SELECT user_country, sum(user_age)
 	FROM fv_users
 	GROUP BY user_country WITH ROLLUP;
-
+```
 Et là vous allez voir l'information en fait, on va récupérer la somme de tous les âges d'accord donc je vous montrer de façon comment quand ça se passer et on va récupérer les résultats comme on l'avait précédemment.
-
+```sql
 	mysql> SELECT user_country, sum(user_age)
 		-> FROM fv_users
 		-> GROUP BY user_country WITH ROLLUP;
@@ -276,7 +279,7 @@ Et là vous allez voir l'information en fait, on va récupérer la somme de tous
 	| NULL         |           287 |
 	+--------------+---------------+
 	8 rows in set (0.00 sec)
-
+```
 Voilà vous voyez on récupère chine/16 etc.
 
 Voilà donc c'est bon donc il a fait la somme complète de tous les personnes par pays donc ça c'est ce qu'on voulait, ce qu'on avait dit au début.
@@ -290,7 +293,7 @@ Et pour le japon, on a Yuma et Jujiko, 38 et 22 on obtient bien du coup si on fa
 Et là si vous regardez, on a obtenu une dernière ligne en plus des résultats qu'on avait faits par regroupement, qui elle a fait la somme de tous les âges d'accord donc on a déjà fait une somme par pays par rapport au groupement qu'on a voulu faire et en plus de ça on a retourné une dernière lie à notre à notre résultat qui a fait la somme de toutes les sommes.
 
 Vous voyez on a fait deux choses en une donc ça c'est pas mal pratique et plus tard parce que là vous avez dû remarquer que c'est marquez NULL et mieux donc c'est pas forcément très esthétique, vous apprendrez il y a certaines autres fonctions plus tard éventuellement a renommer ici plutôt que laisser ça par défaut.
-
+```sql
 	mysql> SELECT user_country, sum(user_age)
 		-> FROM fv_users
 		-> GROUP BY user_country WITH ROLLUP;
@@ -307,7 +310,7 @@ Vous voyez on a fait deux choses en une donc ça c'est pas mal pratique et plus 
 >	| NULL         |           287 |
 	+--------------+---------------+
 	8 rows in set (0.00 sec)
-
+```
 On apprendra à mettre un autre nom mais comme on l'a pas encore vu on passera pour le moment et on verra tout ça plus tard.
 
 Donc là on a fait 2 choses on a fait notre groupement par pays donc ça c'est la première chose qu'on a fait pour chacun de ces regroupements de pays on a fait la somme des âges de chaque résident par pays donc on a fait donc du coup une deuxième chose et ensuite une fois qu'on a eu la somme de tous les âges on a fait la somme totale de toutes les personnes de notre temps donc on a fait trois traitements en fait d'accord trois opérations en une seule requête.
@@ -337,36 +340,37 @@ Comment on peut faire ça ? par exemple, qu'est ce qu'on pourrait faire ? admett
 Un exemple on pourrait dire on veut récupérer les résultats et on veut avoir par exemple les pays pour lesquels la somme de l'âge des résidents dépasse par exemple un certain donc on peut dire par exemple dépasse 20 on va commencer par ça donc comment on va faire ça parce que ce sera plus simple avec un exemple.
 
 On récupère toujours pareil le pays car justement le regroupement va se faire part ça. Je veux qu'on ait une ligne pour chaque pays.
-	
+```sql
 	SELECT user_country
-
+```
 On va faire la somme de chacun des âges ça c'est important.
-
+```sql
 	SELECT user_country, SUM(user_age)
-
+```
 On récupère depuis une base de données pas de problème ok.
-
+```sql
 	SELECT user_country, SUM(user_age)
 	FROM fv_users
-
+```
 On fait notre groupement par rapport au pays ça ça ne change pas.
-
+```sql
 	SELECT user_country, SUM(user_age)
 	FROM fv_users
 	GROUP BY user_country
-
+```
 Et le petit bonus c'est le fameux having, having c'est un peu comme un where d'accord qui va permettre de filtrer, qu'est ce que je lui dis ? hé bien cette fameuse somme là ici SUM() en fait je veux récupérer que les enregistrements dont la somme des âges dépasses, strictement supérieur par exemple à 20, on peut faire ce genre d'exemple.
 
-	notes.sql
-	--------- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
++ notes.sql
+```sql
+	-- C:/Users/sam/OneDrive/Formations/FormationVideo/Ressources/SQL/cours/014_Grouper_resultats/data4.sql
 	
 	SELECT user_country, SUM(user_age)
 	FROM fv_users
 	GROUP BY user_country
 	HAVING SUM(user_age) > 20;
-
+```
 Alors encore une fois l'utilité de cette requête bon et très discutable mais ça suffit par rapport à ce que je veux vous montrez.
-
+```sql
 	mysql> SELECT user_country, SUM(user_age)
 		-> FROM fv_users
 		-> GROUP BY user_country
@@ -382,7 +386,7 @@ Alors encore une fois l'utilité de cette requête bon et très discutable mais 
 	| États-Unis   |            37 |
 	+--------------+---------------+
 	6 rows in set (0.00 sec)
-
+```
 On va ici et voilà donc toutes les sommes d'âge de chacun des pays qu'on a regroupé, dépasserait 20 ans au final, dépasserait 20 ans si on fait la somme des âges, seront récupérés dans cette requête.
 
 Par exemple si on voit alors on a une seule personne qui vient de chine, elle a 16 ans et du coup comme ce n'est pas strictement supérieure à 20, si on fait la somme eh bien voyez qu'on a pas retourné la chine d'accord. 
@@ -392,7 +396,7 @@ On a les états unis puisqu'il ya qu une seule personne qui a 37 ans.
 L'italie a une seule personne 21 etc etc.
 
 Maintenant on peut être un peu plus strict et dire 50 et là il y aura forcément moins d'enregistrement, toutes les sommes qui sont inférieures ne passeront pas.
-
+```sql
 mysql> SELECT user_country, SUM(user_age)
     -> FROM fv_users
     -> GROUP BY user_country
@@ -405,8 +409,7 @@ mysql> SELECT user_country, SUM(user_age)
 | Japon        |            60 |
 +--------------+---------------+
 2 rows in set (0.00 sec)
-
-
+```
 Voilà la voyez du coup il n'y a que le japon et la france qui dont 30 ans.
 
 Ca permet éventuellement comme ça de filtrer encore des résultats donc là il y a, vraiment une seule requête c'est ça qui est important qu'il faut comprendre, c'est qu'on peut sélectionner des données çad qu'au départ il faut voir comme ça parce qu'au niveau sql ces pas si compliqué que ça.
@@ -434,4 +437,3 @@ Et vous vraiment n'hésitez pas et comme je vous l'ai dit si vous ne voulez pas 
 Je vous dis à bientôt pour la suite, la prochaine séance, on a encore pas mal de choses à voir et je pense qu'on terminera ce cours aux alentours de la séance 22 je pense qu'il y a encore quelques vidéos à faire pour terminer ce cours donc on a encore les jointures à voir, on a des sous requêtes, on a pas mal de fonctions différentes, chiffrement, les fonctions sur les chaînes de caractères, les dates etc et on pourra clore cette formation à sql et vous aurez pas pour le coup plein plein de choses que vous aurez vu et que vous pourrez du coup utiliser avec éventuellement des langages de programmation ou simplement si un jour vous travaillez sur des bases de données.
 
 A bientôt tout le monde pour la suite de ce cours sql
-*/

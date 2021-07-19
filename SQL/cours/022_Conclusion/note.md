@@ -1,5 +1,4 @@
-/*
-SQL #22 - conclusion
+# [22. Conclusion](https://www.youtube.com/watch?v=TgvBXMaZULk)
 09-01-20
 
 Bonjour à tous c'est la 22e séance et dernière vidéo de ce cours sql, l'occasion dans cette vidéo de conclusion comme je le fais habituellement avec chaque formation qui se termine de faire un petit point sur tout ce qu'on a abordé ensemble au cours cette formation sur les choses que vous allez pouvoir continuer d'apprendre aux quels vous allez pouvoir continuer de former et ce que vous allez pouvoir retrouver aussi d'autres sur la chaîne qui est en rapport de près ou de loin avec les bases de données.
@@ -10,13 +9,13 @@ En l'occurrence donc le cours sql est terminée donc depuis mon github est dispo
 
 Je viens d'indiquer que le cours sql était terminé d'accord.
 
-	https://github.com/jasonchampagne/FormationVideo
+https://github.com/jasonchampagne/FormationVideo
 
 Vous aurez prochainement parce que ce n'était pas le cas au moment où cette vidéo a été enregistrée ce sera peut-être le cas si vous voyez cette vidéo beaucoup plus tard et que vous terminez cette formation sql plus tard, vous aurez la possibilité de retrouver une playlist de tutoriels, éventuellement une playlist d'exercices avec pas mal de petites choses pour lesquelles vous exercer à sql.
 
 On va revenir rapidement sur le cours et ce qu'on a pu aborder.
 
-	https://www.youtube.com/playlist?list=PLrSOXFDHBtfGl66sXijiN8SU9YJaM_EQg
+https://www.youtube.com/playlist?list=PLrSOXFDHBtfGl66sXijiN8SU9YJaM_EQg
 
 Grossièrement on avait voilà 21 vidéo, 22 si on compte la vidéo de conclusion qui clôture cette formation.
 
@@ -49,7 +48,7 @@ Quelque chose que vous allez retrouver très très souvent.
 Par exemple dans le web quand on développe un site ou qu'on veux simplement utiliser une application, que l'on manipule des données issues d'une base on pourra faire en sorte d'avoir une interface finalement qui permet de satisfaire ce principe de CRUD càd de pouvoir créer, lire donc récupérer en fait tout simplement, mettre à jour et supprimer des données dans une base de données ou depuis une base de données comme on le ferait par exemple depuis un fichier ou tout autre format en fait de stockage de données.
 
 Ca c'était une grande grande partie finalement de cette formation parce que voyez que jusqu'à la séance 12, on a vu grosso modo un petit peu toutes ces choses là.
-
+```txt
 	1. Introduction
 	2. Installation mysql
 	3. Configuration encodage
@@ -72,7 +71,7 @@ Ca c'était une grande grande partie finalement de cette formation parce que voy
 	20. Fonctions mathématiques
 	21. Fonctions de sécurité
 	22. Conclusion
-
+```
 Et comment filtrer les requêtes et cetera.
 
 Je ne vais pas trop m'attarder là dessus de toute façon vous savez un petit peu ce que vous avez vu on va dire dans l'ensemble.
@@ -87,19 +86,19 @@ J'essaie de faire des thèmes qui semblait les principaux vraiment indispensable
 
 Mais il ya peut-être encore une partie d'entre vous qui ne feront en fait que de l'administration de bases de données donc il n'y a pas de langage de programmation forcément derrière et à ce moment là vous occuperez en fait, vous aurez la charge de sécuriser les données en fait directement dans vos bases via les fonctions proposées par le système que vous utilisez donc c'est un cours qui se devait d'être le plus général possible même pour ceux qui se rappellent sur les vidéos sur les fonctions j'ai abordé tout un tas de fonctions différents selon les systèmes de gestion et j'ai posté pas mal de choses sur le github.
 
-	https://github.com/jasonchampagne/FormationVideo
+https://github.com/jasonchampagne/FormationVideo
 
 Pour ceux éventuellement qui chercheraient les différentes ressources concernant les vidéos de la chaîne quand vous êtes donc sur le github, logiquement vous retombez sur ce genre de page et vous cherchez un dépôt qui s'appelle FormationVideo, on ne peut pas se tromper et à partir de là vous avez donc la page on va dire général d'accord qui reprend en fait toutes les formations.
 
 Vous avez un lien direct vers les cours, les tutos, les exercices et cetera qui est terminée ou non, éventuellement des dates.
 
 Bref je vais très très vite là dessus, un petit schéma aussi pour montrer un peu l'aperçu de choses que je prévois ou qui sont déjà publiées sur la chaîne et vous avez en particulier deux parties ici.
-
+```txt
 	Playlists
 	Projets
 	Ressources
 	README.md
-
+```
 Le dossier playlist qui reprend en fait tout simplement l'ensemble des vidéos postées, vous n'êtes pas forcément obliger de passer par youtube, vous pouvez les rechercher depuis ici.
 
 Alors on les retrouve très facilement, on va prendre l'exemple de sql, sql-cours et vous avez l'ensemble des séances et quand cette vidéo aura été publiée vous aurez déjà le lien vers la séance 22 et la dernière qui aura du coup été ici ajouté.
@@ -107,7 +106,7 @@ Alors on les retrouve très facilement, on va prendre l'exemple de sql, sql-cour
 Le lien vers la playlist bien sûr et la partie la plus intéressante finalement c'est la partie ressources.
 
 Dans ce dossier ressources rangés par les différentes playlist finalement, les différentes formations par exemple pour sql vous allez retrouver tout un tas de choses je vous ai mis ici un tableau en fait qui recentralise un petit peu l'ensemble des choses que l'on trouve comme ressource par catégories.
-
+```txt
 	SQL
 	COURS
 
@@ -128,8 +127,8 @@ Dans ce dossier ressources rangés par les différentes playlist finalement, les
 	fonctions-securite		Fonctions de chiffrement et hashage
 	schema-jointures-tables	Schéma des jointures de tables
 	types-donnees			Types de données utilisables
-	
-	https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/SQL
+```
+https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/SQL
 
 On revoie ici des liens vers les cours tuto quand il y a et pour chaque parti, vous retrouver les différents fichiers.
 
@@ -139,7 +138,7 @@ Si vous cherchez par exemple à récupérer le contenu ici de ce fichier en sql 
 
 Solution très simple soit vous faites une sélection complète et vous fait un copier coller dans votre propre fichier, soit vous cliquez sur RAW ici.
 
-	https://raw.githubusercontent.com/jasonchampagne/FormationVideo/master/Ressources/SQL/data1.sql
+https://raw.githubusercontent.com/jasonchampagne/FormationVideo/master/Ressources/SQL/data1.sql
 	
 Ainsi vous êtes sûre en tout cas d'avoir exactement les données telles qu'elles sont d'accord il n'y a pas d'espace blanc d'accord ce sont les données brutes et c'est plus facile du coup de faire un copier coller à partir de là donc ça c'était le petit point important qui semblait nécessaire a rappelé pour ceux qui auraient un petit peu loupé ça.
 
@@ -147,11 +146,16 @@ Vous retrouvez comme ça les différents fichiers qui ont été utilisés pour l
 
 D'ailleurs au niveau du cours, je vous avait montré des tableaux que j'avais fait donc sous format visuel, sous format d'image et là du coup je vous les tout remis ici donc c'est beaucoup plus détaillé, beaucoup plus précis finalement que ce que vous avez pu voir dans le cours.
 
-	https://github.com/jasonchampagne/FormationVideo/blob/master/Ressources/SQL/types-donnees.md
-	
-	Types de données
-	SQL #6 - tables et données
+https://github.com/jasonchampagne/FormationVideo/blob/master/Ressources/SQL/types-donnees.md
 
+> Types de données
+> SQL #6 - tables et données
+
+![](types-numeriques.png)
+![](types-chaines.png)
+![](types-dates.png)
+<!--
+```txt
 	Types numériques
 	TYPE			TAILLE		LIMITE (signé)							LIMITE (non signé)
 	BIT(m)			1 octet		b'000000' à b'111111'					b'000000' à b'111111'
@@ -168,9 +172,11 @@ D'ailleurs au niveau du cours, je vous avait montré des tableaux que j'avais fa
 	NUMERIC(m, d)	
 	FIXED(m, d)		8 octets	jusqu'à 65 chiffres significatifs		jusqu'à 65 chiffres significatifs
 	FLOAT(m, d)		4 octets	-1,175494351.10-38 à 3,402823466.1038	1,175494351.10-38 à 3,402823466.1038
-	
+```
+```txt
 	NOTE : Le type BOOLEAN est équivalent à un TINYINT(1)
-
+```
+```txt
 	Types pour les chaînes
 	TYPE					TAILLE				LIMITE
 	CHAR(m)/BINARY(m)		m					255 caractères / octet
@@ -181,7 +187,8 @@ D'ailleurs au niveau du cours, je vous avait montré des tableaux que j'avais fa
 	LONGTEXT/LONGBLOB		m+4					4294967295 caractères / octet
 	SET						1,2,3,4ou8octets	8,16,24,32ou64 choix
 	ENUM					1 ou 2 octets		255 ou 65535 choix
-	
+```
+```txt
 	Types pour les dates
 	TYPE		TAILLE		LIMITE
 	DATE		3 octets	1000-01-01 à 9999-12-31
@@ -189,9 +196,10 @@ D'ailleurs au niveau du cours, je vous avait montré des tableaux que j'avais fa
 	DATETIME	8 octets	1000-01-01 00:00:00 à 9999-12-31 23:59:59
 	YEAR		1 octet		1901 à 2155
 	TIMESTAMP	4 octets	19700101000000 à 20380119031407
-
+```
+-->
 N'hésitez pas à consulter un petit peu tout ça et ensuite différents fichiers qui ne sont pas forcément tous fait au moment où j'enregistrais cette vidéo et qui seront pareil mis à jour, compléter au fur et à mesure avec tout un tas de détails sur l'usage de beaucoup de fonction sur plusieurs systèmes de gestion de base de données.
-
+```txt
 	README.md
 	data1.sql
 	data2.sql
@@ -208,8 +216,8 @@ N'hésitez pas à consulter un petit peu tout ça et ensuite différents fichier
 	fonctions-securite.md
 	schema-jointures-tables.png
 	types-donnees.md
-
-	https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/SQL
+```
+https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/SQL
 
 Et puisque on parle justement de plusieurs sgbd, ce n'est pas publier encore au moment où cette vidéo était enregistrée, il n'y avait pas encore de playlists en fait, de tutoriels ou d'exercices pour sql dans la playlist d'exercice comme pour les playlists d'exercice dans d'autres formations de la chaîne ça va suivre en fait la progression du cours et ça vous permet de vous exercer très simplement et très rapidement pour toutes les notions en tout cas une bonne majorité de notions qui sont vues sur chaque cours pour pouvoir voilà tout simplement vous entraîner.
 
@@ -244,4 +252,3 @@ J'ai essayé de faire encore une fois au plus complet et surtout le plus adaptab
 Je vous dis à bientôt pour de nouvelles formations, de nouveau cours, on se retrouvera de toute façon sur d'autres séances et dans les commentaires de la chaîne youtube.
 
 A bientôt tout le monde
-*/

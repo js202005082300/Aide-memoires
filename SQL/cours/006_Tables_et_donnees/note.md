@@ -1,5 +1,4 @@
-/*
-SQL #6 - tables et données
+# [6. Tables et données](https://www.youtube.com/watch?v=Y_y-RNZApmk)
 19-12-2020
 
 Bonjour vous êtes sur la formation SQL et on continue avec cette 6e vidéo pour parler des tables et des données liées à ces tables.
@@ -11,7 +10,7 @@ Maintenant que nous avons notre base de données, nous allons voir comment inté
 Alors qu'est-ce qu'on entend par table ? parce qu'il s'agit du thème de cette vidéo. 
 
 Alors une table va être présentée un petit peu comme sous forme d'une boîte d'accord qui va contenir nos informations. 
-
+```txt
 	+---------------------------+
 	| matable					|
 	+---------------------------+
@@ -21,7 +20,7 @@ Alors une table va être présentée un petit peu comme sous forme d'une boîte 
 	|			etc...			|
 	|							|-------------
 	+---------------------------+
-
+```
 La table va être présentée comme une sorte de boîte qui va contenir nos informations, elle va avoir un nom "matable" on va pouvoir la nommer. 
 
 Ensuite elle va contenir un certain nombre de champs. 
@@ -36,7 +35,7 @@ On verra par la suite, on fera une vidéo spécifique dédiée aux contraintes d
 
 On parle de colonnes ou de champs ici. 
 
-Notre table pourra également être reliée à d'autres tables SQL : ----------------. On peut avoir d'autres liaisons et c'est pour ça qu'on parle de SGBD relationnel parce qu'il y a des relations entre les tables mais on peut très bien aussi avoir une table qui serait isolée du reste. 
+Notre table pourra également être reliée à d'autres tables SQL : `----------------`. On peut avoir d'autres liaisons et c'est pour ça qu'on parle de SGBD relationnel parce qu'il y a des relations entre les tables mais on peut très bien aussi avoir une table qui serait isolée du reste. 
 
 On peut avoir par exemple une table de paramètres qui serait isolée, il serait indépendant du reste de tout l'ensemble de notre base de données. 
 
@@ -44,11 +43,13 @@ Voilà ce que vous allez apprendre à faire dans cette vidéo là c'est-à-dire 
 
 On va créer un fichier SQL, code.sql, sur lequel on pourra écrire les requêtes et après on n'aura plus qu'a copier coller au niveau du client. 
 
-	code.sql
-	--------
++ code.sql
+```sql
+
+```
 
 D'ailleurs je vais me connecter sur le client comme ça ce sera fait.
-
+```powershell
 	>mysqld --console
 	2020-12-19T12:34:12.062094Z 0 [System] [MY-010116] [Server] C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\mysql\bin\mysqld.exe (mysqld 8.0.22) starting as process 4828
 	2020-12-19T12:34:12.193893Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
@@ -57,7 +58,7 @@ D'ailleurs je vais me connecter sur le client comme ça ce sera fait.
 	2020-12-19T12:34:47.811272Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
 	2020-12-19T12:34:47.812240Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
 	2020-12-19T12:34:47.951374Z 0 [System] [MY-010931] [Server] C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\mysql\bin\mysqld.exe: ready for connections. Version: '8.0.22'  socket: ''  port: 3306  MySQL Community Server - GPL.
-	
+```
 	> mysql -u root -p
 	Enter password:
 	Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -73,17 +74,17 @@ D'ailleurs je vais me connecter sur le client comme ça ce sera fait.
 	Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 	mysql>
-
+```
 Voilà normalement c'est okay. 
 
 Alors jusqu à présent je vous ai montré qu'on pouvait afficher une base de données donc je vais faire quelques petits rappels très très rapide.
 
-	code.sql
-	--------
++ code.sql
+```sql
 	SHOW DATABASES;
-	
+```
 show databases c'est pour afficher nos bases de données donc logiquement sur MySQL par défaut, vous devriez avoir ça.
-
+```sql
 	> show databases;
 	+--------------------+
 	| Database           |
@@ -94,7 +95,7 @@ show databases c'est pour afficher nos bases de données donc logiquement sur My
 	| sys                |
 	+--------------------+
 	4 rows in set (0.01 sec)
-
+```
 Vous aurez évidemment d'autres bases de données si vous êtes sur un autre système de gestion donc ça c'est à vous de voir. 
 
 Alors sur le fichier je vais en parler très rapidement vous pouvez mettre des commentaires parce qu'ici voyez on est sur un fichier vraiment en SQL, on peut écrire des commentaires. 
@@ -103,9 +104,8 @@ Je vais d'ailleurs faire une petite parenthèse.
 
 Pour les commentaires en SQL, vous avez d'abord le double trait -- d'accord le double tiret. C'est un commentaire sur une seule ligne. Vous avez également le dièse alors par contre sur Visual Studio code il ne gère pas là coloration pour le dièse mais je ne sais pas pourquoi comme s'il le considérait pas comme étant un commentaire mais sachez que ça fonctionne également. Personnellement j'utilise tout le temps le double tiret donc ce n'est pas bien grave. Et vous avez ensuite le commentaire sur plusieurs lignes / * * /, le fameux commentaire en c tel que l'on connaît bien donc évidemment pas de surprise pour ceux qui font quelques langages de programmation car ça c'est un type de commentaire que vous connaissez bien en informatique.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql	
 	-- 	Commentaire sur une seule ligne
 	# 	Commentaire sur une seule ligne
 	
@@ -113,41 +113,38 @@ Pour les commentaires en SQL, vous avez d'abord le double trait -- d'accord le d
 	lignes * /
 	
 	SHOW DATABASES;
-
+```
 Alors vous pouvez comme ça marqué ces 2 là et ce sera efficace, -- et / ** /.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql	
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
-
+```
 On a donc show databases comme on vient de le faire.
 
 Nous allons créer une base de données qu'on va appeler test mais vous avez vu aussi qu'on pouvait faire un petit test pour voir si notre base de données n'existait pas déjà en faisant IF NOT EXISTS. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql	
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS test;
-	
+```
 Alors ce que je vous avais pas dit précédemment et qui va être important ici c'est au niveau de tout ce qui est nommage et ce qui fait appel au nom d'une base de données, Quand on verra plus tard le nom d'une table ou le nom d'un de ces champs, il recommandé d'utiliser des anti quote le symbole que vous allez faire avec la touche alt gr + µ qui va vous donner ce symbole ici `. 
 
 Alors pourquoi doit ton faire ceci ?
 
-	code.sql
-	--------
-	
++ code.sql
+```sql	
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
-
+```
 Tout simplement parce que c'est un jour j'appelle même si ce n'est pas une bonne idée, ma base de données database parce que vous voyez il va le considérer comme un mot-clé (voyez la coloration syntaxique).
-
+```sql
 	CREATE DATABASE IF NOT EXISTS /!\database/!\ `test`;
-
+```
 Et du coup en général les éditeurs de texte vont le colorer pour pouvoir l'indiquer et du coup il ne sera pas si ça correspond à un nommage ou si ça correspond à un mot-clé c'est à dire un mot réservé en SQL au niveau de votre requête. 
 
 Pour éviter ce genre de problème, on prend l'habitude pour tout ce qui est nommage de quelque chose d'utiliser ce symbole c'est-à-dire le fameux anti quote ` ` pour entourer les noms pour éviter les problèmes. 
@@ -159,12 +156,12 @@ Voilà ce sont les petites quotes qui sont penchées vers la gauche.
 Voilà c'est bien le alt gr et la touche µ. 
 
 Je vais donc pouvoir lancer la requête tout simplement.
-
+```sql
 	> CREATE DATABASE IF NOT EXISTS `test`;
 	Query OK, 1 row affected (0.01 sec)
-
+```
 Et ensuite on peut refaire un SHOW DATABASES pour voir qu'on a bien créé une nouvelle base de données.
-
+```sql
 	> show databases;
 	+--------------------+
 	| Database           |
@@ -176,14 +173,13 @@ Et ensuite on peut refaire un SHOW DATABASES pour voir qu'on a bien créé une n
 	| test               |
 	+--------------------+
 	5 rows in set (0.00 sec)
-
+```
 Voyez qu'on a bien test qui est là. 
 
 Ensuite il ne reste plus qu'a faire un USE de la base de données en question pour dire que j'utilise cette base de donnée. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -191,14 +187,13 @@ Ensuite il ne reste plus qu'a faire un USE de la base de données en question po
 
 	> USE `test`;
 	Database changed
-
+```
 Voilà et là ça vous met Database changed donc on a bien le changement qui est fait là. 
 
 Comme pour la commande ici SHOW pour afficher, lister nos bases de données, nous allons avoir une commande également pour les tables. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -206,17 +201,16 @@ Comme pour la commande ici SHOW pour afficher, lister nos bases de données, nou
 	
 	-- Requêtes liées aux tables
 	SHOW TABLES;
-
+```
 Voyez que c'est très simple au niveau de la syntaxe SQL, il n'y a vraiment pas de complication et donc là on a empty set parce que nous avons créé aucune table pour le moment.
-
+```sql
 	> SHOW TABLES;
 	Empty set (0.01 sec)
-
+```
 Si on n'avait pas fait de USE avant c'est-à-dire que si on n'était pas sur la table test, il aurait fallu simplement rajouter ceci.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -224,7 +218,7 @@ Si on n'avait pas fait de USE avant c'est-à-dire que si on n'était pas sur la 
 	
 	-- Requêtes liées aux tables
 >	SHOW TABLES FROM `test`;
-
+```
 C'est pour ça que je vous dis que c'est très simple au niveau de la syntaxe, au niveau des requêttes. 
 
 On dit d'afficher toutes les tables depuis donc FROM la base de données test d'accord on peut faire comme ça mais si on est déjà en train d'utiliser la base de données test, on a évidemment pas besoin de le spécifier parce qu'il le sait. 
@@ -237,9 +231,8 @@ C'est très logique, c'est toujours un peu les mêmes termes SHOW CREATE et cete
 
 Comme nous avions le CREATE DATABASE, on peut faire tout simplement un CREATE TABLE et on va lui donner un nom donc t_users avec un t pour test ou table comme vous voulez. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -249,7 +242,7 @@ Comme nous avions le CREATE DATABASE, on peut faire tout simplement un CREATE TA
 	SHOW TABLES;
 	
 	CREATE TABLE `t_users`
-
+```
 Voilà je mets donc un t underscore user donc pas d'accent, pas d'espace c'est-à-dire que vous pouvez mettre des underscores pour spécifier des espaces. 
 
 Vous pouvez également écrire camelCase où on met une majuscule à chaque début de mot pour ceux qui connaissent, tUsers. 
@@ -262,9 +255,8 @@ Alors selon les systèmes, les noms sont sensibles à la case c'est-à-dire que 
 
 Comme pour CREATE DATABASE, on peut très bien aussi dire ceci IF NOT EXISTS.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -274,14 +266,13 @@ Comme pour CREATE DATABASE, on peut très bien aussi dire ceci IF NOT EXISTS.
 	SHOW TABLES;
 	
 >	CREATE TABLE IF NOT EXISTS `t_users`
-
+```
 De dire voilà tu crées la table t_users si elle n'existe pas déjà parce qu'on va pas essayer de créer une table qui existerait déjà ça amènerait des erreurs donc on peut évidemment rajouter ceci IF NOT EXISTS mais moi comme je sais qu'il n'y a rien, je ne vais pas le mettre mais vous pouvez le faire. 
 
 Alors nous allons ouvrir des parenthèses, il y aura des parenthèses de fin et le fameux ; pour terminer la requête.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -294,14 +285,13 @@ Alors nous allons ouvrir des parenthèses, il y aura des parenthèses de fin et 
 	(
 	
 	);
-
+```
 À l'intérieur des parenthèses nous allons pouvoir enregistrer les différents champs. 
 
 Moi je vais pouvoir faire quelque chose de très simple c'est-à-dire que je vais leur donner un nom, je vais avoir l'identifiant de user, `id_user` suivi d'un type INT mais on va en parler juste après et on va s'arrêter là pour ne pas faire trop compliqué pour le moment. Ensuite nous allons avoir `user_name` VARCHAR(65) mais j'en parlerais aussi après. Et ensuite on va avoir `user_birthday` DATE et ce sera bon.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -316,7 +306,7 @@ Moi je vais pouvoir faire quelque chose de très simple c'est-à-dire que je vai
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE
 	);
-
+```
 Voyez un petit peu le nommage que je fais parce que je n'ai pas choisi au hasard, c'est le nommage que je vous recommande si vous ne savez pas par exemple comment nommer les champs d'une table ou même une table. 
 
 Vous spécifiez un préfixe à vos table `t_...` que vous choisissez. Celui que vous voulez, ça peut être votre nom de famille, ça peut être le nom de votre site, ça peut être des initiales enfin bref tout ce que vous voulez, un préfixe que vous choisissez, un underscore suivi du nom correspondant à la table comme ça vous savez à quoi ça correspond, users.
@@ -334,7 +324,7 @@ Après vous êtes libre, il n'y a pas de règles précises, il n'y a pas de conv
 Une fois que vous avez choisi certaines règles, certaines conventions, il faut le faire jusqu'au bout pour ne pas que ça mélange pour que ça reste homogène et que ça ne mélange pas les différentes syntaxes. 
 
 On va donc faire ça comme ça, copier coller.
-
+```sql
 	> CREATE TABLE `t_users`
 		-> (
 		-> `id_user` INT,
@@ -342,9 +332,9 @@ On va donc faire ça comme ça, copier coller.
 		-> `user_birthday` DATE
 		-> );
 	Query OK, 0 rows affected (0.05 sec)
-
+```
 Voilà Query OK et là on peut du coup refaire un show tables.
-
+```sql
 	> show tables;
 	+----------------+
 	| Tables_in_test |
@@ -352,16 +342,15 @@ Voilà Query OK et là on peut du coup refaire un show tables.
 	| t_users        |
 	+----------------+
 	1 row in set (0.00 sec)
-
+```
 Et on voit que ça à afficher la table t_users. 
 
 Alors il y a également la possibilité d'afficher toutes les informations donc le détail d'une table. 
 
 Pour cela vous avez la commande et je vais le noter ici d'ailleurs DESCRIBE et le nom de la table donc moi ça va être t_users.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -378,13 +367,13 @@ Pour cela vous avez la commande et je vais le noter ici d'ailleurs DESCRIBE et l
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
-
+```
 Alors DESCRIBE peut-être également EXPLAIN alors ça ce sont des alias c'est-à-dire que vous pouvez utiliser le mot EXPLAIN ou vous pouvez utiliser DESC qui est le diminutif de DESCRIBE. 
 
 Moi j'utilise souvent DESCRIBE mais vous pouvez utiliser l'un ou l'autre également d'accord et ça fonctionnera aussi. 
 
 On va donc faire ça et là regardez.
-
+```sql
 	> DESCRIBE `t_users`;
 	+---------------+-------------+------+-----+---------+-------+
 	| Field         | Type        | Null | Key | Default | Extra |
@@ -393,7 +382,7 @@ On va donc faire ça et là regardez.
 	| user_name     | varchar(65) | YES  |     | NULL    |       |
 	| user_birthday | date        | YES  |     | NULL    |       |
 	+---------------+-------------+------+-----+---------+-------+
-
+```
 On obtient toutes les informations que j'ai noté donc on a FIELD qui est le champ ce qu'on appelle la colonne de la table. 
 
 On va avoir le type et là vous voyez qu'il m'a mis INT(11) alors que moi j'avais mis INT mais on va l'expliquer pourquoi. 
@@ -422,6 +411,8 @@ On va donc voir un petit peu tout ça.
 
 On va commencer à parler sur tout ce qui concerne le numérique et vous allez voir qu'il y en a pas mal.
 
+![types-numeriques.png](types-numeriques.png)
+<!--
 +---------------------------------------+-----------+---------------------------+-----------------------+
 | TYPE									| TAILLE	| Limite (signé)			| LIMITE (non signé)	|
 +---------------------------------------+-----------+---------------------------+-----------------------+
@@ -445,7 +436,7 @@ On va commencer à parler sur tout ce qui concerne le numérique et vous allez v
 | DOUBLE(m,d) / DOUBLE PRECISION(m,d) 	| 8 octets	| -1.7976931348623157E+308	| 2.2250738585072014E-308
 | / REAL(m,d)							|			| -2.2250738585072014E-308	| 1.7976931348623157E+308
 +---------------------------------------+-----------+---------------------------+-----------------------+
-
+-->
 Voilà il y en a pas mal, il y en a plein qui vont vous servir, il y en a plein dont vous n'utiliserez peut-être jamais mais je vous ai mis vraiment ceux qui avaient un intérêt, ceux qui étaient significatifs et qui pouvaient servir. 
 
 Je vais aller très vite dessus parce que ces tableaux-là vous pouvez les récupérer en téléchargement dans la description de la vidéo donc je ne vais pas trop m'attarder dessus. 
@@ -483,14 +474,14 @@ Et cetera et cetera.
 Vous pouvez comme ça choisir une limite en mettant entre parenthèses. 
 
 Alors ce n'est pas obligatoire parce que vous voyez ici que pour le INT je ne l'ai pas fait. 
-
+```sql
 	CREATE TABLE `t_users`
 	(
 >		`id_user` INT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE
 	);
-
+```
 À ce moment-là c'est MySQL qui va déterminer une taille par défaut qui est d'ailleurs pas forcément la plus optimale parce que là vous verrez que pour id_user en fait l'identifiant je peux considérer si je réfléchi sur cette table là .. un d'identifiant d'utilisateur est quelque chose qui sera unique c'est à dire que ce sera un numéro d'utilisateur. On peut partir du principe que le premier va commencer à 1 et le dernier atteindra le nombre d'utilisateurs de votre site. 
 
 De manière générale on pourrait se dire que pour commencer quand je crée un site par exemple, je ne m'attends pas à voir 15 mais l'utilisateur pour commencer parce que c'est un nombre qui va évoluer au fil du temps et comme on va pouvoir changer les types. Vous verrez qu'on va pouvoir changer le type d'un champ de table sans problème c'est-à-dire qu'on pourra passer un type petit vers un type plus grand n'importe quand d'ailleurs youtube l'a fait il n'y a pas longtemps pour son compteur de vues sur des vidéos pour ceux qui avaient suivi. 
@@ -499,9 +490,8 @@ Eh bien on pourra modifier ce type donc moi je pourrais partir du principe déj�
 
 Et SMALLINT, on pourrait du coup le spécifier ici.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -518,7 +508,7 @@ Et SMALLINT, on pourrait du coup le spécifier ici.
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
-
+```
 Ça fait qu'on aura pour id_user beaucoup moins d'espace utilisé en mémoire que le fameux INT parce que vous voyez que INT occupe 4 octets donc on a économisé 2 octets donc on a réduit de moitié la place en mémoire pour ce champ là. 
 
 Ça ne paraît pas grand-chose qu'on parle de simple côté mais partez du principe et sachez qu'une base de données elle peut faire plusieurs terra, plusieurs giga-octets d'espaces parce que ça va contenir des millions et des millions d'enregistrements c'est-à-dire que je parle de bases de données réelles pour des cas réel on a énormément de données donc le moindre octet qui peut être gagné est important. 
@@ -529,9 +519,8 @@ C'est ici 2 octets pour un seul enregistrement pour juste l'identifiant c ensuit
 
 Pour le cloud on voit que c'est plus intéressant de faire SMALLINT et puis si un jour j'atteins les 65435 utilisateurs et même si on atteint 60000 utilisateurs, en bon programmeur que nous sommes on va transformer c'est-à-dire qu'on va altérer la table mais ça on le verra après en modifiant le type SMALLINT en par exemple MEDIUMINT et cetera.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -548,7 +537,7 @@ Pour le cloud on voit que c'est plus intéressant de faire SMALLINT et puis si u
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
-
+```
 Voilà on va faire ça au fur et à mesure et ainsi de suite jusqu à éventuellement aller loin loin loin. 
 
 Ça ne sert à rien dès le départ de se dire qu'on est en très grand nombre BIGINT pour parer à l'éventualité du nombre d'utilisateurs qu'il pourrait y avoir parce que avant d'arriver déjà à la taille d'un BIGINT et je rappelle que c'est 2^64-1 donc c'est un très grand nombre et qui est en plus stocké sur 8 octets donc ça prend beaucoup de place. 
@@ -569,6 +558,8 @@ Pour continuer même si je vais essayer de pas perdre trop de temps sinon là po
 
 Nous avons ensuite les types liés aux chaînes de caractères.
 
+![types-chaines.png](types-chaines.png)
+<!--
 +---------------------------+---------------+-----------------------------------+
 | TYPE						| TAILLE		| LIMITE							|
 +---------------------------+---------------+-----------------------------------+
@@ -581,7 +572,7 @@ Nous avons ensuite les types liés aux chaînes de caractères.
 | SET						| 1,2,3,4 ou 8	| 8, 16, 24, 32 ou 64 choix			|
 | ENUM						| 1 ou 2		| 255 ou 65 535 choix				|
 +---------------------------+---------------+-----------------------------------+
-
+-->
 Alors les chaînes de caractères c'est tout ce qui va pas servir de calcul. 
 
 Dès qu'on n'a pas besoin de faire de calcul ou qu'on va par exemple stocker un nombre sur lequel on n'a pas besoin de faire de calcul, je pense par exemple à un code postal ou ce genre de chose, on peut par exemple utiliser ça où stocké sous forme de chaîne ou alors un nom, une adresse ou n'importe quoi. 
@@ -606,9 +597,8 @@ Rappelez-vous je vous avais dit que je vous donnerais un fichier SQL pour qu'on 
 
 Voyez donc qui sait en fonction du nombre de choix que vous voulez différents, si par exemple on voulait faire un ENUM de … alors ENUM ça va être l'un ou l'autre donc ça peut être par exemple est-ce qu'un utilisateur est abonné ? Admettons que vous voudriez dire ça en utilisateur donc ici.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -626,7 +616,7 @@ Voyez donc qui sait en fonction du nombre de choix que vous voulez différents, 
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
-
+```
 On aura donc par exemple différents champs dans ENUM(`N`, `Y`) avec N pour no et Y pour yes.
 
 Voilà on peut faire ce genre de chose et ça je voulais montrer très rapidement.
@@ -649,6 +639,8 @@ Voilà pour les types donc tout ce qui est charactère.
 
 Et on a ensuite tout ce qui concerne les dates.
 
+![types-dates.png](types-dates.png)
+<!--
 +-----------+-----------+-----------------------+
 | TYPE		| TAILLE	| LIMITE				|
 +-----------+-----------+-----------------------+
@@ -663,7 +655,7 @@ Et on a ensuite tout ce qui concerne les dates.
 | TIMESTAMP	| 4 octets	| 19700101000000		|
 |			|			| 20380119031407		|
 +-----------+-----------+-----------------------+
-
+-->
 Et on a ensuite tout ce qui concerne les dates. 
 
 Je vais aller très vite aussi, je vous ai le format je pense que c'est parlant, la première date c'est la date minimale qu'on peut avoir la 2e c'est la date maximale logique. 
@@ -747,7 +739,7 @@ Alors ici on va revenir à des choses générales, valide, valable pour tous les
 Je vous avais dit qu'en cours de route on pourrait sans problème changer ici le type de notre table. 
 
 On voit que ici on a INT(11), VARCHAR(65) et cetera. 
-
+```sql
 	> DESCRIBE `t_users`;
 	+---------------+-------------+------+-----+---------+-------+
 	| Field         | Type        | Null | Key | Default | Extra |
@@ -757,7 +749,7 @@ On voit que ici on a INT(11), VARCHAR(65) et cetera.
 	| user_birthday | date        | YES  |     | NULL    |       |
 	+---------------+-------------+------+-----+---------+-------+
 	3 rows in set (0.01 sec)
-
+```
 D'ailleurs on va changer le id_user, on va lui mettre un SMALLINT plutôt que ce qu'on a ici. 
 
 Comment faire ça ? vous avez une commande qui va permettre d'altérer une table par rapport à ce qu'on dit. 
@@ -765,14 +757,13 @@ Comment faire ça ? vous avez une commande qui va permettre d'altérer une table
 Altérer une table c'est la modifier. 
 
 On va donc juste faire ALTER TABLE suivi du nom de la table en question ok et ensuite on va pouvoir y mettre tout un tas d'informations, tout un tas de choses.
-
+```sql
 	ALTER TABLE ´t_users´
-
+```
 Alors qu'est-ce qu'on peut y faire ? On peut ajouter une colonne, je peux très bien faire ça et ajouter user_points qui aurait un certain nombre de points de types TINYINT(2) de maximum 99 points, pas plus. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -793,16 +784,15 @@ Alors qu'est-ce qu'on peut y faire ? On peut ajouter une colonne, je peux très 
 	
 	ALTER TABLE `t_users`
 >	ADD `user_points` TINYINT(2);
-
+```
 On peut faire ce genre de choses est ; pour terminer la requête. 
 
 Ok alors vous pouvez en noter plusieurs à la ligne, on peut rajouter plusieurs choses à faire sur cette table puisque lui il va faire ALTER TABLE donc je veux modifier la table t_users et il va prendre toutes les choses que vous lui passer à la suite pour tous les changements à apporter à cette table, tout ce que vous allez altérer donc on peut noter plusieurs fois. 
 
 On peut supprimer une colonne, et là je vais supprimer celle que je viens de créer bien que pour le coup ce serait bizarre parce que ça ne va pas se faire tout de suite donc on va faire par exemple DROP `user_points`. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -824,7 +814,7 @@ On peut supprimer une colonne, et là je vais supprimer celle que je viens de cr
 	ALTER TABLE `t_users`
 	ADD `user_points` TINYINT(2)
 	DROP `user_points`;
-
+```
 Ajouter donc une colonne avec ADD et on peut supprimer une colonne avec DROP alors attention c'est pareil selon certains, il y a des syntaxes qui vont être valides sur tous les systèmes de gestion et il y a aussi des syntaxes qui fonctionnent que sur chaque système. 
 
 Par exemple pour MySQL, il a une syntaxe qui lui est propre et il y a la syntaxe que je vous montre ici qui est valide partout. 
@@ -841,9 +831,8 @@ Alors le DROP pour la suppression et on peut modifier une colonne donc il suffir
 
 Alors moi ce que je vais faire c'est un SMALLINT.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -864,16 +853,16 @@ Alors moi ce que je vais faire c'est un SMALLINT.
 	
 	ALTER TABLE `t_users`
 >	MODIFY `id_user` SMALLINT;
-
+```
 On va le modifier d'ailleurs voilà.
-
+```sql
 	> ALTER TABLE `t_users`
 		-> MODIFY `id_user` SMALLINT;
 	Query OK, 0 rows affected (0.18 sec)
 	Records: 0  Duplicates: 0  Warnings: 0
-
+```
 Et là je vais du coup refaire un DESCRIBE voilà.
-
+```sql
 	> DESCRIBE `t_users`;
 	+---------------+-------------+------+-----+---------+-------+
 	| Field         | Type        | Null | Key | Default | Extra |
@@ -883,7 +872,7 @@ Et là je vais du coup refaire un DESCRIBE voilà.
 	| user_birthday | date        | YES  |     | NULL    |       |
 	+---------------+-------------+------+-----+---------+-------+
 	3 rows in set (0.01 sec)
-
+```
 Voilà et vous voyez que le fameux id_user qui était en INT à la base, il est passé en SMALLINT(6) c'est à dire qu'il pourra contenir jusqu à 6 chiffres. 
 
 Voilà pour cette partie là donc très pratique vous voyez qu'on peut altérer une table très rapidement. 
@@ -894,9 +883,8 @@ Par exemple pour PostgreSQL c'est autre chose et je crois que c'est CHANGE TABLE
 
 Alors ici on va mettre tout simplement CHANGE `user_birthday` et puis ensuite un nouveau nom après un espace qui va être `user_birth` et ensuite on peut préciser le type DATE si en plus on veut changer le type au passage on peut le faire aussi mais moi je vais remettre DATE voilà.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -917,17 +905,16 @@ Alors ici on va mettre tout simplement CHANGE `user_birthday` et puis ensuite un
 	
 	ALTER TABLE `t_users`
 >	CHANGE `user_birthday` `user_birth` DATE;
-
-	client
-	------
-	
+```
++ client
+```sql
 	> ALTER TABLE `t_users`
 		-> CHANGE `user_birthday` `user_birth` DATE;
 	Query OK, 0 rows affected (0.03 sec)
 	Records: 0  Duplicates: 0  Warnings: 0
-
+```
 Voilà ensuite on réaffiche.
-
+```sql
 	> DESCRIBE `t_users`;
 	+------------+-------------+------+-----+---------+-------+
 	| Field      | Type        | Null | Key | Default | Extra |
@@ -937,7 +924,7 @@ Voilà ensuite on réaffiche.
 	| user_birth | date        | YES  |     | NULL    |       |
 	+------------+-------------+------+-----+---------+-------+
 	3 rows in set (0.00 sec)
-
+```
 Voilà vous voyez qu'on a changé de nom, je n'ai pas assez de user_birthday à user_birth donc on peut comme ça modifier le nom d'une colonne très facilement avec tout simplement la syntaxe ici CHANGE qu'on peut faire. 
 
 Voilà comment on altère une table d'accord. 
@@ -954,9 +941,8 @@ Voilà pour tout ce qui est modification de table, on a vu comment créer une ta
 
 Pour supprimer notre table nous allons tout simplement faire la commande et je pense que ça ne va pas vous surprendre c'est-à-dire DROP TABLE `` et le nom de la table en question. 
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -974,12 +960,11 @@ Pour supprimer notre table nous allons tout simplement faire la commande et je p
 	);
 
 	DROP TABLE `t_users`;
-
+```
 Comme le DROP DATABASE, on peut toujours pareil préciser le IF EXISTS pour dire que tu essaies de supprimer une table seulement si elle existe sinon ça n'a aucun intérêt, on peut donc faire comme ça.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -997,7 +982,7 @@ Comme le DROP DATABASE, on peut toujours pareil préciser le IF EXISTS pour dire
 	);
 
 	DROP TABLE IF EXISTS `t_users`;
-
+```
 Alors IF EXISTS n'est pas obligatoire, c'est une syntaxe facultative. 
 
 Voilà on va d'ailleurs la supprimer à la fin de cette vidéo avec DROP TABLE. 
@@ -1018,9 +1003,8 @@ En fait toutes ces informations un peu plus détaillées encore que la fameuse c
 
 Il suffit de faire SHOW TABLE STATUS tout simplement et pas besoin de préciser la base de données avec FROM parce que je suis déjà dessus voilà.
 
-	code.sql
-	--------
-	
++ code.sql
+```sql
 	-- Requêtes sur les bases de données
 	SHOW DATABASES;
 	CREATE DATABASE IF NOT EXISTS `test`;
@@ -1040,8 +1024,8 @@ Il suffit de faire SHOW TABLE STATUS tout simplement et pas besoin de préciser 
 	SHOW TABLE STATUS;
 
 	DROP TABLE IF EXISTS `t_users`;
-	
-	
+```
+```sql
 	> SHOW TABLE STATUS;
 	+---------+--------+---------+------------+------+----------------+
 	| Name    | Engine | Version | Row_format | Rows | Avg_row_length |
@@ -1068,7 +1052,7 @@ Il suffit de faire SHOW TABLE STATUS tout simplement et pas besoin de préciser 
 	--------------------+----------+----------------+---------+
 
 	1 row in set (0.02 sec)
-
+```
 SHOW TABLE STATUS Sans avoir besoin de préciser la base de données puisque je suis déjà dessus. 
 
 Voilà donc là vous pouvez voir que je n'ai pas assez de largeur au niveau de mon terminal mais vous voyez qu'il affiche plein d'informations comme le NAME, le nom, le moteur de stockage, la version, le format, le nombre de lignes, enfin tout un tas d'informations qui peut être vous servirons ou pas du tout. 
@@ -1092,17 +1076,17 @@ Après ce qu'il reste à voir et ce qu'on va voir par la suite ce sont les contr
 Voilà en tout cas ce qu'il y a à retenir.
 
 On va supprimer notre petite table justement ici.
-
+```sql
 	> DROP TABLE IF EXISTS `t_users`;
 	Query OK, 0 rows affected (0.05 sec)
 	
 	> show tables;
 	Empty set (0.00 sec)
-	
+```
 On peut faire un show tables et maintenant du coup on n'a plus rien. 
 
 Et puis là du coup on pourra supprimer par la suite la fameuse table où nous sommes par exemple en faisant un USE mysql suivi de DROP DATABASE suivi du nom de la base test. 
-
+```sql
 	> use mysql;
 	Database changed
 
@@ -1119,7 +1103,7 @@ Et puis là du coup on pourra supprimer par la suite la fameuse table où nous s
 	| sys                |
 	+--------------------+
 	4 rows in set (0.00 sec)
-	
+```
 Voilà nous avons viré notre base de données. 
 
 J'espère que cette vidéo vous aura plu du coup on se retrouve pour la prochaine séance pour parler des contraintes donc là ce sera une grosse vidéo aussi et il y aura pas mal de choses à raconter là-dessus. 
@@ -1134,5 +1118,4 @@ Si vous avez besoin d'informations supplémentaires, vous pouvez me retrouver da
 
 Je vous dis à bientôt pour la prochaine séance en SQL et en attendant entraînez vous bien et bonnes révisions sur cette formation. 
 
-Ciao tout le monde	
-*/
+Ciao tout le monde
