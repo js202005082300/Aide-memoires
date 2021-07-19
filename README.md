@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 14-07-2021 
+> 🧭 Màj le 19-07-2021 
 >
 > Cours terminé :heavy_check_mark: - 
 > Cours en progression 	:writing_hand:
@@ -13,7 +13,10 @@
 [guide allemand](https://www.allemandfacile.com/guide/)
 
 ## Formations Informatique
-:label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo) - [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists) - [Notes d'aide](Aide/README.md)
+:label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
++ [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)
++ [Notes d'aide](Aide/README.md)
++ [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)
 
 ### [Prises de notes](#)
 ||notes
@@ -25,7 +28,7 @@
 |:heavy_check_mark:|[C++](C++/README.md)
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:writing_hand:|[Hacking (old)](Hacking/README.md)
-||[HTML-CSS](HTML-CSS/README.md)
+|:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)
 |:heavy_check_mark:|[Java](Java/README.md)
 |:writing_hand:|[JavaScript](JavaScript/README.md)
 |:heavy_check_mark:|[PHP](PHP/README.md)

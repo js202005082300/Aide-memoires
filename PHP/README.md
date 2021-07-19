@@ -1,4 +1,4 @@
-:label: [FormationVidéo Git](https://github.com/jasonchampagne/FormationVideo) - [Ressource JavaScript](https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/PHP)
+:label: [FormationVidéo Git](https://github.com/jasonchampagne/FormationVideo) - [Ressource PHP](https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/PHP)
 
 # PHP
 > [Doc](https://www.php.net/manual/fr/index.php)  

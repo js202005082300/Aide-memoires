@@ -1,0 +1,56 @@
+    /*
+        display, visbility, opacity
+
+        position
+        top, right, bottom, left
+        z-index
+
+        float
+    */
+
+    *
+    {
+        margin:0;
+        outline:none;
+        padding:0;
+    }
+
+    body
+    {
+        background-color: background-color:#EFEFEF;
+        margin:auto;
+        width:1000px;
+    }
+
+    header
+    {
+        background-color:rgb(209, 175, 160);
+        height:80px;
+        margin:auto;
+        width:1000px;
+    }
+
+    section
+    {
+        background-color:rgb(134, 175, 155);
+        margin:auto;
+        width:800px;
+        float:left;
+    }
+
+    aside
+    {
+        background-color:rgb(212, 172, 154);
+        margin:auto;
+        width:200px;
+        float:right;        
+    }
+
+    footer
+    {
+       clear:both;
+        background-color:rgb(138, 161, 236);
+        height:30px;
+        margin:auto;
+        width:1000px;
+    }

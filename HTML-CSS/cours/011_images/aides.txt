@@ -1,0 +1,8 @@
+##Autres commandes
+ffmpeg -i pic-large.jpg -vf scale=320:-1 pic-little.jpg
+ffmpeg -i pic-large.jpg -vf scale=320:240 pic-little.jpg
+ffmpeg -i carte.png -vf scale=500:500 carte.png
+ffmpeg -i carte-rouge.png -vf scale=250:250 carte-rouge2.png
+src: https://trac.ffmpeg.org/wiki/Scaling
+
+ffmpeg -i song.mp3 -ss 00:00:01 -c copy song2.mp3

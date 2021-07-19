@@ -1,0 +1,5 @@
+	/* un commentaire */
+	body{background-color:#DDD;width:1000px;}
+	header{height:100px;}
+	footer{text-align:center;}
+	body,header,footer{margin:auto;}

@@ -1,0 +1,31 @@
+	body
+	{
+		background-color:#EEE;
+		margin:auto;
+		width:800px;
+	}
+	
+	#wrapper
+	{
+		border:3px solid darkblue;
+		width:100%;
+	}
+
+	.bloc1, .bloc2
+	{
+		box-sizing:border-box;
+	}
+	
+	.bloc1
+	{
+		background-color:rgb(224,185,185);
+	}
+
+	.bloc2
+	{
+		background-color:rgb(156,169,212);
+		border:10px dashed red;
+		padding:15px;
+		margin:10px;
+		outline:10px solid green;
+	}

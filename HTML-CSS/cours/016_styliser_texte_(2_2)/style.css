@@ -1,0 +1,11 @@
+	body
+	{
+		margin:auto;
+		width:500px
+	}
+	
+	.modif-p
+	{
+		/* text-align:center; */
+		text-justify:newspaper;
+	}

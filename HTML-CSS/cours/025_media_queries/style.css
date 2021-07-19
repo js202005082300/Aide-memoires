@@ -1,0 +1,58 @@
+	body
+	{
+		background-color:#EEE;
+	}
+
+	img
+	{
+		max-width:100%;
+		height:auto;
+	}
+
+	.container
+	{
+		display:grid;
+		grid-template-columns: auto minmax(150px, 300px);
+		grid-template-areas:"entete entete"
+							"principal bare"
+							"pied pied";
+	}
+	
+	header
+	{
+		grid-area:entete;
+	}
+	
+	section,aside
+	{
+		padding:20px;
+	}
+	
+	section
+	{
+		background-color:#DDD;
+		grid-area:principal;
+	}
+	
+	aside
+	{
+		background-color:#AAA;
+		grid-area:bare;
+	}
+
+	pied
+	{
+		grid-area:pied;
+	}
+
+	@media(max-width:800px)
+	{
+		.container
+		{
+			grid-template-columns: 1fr;
+			grid-template-areas:"entete"
+								"principal"
+								"bare"
+								"pied";
+		}
+	}

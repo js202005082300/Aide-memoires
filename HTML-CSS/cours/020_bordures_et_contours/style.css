@@ -1,0 +1,37 @@
+	html
+	{
+		background-color:#FFF;
+	}
+	body,div,p
+	{
+		margin:auto;
+	}
+	body
+	{
+		width:1200px;
+		margin:auto;
+	}
+	table, td, th
+	{
+		border:1px solid #000;
+		border-collapse:collapse;
+	}
+	td,th
+	{
+		padding:10px;
+	}
+	div
+	{
+		background-color:#BBB;
+		padding:5px;
+		width:600px;
+		margin-top:25px;
+		margin-bottom:25px;
+	}
+	p
+	{
+		background-color:#c76f6f;
+		width:400px;
+		padding:10px;
+		text-align:justify;
+	}

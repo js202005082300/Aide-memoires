@@ -1,6 +1,67 @@
-# SQL
+:label: [FormationVidéo Git](https://github.com/jasonchampagne/FormationVideo) - [Ressource SQL](https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/SQL)
 
-## Introduction - Installation mysql
+# SQL
+> [DB2](https://www-01.ibm.com/support/docview.wss?uid=swg27023558)
+> [MongoDB](https://docs.mongodb.com/manual)
+> [MySQL](https://dev.mysql.com/doc/)
+> [Oracle Database](https://docs.oracle.com/cd/B19306_01/index.htm)
+> [PL/SQL](https://docs.oracle.com/cd/B10501_01/index.htm)
+> [PostgreSQL](https://docs.postgresql.fr)
+> [SQLite](https://sqlite.org/docs.html)
+> [SQL Server](https://docs.microsoft.com/fr-fr/sql)
+
+## [Playlist cours](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/sql-cours.md)
+
+||notes de cours|pense-bêtes
+-|:-|:-:
+|:heavy_check_mark:|[1. Introduction](cours/001_Introduction/note.md)
+|:heavy_check_mark:|[2. Installation mysql](cours/002_Installation_mysql/note.md)
+|:heavy_check_mark:|[3. Configuration encodage](cours/003_Configuration_encodage/note.md)
+|:heavy_check_mark:|[4. Moteur de stockage](cours/004_Moteur_de_stockage/note.md)
+|:heavy_check_mark:|[5. Gestion bases](cours/005_Gestion_bases/note.md)
+||[6. Tables et données](cours/006_Tables_et_donnees/note.md)
+||[7. Contraintes](cours/007_Contraintes/note.md)
+||[8. Utilisateurs et privilèges](cours/008_Utilisateurs_et_privileges/note.md)
+||[9. Lecture données](cours/009_Lecture_donnees/note.md)
+||[10. Filtrer requêtes](cours/010_Filtrer_requetes/note.md)
+||[11. Enregistrer données](cours/011_Enregistrer_donnees/note.md)
+||[12. Modifier et supprimer](cours/012_Modifier_et_supprimer/note.md)
+||[13. Fonctions d'agrégation](cours/013_Fonctions_d_agregation/note.md)
+||[14. Grouper résultats](cours/014_Grouper_resultats/note.md)
+||[15. Unions et intersections](cours/015_Unions_et_intersections/note.md)
+||[16. Sous-requêtes](cours/016_Sous-requetes/note.md)
+||[17. Jointures](cours/017_Jointures/note.md)
+||[18. Fonctions chaînes de caractères](cours/018_Fonctions_chaines_de_caracteres/note.md)
+||[19. Fonctions dates et heures](cours/019_Fonctions_dates_et_heures/note.md)
+||[20. Fonctions mathématiques](cours/020_Fonctions_mathematiques/note.md)
+||[21. Fonctions de sécurité](cours/021_Fonctions_de_securite/note.md)
+||[22. Conclusion](cours/022_Conclusion/note.md)
+
+
+<!--
+
+# [6. Tables et données](https://www.youtube.com/watch?v=Y_y-RNZApmk)
+# [7. Contraintes](https://www.youtube.com/watch?v=b3kbXSOg9ZU)
+# [8. Utilisateurs et privilèges](https://www.youtube.com/watch?v=IvOCAobeihs)
+# [9. Lecture données](https://www.youtube.com/watch?v=QfN_URkzw94)
+# [10. Filtrer requêtes](https://www.youtube.com/watch?v=jLQ7r6a9aiA)
+# [11. Enregistrer données](https://www.youtube.com/watch?v=ETBhek3AklE)
+# [12. Modifier et supprimer](https://www.youtube.com/watch?v=7gMgsSrFgaw)
+# [13. Fonctions d'agrégation](https://www.youtube.com/watch?v=TnPLdAuGCzU)
+# [14. Grouper résultats](https://www.youtube.com/watch?v=5RFdXGicu1o)
+# [15. Unions et intersections](https://www.youtube.com/watch?v=tIP_bQeFeXg)
+# [16. Sous-requêtes](https://www.youtube.com/watch?v=n2y6DZAM_fM)
+# [17. Jointures](https://www.youtube.com/watch?v=Qms4XqTtnkA)
+# [18. Fonctions chaînes de caractères](https://www.youtube.com/watch?v=oEaLoI3Io90)
+# [19. Fonctions dates et heures](https://www.youtube.com/watch?v=hLY7cBnFoPQ)
+# [20. Fonctions mathématiques](https://www.youtube.com/watch?v=9Y20_0MQzEE)
+# [21. Fonctions de sécurité](https://www.youtube.com/watch?v=VTkhWoQ4QPA)
+# [22. Conclusion](https://www.youtube.com/watch?v=TgvBXMaZULk)
+-->
+
+>
+
+## [Introduction - Installation mysql](cours/002_Installation_mysql/note.md)
 
 ### Windows
 [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
@@ -48,7 +109,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 sudo service mysql restart
 mysql -u root -p
 ```
-## Configuration encodage
+## [Configuration encodage](cours/003_Configuration_encodage/note.md)
 
 ### Windows
 ```ini
@@ -95,7 +156,7 @@ Si nécessaire...
 ```sql
 SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
-## Moteur de stockage
+## [Moteur de stockage](cours/004_Moteur_de_stockage/note.md)
 ```sql
 /*
 	MyISAM (non transactionnel)
@@ -129,7 +190,7 @@ C:\MyWAMP\mysql\my.ini
 	[client]
 	default-character-set = utf8mb4
 ```
-## Gestion bases
+## [Gestion bases](cours/005_Gestion_bases/note.md)
 ```sql
 SHOW DATABASES;
 CREATE DATABASE ``;
@@ -137,7 +198,7 @@ CREATE DATABASE IF NOT EXISTS ``;
 USE ``; 
 DROP DATABASE ``;
 ```
-## Tables et données
+## [Tables et données](cours/006_Tables_et_donnees/note.md)
 ```sql
 
 -- 	Commentaire sur une seule ligne
@@ -178,7 +239,7 @@ DROP TABLE ``;
 DROP TABLE IF EXISTS ``;
 SHOW TABLE STATUS;
 ```
-## Contraintes
+## [Contraintes](cours/007_Contraintes/note.md)
 ```sql
 /*
 	NOT NULL 		(colonne obligatoire)
@@ -241,7 +302,7 @@ SHOW TABLES;
 SHOW TABLE STATUS FROM `basename`;
 EXPLAIN `tablename` `fieldname`;
 ```
-## Utilisateurs et privilèges
+## [Utilisateurs et privilèges](cours/008_Utilisateurs_et_privileges/note.md)
 ```sql
 SHOW DATABASES;
 SELECT USER FROM mysql.user;
@@ -257,7 +318,7 @@ GRANT ALL ON cours_sql.* TO 'jachampagne'@'localhost' WITH GRANT OPTION;
 REVOKE ALL ON cours_sql.* TO 'jachampagne'@'localhost';
 REVOKE CREATE TABLE ON cours_sql.* TO 'jachampagne'@'localhost';
 ```
-## Lecture données
+## [Lecture données](cours/009_Lecture_donnees/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data1.sql
 SELECT product_name FROM fv_products;
@@ -272,7 +333,7 @@ SELECT product_name AS Nom_du_produit FROM fv_products;
 SELECT product_name AS "Nom du produit" FROM fv_products;
 SELECT product_name AS "Nom du produit" FROM fv_products AS Inventory;
 ```
-## Filtrer requêtes
+## [Filtrer requêtes](cours/010_Filtrer_requetes/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data2.sql
 /*
@@ -314,7 +375,7 @@ SELECT * FROM fv_games LIMIT 5;
 SELECT * FROM fv_games LIMIT 5 OFFSET 3;
 SElECT * FROM fv_games LIMIT 3, 5;
 ```
-## Enregistrer données
+## [Enregistrer données](cours/011_Enregistrer_donnees/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data3.sql
 
@@ -329,7 +390,7 @@ VALUES
 ('Jason', 'CHAMPAGNE', '1991-02-10', 15),
 ('Jason', 'CHAMPAGNE', '1991-02-10', 15);
 ```
-## Modifier et supprimer
+## [Modifier et supprimer](cours/012_Modifier_et_supprimer/note.md)
 ```sql
 /*
 	CRUD
@@ -347,7 +408,7 @@ DELETE FROM fv_games WHERE game_title = 'Tekken';
 DELETE FROM fv_games;
 TRUNCATE TABLE fv_games;
 ```
-## Fonctions d'agrégation
+## [Fonctions d'agrégation](cours/013_Fonctions_d_agregation/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data2.sql
 SELECT COUNT(*) FROM fv_games;
@@ -357,7 +418,7 @@ SELECT MAX(game_price) FROM fv_games;
 SELECT MIN(game_price) FROM fv_games;
 SELECT SUM(game_stock) FROM fv_games;
 ```
-## Grouper résultats
+## [Grouper résultats](cours/014_Grouper_resultats/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data4.sql
 SELECT COUNT(*) FROM fv_users WHERE user_country = 'FRANCE';
@@ -368,7 +429,7 @@ SELECT user_country, sum(user_age) FROM fv_users GROUP BY user_country WITH ROLL
 SELECT user_country, SUM(user_age) FROM fv_users GROUP BY user_country HAVING SUM(user_age) > 20;
 SELECT user_country, SUM(user_age) FROM fv_users GROUP BY user_country HAVING SUM(user_age) > 50;
 ```
-## Unions et intersections
+## [Unions et intersections](cours/015_Unions_et_intersections/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data5.sql
 
@@ -405,7 +466,7 @@ UNION
 SELECT user_name, user_country FROM fv_site2_users
 ORDER BY user_name;
 ```
-## Sous-requêtes
+## [Sous-requêtes](cours/016_Sous-requetes/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data6.sql
 
@@ -502,7 +563,7 @@ WHERE EXISTS
 ) AND player_level > 10
 ORDER BY player_level ASC;
 ```
-## Jointures
+## [Jointures](cours/017_Jointures/note.md)
 ```sql
 SOURCE C:/MyWAMP/mysql/data7.sql
 
@@ -572,7 +633,7 @@ FROM fv_players
 CROSS JOIN fv_abilities
 ORDER BY player_name;
 ```
-## Fonctions chaînes de caractères
+## [Fonctions chaînes de caractères](cours/018_Fonctions_chaines_de_caracteres/note.md)
 ```sql
 /*
 	(fv_carbrands) carbrand_country <--------> country_code (fv_countries)
@@ -619,7 +680,7 @@ SELECT SUBSTR('bonjour', 2);
 SELECT carbrand_name, SUBSTRING(carbrand_name, 2, 2) FROM fv_carbrands;
 SELECT carbrand_name, SUBSTRING(carbrand_name, 2, 3) FROM fv_carbrands;
 ```
-## Fonctions dates et heures
+## [Fonctions dates et heures](cours/019_Fonctions_dates_et_heures/note.md)
 ```sql
 SELECT NOW();
 	SELECT SYSDATE() 	-- Oracle
@@ -656,7 +717,7 @@ SELECT DATE_FORMAT('2020-12-06 14:07:23', 'Le %d/%m/%Y, à %H:%i:%S');	-- MySQL
 	-- SQL Server
 	FORMAT(<date>, <format>)  -> dd/MM/yyyy
 ```
-## Fonctions mathématiques
+## [Fonctions mathématiques](cours/020_Fonctions_mathematiques/note.md)
 ```sql
 SELECT ABS(-1) FROM dual;
 SELECT ABS(-1);
@@ -704,7 +765,7 @@ SELECT 5 MOD 2;
 SELECT RAND();
 SELECT RAND(15);
 ```
-## Fonctions de sécurité
+## [Fonctions de sécurité](cours/021_Fonctions_de_securite/note.md)
 ```sql
 /*
 	> Chiffrement 	: (donnée en clair) -> clé -> (donnée chiffré)
@@ -747,5 +808,5 @@ SELECT @passw;
 SET @text = cast(AES_DECRYPT(@passw, 'secret') AS char);
 SELECT @text;
 ```
-## Conclusion
+## [Conclusion](cours/022_Conclusion/note.md)
 /

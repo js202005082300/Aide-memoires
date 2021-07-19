@@ -1,32 +1,75 @@
-# Cours HTML CSS
+:label: [FormationVidéo Git](https://github.com/jasonchampagne/FormationVideo) - [Ressource HTML-CSS](https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/HTML-CSS)
+
+# HTML CSS
+> [Doc HTML](https://html.spec.whatwg.org/)  
+> [Doc CSS](https://www.w3.org/TR/css-color-4/)  
+
+## [Playlist cours](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/html-css-cours.md)  
 
 [W3C](https://www.w3.org/TR/html52/)  
 [W3C validator](https://validator.w3.org/#validate_by_uri)  
 
-+ [004 - Formatage texte 1/2](#formatage-texte-1/2)
-+ [005 - Formatage texte 2/2](#formatage-texte-2/2)
-+ [006 - Formatage technique](#formatage-technique)
-+ [007 - Listes](#listes)
-+ [008 - Tableau](#tableau)
-+ [009 - Formulaires 1/2](#formulaires-1/2)
-+ [010 - Formulaires 2/2](#formulaires-2/2)
-+ [011 - images](#images)
-+ [012 - sons et vidéos](#sons-et-vidéos)
-+ [013 - structurer page web](#structurer-page-web)
-+ [015 - styliser texte 1/2](#styliser-texte-1/2)
-+ [016 - styliser texte 2/2](#styliser-texte-2/2)
-+ [017 - couleur et fond](#couleur-et-fond)
-+ [018 - styliser liste](#styliser-liste)
-+ [019 - modèle de boîte](#modèle-de-boîte)
-+ [020 - bordures et contours](#bordures-et-contours)
-+ [021 - affichage et positionnement](#affichage-et-positionnement)
-+ [022 - modèle avancé de boîte](#modèle-avancé-de-boîte)
-+ [023 - flexbox](#flexbox)
-+ [024 - grid](#grid)
-+ [025 - media queries](#media-queries)
-+ [026 - conclusion](#conclusion)
+||notes de cours|pense-bêtes
+-|:-|:-:
+|:heavy_check_mark:|[1. Introduction](cours/001_introduction/note.md)
+|:heavy_check_mark:|[2. Première page web](cours/002_première_page_web/note.md)
+|:heavy_check_mark:|[3. Fonctionnement balises](cours/003_fonctionnement_balises/note.md)
+|:heavy_check_mark:|[4. Formatage texte (1/2)](cours/004_formatage_texte_(1_2)/note.md)|[:memo:](#formatage-texte-1/2)
+|:heavy_check_mark:|[5. Formatage texte (2/2)](cours/005_formatage_texte_(2_2)/note.md)|[:memo:](#formatage-texte-2/2)
+|:heavy_check_mark:|[6. Formatage technique](cours/006_formatage_technique/note.md)|[:memo:](#formatage-technique)
+|:heavy_check_mark:|[7. Listes](cours/007_listes/note.md)|[:memo:](#listes)
+|:heavy_check_mark:|[8. Tableaux](cours/008_tableaux/note.md)|[:memo:](#tableau)
+|:heavy_check_mark:|[9. Fomulaires (1/2)](cours/009_formulaires_(1_2)/note.md)|[:memo:](#formulaires-1/2)
+|:heavy_check_mark:|[10. Fomulaires (2/2)](cours/010_formulaires_(2_2)/note.md)|[:memo:](#formulaires-2/2)
+|:heavy_check_mark:|[11. Images](cours/011_images/note.md)|[:memo:](#images)
+|:heavy_check_mark:|[12. Sons et vidéos](cours/012_sons_et_vidéos/note.md)|[:memo:](#sons-et-vidéos)
+|:heavy_check_mark:|[13. Structurer page web](cours/013_structurer_page_web/note.md)|[:memo:](#structurer-page-web)
+|:heavy_check_mark:|[14. Introduction design](cours/014_introduction_design/note.md)
+|:heavy_check_mark:|[15. Styliser texte (1/2)](cours/015_styliser_texte_(1_2)/note.md)|[:memo:](#styliser-texte-1/2)
+|:heavy_check_mark:|[16. Styliser texte (2/2)](cours/016_styliser_texte_(2_2)/note.md)|[:memo:](#styliser-texte-2/2)
+|:heavy_check_mark:|[17. Couleur et fond](cours/017_couleur_et_fond/note.md)|[:memo:](#couleur-et-fond)
+|:heavy_check_mark:|[18. Styliser liste](cours/018_styliser_liste/note.md)|[:memo:](#styliser-liste)
+|:heavy_check_mark:|[19. Modèle de boîte](cours/019_modèle_de_boîte/note.md)|[:memo:](#modèle-de-boîte)
+|:heavy_check_mark:|[20. Bordures et contours](cours/020_bordures_et_contours/note.md)|[:memo:](#bordures-et-contours)
+|:heavy_check_mark:|[21. Affichage et positionnement](cours/021_affichage_et_positionnement/note.md)|[:memo:](#affichage-et-positionnement)
+|:heavy_check_mark:|[22. Modèle avancé de boîte](cours/022_modèle_avancé_de_boîte/note.md)|[:memo:](#modèle-avancé-de-boîte)
+|:heavy_check_mark:|[23. Flexbox](cours/023_flexbox/note.md)|[:memo:](#flexbox)
+|:heavy_check_mark:|[24. Grid](cours/024_grid/note.md)|[:memo:](#grid)
+|:heavy_check_mark:|[25. Media queries](cours/025_media_queries/note.md)|[:memo:](#media-queries)
+|:heavy_check_mark:|[26. Conclusion](cours/026_conclusion/note.md)|[:memo:](#conclusion)
 
-## Formatage texte 1/2
+## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/html-css-tutoriels.md)  
+
+||notes|
+-|:-|
+|:heavy_check_mark:|[Attributs universels](tutos/attributs_universels.md)
+|:heavy_check_mark:|[Balises obsolètes](tutos/balises_obsolètes.md)
+|:heavy_check_mark:|[Thème sombre](tutos/thème_sombre.md))
+|:heavy_check_mark:|[Valider page HTML](tutos/valider_page_HTML.md)
+|:heavy_check_mark:|[Variables](tutos/variables.md)
+
+
+## [Playlist exercices](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/html-css-exercices.md)  
+
+||notes|
+-|:-|
+||[1. Article de blog](exos/articles_de_blog.md)
+||[2. Tableau de données](exos/tableau_de_données.md)
+||[3. Formulaire saisie patient](exos/formulaire_saisie_patient.md)
+||[4. Un peu de style](exos/un_peu_de_style.md)
+||[5. Strange news](exos/strange_news.md)
+
+<!--
+
+# [2. Tableau de données](https://www.youtube.com/watch?v=jqNCf_NRXnc)
+# [3. Formulaire saisie patient](https://www.youtube.com/watch?v=mQB-f2scL3M)
+# [4. Un peu de style](https://www.youtube.com/watch?v=Rbt9amRWfm4)
+# [5. Strange news](https://www.youtube.com/watch?v=gagqaBk3GXo)
+-->
+
+
+
+## [Formatage texte 1/2](cours/004_formatage_texte_(1_2)/note.md)
 
 ```html
 <!-- -->
@@ -53,7 +96,7 @@
 	target                = "_blank"
 ```
 
-## Formatage texte 2/2
+## [Formatage texte 2/2](cours/005_formatage_texte_(2_2)/note.md)
 
 ```html
 <a>
@@ -79,7 +122,7 @@
 <wbr>
 ```
 
-## Formatage technique
+## [Formatage technique](cours/006_formatage_technique/note.md)
 
 ```html
 <code>
@@ -100,7 +143,7 @@
 <var>
 ```
 
-## Listes
+## [Listes](cours/007_listes/note.md)
 
 ```html
 <ul> <li>
@@ -110,7 +153,7 @@
 	type                  = "1"/"" "a" "A" "i" "I"
 ```
 
-## Tableau
+## [Tableau](cours/008_tableaux/note.md)
 
 ```html
 <table> <caption> <thead> <tbody> <tfoot> <tr> <th> <td> <colgroup> <col>
@@ -130,7 +173,7 @@
 	span                  = "2"
 ```
 
-## Formulaires 1/2
+## [Formulaires 1/2](cours/009_formulaires_(1_2)/note.md)
 
 ```html
 <form>
@@ -156,7 +199,7 @@
 	for               = "prenom" (<input id="prenom">)
 ```
 
-## Formulaires 2/2
+## [Formulaires 2/2](cours/010_formulaires_(2_2)/note.md)
 
 ```html
 <form>
@@ -195,7 +238,7 @@
 	formaction        = "mapage.html"
 ```
 
-## Images
+## [Images](cours/011_images/note.md)
 
 ```html
 <img>
@@ -225,7 +268,7 @@
 <picture> <img>
 ```
 
-## Sons et vidéos
+## [Sons et vidéos](cours/012_sons_et_vidéos/note.md)
 
 ```html
 <audio> <source>
@@ -248,7 +291,7 @@
 	poster            = "miniature.jpg"
 ```
 
-## Structurer page web
+## [Structurer page web](cours/013_structurer_page_web/note.md)
 
 ```html
 <body> 
@@ -340,7 +383,7 @@
 </body>
 ```
 
-## Styliser texte 1/2
+## [Styliser texte 1/2](cours/015_styliser_texte_(1_2)/note.md)
 ```css
 font-style:italic oblique;
 font-variant:normal small-caps;
@@ -354,7 +397,7 @@ font-family:calibri, arial, sans-serif;
 
 font:italic small-caps bold 20px 20px Calibri;
 ```
-## Styliser texte 2/2
+## [Styliser texte 2/2](cours/016_styliser_texte_(2_2)/note.md)
 ```css
 text-decoration:
     underline
@@ -421,7 +464,7 @@ text-justify:
 text-align-last:
     right
 ```
-## Couleur et fond
+## [Couleur et fond](cours/017_couleur_et_fond/note.md)
 ```css
 color:
     darkslateblue
@@ -483,7 +526,7 @@ background:
 background-color:
     #000
 ```
-## Styliser liste
+## [Styliser liste](cours/018_styliser_liste/note.md)
 ```css
 list-style-image:
     url(img1.png)
@@ -507,7 +550,7 @@ list-style:
     square inside;
     square inside url(img1.png);
 ```
-## Modèle de boîte
+## [Modèle de boîte](cours/019_modèle_de_boîte/note.md)
 
 ```css
 background-color:#FFF|#DDD|#BBB|#c76f6f
@@ -538,7 +581,7 @@ overflow-x:scroll
 overflow-y:
 overflow-wrap:break-word (ou word-wrap:break-word)
 ```
-## Bordures et contours
+## [Bordures et contours](cours/020_bordures_et_contours/note.md)
 
 ![bordures et contours](img/border.png)  
 
@@ -649,7 +692,7 @@ th
 }
 ```
 
-## Affichage et positionnement
+## [Affichage et positionnement](cours/021_affichage_et_positionnement/note.md)
 
 [A voir pour Display](https://www.creativejuiz.fr/blog/tutoriels/display-inline-block-une-valeur-trop-peu-utilisee#ex-nav)
 ```css
@@ -674,13 +717,13 @@ float:left|right|none
 clear:left|right|both
 ```
 
-## Modèle avancé de boîte
+## [Modèle avancé de boîte](cours/022_modèle_avancé_de_boîte/note.md)
 
 ```css
 box-shadow:0 0 3px #111;
 box-sizing:content-box|border-box
 ```
-## Flexbox
+## [Flexbox](cours/023_flexbox/note.md)
 ![bordures et contours](img/flexbox.JPG)  
 
 ```css
@@ -697,7 +740,7 @@ flex-basis:<length>
 flex:<grow> <shrink> <basis>
 align-self:flex-start|flex-end|center|baseline|stretch
 ```
-## Grid
+## [Grid](cours/024_grid/note.md)
 ![bordures et contours](img/grids.JPG)  
 
 ```css
@@ -833,7 +876,7 @@ align-self:
 place-self:
     center center;
 ```
-## Media queries
+## [Media queries](cours/025_media_queries/note.md)
 ```css
 @media(max-width:600px){}
 @media all (max-width:600px){}
@@ -878,7 +921,7 @@ Ou encore,
 ```css
 <meta name="viewport" content="width:device-width, initial-scale=1">
 ```
-## Conclusion
+## [Conclusion](cours/026_conclusion/note.md)
 /
 
 [Cours HTML-CSS](#cours-html-css) :point_up_2:

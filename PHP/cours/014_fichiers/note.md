@@ -78,7 +78,7 @@ Et en 2e paramètre pour cette fonction fopen(), nous allons le passer tout simp
 
 Et ce mode d'ouverture comme il y en a pas mal, je vous ai fait un petit schéma ici, un petit tableau pour les énumérer principalement. Alors il en manque quelques-uns très très spécifiques mais que vous n'aurez de toute façon pas l'utilité. Il y a très peu de chances que vous vous en servez un jour.
 
-![PHP#14_ModesOuvertureFichier.JPG](PHP#14_ModesOuvertureFichier.JPG)
+![ModesOuvertureFichier.png](ModesOuvertureFichier.png)
 <!--
 MODES D'OUVERTURE DE FICHIER EN PHP
 
@@ -973,7 +973,7 @@ On peut également faire de la lecture ou de l'écriture en formaté avec fscanf
 
 Voilà je pense que pour cette vidéo on va s'arrêter là et maintenant on va passer au petit tableau que je vous ai fait qui va être pratique pour les fonctions de fichier. 
 
-![PHP#14_FichierModesOuvertureFichierPHP.png](PHP#14_FichierModesOuvertureFichierPHP.png)
+![FonctionsSurLesFichiers.png](FonctionsSurLesFichiers.png)
 
 <!--
 FONCTIONS SUR LES FICHIERS
@@ -1016,7 +1016,7 @@ FONCTIONS SUR LES FICHIERS
 -->
 Ce tableau est disponible dans la description de la vidéo alors je n'ai pas mis les modes d'ouverture parce que c'est très court voilà.
 
-![PHP#14_ModesOuvertureFichier.JPG](PHP#14_ModesOuvertureFichier.JPG)
+![ModesOuvertureFichier.png](ModesOuvertureFichier.png)
 
 <!--
 MODES D'OUVERTURE DE FICHIER EN PHP
