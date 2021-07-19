@@ -2,8 +2,10 @@
 
 > 🧭 Màj le 19-07-2021 
 >
-> Cours terminé :heavy_check_mark: - 
-> Cours en progression 	:writing_hand:
+> :heavy_check_mark: Cours terminé
+> :writing_hand: En progression
+> :hourglass_flowing_sand: En attente de publication
+> :file_folder: Archivé (old)
 
 ---
 
@@ -19,20 +21,20 @@
 + [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)
 
 ### [Prises de notes](#)
-||notes
--|:-
-||[Architecture](Architecture/README.md)
-||[Assembleur](Assembleur/README.md)
+||notes|commentaires
+-|:-|:-
+|:hourglass_flowing_sand:|[Architecture](Architecture/README.md)
+|:hourglass_flowing_sand:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)
-|:heavy_check_mark:|[C++](C++/README.md)
+|:hourglass_flowing_sand:|[C#](CSharp/README.md)
+|:hourglass_flowing_sand:|[C++](C++/README.md)
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
-|:writing_hand:|[Hacking (old)](Hacking/README.md)
-|:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)
-|:heavy_check_mark:|[Java](Java/README.md)
-|:writing_hand:|[JavaScript](JavaScript/README.md)
+|:file_folder:|[Hacking (old)](Hacking/README.md)|A revoir
+|:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|*Faire les exercices*
+|:hourglass_flowing_sand:|[Java](Java/README.md)|*2 nouvelles vidéos à voir*
+|:hourglass_flowing_sand:|[JavaScript](JavaScript/README.md)|*Les exceptions à voir*
 |:heavy_check_mark:|[PHP](PHP/README.md)
-|:heavy_check_mark:|[Python](Python/README.md)
-||[SQL](SQL/README.md)
-||[Windows](Windows/README.md)
-|:writing_hand:|[Algorithmie (old)](Algorithmie/README.md)
+|:heavy_check_mark:|[Python](Python/README.md)|*Voir les tutos*
+|:writing_hand:|[SQL](SQL/README.md)|*conversion en .md*
+|:hourglass_flowing_sand:|[Windows](Windows/README.md)
+|:file_folder:|[Algorithmie (old)](Algorithmie/README.md)|*A voir*
