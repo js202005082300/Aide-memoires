@@ -51,8 +51,43 @@
 |:heavy_check_mark:|[42. Jouer du son](cours/042_jouer_du_son/note.md)
 |:heavy_check_mark:|[43. Conclusion](cours/043_conclusion/note.md)
 
-## [Playlist exercices](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/python-exercices.md)
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/python-tutoriels.md)
+
+||notes de cours|
+|-|:-|
+|:heavy_check_mark:|[Base de données MySQL](tutos/Base_de_données_MySQL.md)
+||[Calculs mathématiques](tutos/Calculs_mathématiques.md)
+||[Créer un exécutable](tutos/Créer_un_exécutable.md)
+||[Décorateurs](tutos/Décorateurs.md)
+||[Différences 2.X et 3.X](tutos/Différences_2X_et_3X.md)
+||[Distribuer un projet](tutos/Distribuer_un_projet.md)
+||[Environnements virtuels](tutos/Environnements_virtuels.md)
+||[Événements tkinter](tutos/Événements_tkinter.md)
+||[Formatage de texte](tutos/Formatage_de_texte.md)
+|:heavy_check_mark:|[Installer des paquets](tutos/Installer_des_paquets.md)
+||[Introspection](tutos/Introspection.md)
+||[Méthodes spéciales](tutos/Méthodes_spéciales.md)
+||[Portée variables](tutos/Portée_variables.md)
+||[Tests unitaires](tutos/Tests_unitaires.md)
+
+<!--
+
+# [Calculs mathématiques](https://www.youtube.com/watch?v=uwLhuFd7ruA)
+# [Créer un exécutable](https://www.youtube.com/watch?v=Jji2ik_AQOg)
+# [Décorateurs](https://www.youtube.com/watch?v=LiBsVCXAgXI)
+# [Différences 2.X et 3.X](https://www.youtube.com/watch?v=LU7FSqzVrdc)
+# [Distribuer un projet](https://www.youtube.com/watch?v=9Sy3AXavfJg)
+# [Environnements virtuels](https://www.youtube.com/watch?v=zW0yI3m7Ydg)
+# [Événements tkinter](https://www.youtube.com/watch?v=yZp6958SkVI)
+# [Formatage de texte](https://www.youtube.com/watch?v=4ApZ80RegNI)
+
+# [Introspection](https://www.youtube.com/watch?v=JKrpRtHBZRk)
+# [Méthodes spéciales](https://www.youtube.com/watch?v=XxUasK8f-s0)
+# [Portée variables](https://www.youtube.com/watch?v=50HJA4KpPqU)
+# [Tests unitaires](https://www.youtube.com/watch?v=apgReCCAQr4)
+-->
+
+## [Playlist exercices](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/python-exercices.md)
 
 > -----------------------
 
