@@ -56,9 +56,9 @@
 ||notes de cours|
 |-|:-|
 |:heavy_check_mark:|[Base de données MySQL](tutos/Base_de_données_MySQL.md)
-||[Calculs mathématiques](tutos/Calculs_mathématiques.md)
-||[Créer un exécutable](tutos/Créer_un_exécutable.md)
-||[Décorateurs](tutos/Décorateurs.md)
+|:heavy_check_mark:|[Calculs mathématiques](tutos/Calculs_mathématiques.md)
+|:heavy_check_mark:|[Créer un exécutable](tutos/Créer_un_exécutable.md)
+|:heavy_check_mark:|[Décorateurs](tutos/Décorateurs.md)
 ||[Différences 2.X et 3.X](tutos/Différences_2X_et_3X.md)
 ||[Distribuer un projet](tutos/Distribuer_un_projet.md)
 ||[Environnements virtuels](tutos/Environnements_virtuels.md)
@@ -71,10 +71,6 @@
 ||[Tests unitaires](tutos/Tests_unitaires.md)
 
 <!--
-
-# [Calculs mathématiques](https://www.youtube.com/watch?v=uwLhuFd7ruA)
-# [Créer un exécutable](https://www.youtube.com/watch?v=Jji2ik_AQOg)
-# [Décorateurs](https://www.youtube.com/watch?v=LiBsVCXAgXI)
 # [Différences 2.X et 3.X](https://www.youtube.com/watch?v=LU7FSqzVrdc)
 # [Distribuer un projet](https://www.youtube.com/watch?v=9Sy3AXavfJg)
 # [Environnements virtuels](https://www.youtube.com/watch?v=zW0yI3m7Ydg)
@@ -88,6 +84,17 @@
 -->
 
 ## [Playlist exercices](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/python-exercices.md)
+
+<!--
+# [1. Affichage simple](https://www.youtube.com/watch?v=HVN4qv6Dxdk)
+# [2. Variables (QCM)](https://www.youtube.com/watch?v=7o3y47LYFvE)
+# [3. L'attaque des titans](https://www.youtube.com/watch?v=2VhWLJ_TQ0U)
+# [4. Terminal de commandes](https://www.youtube.com/watch?v=-3v4_AoCeKM)
+# [5. Damn geoshape !](https://www.youtube.com/watch?v=mJwjyE5HSEA)
+# [6. Jeu de l'étudiant](https://www.youtube.com/watch?v=mvWBlzDPcjQ)
+# [7. Famille bouftou](https://www.youtube.com/watch?v=gUXFoGzCzLE)
+# [8. Where is Bryan ?](https://www.youtube.com/watch?v=gmQp9F1oMIE)
+-->
 
 > -----------------------
 
