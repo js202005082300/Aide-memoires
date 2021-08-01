@@ -742,7 +742,7 @@ Du coup il suffit juste de dire que le `<th>` ici d'accord il prend une taille p
 		</thead>
 ```
 Et quand j'actualise l'information ici est bien mise comme il faut voilà.
-````html
+```html
 <!doctype html>
 <html>
 <head>

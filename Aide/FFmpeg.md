@@ -77,14 +77,15 @@ Fusionner plusieurs fichiers en un seul (sans ré-encodage) :
 	ffmpeg -i pic-large.jpg -vf scale=320:240 pic-little.jpg
 	
 	ffmpeg -i img2.png -vf scale=15:-1 img22.png
+
 src: https://trac.ffmpeg.org/wiki/Scaling
 
 ## Alpha mask
 
-ffmpeg -i in.png -filter_complex "color=white [alpha]" out.png
-ffmpeg -i img1.png -filter_complex "color=black; alphaextract[alpha]" out.png
-ffmpeg -i img1.png -filter_complex "color=white" alphaextract[alpha] out.png
-ffplay -i img1.png -vf alphaextract out.png
+	ffmpeg -i in.png -filter_complex "color=white [alpha]" out.png  
+	ffmpeg -i in.png -filter_complex "color=black; alphaextract[alpha]" out.png  
+	ffmpeg -i in.png -filter_complex "color=white" alphaextract[alpha] out.png  
+	ffplay -i in.png -vf alphaextract out.png  
 
 ## monochrome
 

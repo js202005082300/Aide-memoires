@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: MonNouveauProjetTest123487
+Version: 1.0.0
+Summary: Un projet inutile
+Home-page: UNKNOWN
+Author: René LaTaupe
+License: LICENSE
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Lisez-moi
+
+Le ichier d'aide...
+

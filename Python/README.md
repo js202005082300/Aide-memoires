@@ -59,11 +59,11 @@
 |:heavy_check_mark:|[Calculs mathématiques](tutos/Calculs_mathématiques.md)
 |:heavy_check_mark:|[Créer un exécutable](tutos/Créer_un_exécutable.md)
 |:heavy_check_mark:|[Décorateurs](tutos/Décorateurs.md)
-||[Différences 2.X et 3.X](tutos/Différences_2X_et_3X.md)
-||[Distribuer un projet](tutos/Distribuer_un_projet.md)
-||[Environnements virtuels](tutos/Environnements_virtuels.md)
-||[Événements tkinter](tutos/Événements_tkinter.md)
-||[Formatage de texte](tutos/Formatage_de_texte.md)
+|:heavy_check_mark:|[Différences 2.X et 3.X](tutos/Différences_2X_et_3X.md)
+|:heavy_check_mark:|[Distribuer un projet](tutos/Distribuer_un_projet.md)
+|:heavy_check_mark:|[Environnements virtuels](tutos/Environnements_virtuels.md)
+|:heavy_check_mark:|[Événements tkinter](tutos/Événements_tkinter.md)
+|:heavy_check_mark:|[Formatage de texte](tutos/Formatage_de_texte.md)
 |:heavy_check_mark:|[Installer des paquets](tutos/Installer_des_paquets.md)
 ||[Introspection](tutos/Introspection.md)
 ||[Méthodes spéciales](tutos/Méthodes_spéciales.md)
@@ -71,11 +71,6 @@
 ||[Tests unitaires](tutos/Tests_unitaires.md)
 
 <!--
-# [Différences 2.X et 3.X](https://www.youtube.com/watch?v=LU7FSqzVrdc)
-# [Distribuer un projet](https://www.youtube.com/watch?v=9Sy3AXavfJg)
-# [Environnements virtuels](https://www.youtube.com/watch?v=zW0yI3m7Ydg)
-# [Événements tkinter](https://www.youtube.com/watch?v=yZp6958SkVI)
-# [Formatage de texte](https://www.youtube.com/watch?v=4ApZ80RegNI)
 
 # [Introspection](https://www.youtube.com/watch?v=JKrpRtHBZRk)
 # [Méthodes spéciales](https://www.youtube.com/watch?v=XxUasK8f-s0)

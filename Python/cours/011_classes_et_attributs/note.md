@@ -255,9 +255,9 @@ Donc je ne vais même pas l'appeler comme ça. Je vais l'appeler, par exemple, h
 #coding:utf-8
 
 class Humain:
-    ""
+    """
     Classe des êtres humains
-    ""
+    """
     def __init__(self):
         pass
 
@@ -295,9 +295,9 @@ Alors vous ne voyez rien puisque je ne fait que "pass" au niveau du constructeur
 #coding:utf-8
 
 class Humain:
-    ""
+    """
     Classe des êtres humains
-    ""
+    """
     def __init__(self):
 
 print("Lancement du programme...")
@@ -795,9 +795,9 @@ Si par défaut, je veux pouvoir avoir un prénom , je peux mettre ceci " c_preno
 #coding:utf-8
 
 class Humain:
-    ""
+    """
     Classe des êtres humains
-    ""
+    """
     def __init__(self, c_prenom="Toto", c_age):
         print("Création d'un Humain...")
         self.prenom = c_prenom

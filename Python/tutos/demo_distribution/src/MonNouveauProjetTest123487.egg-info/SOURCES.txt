@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/MonNouveauProjetTest123487.egg-info/PKG-INFO
+src/MonNouveauProjetTest123487.egg-info/SOURCES.txt
+src/MonNouveauProjetTest123487.egg-info/dependency_links.txt
+src/MonNouveauProjetTest123487.egg-info/requires.txt
+src/MonNouveauProjetTest123487.egg-info/top_level.txt
