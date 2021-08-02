@@ -244,14 +244,15 @@ Donc ça on l'ajoute et on va créer un champ, les champs c'est que dans la tabl
 Par exemple moi tt_users, qu'est-ce que je veux qu'elle ait comme information? Je ne suis pas encore là pour vous faire un cours sur la SQL donc vous allez juste faire écouter ce que je vous dis sans forcément apprendre ça parce que vous n'êtes pas là pour apprendre la SQL. 
 
 On va faire un identifiant parce que c'est bien d'avoir un identifiant surtout quand on veut faire des sélections de tri donc on va faire … alors ça c'est mon habitude parce que je trouve que c'est bien de noter comme ça, c'est toujours de noté pour l'identifiant "id_" suivi du nom utilisé pour la table donc en gros "id_user".
-
+```
     Editer la définition de la table > Champs > id_user (INTEGER, CP, IA)
-    
+```
+```sql
     CREATE TABLE "tt_users" (
         "id_user"	INTEGER,
         PRIMARY KEY("id_user" AUTOINCREMENT)
     );
-
+```
 Ensuite on le met en clé primaire et en auto incrémentation parce qu'on veut que l'identifiant soit unique pour chaque utilisateur et on auto-incrémente c'est-à-dire qu'il fasse augmenter de un automatiquement voilà. 
 
 Et on va ajouter un autre champ et ici on prend le nom de la table au singulier "user_" et je mets le nom du champ que je veux donc par exemple si je veux le nom d'utilisateur, je vais mettre "user_name".
@@ -328,7 +329,7 @@ Donc ça main.db, c'est ma base de données.
 
 Juste avec ce fichier là toute votre base de données est enregistrée mais l'avantage n'est pas seulement un simple fichier texte et si j'essaie de l'ouvrir, j'obtiens ça.
 ```txt
-    SQLite format 3  ....
+    SQLite format 3 ...
 ```
 On obtient ça, le fichier est en binaire donc on ne va pas pouvoir le lire comme ça mais du coup on va pouvoir l'interroger là-dessus, faire des requêtes, faire de la recherche, faire de la sélection, l'enregistrement tout ça bref pas mal de petites choses intéressantes. 
 
@@ -801,7 +802,7 @@ Et ensuite on fait la requête cursor.execute() et donc on passe la requête.
 
     connection.close()
 ```
-Alors  la requête comme tout ça c'est juste de la révision, si vous voulez l'écrire sur plusieurs lignes, vous pouvez utiliser la syntaxe comme ça " "" "" " parce que vous savez qu'en écrivant 3 doubles quotes, vous pouvez du coup mettre les choses comme ça sur plusieurs lignes. 
+Alors  la requête comme tout ça c'est juste de la révision, si vous voulez l'écrire sur plusieurs lignes, vous pouvez utiliser la syntaxe comme ça `""" """` parce que vous savez qu'en écrivant 3 doubles quotes, vous pouvez du coup mettre les choses comme ça sur plusieurs lignes. 
 ```py
     #coding:utf-8
     import sqlite3
@@ -810,8 +811,8 @@ Alors  la requête comme tout ça c'est juste de la révision, si vous voulez l'
     cursor = connection.cursor()
 
     new_user = [cursor.lastrowid, "Julie", 23]
-    cursor.execute(""SELECT *
-    FROM ... "")
+    cursor.execute("""SELECT *
+    FROM ... """)
 
     connection.close()
 ```
