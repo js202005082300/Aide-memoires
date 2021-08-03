@@ -65,14 +65,13 @@
 |:heavy_check_mark:|[Événements tkinter](tutos/Événements_tkinter.md)
 |:heavy_check_mark:|[Formatage de texte](tutos/Formatage_de_texte.md)
 |:heavy_check_mark:|[Installer des paquets](tutos/Installer_des_paquets.md)
-||[Introspection](tutos/Introspection.md)
+|:heavy_check_mark:|[Introspection](tutos/Introspection.md)
 ||[Méthodes spéciales](tutos/Méthodes_spéciales.md)
 ||[Portée variables](tutos/Portée_variables.md)
 ||[Tests unitaires](tutos/Tests_unitaires.md)
 
 <!--
 
-# [Méthodes spéciales](https://www.youtube.com/watch?v=XxUasK8f-s0)
 # [Portée variables](https://www.youtube.com/watch?v=50HJA4KpPqU)
 # [Tests unitaires](https://www.youtube.com/watch?v=apgReCCAQr4)
 -->

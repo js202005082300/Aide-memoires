@@ -70,7 +70,7 @@ https://pypi.org/
 
 Nous tombons sur ce genre de page avec l'ensemble des paquets qui sont disponibles alors au moment où on fait cette vidéo vous voyez qu'il y a quand même 123471 packages qui sont disponibles.
 
-![PyPI.PNG](images/PyPI.png)
+![PyPI.PNG](images/PyPI.PNG)
 
 Alors Notez que si vous voulez faire quelque chose de précis en python, faites simplement une recherche sur internet parce qu'il y a 99% de chance qu'il y ait déjà un package qui vous permettent de le faire simplement sauf si bien sûr vous avez envie de développer votre propre module vous-même.
 
