@@ -34,7 +34,7 @@
 |:hourglass_flowing_sand:|[Java](Java/README.md)|*2 nouvelles vidéos à voir*
 |:hourglass_flowing_sand:|[JavaScript](JavaScript/README.md)|*Les exceptions à voir*
 |:heavy_check_mark:|[PHP](PHP/README.md)
-|:heavy_check_mark:|[Python](Python/README.md)|*Voir les tutos*
+|:writing_hand:|[Python](Python/README.md)|*Voir les tutos*
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:hourglass_flowing_sand:|[Windows](Windows/README.md)
 |:file_folder:|[Algorithmie (old)](Algorithmie/README.md)|*A voir*
