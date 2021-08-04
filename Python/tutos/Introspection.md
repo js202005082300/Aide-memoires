@@ -815,7 +815,7 @@ Arc
 
 L'attribut name devient un arc, à l'origine c'était une épée en mousse et donc ça devient un arc juste avec une modification. Ici il n'est pas sujet de parler des filtres et des accesseurs pour la modification des attributs, on l'a déjà vu dans le cours donc ici c'est la méthode la plus rapide pour pouvoir modifier un attribut de classe, pour un objet c'est à dire une instance en particulier.
 
-En réalité quand on fait ce genre de manipulation, python va se charger de le faire d'une autre manière et il va utiliser l'attribut spécial __dict__et comme c'est un dictionnaire on y accède comme ceci `it1.__dict__["name"] = "Arc"` avec la clé name et du coup on l'appelle Arc.
+En réalité quand on fait ce genre de manipulation, python va se charger de le faire d'une autre manière et il va utiliser l'attribut spécial `__dict__` et comme c'est un dictionnaire on y accède comme ceci `it1.__dict__["name"] = "Arc"` avec la clé name et du coup on l'appelle Arc.
 
 si je teste on obtient exactement le même code.
 
@@ -886,9 +886,9 @@ Voilà ça encore une fois c'est de l'introspection.
 
 Petite parenthèse si vous voulez accéder à des attributs d'une instance, ou même les modifier, n'utilisez pas cette syntaxe `it1.__dict__["description"]` même si je vous le montre que ça fonctionne par contre ce n'est pas conseillé, c'est pour ça qu'on a des syntaxes comme ceci `it1.description` qui es tu une manière de procéder pour accéder aux éléments et les modifier.
 
-Utiliser l'attribut __dict__ est une manière sous-jacente de python et c'est python qui procède de cette manière mais c'est bien de le savoir comme ça on voit qu'avec l'introspection effectivement on peut travailler directement sur des attributs spécifiques que ce soit en lecture ou en écriture pour de la modification.
+Utiliser l'attribut `__dict__` est une manière sous-jacente de python et c'est python qui procède de cette manière mais c'est bien de le savoir comme ça on voit qu'avec l'introspection effectivement on peut travailler directement sur des attributs spécifiques que ce soit en lecture ou en écriture pour de la modification.
 
-C'est bien de connaître cet attribut spécial __dict__ parce qu'on va certainement le croiser de nombreuses fois dans beaucoup de codes.
+C'est bien de connaître cet attribut spécial `__dict__` parce qu'on va certainement le croiser de nombreuses fois dans beaucoup de codes.
 
 Par contre dans le développement et l'utilisation d'accesseurs, on ne doit pas procéder de cette manière c'est à dire le nom de l'objet, un point puis le nom de l'attribut égale sa nouvelle valeur et pourquoi pas filtrer tout ça avec des propriétés et des décorateurs pour faire les choses encore plus proprement.
 
@@ -926,7 +926,7 @@ print(it1.__doc__)
 
 Voilà c'est plutôt sympa parce que quand vous avez une description pour une classe une méthode ou n'importe quoi, on va pouvoir récupérer comme ça des informations.
 
-Donc doc pour documentation, c'est la DocString pour être plus exact donc c'est tout ce qui s'écrit comme ça entre eux 3 double quote `""" … """` qui permettent de mettre comme ça une description donc un élément en particulier et moi c'est ici la classe que je présente mais j'aurais pu très bien la mettre pour la méthode __init__(), pour la méthode toString(), bref on peut s'en servir comme ça pour mettre pas mal d'informations.
+Donc doc pour documentation, c'est la DocString pour être plus exact donc c'est tout ce qui s'écrit comme ça entre eux 3 double quote `""" … """` qui permettent de mettre comme ça une description donc un élément en particulier et moi c'est ici la classe que je présente mais j'aurais pu très bien la mettre pour la méthode `__init__()`, pour la méthode `toString()`, bref on peut s'en servir comme ça pour mettre pas mal d'informations.
 
 Donc très pratique comme attribut spécial, on peut d'ailleurs le mettre pour tous les objets, par exemple.
 
@@ -956,7 +956,7 @@ Base 0 means to interpret the base from the string as an integer literal.
 
 Vous voyez qu'il y a également une description, une DocString, pour le type natif int, integer qui est défini directement par python et on peut même y lire certaines informations pour faire un cast notamment avec des petits exemples d'utilisation donc c'est assez fourni et c'est évidemment en anglais comme beaucoup de langages de programmation si ce n'est pas tous sauf quelques exceptions.
 
-Nous on peut se servir de cet attribut spécial __doc__ pour récupérer la DocString d'une information ou autre, une méthode et cetera donc ça peut servir.
+Nous on peut se servir de cet attribut spécial `__doc__` pour récupérer la DocString d'une information ou autre, une méthode et cetera donc ça peut servir.
 
 Voilà libre à nous plus tard de revenir et de faire de l'introspection, peut être également lire des articles, des études et des recherches parce qu'il y a pas mal de travaux qui ont été faits là-dessus parce que encore une fois c'est un domaine de la programmation à part entière que ce soit en Python, en CSharp, en Java, en C++. Voilà ça existe vraiment partout et il y a beaucoup de choses intéressantes donc libre à vous de vous renseigner là-dessus et d'expérimenter et de voir un petit peu l'utilité que ça peut avoir et quelle utilité ça peut avoir. C'est voir le concept qui se cache derrière tout ça c'est à dire faire de l'introspection.
 

@@ -66,13 +66,12 @@
 |:heavy_check_mark:|[Formatage de texte](tutos/Formatage_de_texte.md)
 |:heavy_check_mark:|[Installer des paquets](tutos/Installer_des_paquets.md)
 |:heavy_check_mark:|[Introspection](tutos/Introspection.md)
-||[Méthodes spéciales](tutos/Méthodes_spéciales.md)
+|:heavy_check_mark:|[Méthodes spéciales](tutos/Méthodes_spéciales.md)
 ||[Portée variables](tutos/Portée_variables.md)
 ||[Tests unitaires](tutos/Tests_unitaires.md)
 
 <!--
 
-# [Portée variables](https://www.youtube.com/watch?v=50HJA4KpPqU)
 # [Tests unitaires](https://www.youtube.com/watch?v=apgReCCAQr4)
 -->
 
