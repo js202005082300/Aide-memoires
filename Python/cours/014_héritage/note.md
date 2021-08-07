@@ -1309,7 +1309,7 @@ if isinstance(lezard, Reptile):
    print("Lézard est un Animal")
 ```
 On peut même voir que si je fait (lézard, Reptile), ça marche.
-```py
+```powershell
     >python main.py
     Lézard est un Animal
 ```

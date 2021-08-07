@@ -1,0 +1,65 @@
+---------------------------------------------
+Nom : Joueur
+Niveau : 5
+Or : 3
+PV : 200
+PM : 70
+EXP : 0
+Prochain niveau : 100 EXP
+Objet equipe : Epee en bois
+
+---------------------------------------------
+Nom : Golem de pierre
+Niveau : 1
+Or : 5
+PV : 100
+PM : 0
+EXP : 0
+Prochain niveau : 100 EXP
+Objet equipe : Massue
+
+Choisir un nom (16 caracteres max.) : Unnombientroplongpouretrevalide
+Le nom de votre personnage doit comporter 16 caracteres max.
+Choisir un nom (16 caracteres max.) : Perceval
+Vous changez de nom pour -> Perceval
+
+Golem de pierre : Qui ose troubler mon profond sommeil ?
+Perceval : Moi ! Le heros de cette histoire !!
+Golem de pierre : Je vois...
+Perceval : Alors en garde, vil gredin !
+Perceval attaque Golem de pierre avec Epee en bois !
+L'attaque inflige 32 points de degats !
+Perceval attaque Golem de pierre avec Epee en bois !
+L'attaque inflige 32 points de degats !
+Golem de pierre : vous vous soignez et regagnez 50 points de vie !
+Golem de pierre : vous vous soignez et regagnez 50 points de vie !
+Golem de pierre attaque Perceval avec Massue !
+L'attaque inflige 40 points de degats !
+---------------------------------------------
+Nom : Perceval
+Niveau : 5
+Or : 3
+PV : 160
+PM : 70
+EXP : 0
+Prochain niveau : 100 EXP
+Objet equipe : Epee en bois
+
+---------------------------------------------
+Nom : Golem de pierre
+Niveau : 1
+Or : 5
+PV : 100
+PM : 0
+EXP : 0
+Prochain niveau : 100 EXP
+Objet equipe : Massue
+
+Epee en bois a ete vendu(e), vous empochez 1 piece(s) d'or.
+Arc de foudre equipe(e) !
+Perceval : Meurs, monstre !
+Perceval attaque Golem de pierre avec Arc de foudre !
+L'attaque inflige 240 points de degats !
+Golem de pierre succombe de ses blessures...
+FIN DE LA PARTIE !
+Perceval monte au niveau 6 !

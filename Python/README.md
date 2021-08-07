@@ -53,7 +53,7 @@
 
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/python-tutoriels.md)
 
-||notes de cours|
+||notes|
 |-|:-|
 |:heavy_check_mark:|[Base de données MySQL](tutos/Base_de_données_MySQL.md)
 |:heavy_check_mark:|[Calculs mathématiques](tutos/Calculs_mathématiques.md)
@@ -67,30 +67,25 @@
 |:heavy_check_mark:|[Installer des paquets](tutos/Installer_des_paquets.md)
 |:heavy_check_mark:|[Introspection](tutos/Introspection.md)
 |:heavy_check_mark:|[Méthodes spéciales](tutos/Méthodes_spéciales.md)
-||[Portée variables](tutos/Portée_variables.md)
+|:heavy_check_mark:|[Portée variables](tutos/Portée_variables.md)
 ||[Tests unitaires](tutos/Tests_unitaires.md)
 
-<!--
-
-# [Tests unitaires](https://www.youtube.com/watch?v=apgReCCAQr4)
--->
+[[ARCHIVE] Tutoriel Python - créer exécutable (cx_Freeze)](https://www.youtube.com/watch?v=essSa78iv-A&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=29)
 
 ## [Playlist exercices](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/python-exercices.md)
 
-<!--
-# [1. Affichage simple](https://www.youtube.com/watch?v=HVN4qv6Dxdk)
-# [2. Variables (QCM)](https://www.youtube.com/watch?v=7o3y47LYFvE)
-# [3. L'attaque des titans](https://www.youtube.com/watch?v=2VhWLJ_TQ0U)
-# [4. Terminal de commandes](https://www.youtube.com/watch?v=-3v4_AoCeKM)
-# [5. Damn geoshape !](https://www.youtube.com/watch?v=mJwjyE5HSEA)
-# [6. Jeu de l'étudiant](https://www.youtube.com/watch?v=mvWBlzDPcjQ)
-# [7. Famille bouftou](https://www.youtube.com/watch?v=gUXFoGzCzLE)
-# [8. Where is Bryan ?](https://www.youtube.com/watch?v=gmQp9F1oMIE)
--->
+||notes|
+|-|:-|
+|:heavy_check_mark:|[1. Affichage simple](exos/01_Affichage_simple/main.py)
+|:heavy_check_mark:|[2. Variables (QCM)](exos/02_Variables_QCM/main.py)
+|:heavy_check_mark:|[3. L'attaque des titans](exos/03_Attaque_des_titans/main.py)
+|:heavy_check_mark:|[4. Terminal de commandes](exos/04_Terminal_de_commandes/main.py)
+|:heavy_check_mark:|[5. Damn geoshape !](exos/05_Damn_geoshape/main.py)
+|:heavy_check_mark:|[6. Jeu de l'étudiant](exos/06_Jeu_de_l_étudiant/main.py)
+|:heavy_check_mark:|[7. Famille bouftou](exos/07_Famille_bouftou/main.py)
+|:heavy_check_mark:|[8. Where is Bryan ?](exos/08_Where_is_Bryan/main.py)
 
 > -----------------------
-
-[[ARCHIVE] Tutoriel Python - créer exécutable (cx_Freeze)](https://www.youtube.com/watch?v=essSa78iv-A&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=29)
 
 <!--
 

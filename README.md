@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 04-08-2021 
+> 🧭 Màj le 07-08-2021 
 >
 > :heavy_check_mark: Cours terminé
 > :writing_hand: En progression
@@ -34,7 +34,35 @@
 |:hourglass_flowing_sand:|[Java](Java/README.md)|*2 nouvelles vidéos à voir*
 |:hourglass_flowing_sand:|[JavaScript](JavaScript/README.md)|*Les exceptions à voir*
 |:heavy_check_mark:|[PHP](PHP/README.md)
-|:writing_hand:|[Python](Python/README.md)|*Voir les tutos*
+|:writing_hand:|[Python](Python/README.md)|*le dernier tuto + Synthèse du cours à faire*
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:hourglass_flowing_sand:|[Windows](Windows/README.md)
 |:file_folder:|[Algorithmie (old)](Algorithmie/README.md)|*A voir*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+J-xx
+https://www.youtube.com/watch?v=xchGAzcDNlw&list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbA&index=4
+-->
