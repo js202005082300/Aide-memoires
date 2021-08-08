@@ -35,5 +35,5 @@
 |:heavy_check_mark:|[PHP](PHP/README.md)
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
-|:hourglass_flowing_sand:|[Windows](Windows/README.md)
+|:heavy_check_mark:|[Windows](Windows/README.md)
 |:file_folder:/:x:|[Algorithmie (old)](Algorithmie/README.md)|*A voir*
