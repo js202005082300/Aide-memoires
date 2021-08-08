@@ -27,8 +27,8 @@
 |:heavy_check_mark:|[C](C/README.md)
 |:heavy_check_mark:|[C#](CSharp/README.md)
 |:x:|[C++](C++/README.md)|*voir la dernière vidéo*
-|:heavy_check_mark:/:x:|[GNU-Linux](GNU-Linux/README.md)
-|:file_folder:|[Hacking (old)](Hacking/README.md)|*A voir*
+|:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
+|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*A voir*
 |:x:|[HTML-CSS](HTML-CSS/README.md)|*Faire les exercices*
 |:x:|[Java](Java/README.md)|*2 nouvelles vidéos à voir*
 |:x:|[JavaScript](JavaScript/README.md)|*Les exceptions à voir*
