@@ -3,7 +3,7 @@
 > 🧭 Màj le 08-08-2021 
 >
 > :heavy_check_mark: A jour
-> :x: En progression
+> :x: A (re)voir
 > :file_folder: Archivé (old)
 
 ---
