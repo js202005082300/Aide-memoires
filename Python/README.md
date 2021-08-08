@@ -68,7 +68,7 @@
 |:heavy_check_mark:|[Introspection](tutos/Introspection.md)
 |:heavy_check_mark:|[Méthodes spéciales](tutos/Méthodes_spéciales.md)
 |:heavy_check_mark:|[Portée variables](tutos/Portée_variables.md)
-||[Tests unitaires](tutos/Tests_unitaires.md)
+|:heavy_check_mark:|[Tests unitaires](tutos/Tests_unitaires.md)
 
 [[ARCHIVE] Tutoriel Python - créer exécutable (cx_Freeze)](https://www.youtube.com/watch?v=essSa78iv-A&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=29)
 
