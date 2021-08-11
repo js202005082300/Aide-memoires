@@ -1,8 +1,20 @@
-let naruto = 
+class Ninja
 {
-    attack: function() { return "Rasengan"; },
-    name: "Naruto Uzumaki",
-    weapon: "Kunai"
-};
+    constructor(name = "Naruto")
+    {
+        this.name = name;
+    }
+}
 
-document.write(naruto.attack());
+class SuperNinja extends Ninja
+{
+    constructor(name = "Naruto", weapon = "shuriken")
+    {
+        super(name);
+        this.weapon = weapon;
+    }
+}
+
+let kakashi = new SuperNinja("Kakashi Hatake", "kunai");
+document.write(kakashi.name + "<br>");
+document.write(kakashi.weapon + "<br>");
