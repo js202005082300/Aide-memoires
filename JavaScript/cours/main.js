@@ -1,20 +1,6 @@
-class Ninja
+function assert(condition, message)
 {
-    constructor(name = "Naruto")
-    {
-        this.name = name;
-    }
+    if(!condition)
+        throw message || "Erreur d'assertion";
 }
-
-class SuperNinja extends Ninja
-{
-    constructor(name = "Naruto", weapon = "shuriken")
-    {
-        super(name);
-        this.weapon = weapon;
-    }
-}
-
-let kakashi = new SuperNinja("Kakashi Hatake", "kunai");
-document.write(kakashi.name + "<br>");
-document.write(kakashi.weapon + "<br>");
+assert(1 === 2);

@@ -18,4 +18,4 @@
 |:heavy_check_mark:|[8. Programmation objet](cours/008_programmation_objet/note.md)
 |:heavy_check_mark:|[9. Prototypes et classes](cours/009_prototypes_et_classes/note.md)
 |:heavy_check_mark:|[10. Héritage](cours/010_héritage/note.md)
-||[11. Exceptions](cours/011_exeptions/note.md)
+|:heavy_check_mark:|[11. Exceptions](cours/011_exeptions/note.md)

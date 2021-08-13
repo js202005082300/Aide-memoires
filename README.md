@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 11-08-2021 
+> 🧭 Màj le 13-08-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -31,7 +31,7 @@
 |:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*A voir*
 |:x:|[HTML-CSS](HTML-CSS/README.md)|*Faire les exercices*
 |:x:|[Java](Java/README.md)|*2 nouvelles vidéos à voir*
-|:x:|[JavaScript](JavaScript/README.md)|*Les exceptions à voir*
+|:heavy_check_mark:|[JavaScript](JavaScript/README.md)|
 |:heavy_check_mark:|[PHP](PHP/README.md)
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
