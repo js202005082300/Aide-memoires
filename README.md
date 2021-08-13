@@ -20,7 +20,7 @@
 + [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)
 
 ### [Prises de notes](#)
-||notes|commentaires
+||notes|todo
 -|:-|:-
 |:heavy_check_mark:|[Architecture](Architecture/README.md)
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
