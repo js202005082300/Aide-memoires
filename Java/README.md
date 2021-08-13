@@ -36,6 +36,6 @@
 
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/java-tutoriels.md)  
 
-||notes de cours|
+||notes|
 -|:-|
 ||[créer_exécutable_JAR](cours/créer_exécutable_JAR.md)
