@@ -12,44 +12,44 @@
 
 ||notes de cours|pense-bêtes
 -|:-|:-:
-|:heavy_check_mark:|[1. Introduction](001_introduction/note.md)|[:memo:](#introduction)
-|:heavy_check_mark:|[2. Installer système](002_installer_système/note.md)
-|:heavy_check_mark:|[3. Environnement de bureau](003_environnement_de_bureau/note.md)
-|:heavy_check_mark:|[4. Dossier utilisateur](004_dossier_utilisateur/note.md)
-|:heavy_check_mark:|[5. Gestion documents](005_gestion_documents/note.md)
-|:heavy_check_mark:|[6. Lecture médias](006_lecture_médias/note.md)
-|:heavy_check_mark:|[7. Navigation internet](007_navigation_internet/note.md)
-|:heavy_check_mark:|[8. Messagerie électronique](008_messagerie_électronique/note.md)
-|:heavy_check_mark:|[9. Installation logiciels](009_installation_logiciels/note.md)
-|:heavy_check_mark:|[10. Raccourcis clavier](010_raccourcis_clavier/note.md)
-|:heavy_check_mark:|[11. Ligne commande (shell)](011_ligne_commande_(shell)/note.md)
-|:heavy_check_mark:|[12. Arborescence fichiers](012_arborescence_fichiers/note.md)|[:memo:](#arborescence-fichiers)
-|:heavy_check_mark:|[13. Manipulation fichiers](013_manipulation_fichiers/note.md)|[:memo:](#manipulation-fichiers)
-|:heavy_check_mark:|[14. Utilisateurs et groupes](014_utilisateurs_et_groupes/note.md)|[:memo:](#utilisateurs-et-groupes)
-|:heavy_check_mark:|[15. Droits et permissions](015_droits_et_permissions/note.md)|[:memo:](#droits-et-permissions)
-|:heavy_check_mark:|[16. Flux redirection](016_flux_redirection/note.md)|[:memo:](#flux-redirection)
-|:heavy_check_mark:|[17. Recherche et tri](017_recherche_et_tri/note.md)|[:memo:](#recherche-et-tri)
-|:heavy_check_mark:|[18. Archivage et compression](018_archivage_et_compression/note.md)|[:memo:](#archivage-et-compression)
-|:heavy_check_mark:|[19. Espaces de stockage](019_espaces_de_stockage/note.md)|[:memo:](#espaces-de-stockage)
-|:heavy_check_mark:|[20. Gestionnaire de paquets](020_gestionnaire_de_paquets/note.md)|[:memo:](#gestionnaire-de-paquets)
-|:heavy_check_mark:|[21. Éditeur mode console](021_éditeur_mode_console/note.md)|[:memo:](#éditeur-mode-console)
-|:heavy_check_mark:|[22. Processus](022_processus/note.md)|[:memo:](#processus)
-|:heavy_check_mark:|[23. Signaux](023_signaux/note.md)|[:memo:](#signaux)
-|:heavy_check_mark:|[24. Planification de tâches](024_planification_de_tâches/note.md)|[:memo:](#planification-de-tâches)
-|:heavy_check_mark:|[25. Environnement multi-utilisateurs](025_environnement_multi-utilisateurs/note.md)|[:memo:](#environnement-multi-utilisateurs)
-|:heavy_check_mark:|[26. Informations réseau](026_Informations_réseau/note.md)|[:memo:](#informations-réseau)
-|:heavy_check_mark:|[27. Configuration netplan](027_configuration_netplan/note.md)|[:memo:](#configuration-netplan)
-|:heavy_check_mark:|[28. Réseau et routage](028_réseau_et_routage/note.md)|[:memo:](#réseau-et-routage)
-|:heavy_check_mark:|[29. Pare-feu](029_pare_feu/note.md)|[:memo:](#pare-feu)
-|:heavy_check_mark:|[30. Introduction bash](030_introduction_bash/note.md)|[:memo:](#introduction-bash)
-|:heavy_check_mark:|[31. Variables](031_variables/note.md)|[:memo:](#variables)
-|:heavy_check_mark:|[32. Opérations](032_opérations/note.md)|[:memo:](#opérations)
-|:heavy_check_mark:|[33. Conditions](033_conditions/note.md)|[:memo:](#conditions)
-|:heavy_check_mark:|[34. Boucles](034_boucles/note.md)|[:memo:](#boucles)
-|:heavy_check_mark:|[35. Chaînes de caractères](035_chaînes_de_caractères/note.md)|[:memo:](#chaînes-de-caractères)
-|:heavy_check_mark:|[36. Tableaux](036_tableaux/note.md)|[:memo:](#tableaux)
-|:heavy_check_mark:|[37. Fonctions](037_fonctions/note.md)|[:memo:](#fonctions)
-|:heavy_check_mark:|[38. Conclusion](038_conclusion/note.md)
+|:heavy_check_mark:|[1. Introduction](cours/001_introduction/note.md)|[:memo:](#introduction)
+|:heavy_check_mark:|[2. Installer système](cours/002_installer_système/note.md)
+|:heavy_check_mark:|[3. Environnement de bureau](cours/003_environnement_de_bureau/note.md)
+|:heavy_check_mark:|[4. Dossier utilisateur](cours/004_dossier_utilisateur/note.md)
+|:heavy_check_mark:|[5. Gestion documents](cours/005_gestion_documents/note.md)
+|:heavy_check_mark:|[6. Lecture médias](cours/006_lecture_médias/note.md)
+|:heavy_check_mark:|[7. Navigation internet](cours/007_navigation_internet/note.md)
+|:heavy_check_mark:|[8. Messagerie électronique](cours/008_messagerie_électronique/note.md)
+|:heavy_check_mark:|[9. Installation logiciels](cours/009_installation_logiciels/note.md)
+|:heavy_check_mark:|[10. Raccourcis clavier](cours/010_raccourcis_clavier/note.md)
+|:heavy_check_mark:|[11. Ligne commande (shell)](cours/011_ligne_commande_(shell)/note.md)
+|:heavy_check_mark:|[12. Arborescence fichiers](cours/012_arborescence_fichiers/note.md)|[:memo:](#arborescence-fichiers)
+|:heavy_check_mark:|[13. Manipulation fichiers](cours/013_manipulation_fichiers/note.md)|[:memo:](#manipulation-fichiers)
+|:heavy_check_mark:|[14. Utilisateurs et groupes](cours/014_utilisateurs_et_groupes/note.md)|[:memo:](#utilisateurs-et-groupes)
+|:heavy_check_mark:|[15. Droits et permissions](cours/015_droits_et_permissions/note.md)|[:memo:](#droits-et-permissions)
+|:heavy_check_mark:|[16. Flux redirection](cours/016_flux_redirection/note.md)|[:memo:](#flux-redirection)
+|:heavy_check_mark:|[17. Recherche et tri](cours/017_recherche_et_tri/note.md)|[:memo:](#recherche-et-tri)
+|:heavy_check_mark:|[18. Archivage et compression](cours/018_archivage_et_compression/note.md)|[:memo:](#archivage-et-compression)
+|:heavy_check_mark:|[19. Espaces de stockage](cours/019_espaces_de_stockage/note.md)|[:memo:](#espaces-de-stockage)
+|:heavy_check_mark:|[20. Gestionnaire de paquets](cours/020_gestionnaire_de_paquets/note.md)|[:memo:](#gestionnaire-de-paquets)
+|:heavy_check_mark:|[21. Éditeur mode console](cours/021_éditeur_mode_console/note.md)|[:memo:](#éditeur-mode-console)
+|:heavy_check_mark:|[22. Processus](cours/022_processus/note.md)|[:memo:](#processus)
+|:heavy_check_mark:|[23. Signaux](cours/023_signaux/note.md)|[:memo:](#signaux)
+|:heavy_check_mark:|[24. Planification de tâches](cours/024_planification_de_tâches/note.md)|[:memo:](#planification-de-tâches)
+|:heavy_check_mark:|[25. Environnement multi-utilisateurs](cours/025_environnement_multi-utilisateurs/note.md)|[:memo:](#environnement-multi-utilisateurs)
+|:heavy_check_mark:|[26. Informations réseau](cours/026_Informations_réseau/note.md)|[:memo:](#informations-réseau)
+|:heavy_check_mark:|[27. Configuration netplan](cours/027_configuration_netplan/note.md)|[:memo:](#configuration-netplan)
+|:heavy_check_mark:|[28. Réseau et routage](cours/028_réseau_et_routage/note.md)|[:memo:](#réseau-et-routage)
+|:heavy_check_mark:|[29. Pare-feu](cours/029_pare_feu/note.md)|[:memo:](#pare-feu)
+|:heavy_check_mark:|[30. Introduction bash](cours/030_introduction_bash/note.md)|[:memo:](#introduction-bash)
+|:heavy_check_mark:|[31. Variables](cours/031_variables/note.md)|[:memo:](#variables)
+|:heavy_check_mark:|[32. Opérations](cours/032_opérations/note.md)|[:memo:](#opérations)
+|:heavy_check_mark:|[33. Conditions](cours/033_conditions/note.md)|[:memo:](#conditions)
+|:heavy_check_mark:|[34. Boucles](cours/034_boucles/note.md)|[:memo:](#boucles)
+|:heavy_check_mark:|[35. Chaînes de caractères](cours/035_chaînes_de_caractères/note.md)|[:memo:](#chaînes-de-caractères)
+|:heavy_check_mark:|[36. Tableaux](cours/036_tableaux/note.md)|[:memo:](#tableaux)
+|:heavy_check_mark:|[37. Fonctions](cours/037_fonctions/note.md)|[:memo:](#fonctions)
+|:heavy_check_mark:|[38. Conclusion](cours/038_conclusion/note.md)
 
 ||notes de tutoriels|pense-bêtes
 -|:-|:-:
@@ -75,7 +75,7 @@ sudo -i|passer root.
 sudo su|passer super utilisateur.
 exit| (ou ctrl+D) quitter les pouvoirs root.
 
-## [Introduction](001_introduction/note.md)
+## [Introduction](cours/001_introduction/note.md)
 
 commandes|descriptions
 -|-
@@ -98,7 +98,7 @@ shutdown -r 1|redémarrer dans une minute
 shutdown -r 23:00|redémarrer à une heure précise, exemple 23h
 shutdown -c|annuler un redémarrage
 
-## [Arborescence fichiers](012_arborescence_fichiers/note.md)
+## [Arborescence fichiers](cours/012_arborescence_fichiers/note.md)
 
 commandes|descriptions
 -|-
@@ -133,7 +133,7 @@ file linux.txt|retourne le type de fichier (linux.txt: UTF-8 Unicode text).
 mv linux.txt linux.mp3|:warning: Le type ne change pas si on change l'extension.
 file linux.mp3|retourne le type de fichier(linux.mp3: UTF-8 Unicode text).
 
-## [Manipulation fichiers](013_manipulation_fichiers/note.md)
+## [Manipulation fichiers](cours/013_manipulation_fichiers/note.md)
 
 commandes|descriptions
 -|-
@@ -157,7 +157,7 @@ rm *.*|supprimer tout type de fichiers.
 gedit doc.txt|éditer.
 cat doc.txt|afficher le contenu d'un fichier.
 
-## [Utilisateurs et groupes](014_utilisateurs_et_groupes/note.md)
+## [Utilisateurs et groupes](cours/014_utilisateurs_et_groupes/note.md)
 
 ```bash
 cat /etc/passwd #fichier des utilisateurs.
@@ -165,7 +165,7 @@ cat /etc/shadow #fichier des mots de passe.
 cat /etc/group #fichier des groupes.
 ```
 
-## [Droits et permissions](015_droits_et_permissions/note.md)
+## [Droits et permissions](cours/015_droits_et_permissions/note.md)
 
 commandes|descriptions
 -|-
@@ -195,7 +195,7 @@ chown user:user doc.txt|devenir proprio.
 su chuck|ouvrir une session utilisateur.
 exit|fermer la session.
 
-## [Flux redirection](016_flux_redirection/note.md)
+## [Flux redirection](cours/016_flux_redirection/note.md)
 
 commandes|descriptions
 -|-
@@ -228,7 +228,7 @@ cat > fic.txt << EOF
 	> EOF
 ```
 
-## [Recherche et tri](017_recherche_et_tri/note.md)
+## [Recherche et tri](cours/017_recherche_et_tri/note.md)
 
 commandes|descriptions
 -|-
@@ -278,7 +278,7 @@ grep -n -E ^a fic.txt &#124; cut -d : -f 1|retourne le contenu de la colonne 1 d
 grep -n -E ^a fic.txt &#124; cut -d : -f 2|retourne le contenu de la colonne 2 délimité par :
 cut -c 1-3 fic.txt|retourne les 3 premiers charactères de chaque mot.
 
-## [Archivage et compression](018_archivage_et_compression/note.md)
+## [Archivage et compression](cours/018_archivage_et_compression/note.md)
 
 commandes|descriptions
 -|-
@@ -312,7 +312,7 @@ tar -jcf archive.tar.bz2 ./*|bziper tout le répertoire courant.
 bunzip2 archive.tar.bz2|-
 zcat archive.tar.gz|-
 
-## [Espaces de stockage](019_espaces_de_stockage/note.md)
+## [Espaces de stockage](cours/019_espaces_de_stockage/note.md)
 
 commandes|descriptions
 -|-
@@ -334,7 +334,7 @@ sudo mkfs.exfat /dev/sdc1|formater au format exfat.
 sudo mkfs.exfat -n "USB-USER" /dev/sdc1|spécifier un nom.
 sudo mkfs.vfat -F 32 /dev/sdc1 -n "USB-USER"|-
 
-## [Gestionnaire de paquets](020_gestionnaire_de_paquets/note.md)
+## [Gestionnaire de paquets](cours/020_gestionnaire_de_paquets/note.md)
 
 commandes|descriptions
 -|-
@@ -397,7 +397,7 @@ sudo apt-get autoclean|suppression paquets archivés sauf versions dans les dép
 sudo apt-get clean|suppression de toutes les archives.
 /var/cache/apt/archives|emplacement des archives.
 
-## [Éditeur mode console](021_éditeur_mode_console/note.md)
+## [Éditeur mode console](cours/021_éditeur_mode_console/note.md)
 
 commandes|descriptions
 -|-
@@ -439,62 +439,62 @@ n|occurence précédente
 N|occurence suivante
 :%s/ancien-mot/nouveau-mot/g|remplacer ancien-mot par nouveau-mot
 
-## [Processus](022_processus/note.md)
+## [Processus](cours/022_processus/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
-ps|affiche les processus en cours d'exécution.|[:radio_button:](022_processus/note.md#ps)
+ps|affiche les processus en cours d'exécution.|[:radio_button:](cours/022_processus/note.md#ps)
 ps -elf|affiche une syntaxe standard.
 ps -auwx|affiche une syntaxe bsd light.
 ps -u sam|lister les processus d'un utilisateur particulier.
-top|affiche les processus en temps réel (3sec).|[:radio_button:](022_processus/note.md#top)
+top|affiche les processus en temps réel (3sec).|[:radio_button:](cours/022_processus/note.md#top)
 ls|lister le contenu d'un répertoire.
 ls -R /|lister le système (cela prend du temps).
-ls -R / &|lister le système en tâche de fond.|[:radio_button:](022_processus/note.md#esperluette)
+ls -R / &|lister le système en tâche de fond.|[:radio_button:](cours/022_processus/note.md#esperluette)
 ctrl+C|interrompre le processus.
 firefox &|-
-nohup firefox|délier un processus du terminal.|[:radio_button:](022_processus/note.md#nohup)
+nohup firefox|délier un processus du terminal.|[:radio_button:](cours/022_processus/note.md#nohup)
 nohup ls -R /|-
-ps &#124; grep "bash"|retourne le PID du Shell courant. pipe utilise le retour de `ps` en entrée de `grep`.|[:radio_button:](022_processus/note.md#barre-de-sheffer)
-echo $?|$? retourne le code retour du dernier processus terminé (0 si tout est ok, 1 si on a voulu faire `cat` d'un fichier qui n'existe pas).|[:radio_button:](022_processus/note.md#variable-interrogation)
-echo $$|$$ retourne le PID du Shell courant.|[:radio_button:](022_processus/note.md#variable-dollar)
-echo $!|$! retourne le PID du dernier processus que vous avez lancé en arrière-plan.|[:radio_button:](022_processus/note.md#variable-exclamation)
-ls -l ; echo OK| ; permet de faire d'abord la première commande et une fois terminé ça fait la 2e.|[:radio_button:](022_processus/note.md#point-virgule)
-cat out2.txt && echo "OK"| && permet d'exécuter ce qui suit seulement si le code de retour de ce processus cat out2.txt qui a pu être lancé grâce à cette commande retourne 0 donc retourne aucune erreur.|[:radio_button:](022_processus/note.md#double-esperluette)
-cat out2.txt &#124;&#124; echo "PROBLEME"| &#124;&#124; permet d'exécuter ce qui suit seulement si le code de retour signifie qu'il y a une erreur.|[:radio_button:](022_processus/note.md#double-barre-de-sheffer)
+ps &#124; grep "bash"|retourne le PID du Shell courant. pipe utilise le retour de `ps` en entrée de `grep`.|[:radio_button:](cours/022_processus/note.md#barre-de-sheffer)
+echo $?|$? retourne le code retour du dernier processus terminé (0 si tout est ok, 1 si on a voulu faire `cat` d'un fichier qui n'existe pas).|[:radio_button:](cours/022_processus/note.md#variable-interrogation)
+echo $$|$$ retourne le PID du Shell courant.|[:radio_button:](cours/022_processus/note.md#variable-dollar)
+echo $!|$! retourne le PID du dernier processus que vous avez lancé en arrière-plan.|[:radio_button:](cours/022_processus/note.md#variable-exclamation)
+ls -l ; echo OK| ; permet de faire d'abord la première commande et une fois terminé ça fait la 2e.|[:radio_button:](cours/022_processus/note.md#point-virgule)
+cat out2.txt && echo "OK"| && permet d'exécuter ce qui suit seulement si le code de retour de ce processus cat out2.txt qui a pu être lancé grâce à cette commande retourne 0 donc retourne aucune erreur.|[:radio_button:](cours/022_processus/note.md#double-esperluette)
+cat out2.txt &#124;&#124; echo "PROBLEME"| &#124;&#124; permet d'exécuter ce qui suit seulement si le code de retour signifie qu'il y a une erreur.|[:radio_button:](cours/022_processus/note.md#double-barre-de-sheffer)
 
-## [Signaux](023_signaux/note.md)
+## [Signaux](cours/023_signaux/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
 ps -aux|lister les processus (+status).
 kill -l|lister les différents types de signaux.
 ps -aux &#124; grep "firefox"|lister tous les processus liés à firefox.
-xeyes|programme avec des yeux.|[:radio_button:](023_signaux/note.md#xeyes)
+xeyes|programme avec des yeux.|[:radio_button:](cours/023_signaux/note.md#xeyes)
 xeyes &|-
 ps -aux &#124; grep "xeyes"|-
-kill -19 2719|stopper un processus.|[:radio_button:](023_signaux/note.md#sigstop)
-kill -18 2719|reveiller un processus.|[:radio_button:](023_signaux/note.md#sigcont)
-kill -9 2719|tuer un processus.|[:radio_button:](023_signaux/note.md#sigkill)
-sleep 2|pause de 2 secondes.|[:radio_button:](023_signaux/note.md#sleep)
+kill -19 2719|stopper un processus.|[:radio_button:](cours/023_signaux/note.md#sigstop)
+kill -18 2719|reveiller un processus.|[:radio_button:](cours/023_signaux/note.md#sigcont)
+kill -9 2719|tuer un processus.|[:radio_button:](cours/023_signaux/note.md#sigkill)
+sleep 2|pause de 2 secondes.|[:radio_button:](cours/023_signaux/note.md#sleep)
 kill -19 4763 ; sleep 5 ; kill -18 4763|endore le processus 5 secondes.
-ctrl+Z|stopper un processus (SIGSTOP).|[:radio_button:](023_signaux/note.md#ctrlz)
-ctrl+C|interrompre un processus (SIGINT).|[:radio_button:](023_signaux/note.md#ctrlc)
-kill -9 1000 1001 1002|tuer un processus.|[:radio_button:](023_signaux/note.md#kill)
-killall google-chrome|quitter tous les processus correspondant à cette application.|[:radio_button:](023_signaux/note.md#killall)
-ps -auwx &#124; grep "firefox" > [res.out](023_signaux/res.out)|-
+ctrl+Z|stopper un processus (SIGSTOP).|[:radio_button:](cours/023_signaux/note.md#ctrlz)
+ctrl+C|interrompre un processus (SIGINT).|[:radio_button:](cours/023_signaux/note.md#ctrlc)
+kill -9 1000 1001 1002|tuer un processus.|[:radio_button:](cours/023_signaux/note.md#kill)
+killall google-chrome|quitter tous les processus correspondant à cette application.|[:radio_button:](cours/023_signaux/note.md#killall)
+ps -auwx &#124; grep "firefox" > [res.out](cours/023_signaux/res.out)|-
 ps -elf &#124; grep "firefox"|-
-fg|Mettre un processus au 1er plan (foreground).|[:radio_button:](023_signaux/note.md#fg)
-bg|exécuter un processus en arrière plan (background).|[:radio_button:](023_signaux/note.md#bg)
-jobs|lister les processus en tâche de fond (numérotés).|[:radio_button:](023_signaux/note.md#jobs)
+fg|Mettre un processus au 1er plan (foreground).|[:radio_button:](cours/023_signaux/note.md#fg)
+bg|exécuter un processus en arrière plan (background).|[:radio_button:](cours/023_signaux/note.md#bg)
+jobs|lister les processus en tâche de fond (numérotés).|[:radio_button:](cours/023_signaux/note.md#jobs)
 fg %1|passer le processus n°1 au 1er plan.
-kill -kill 6448|termine un processus.|[:radio_button:](023_signaux/note.md#kill-kill)
+kill -kill 6448|termine un processus.|[:radio_button:](cours/023_signaux/note.md#kill-kill)
 
-## [Planification de tâches](024_planification_de_tâches/note.md)
+## [Planification de tâches](cours/024_planification_de_tâches/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
-date|retourne une date|[:radio_button:](024_planification_de_tâches/note.md#date)
+date|retourne une date|[:radio_button:](cours/024_planification_de_tâches/note.md#date)
 %A %a|jour (lettres - complet ou abrégé)
 %B %b|mois (lettres - complet ou abrégé)
 %d|numéro du jour (01 à 31)
@@ -505,33 +505,33 @@ date|retourne une date|[:radio_button:](024_planification_de_tâches/note.md#dat
 %S|seconde (00 à 59)
 %F|%Y-%m-%d
 %T|%H:%M:%S
-date "+Nous sommes %A"|retourner le jour de la semaine en lettre.|[:radio_button:](024_planification_de_tâches/note.md#plus)
+date "+Nous sommes %A"|retourner le jour de la semaine en lettre.|[:radio_button:](cours/024_planification_de_tâches/note.md#plus)
 date "+%F %T"|2021-02-25 13:10:10
-date "+%Z"|affiche le time zone (CEST).|[:radio_button:](024_planification_de_tâches/note.md#fuseau_horaire)
+date "+%Z"|affiche le time zone (CEST).|[:radio_button:](cours/024_planification_de_tâches/note.md#fuseau_horaire)
 date "+%D"|date inverse date et jour (02/25/21)
-sudo date mmddHHMMYYYY|modifier la date du système.|[:radio_button:](024_planification_de_tâches/note.md#modifier-la-date-du-système)
-sudo apt install at|-|[:radio_button:](024_planification_de_tâches/note.md#at)
+sudo date mmddHHMMYYYY|modifier la date du système.|[:radio_button:](cours/024_planification_de_tâches/note.md#modifier-la-date-du-système)
+sudo apt install at|-|[:radio_button:](cours/024_planification_de_tâches/note.md#at)
 at 21:20|planifier une tâche.
 mv /home/sam/Bureau/test.txt /home/sam/Bureau/test-renomé.txt|renomer.
 rm /home/sam/Bureau/test.txt|supprimer.
 EOT|(END OF TEXT) terminer la planification avec ctrl+D
-atq|afficher la files d'attentes des tâches planifiées.|[:radio_button:](024_planification_de_tâches/note.md#atq)
+atq|afficher la files d'attentes des tâches planifiées.|[:radio_button:](cours/024_planification_de_tâches/note.md#atq)
 atrm 6|supprimer la tâche 6.
-at 18:00 tomorrow|planifier demain 18H00.|[:radio_button:](024_planification_de_tâches/note.md#tomorrow-and-today)
-at 18:00 today|-|[:radio_button:](024_planification_de_tâches/note.md#tomorrow-and-today)
-at 18:00 05/25/2019|-|[:radio_button:](024_planification_de_tâches/note.md#planifier-à-une-date)
-at now+5 months|planifier dans 5 mois.|[:radio_button:](024_planification_de_tâches/note.md#now)
+at 18:00 tomorrow|planifier demain 18H00.|[:radio_button:](cours/024_planification_de_tâches/note.md#tomorrow-and-today)
+at 18:00 today|-|[:radio_button:](cours/024_planification_de_tâches/note.md#tomorrow-and-today)
+at 18:00 05/25/2019|-|[:radio_button:](cours/024_planification_de_tâches/note.md#planifier-à-une-date)
+at now+5 months|planifier dans 5 mois.|[:radio_button:](cours/024_planification_de_tâches/note.md#now)
 at now+5 minutes|-
 at now+10 hours|-
 at now+5 days|-
-man at|-|[:radio_button:](024_planification_de_tâches/note.md#at)
-man shutdown|-|[:radio_button:](024_planification_de_tâches/note.md#shutdown)
-shutdown -H #équivalent à `halt`|mettre en veille.|[:radio_button:](024_planification_de_tâches/note.md#now)
-shutdown -P #équivalent à `poweroff`|extinction.|[:radio_button:](024_planification_de_tâches/note.md#poweroff)
-shutdown -r #équivalent à `reboot`|redémarrer.|[:radio_button:](024_planification_de_tâches/note.md#reboot)
-crontab|cron utilise le fichier crontab.|[:radio_button:](024_planification_de_tâches/note.md#cron)
-select-editor|sélectionner un éditeur.|[:radio_button:](024_planification_de_tâches/note.md#select-editor)
-crontab -e|éditer le fichier crontab.|[:radio_button:](024_planification_de_tâches/note.md#crontab-option-e)
+man at|-|[:radio_button:](cours/024_planification_de_tâches/note.md#at)
+man shutdown|-|[:radio_button:](cours/024_planification_de_tâches/note.md#shutdown)
+shutdown -H #équivalent à `halt`|mettre en veille.|[:radio_button:](cours/024_planification_de_tâches/note.md#now)
+shutdown -P #équivalent à `poweroff`|extinction.|[:radio_button:](cours/024_planification_de_tâches/note.md#poweroff)
+shutdown -r #équivalent à `reboot`|redémarrer.|[:radio_button:](cours/024_planification_de_tâches/note.md#reboot)
+crontab|cron utilise le fichier crontab.|[:radio_button:](cours/024_planification_de_tâches/note.md#cron)
+select-editor|sélectionner un éditeur.|[:radio_button:](cours/024_planification_de_tâches/note.md#select-editor)
+crontab -e|éditer le fichier crontab.|[:radio_button:](cours/024_planification_de_tâches/note.md#crontab-option-e)
 m h dom mon dow command|format de comande crontab.
 m|(minute) ou *, n'importe lequel.
 h|(hour)
@@ -541,62 +541,62 @@ dow|(day of week), dimanche=0.
 command|(command)
 whereis apt-get|-
 00 18 * * * /usr/bin/apt-get update|-
-00 18 * * * /usr/bin/apt-get update && /usr/bin/apt-get upgrade|tous les jours à 18h on met à jour la liste des dépôts et mettre à jour les logiciels de notre système.|[:radio_button:](024_planification_de_tâches/note.md#exemple)
+00 18 * * * /usr/bin/apt-get update && /usr/bin/apt-get upgrade|tous les jours à 18h on met à jour la liste des dépôts et mettre à jour les logiciels de notre système.|[:radio_button:](cours/024_planification_de_tâches/note.md#exemple)
 00 18 * * * **0** /usr/bin/apt-get update && /usr/bin/apt-get upgrade|idem les dimanches (0).
 00 18 * * * **1** /usr/bin/apt-get update && /usr/bin/apt-get upgrade|idem les lundis (1).
 00 18 * * * **1,0** /usr/bin/apt-get update && /usr/bin/apt-get upgrade|idem les lundis et les dimanches.
 00 18 * * * **0,1** /usr/bin/apt-get update && /usr/bin/apt-get upgrade|idem les dimanches et les lundis.
 00 18 * * * **1-3** /usr/bin/apt-get update && /usr/bin/apt-get upgrade|idem les lundis aux mercredis.
-ctrl+O, enter et ctrl+X|valider crontab avec nano.|[:radio_button:](024_planification_de_tâches/note.md#valider-avec-nano)
-crontab -e|lister les tâches du fichier crontab.|[:radio_button:](024_planification_de_tâches/note.md#crontab-option-l)
-contab -r|supprimer le fichier crontab.|[:radio_button:](024_planification_de_tâches/note.md#crontab-option-r)
+ctrl+O, enter et ctrl+X|valider crontab avec nano.|[:radio_button:](cours/024_planification_de_tâches/note.md#valider-avec-nano)
+crontab -e|lister les tâches du fichier crontab.|[:radio_button:](cours/024_planification_de_tâches/note.md#crontab-option-l)
+contab -r|supprimer le fichier crontab.|[:radio_button:](cours/024_planification_de_tâches/note.md#crontab-option-r)
 
-## [Environnement multi-utilisateurs](025_environnement_multi-utilisateurs/note.md)
+## [Environnement multi-utilisateurs](cours/025_environnement_multi-utilisateurs/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
-sudo adduser chuck|créer un utilisateur.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#adduser)
-su chuck|se connecter.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#su)
+sudo adduser chuck|créer un utilisateur.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#adduser)
+su chuck|se connecter.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#su)
 exit|se déconnecter.
-sudo passwd chuck|modifier le mot de passe d'utilisateur.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#passwd)
-usermod chuck|modifier des informations précises sur un utilisateur.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#usermod)
+sudo passwd chuck|modifier le mot de passe d'utilisateur.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#passwd)
+usermod chuck|modifier des informations précises sur un utilisateur.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#usermod)
 sudo usermod chuck -G sudo|ajouter chuck au groupe sudo.
-sudo deluser chuck|supprimer un utilisateur.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#deluser)
+sudo deluser chuck|supprimer un utilisateur.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#deluser)
 sudo rm -R /home/chuck|supprimer un dossier utilisateur.
 ls /home|lister le dossier des utilisateurs.
-groups|lister les groupes.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#groups)
+groups|lister les groupes.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#groups)
 sudo adduser chuck|regarder les groupes d'un autre utilisateur.
 groups chuck|-
-man addgroup|ajouter de nouveaux groupes et ajouter un utilisateur à un groupe spécifique.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#addgroup)
-man chgrp|changement de groupes spécifiques.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#chgrp)
-chgrp staff /u|change le groupe de /u vers "staff".|[:radio_button:](025_environnement_multi-utilisateurs/note.md#chgrp)
-id|voir les identifiants d'utilisateurs et les identifiants de groupes.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#id)
-users|voir tous les utilisateurs qui sont connectés.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#users)
-who|voir les utilisateurs qui se sont connectés sur une machine en particulier.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#who)
-w|surveiller l'activité du système concernant les utilisateurs dans votre environnement multi utilisateurs.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#w)
-tload|représenter la charge du système.|[:radio_button:](025_environnement_multi-utilisateurs/note.md#tload)
+man addgroup|ajouter de nouveaux groupes et ajouter un utilisateur à un groupe spécifique.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#addgroup)
+man chgrp|changement de groupes spécifiques.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#chgrp)
+chgrp staff /u|change le groupe de /u vers "staff".|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#chgrp)
+id|voir les identifiants d'utilisateurs et les identifiants de groupes.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#id)
+users|voir tous les utilisateurs qui sont connectés.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#users)
+who|voir les utilisateurs qui se sont connectés sur une machine en particulier.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#who)
+w|surveiller l'activité du système concernant les utilisateurs dans votre environnement multi utilisateurs.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#w)
+tload|représenter la charge du système.|[:radio_button:](cours/025_environnement_multi-utilisateurs/note.md#tload)
 tload -d 1|représenter la charge du système avec un délait d'1 seconde.
 man tload|-
 
-## [Informations réseau](026_Informations_réseau/note.md)
+## [Informations réseau](cours/026_Informations_réseau/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
-finger sam|afficher des informations utilisateur|[:radio_button:](026_Informations_réseau/note.md#finger)
-wget https://ubuntu.com/download/desktop/thank-you?version=20.04&architecture=amd64|télécharger à partir d'un lien téléchageable|[:radio_button:](026_Informations_réseau/note.md#wget)
+finger sam|afficher des informations utilisateur|[:radio_button:](cours/026_Informations_réseau/note.md#finger)
+wget https://ubuntu.com/download/desktop/thank-you?version=20.04&architecture=amd64|télécharger à partir d'un lien téléchageable|[:radio_button:](cours/026_Informations_réseau/note.md#wget)
 cat /etc/hostname|retourne le nom d'hôte.
-host google.be|récupèrer un nom d'hôte, l'adresse IPV4 correspondant à google.|[:radio_button:](026_Informations_réseau/note.md#host)
+host google.be|récupèrer un nom d'hôte, l'adresse IPV4 correspondant à google.|[:radio_button:](cours/026_Informations_réseau/note.md#host)
 host 172.217.17.35|-
 cat /etc/hosts|-
 sudo gedit /etc/hosts|modifier certaines résolutions DNS.
-whois google.fr|récupérer des informations d'un nom de domaine.|[:radio_button:](026_Informations_réseau/note.md#whois)
+whois google.fr|récupérer des informations d'un nom de domaine.|[:radio_button:](cours/026_Informations_réseau/note.md#whois)
 
-## [Configuration netplan](027_configuration_netplan/note.md)
+## [Configuration netplan](cours/027_configuration_netplan/note.md)
 
 Exemple de configuration sous Netplan
 
-[:bookmark: La configuration yaml pour une connection filière](027_configuration_netplan/note.md#configuration-filière)  
-[:bookmark: La configuration yaml pour une connection wifi](027_configuration_netplan/note.md#configuration-wifi)  
+[:bookmark: La configuration yaml pour une connection filière](cours/027_configuration_netplan/note.md#configuration-filière)  
+[:bookmark: La configuration yaml pour une connection wifi](cours/027_configuration_netplan/note.md#configuration-wifi)  
 
 ```yaml
 # Let NetworkManager manage all devices on this system
@@ -626,110 +626,110 @@ network:
 
 commandes|descriptions|détails
 -|-|:-:
-ping google.fr|interroger un sereur, le site de google.|[:radio_button:](027_configuration_netplan/note.md#ping)
+ping google.fr|interroger un sereur, le site de google.|[:radio_button:](cours/027_configuration_netplan/note.md#ping)
 ps -auwx &#124; grep "init"|-
 uname -a|version.
-sudo apt remove ifupdown|désinstaller car obsolète.|[:radio_button:](027_configuration_netplan/note.md#ifupdown-obsolète)
-sudo apt remove resolvconf|désinstaller car obsolète.|[:radio_button:](027_configuration_netplan/note.md#resolvconf-obsolète)
-cd /etc/netplan|fichier de configuration Netplan.|[:radio_button:](027_configuration_netplan/note.md#netplan)
-netplan generate|regénérer le fichier netplan.|[:radio_button:](027_configuration_netplan/note.md#generate-try-apply)
-netplan try|vérifier que la configuration réseau fonctionne.|[:radio_button:](027_configuration_netplan/note.md#generate-try-apply)
-netplan apply|appliquer complètement la configuration même après le redémarrage.|[:radio_button:](027_configuration_netplan/note.md#generate-try-apply)
-netplan -d apply|faire du débogage.|[:radio_button:](027_configuration_netplan/note.md#generate-try-apply)
-systemctl restart systemd-networkd|redémarre le service et prend en compte la configuration.|[:radio_button:](027_configuration_netplan/note.md#systemctl)
-sudo apt install net-tools|installer fichier `ifconfig`.|[:radio_button:](027_configuration_netplan/note.md#ifconfig)
-ifconfig|récupérer les noms liés aux interfaces.|[:radio_button:](027_configuration_netplan/note.md#ifconfig)
-ifconfig -a|idem.|[:radio_button:](027_configuration_netplan/note.md#ifconfig)
-ip a|récupérer toutes les informations de tout ce qui configuration des interfaces.|[:radio_button:](027_configuration_netplan/note.md#ip)
-ip addr|idem.|[:radio_button:](027_configuration_netplan/note.md#ip-addr)
-ping google.fr|tester connection en envoyant des paquets.|[:radio_button:](027_configuration_netplan/note.md#ping-verification)
-ifup|old.|[:radio_button:](027_configuration_netplan/note.md#ifup-ifdown)
-ifdown|old.|[:radio_button:](027_configuration_netplan/note.md#ifup-ifdown)
-ip link wsl2sb6 down|désactiver mon interface wi-fi.|[:radio_button:](027_configuration_netplan/note.md#ip-link)
-ip link wsl2sb6 up|ré-activer mon interface wi-fi.|[:radio_button:](027_configuration_netplan/note.md#ip-link)
-ip link enp3s0 down|désactiver mon interface filiaire.|[:radio_button:](027_configuration_netplan/note.md#ip-link)
+sudo apt remove ifupdown|désinstaller car obsolète.|[:radio_button:](cours/027_configuration_netplan/note.md#ifupdown-obsolète)
+sudo apt remove resolvconf|désinstaller car obsolète.|[:radio_button:](cours/027_configuration_netplan/note.md#resolvconf-obsolète)
+cd /etc/netplan|fichier de configuration Netplan.|[:radio_button:](cours/027_configuration_netplan/note.md#netplan)
+netplan generate|regénérer le fichier netplan.|[:radio_button:](cours/027_configuration_netplan/note.md#generate-try-apply)
+netplan try|vérifier que la configuration réseau fonctionne.|[:radio_button:](cours/027_configuration_netplan/note.md#generate-try-apply)
+netplan apply|appliquer complètement la configuration même après le redémarrage.|[:radio_button:](cours/027_configuration_netplan/note.md#generate-try-apply)
+netplan -d apply|faire du débogage.|[:radio_button:](cours/027_configuration_netplan/note.md#generate-try-apply)
+systemctl restart systemd-networkd|redémarre le service et prend en compte la configuration.|[:radio_button:](cours/027_configuration_netplan/note.md#systemctl)
+sudo apt install net-tools|installer fichier `ifconfig`.|[:radio_button:](cours/027_configuration_netplan/note.md#ifconfig)
+ifconfig|récupérer les noms liés aux interfaces.|[:radio_button:](cours/027_configuration_netplan/note.md#ifconfig)
+ifconfig -a|idem.|[:radio_button:](cours/027_configuration_netplan/note.md#ifconfig)
+ip a|récupérer toutes les informations de tout ce qui configuration des interfaces.|[:radio_button:](cours/027_configuration_netplan/note.md#ip)
+ip addr|idem.|[:radio_button:](cours/027_configuration_netplan/note.md#ip-addr)
+ping google.fr|tester connection en envoyant des paquets.|[:radio_button:](cours/027_configuration_netplan/note.md#ping-verification)
+ifup|old.|[:radio_button:](cours/027_configuration_netplan/note.md#ifup-ifdown)
+ifdown|old.|[:radio_button:](cours/027_configuration_netplan/note.md#ifup-ifdown)
+ip link wsl2sb6 down|désactiver mon interface wi-fi.|[:radio_button:](cours/027_configuration_netplan/note.md#ip-link)
+ip link wsl2sb6 up|ré-activer mon interface wi-fi.|[:radio_button:](cours/027_configuration_netplan/note.md#ip-link)
+ip link enp3s0 down|désactiver mon interface filiaire.|[:radio_button:](cours/027_configuration_netplan/note.md#ip-link)
 
-## [Réseau et routage](028_réseau_et_routage/note.md)
-
-commandes|descriptions|détails
--|-|:-:
-man ip|-|[:radio_button:](028_réseau_et_routage/note.md#man-ip)
-ip a|afficher l'ensemble des interfaces.|[:radio_button:](028_réseau_et_routage/note.md#ip-a)
-ip addr show enp0s3|filtrer le retour de la commande ip a.|[:radio_button:](028_réseau_et_routage/note.md#ip-addr)
-ip addr show lo|filtrer le loopback.|[:radio_button:](028_réseau_et_routage/note.md#ip-addr)
-man ip|manuel.|[:radio_button:](028_réseau_et_routage/note.md#man-ip)
-ip -4 a|afficher les informations en ipv4.|[:radio_button:](028_réseau_et_routage/note.md#ipv4-ipv6)
-ip -6 a|afficher les informations en ipv6.|[:radio_button:](028_réseau_et_routage/note.md#ipv4-ipv6)
-ip addr|alias de `ip a`.|[:radio_button:](028_réseau_et_routage/note.md#ip-a-vs-ip-addr)
-ip link ls up|afficher les interfaces actives.|[:radio_button:](028_réseau_et_routage/note.md#interfaces-actives)
-ip link list up|alias de `ip link ls up`.|[:radio_button:](028_réseau_et_routage/note.md#interfaces-actives)
-ip link show up|alias de `ip link ls up`.|[:radio_button:](028_réseau_et_routage/note.md#interfaces-actives)
-ip l show up|alias de `ip link ls up`.|[:radio_button:](028_réseau_et_routage/note.md#interfaces-actives)
-sudo ip link set enp0s3 down|désactiver l'interface.|[:radio_button:](028_réseau_et_routage/note.md#activer-désactiver-une-interface)
-sudo ip link set enp0s3 up|activer l'interface.|[:radio_button:](028_réseau_et_routage/note.md#activer-désactiver-une-interface)
-ip a add 192.168.4.36/24 enp0s3|ajouter une adresse avec un masque de sous-réseau à une interface.|[:radio_button:](028_réseau_et_routage/note.md#add-ip)
-ip a del 192.168.4.36/24 enp0s3|retirer une adresse avec un masque de sous-réseau à une interface.|[:radio_button:](028_réseau_et_routage/note.md#add-ip)
-ip route add default via 192.168.x.x|ajouter une passerelle par défaut.|[:radio_button:](028_réseau_et_routage/note.md#add-gateway)
-ip r add default via 192.168.x.x|alias de route.|[:radio_button:](028_réseau_et_routage/note.md#add-gateway)
-ip route add X.X.X.X/24 via <IP> enp0s3|ajouter un routage entre 2 adresses que l'on applique à une interface.|[:radio_button:](028_réseau_et_routage/note.md#add-gateway)
-ip route del X.X.X.X/24 via <IP> enp0s3|retirer un routage entre 2 adresses que l'on applique à une interface.|[:radio_button:](028_réseau_et_routage/note.md#add-gateway)
-sudo service network-manager start|démarrer le service qui gère le réseau.|[:radio_button:](028_réseau_et_routage/note.md#activer-désactiver-le-service)
-sudo service network-manager stop|arrêter le service qui gère le réseau.|[:radio_button:](028_réseau_et_routage/note.md#activer-désactiver-le-service)
-
-## [Pare-feu](029_pare_feu/note.md)
+## [Réseau et routage](cours/028_réseau_et_routage/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
-sudo ufw status|status du pare-feu.|[:radio_button:](029_pare_feu/note.md#installation-ufw)
-sudo apt install ufw|installation ufw.|[:radio_button:](029_pare_feu/note.md#installation-ufw)
-cat /etc/default/ufw|configuration ufw.|[:radio_button:](029_pare_feu/note.md#configuration-ufw)
-sudo ufw status verbose|status du pare-feu plus détaillé.|[:radio_button:](029_pare_feu/note.md#verbose)
-sudo ufw default deny incoming|interdire ce qui rentre et autoriser ce qui sort par défaut si aucune règle.|[:radio_button:](029_pare_feu/note.md#règle-par-défaut)
-sudo ufw allow http|autoriser le protocole http.|[:radio_button:](029_pare_feu/note.md#allow-http)
-sudo ufw allow|autoriser les protocoles bien connus.|[:radio_button:](029_pare_feu/note.md#allow-http)
-sudo ufw allow 80|autoriser le protocole http (port 80)|[:radio_button:](029_pare_feu/note.md#allow-http)
-cat /etc/services|afficher les différents protocoles|[:radio_button:](029_pare_feu/note.md#fichier-services)
-sudo ufw allow https|autoriser le protocole https.|[:radio_button:](029_pare_feu/note.md#allow-https)
-sudo ufw allow ssh|autoriser la connection à distance SSH.|[:radio_button:](029_pare_feu/note.md#allow-ssh)
-sudo ufw enable|activer le pare-feu.|[:radio_button:](029_pare_feu/note.md#activer-pare-feu)
+man ip|-|[:radio_button:](cours/028_réseau_et_routage/note.md#man-ip)
+ip a|afficher l'ensemble des interfaces.|[:radio_button:](cours/028_réseau_et_routage/note.md#ip-a)
+ip addr show enp0s3|filtrer le retour de la commande ip a.|[:radio_button:](cours/028_réseau_et_routage/note.md#ip-addr)
+ip addr show lo|filtrer le loopback.|[:radio_button:](cours/028_réseau_et_routage/note.md#ip-addr)
+man ip|manuel.|[:radio_button:](cours/028_réseau_et_routage/note.md#man-ip)
+ip -4 a|afficher les informations en ipv4.|[:radio_button:](cours/028_réseau_et_routage/note.md#ipv4-ipv6)
+ip -6 a|afficher les informations en ipv6.|[:radio_button:](cours/028_réseau_et_routage/note.md#ipv4-ipv6)
+ip addr|alias de `ip a`.|[:radio_button:](cours/028_réseau_et_routage/note.md#ip-a-vs-ip-addr)
+ip link ls up|afficher les interfaces actives.|[:radio_button:](cours/028_réseau_et_routage/note.md#interfaces-actives)
+ip link list up|alias de `ip link ls up`.|[:radio_button:](cours/028_réseau_et_routage/note.md#interfaces-actives)
+ip link show up|alias de `ip link ls up`.|[:radio_button:](cours/028_réseau_et_routage/note.md#interfaces-actives)
+ip l show up|alias de `ip link ls up`.|[:radio_button:](cours/028_réseau_et_routage/note.md#interfaces-actives)
+sudo ip link set enp0s3 down|désactiver l'interface.|[:radio_button:](cours/028_réseau_et_routage/note.md#activer-désactiver-une-interface)
+sudo ip link set enp0s3 up|activer l'interface.|[:radio_button:](cours/028_réseau_et_routage/note.md#activer-désactiver-une-interface)
+ip a add 192.168.4.36/24 enp0s3|ajouter une adresse avec un masque de sous-réseau à une interface.|[:radio_button:](cours/028_réseau_et_routage/note.md#add-ip)
+ip a del 192.168.4.36/24 enp0s3|retirer une adresse avec un masque de sous-réseau à une interface.|[:radio_button:](cours/028_réseau_et_routage/note.md#add-ip)
+ip route add default via 192.168.x.x|ajouter une passerelle par défaut.|[:radio_button:](cours/028_réseau_et_routage/note.md#add-gateway)
+ip r add default via 192.168.x.x|alias de route.|[:radio_button:](cours/028_réseau_et_routage/note.md#add-gateway)
+ip route add X.X.X.X/24 via <IP> enp0s3|ajouter un routage entre 2 adresses que l'on applique à une interface.|[:radio_button:](cours/028_réseau_et_routage/note.md#add-gateway)
+ip route del X.X.X.X/24 via <IP> enp0s3|retirer un routage entre 2 adresses que l'on applique à une interface.|[:radio_button:](cours/028_réseau_et_routage/note.md#add-gateway)
+sudo service network-manager start|démarrer le service qui gère le réseau.|[:radio_button:](cours/028_réseau_et_routage/note.md#activer-désactiver-le-service)
+sudo service network-manager stop|arrêter le service qui gère le réseau.|[:radio_button:](cours/028_réseau_et_routage/note.md#activer-désactiver-le-service)
+
+## [Pare-feu](cours/029_pare_feu/note.md)
+
+commandes|descriptions|détails
+-|-|:-:
+sudo ufw status|status du pare-feu.|[:radio_button:](cours/029_pare_feu/note.md#installation-ufw)
+sudo apt install ufw|installation ufw.|[:radio_button:](cours/029_pare_feu/note.md#installation-ufw)
+cat /etc/default/ufw|configuration ufw.|[:radio_button:](cours/029_pare_feu/note.md#configuration-ufw)
+sudo ufw status verbose|status du pare-feu plus détaillé.|[:radio_button:](cours/029_pare_feu/note.md#verbose)
+sudo ufw default deny incoming|interdire ce qui rentre et autoriser ce qui sort par défaut si aucune règle.|[:radio_button:](cours/029_pare_feu/note.md#règle-par-défaut)
+sudo ufw allow http|autoriser le protocole http.|[:radio_button:](cours/029_pare_feu/note.md#allow-http)
+sudo ufw allow|autoriser les protocoles bien connus.|[:radio_button:](cours/029_pare_feu/note.md#allow-http)
+sudo ufw allow 80|autoriser le protocole http (port 80)|[:radio_button:](cours/029_pare_feu/note.md#allow-http)
+cat /etc/services|afficher les différents protocoles|[:radio_button:](cours/029_pare_feu/note.md#fichier-services)
+sudo ufw allow https|autoriser le protocole https.|[:radio_button:](cours/029_pare_feu/note.md#allow-https)
+sudo ufw allow ssh|autoriser la connection à distance SSH.|[:radio_button:](cours/029_pare_feu/note.md#allow-ssh)
+sudo ufw enable|activer le pare-feu.|[:radio_button:](cours/029_pare_feu/note.md#activer-pare-feu)
 sudo ufw allow http/tcp|autoriser http mais en précisant le protocole de transport tcp.
-sudo ufw status verbose|-|[:radio_button:](029_pare_feu/note.md#verbose)
-sudo ufw logging on|journalisation on|[:radio_button:](029_pare_feu/note.md#logging)
-sudo ufw logging off|journalisation off|[:radio_button:](029_pare_feu/note.md#logging)
-sudo ufw logging low|journalisation on|[:radio_button:](029_pare_feu/note.md#logging)
-sudo ufw reset|réinitialisation de toutes les règles à leurs paramètres installés par défaut.|[:radio_button:](029_pare_feu/note.md#reset)
-sudo ufw status numbered|afficher des numéros de règles.|[:radio_button:](029_pare_feu/note.md#numbered)
-sudo ufw delete 6|supprimer la règle 6.|[:radio_button:](029_pare_feu/note.md#delete)
-sudo ufw insert 4 allow ftp|ajouter une règle à propos de ftp.|[:radio_button:](029_pare_feu/note.md#delete)
-sudo ufw allow http from 163.146.4.1|autoriser en entrée http depuis une adresse ip.|[:radio_button:](029_pare_feu/note.md#from)
-sudo ufw deny http from 163.146.4.1|ne pas autoriser en entrée http depuis une adresse ip.|[:radio_button:](029_pare_feu/note.md#from)
-sudo ufw allow 5200:5500/tcp|autoriser une plage de ports.|[:radio_button:](029_pare_feu/note.md#ports)
-sudo ufw allow https from <ip> to any port 443|on autorise une entrée https depuis cette adresse ip uniquement et pour le port 443 uniquement.|[:radio_button:](029_pare_feu/note.md#ports)
-sudo ufw allow in on lo to any port 3306|configurer le port MySQL par défaut avec l'interface du réseau local.|[:radio_button:](029_pare_feu/note.md#configurer-le-port-mysql-en-local)
-sudo ufw deny out ftp|interdire en sortie l'utilisation de ftp.|[:radio_button:](029_pare_feu/note.md#filtrage-des-communications-sortantes)
-sudo ufw enable|activer le pare-feu.|[:radio_button:](029_pare_feu/note.md#état-du-pare-feu)
-sudo ufw disable|désactiver le pare-feu.|[:radio_button:](029_pare_feu/note.md#état-du-pare-feu)
-sudo ufw reload|redémarrer le pare-feu.|[:radio_button:](029_pare_feu/note.md#état-du-pare-feu)
-sudo ufw reset|réinitialiser le pare-feu.|[:radio_button:](029_pare_feu/note.md#quid-état-de-ufw) 
-sudo ufw delete allow ssh|supprimer une règle.|[:radio_button:](029_pare_feu/note.md#quid-delete)
-sudo ufw route allow in on <A> out on <B>|redirection de la machine A à B.|[:radio_button:](029_pare_feu/note.md#routage)
+sudo ufw status verbose|-|[:radio_button:](cours/029_pare_feu/note.md#verbose)
+sudo ufw logging on|journalisation on|[:radio_button:](cours/029_pare_feu/note.md#logging)
+sudo ufw logging off|journalisation off|[:radio_button:](cours/029_pare_feu/note.md#logging)
+sudo ufw logging low|journalisation on|[:radio_button:](cours/029_pare_feu/note.md#logging)
+sudo ufw reset|réinitialisation de toutes les règles à leurs paramètres installés par défaut.|[:radio_button:](cours/029_pare_feu/note.md#reset)
+sudo ufw status numbered|afficher des numéros de règles.|[:radio_button:](cours/029_pare_feu/note.md#numbered)
+sudo ufw delete 6|supprimer la règle 6.|[:radio_button:](cours/029_pare_feu/note.md#delete)
+sudo ufw insert 4 allow ftp|ajouter une règle à propos de ftp.|[:radio_button:](cours/029_pare_feu/note.md#delete)
+sudo ufw allow http from 163.146.4.1|autoriser en entrée http depuis une adresse ip.|[:radio_button:](cours/029_pare_feu/note.md#from)
+sudo ufw deny http from 163.146.4.1|ne pas autoriser en entrée http depuis une adresse ip.|[:radio_button:](cours/029_pare_feu/note.md#from)
+sudo ufw allow 5200:5500/tcp|autoriser une plage de ports.|[:radio_button:](cours/029_pare_feu/note.md#ports)
+sudo ufw allow https from <ip> to any port 443|on autorise une entrée https depuis cette adresse ip uniquement et pour le port 443 uniquement.|[:radio_button:](cours/029_pare_feu/note.md#ports)
+sudo ufw allow in on lo to any port 3306|configurer le port MySQL par défaut avec l'interface du réseau local.|[:radio_button:](cours/029_pare_feu/note.md#configurer-le-port-mysql-en-local)
+sudo ufw deny out ftp|interdire en sortie l'utilisation de ftp.|[:radio_button:](cours/029_pare_feu/note.md#filtrage-des-communications-sortantes)
+sudo ufw enable|activer le pare-feu.|[:radio_button:](cours/029_pare_feu/note.md#état-du-pare-feu)
+sudo ufw disable|désactiver le pare-feu.|[:radio_button:](cours/029_pare_feu/note.md#état-du-pare-feu)
+sudo ufw reload|redémarrer le pare-feu.|[:radio_button:](cours/029_pare_feu/note.md#état-du-pare-feu)
+sudo ufw reset|réinitialiser le pare-feu.|[:radio_button:](cours/029_pare_feu/note.md#quid-état-de-ufw) 
+sudo ufw delete allow ssh|supprimer une règle.|[:radio_button:](cours/029_pare_feu/note.md#quid-delete)
+sudo ufw route allow in on <A> out on <B>|redirection de la machine A à B.|[:radio_button:](cours/029_pare_feu/note.md#routage)
 
-## [Introduction bash](030_introduction_bash/note.md)
+## [Introduction bash](cours/030_introduction_bash/note.md)
 
 commandes|descriptions|détails
 -|-|:-:
-touch main.sh|créer un fichier.|[:radio_button:](030_introduction_bash/note.md#créer-un-fichier)
-code main.sh|créer un fichier.|[:radio_button:](030_introduction_bash/note.md#créer-un-fichier)
-#!/bin/bash|désigner le shell.|[:radio_button:](030_introduction_bash/note.md#désigner-le-shell)
-echo "Hello World !"|afficher avec la commande echo.|[:radio_button:](030_introduction_bash/note.md#echo)
-whereis echo|trouver le programme echo.|[:radio_button:](030_introduction_bash/note.md#echo)
-ls Documents|-|[:radio_button:](030_introduction_bash/note.md#ls)
-chmod u+x main.sh|s'octroyer les droits d'exécution.|[:radio_button:](030_introduction_bash/note.md#chmod)
-./main.sh|exécuter main.sh|[:radio_button:](030_introduction_bash/note.md#execution)
-echo -e "Hello World !"|option e pour l'utilisation de méta charactères : \n \t \v \f \r.|[:radio_button:](030_introduction_bash/note.md#option-e)
+touch main.sh|créer un fichier.|[:radio_button:](cours/030_introduction_bash/note.md#créer-un-fichier)
+code main.sh|créer un fichier.|[:radio_button:](cours/030_introduction_bash/note.md#créer-un-fichier)
+#!/bin/bash|désigner le shell.|[:radio_button:](cours/030_introduction_bash/note.md#désigner-le-shell)
+echo "Hello World !"|afficher avec la commande echo.|[:radio_button:](cours/030_introduction_bash/note.md#echo)
+whereis echo|trouver le programme echo.|[:radio_button:](cours/030_introduction_bash/note.md#echo)
+ls Documents|-|[:radio_button:](cours/030_introduction_bash/note.md#ls)
+chmod u+x main.sh|s'octroyer les droits d'exécution.|[:radio_button:](cours/030_introduction_bash/note.md#chmod)
+./main.sh|exécuter main.sh|[:radio_button:](cours/030_introduction_bash/note.md#execution)
+echo -e "Hello World !"|option e pour l'utilisation de méta charactères : \n \t \v \f \r.|[:radio_button:](cours/030_introduction_bash/note.md#option-e)
 echo -e "Hello\nWorld !"|retour à la ligne.
 echo -e "Hello World !\n"|retour à la ligne par défaut.
-echo -n "Hello World !\n"|option n pour ignore le retour à la ligne..|[:radio_button:](030_introduction_bash/note.md#option-n)
+echo -n "Hello World !\n"|option n pour ignore le retour à la ligne..|[:radio_button:](cours/030_introduction_bash/note.md#option-n)
 
 ```bash
 #Argument -e
@@ -740,7 +740,7 @@ echo -n "Hello World !\n"|option n pour ignore le retour à la ligne..|[:radio_b
 \r	retour charriot
 ```
 
-## [Variables](031_variables/note.md)
+## [Variables](cours/031_variables/note.md)
 
 ```bash
 code main.sh
@@ -755,13 +755,13 @@ sam@sam:~/Documents$ chmod u+x main.sh
 sam@sam:~/Documents$ ./main.sh
 OK
 ```
-* [créer une variable](031_variables/note.md#creer-une-variable) : [nommage](031_variables/note.md#nommage) | [initialisation](031_variables/note.md#initialisation)
+* [créer une variable](cours/031_variables/note.md#creer-une-variable) : [nommage](cours/031_variables/note.md#nommage) | [initialisation](cours/031_variables/note.md#initialisation)
 ```sh
 #!/bin/bash
 
 some_data=63
 ```
-* [afficher l'information](031_variables/note.md#afficher-l-information)
+* [afficher l'information](cours/031_variables/note.md#afficher-l-information)
 ```sh
 #!/bin/bash
 
@@ -791,7 +791,7 @@ sam@sam:~/Documents$ ./main.sh
 Hello World !
 Hello World !
 ```
-* [réaffectation](031_variables/note.md#réaffectation)
+* [réaffectation](cours/031_variables/note.md#réaffectation)
 ```sh
 #!/bin/bash
 
@@ -811,7 +811,7 @@ sam@sam:~/Documents$ ./main.sh
 63
 hello
 ```
-* [quote, double quote et anti-quote](031_variables/note.md#quote-double-quote-et-anti-quote)
+* [quote, double quote et anti-quote](cours/031_variables/note.md#quote-double-quote-et-anti-quote)
 
 ```sh
 #!/bin/bash
@@ -839,7 +839,7 @@ sam@sam:~/Documents$ ./main.sh
 
 str1='Jas\'on' #échaper les apostrophes si on utilise de simples quotes.
 ```
-* [saisie au clavier](031_variables/note.md#saisie-au-clavier)
+* [saisie au clavier](cours/031_variables/note.md#saisie-au-clavier)
 ```sh
 #!/bin/bash
 
@@ -882,7 +882,7 @@ sam@sam:~/Documents$ ./main.sh
 Comment t appelles-tu ? okzfe
  Saisie : okzfe
 ```
-* [constante et readonly](031_variables/note.md#readonly)
+* [constante et readonly](cours/031_variables/note.md#readonly)
 ```sh
 #!/bin/bash
 
@@ -896,7 +896,7 @@ echo $data
 sam@sam:~/Documents$ ./main.sh
 16
 ```
-* [constante et declare](031_variables/note.md#declare)
+* [constante et declare](cours/031_variables/note.md#declare)
 ```sh
 #!/bin/bash
 
@@ -916,7 +916,7 @@ echo $data
 sam@sam:~/Documents$ ./main.sh: ligne 7: data : variable en lecture seule
 26
 ```
-* [declare et readonly](031_variables/note.md#declare-et-readonly)
+* [declare et readonly](cours/031_variables/note.md#declare-et-readonly)
 ```bash
 sam@sam:~/Documents$ declare
 BASH=/usr/bin/bash
@@ -931,7 +931,7 @@ declare -ir PPID="2783"
 declare -r #...
 declare -ir UID="1000"
 ```
-* [paramètre d'appel](031_variables/note.md#paramètre-d-appel)
+* [paramètre d'appel](cours/031_variables/note.md#paramètre-d-appel)
 ```sh
 #!/bin/bash
 
@@ -993,7 +993,7 @@ echo $1
 sam@sam:~/Documents$ ./main.sh a b c d e f g h i j k l m n
 k
 ```
-* [substitution de commande](031_variables/note.md#substitution-de-commande)
+* [substitution de commande](cours/031_variables/note.md#substitution-de-commande)
 ```sh
 #!/bin/bash
 
@@ -1002,7 +1002,7 @@ echo $current_directory
 sam@sam:~/Documents$ ./main.sh
 /home/sam/Documents
 ```
-* [évaluer une expression](031_variables/note.md#évaluer-une-expression)
+* [évaluer une expression](cours/031_variables/note.md#évaluer-une-expression)
 ```sh
 #!/bin/bash
 
@@ -1021,7 +1021,7 @@ echo $data
 sam@sam:~/Documents$ ./main.sh
 20
 ```
-* [unset](031_variables/note.md#unset)
+* [unset](cours/031_variables/note.md#unset)
 ```sh
 #!/bin/bash
 
@@ -1034,7 +1034,7 @@ unset data
 echo $data
 sam@sam:~/Documents$ 
 ```
-* [set](031_variables/note.md#set)
+* [set](cours/031_variables/note.md#set)
 ```sh
 #!/bin/bash
 
@@ -1053,7 +1053,7 @@ echo $0
 sam@sam:~/Documents$ ./main.sh aaa bbb ccc ddd
 ./main.sh
 ```
-* [indirection](031_variables/note.md#indirection)
+* [indirection](cours/031_variables/note.md#indirection)
 ```sh
 #!/bin/bash
 
@@ -1066,7 +1066,7 @@ OK
 
 :books: [curiosité](https://linux.goffinet.org/administration/scripts-shell/)
 
-## [Opérations](032_opérations/note.md)
+## [Opérations](cours/032_opérations/note.md)
 
 ```sh
 #!/bin/bash
@@ -1086,7 +1086,7 @@ echo $number
 sam@sam:~/Documents$ ./main.sh
 145+5hello
 ```
-[let](032_opérations/note.md#let)
+[let](cours/032_opérations/note.md#let)
 ```sh
 #!/bin/bash
 
@@ -1105,7 +1105,7 @@ echo $number
 sam@sam:~/Documents$ ./main.sh
 211
 ```
-[Opérateurs](032_opérations/note.md#opérateurs)
+[Opérateurs](cours/032_opérations/note.md#opérateurs)
 ```sh
 #!/bin/bash
 
@@ -1116,7 +1116,7 @@ sam@sam:~/Documents$ ./main.sh
 # a = a + 1
 # a += 1
 ```
-[test commande composé](032_opérations/note.md#test-commande-composé)
+[test commande composé](cours/032_opérations/note.md#test-commande-composé)
 ```sh
 #!/bin/bash
 
@@ -1130,9 +1130,9 @@ echo $result
 sam@sam:~/Documents$ ./main.sh
 ./main.sh: ligne 3: 'a' + 'b' : erreur de syntaxe : opérande attendu (le symbole erroné est « 'a' + 'b' »)
 ```
-## [Conditions](033_conditions/note.md)
+## [Conditions](cours/033_conditions/note.md)
 
-[exit status](033_conditions/note.md#exit-status)
+[exit status](cours/033_conditions/note.md#exit-status)
 ```sh
 sam@sam:~/Documents$ ((1 < 2))
 sam@sam:~/Documents$ echo $?
@@ -1142,7 +1142,7 @@ sam@sam:~/Documents$ ((1 > 2))
 sam@sam:~/Documents$ echo $?
 1
 ```
-[Syntaxe 1, if test](033_conditions/note.md#if-test)
+[Syntaxe 1, if test](cours/033_conditions/note.md#if-test)
 ```sh
 #!/bin/bash
 
@@ -1154,7 +1154,7 @@ if test $nb1 < $nb2 ; then
     echo 'nb1 < nb2'
 fi
 ```
-[Expressions de test](033_conditions/note.md#expressions-de-test)
+[Expressions de test](cours/033_conditions/note.md#expressions-de-test)
 ```sh
 #!/bin/bash
 
@@ -1182,7 +1182,7 @@ sam@sam:~/Documents$ ./main.bash
 sam@sam:~/Documents$ 
 ```
 
-[Syntaxe 2, if crochet](033_conditions/note.md#if-crochet)
+[Syntaxe 2, if crochet](cours/033_conditions/note.md#if-crochet)
 ```sh
 #!/bin/bash
 
@@ -1204,7 +1204,7 @@ fi
 sam@sam:~/Documents$ ./main.bash
 sam@sam:~/Documents$ 
 ```
-[elif](033_conditions/note.md#elif)
+[elif](cours/033_conditions/note.md#elif)
 ```sh
 #!/bin/bash
 
@@ -1230,7 +1230,7 @@ fi
 sam@sam:~/Documents$ ./main.bash
 nb1 > nb2
 ```
-[else](033_conditions/note.md#else)
+[else](cours/033_conditions/note.md#else)
 ```sh
 nb1=24
 nb2=24
@@ -1245,7 +1245,7 @@ fi
 sam@sam:~/Documents$ ./main.bash
 nb1 = nb2
 ```
-[OU ET](033_conditions/note.md#OU-ET)
+[OU ET](cours/033_conditions/note.md#OU-ET)
 ```sh
 #!/bin/bash
 
@@ -1270,7 +1270,7 @@ fi
 sam@sam:~/Documents$ ./main.bash
 sam@sam:~/Documents$ 
 ```
-[Vérification de chaînes](033_conditions/note.md#vérification-de-chaînes)
+[Vérification de chaînes](cours/033_conditions/note.md#vérification-de-chaînes)
 ```sh
 #!/bin/bash
 
@@ -1312,7 +1312,7 @@ fi
 sam@sam:~/Documents$ ./main.bash
 PAS VIDE :D
 ```
-[Vérification de fichiers](033_conditions/note.md#vérification-de-fichiers)
+[Vérification de fichiers](cours/033_conditions/note.md#vérification-de-fichiers)
 ```bash
 #!/bin/bash
 
@@ -1338,7 +1338,7 @@ fi
 sam@sam:~$ ./main.bash
 Musique OK
 ```
-[Vérification de droits](033_conditions/note.md#vérification-de-droits)
+[Vérification de droits](cours/033_conditions/note.md#vérification-de-droits)
 ```bash
 #!/bin/bash
 
@@ -1369,7 +1369,7 @@ Le fichier n est pas vide
 sam@sam:~$ cat test.txt
 hello
 ```
-[case](033_conditions/note.md#case)
+[case](cours/033_conditions/note.md#case)
 ```bash
 #!/bin/bash
 
@@ -1396,12 +1396,12 @@ sam@sam:~$ ./main.bash
 > ieirfnfe
 ieirfnfe
 ```
-[Syntaxe 3](033_conditions/note.md#3e-syntaxe)
+[Syntaxe 3](cours/033_conditions/note.md#3e-syntaxe)
 Voir séance 34.
 
-## [Boucles](034_boucles/note.md)
+## [Boucles](cours/034_boucles/note.md)
 
-[if double crochet](034_boucles/note.md#if-double-crochet)
+[if double crochet](cours/034_boucles/note.md#if-double-crochet)
 ```bash
 #!/bin/bash
 
@@ -1428,7 +1428,7 @@ Hi !
 Hi !
 ^C
 ```
-[break](034_boucles/note.md#break)
+[break](cours/034_boucles/note.md#break)
 ```bash
 #!/bin/bash
 
@@ -1440,7 +1440,7 @@ done
 sam@sam:~$ ./main.bash
 Hi !
 ```
-[continue](034_boucles/note.md#continue)
+[continue](cours/034_boucles/note.md#continue)
 ```bash
 #!/bin/bash
 
@@ -1452,7 +1452,7 @@ done
 sam@sam:~$ ./main.bash
 ^C
 ```
-[Point d'arrêt et compteur](034_boucles/note.md#point-arrêt-et-compteur)
+[Point d'arrêt et compteur](cours/034_boucles/note.md#point-arrêt-et-compteur)
 ```bash
 #!/bin/bash
 
@@ -1476,7 +1476,7 @@ sam@sam:~$ ./main.bash
 9
 fin du programme...
 ```
-[Until](034_boucles/note.md#until)
+[Until](cours/034_boucles/note.md#until)
 ```bash
 #!/bin/bash
 
@@ -1490,7 +1490,7 @@ echo 'fin du programme...'
 sam@sam:~$ ./main.bash
 fin du programme...
 ```
-[for](034_boucles/note.md#for)
+[for](cours/034_boucles/note.md#for)
 ```bash
 #!/bin/bash
 
@@ -1537,7 +1537,7 @@ sam@sam:~$ ./main.bash
 9
 ```
 
-## [Chaînes de caractères](035_chaînes_de_caractères/note.md)
+## [Chaînes de caractères](cours/035_chaînes_de_caractères/note.md)
 
 ```bash
 #!/bin/bash
@@ -1571,7 +1571,7 @@ echo ${#str}
 sam@sam:~$ ./main.bash
 11
 ```
-[La longueur de chaîne](035_chaînes_de_caractères/note.md#la-longueur-de-chaîne)
+[La longueur de chaîne](cours/035_chaînes_de_caractères/note.md#la-longueur-de-chaîne)
 ```bash
 #!/bin/bash
 
@@ -1586,7 +1586,7 @@ echo $str
 sam@sam:~$ ./main.bash
 13
 ```
-[En minuscule](035_chaînes_de_caractères/note.md#en-minuscule)
+[En minuscule](cours/035_chaînes_de_caractères/note.md#en-minuscule)
 ```bash
 #!/bin/bash
 
@@ -1607,7 +1607,7 @@ echo ${str,,[W]}
 sam@sam:~$ ./main.bash
 Hello world !
 ```
-[En majuscule](035_chaînes_de_caractères/note.md#en-majuscule)
+[En majuscule](cours/035_chaînes_de_caractères/note.md#en-majuscule)
 ```bash
 #!/bin/bash
 
@@ -1621,7 +1621,7 @@ echo ${str^^[l]}
 sam@sam:~$ ./main.bash
 HeLLo WorLd !
 ```
-[Extraction](035_chaînes_de_caractères/note.md#extraction)
+[Extraction](cours/035_chaînes_de_caractères/note.md#extraction)
 ```bash
 #!/bin/bash
 
@@ -1635,7 +1635,7 @@ echo ${str:0:5}
 sam@sam:~$ ./main.bash
 Hello
 ```
-[Remplacement](035_chaînes_de_caractères/note.md#remplacement)
+[Remplacement](cours/035_chaînes_de_caractères/note.md#remplacement)
 ```bash
 #!/bin/bash
 
@@ -1661,7 +1661,7 @@ echo ${str/%!/_}
 sam@sam:~$ ./main.bash
 Hello World _
 ```
-[Suppression](035_chaînes_de_caractères/note.md#suppression)
+[Suppression](cours/035_chaînes_de_caractères/note.md#suppression)
 ```bash
 #!/bin/bash
 
@@ -1689,7 +1689,7 @@ sam@sam:~$ ./main.bash
 rld !
 ```
 
-[Remplacement et indice](035_chaînes_de_caractères/note.md#remplacement-et-indice)
+[Remplacement et indice](cours/035_chaînes_de_caractères/note.md#remplacement-et-indice)
 
 ```bash
 #!/bin/bash
@@ -1725,7 +1725,7 @@ echo $newstr
 sam@sam:~$ ./main.bash
 i World !
 ```
-[printf](035_chaînes_de_caractères/note.md#printf)
+[printf](cours/035_chaînes_de_caractères/note.md#printf)
 ```bash
 #!/bin/bash
 
@@ -1766,20 +1766,20 @@ sam@sam:~$ ./main.bash
 Bonjour le chat de 5 ans
 ```
 
-## [Tableaux](036_tableaux/note.md)
+## [Tableaux](cours/036_tableaux/note.md)
 
-[Déclaration et initialisation](036_tableaux/note.md#déclaration-et-initialisation)
+[Déclaration et initialisation](cours/036_tableaux/note.md#déclaration-et-initialisation)
 ```bash
 #!/bin/bash
 
 readonly -a index_array=(142 65 2 98)
 declare -A assoc_array=(["prenom"]="Jack" ["nom"]="DURAND")
 ```
-[Spécifier indice](036_tableaux/note.md#spécifier-indice)  
+[Spécifier indice](cours/036_tableaux/note.md#spécifier-indice)  
 ```bash
 declare -a index_array=(142 65 [50]=2 98)
 ```
-[Afficher tableau par indices](036_tableaux/note.md#afficher-tableau-par-indices)
+[Afficher tableau par indices](cours/036_tableaux/note.md#afficher-tableau-par-indices)
 ```bash
 #!/bin/bash
 
@@ -1855,7 +1855,7 @@ echo ${index_array[-2]}
 $ ./main.bash
 2
 ```
-[Afficher tableau associatif](036_tableaux/note.md#afficher-tableau-associatif)
+[Afficher tableau associatif](cours/036_tableaux/note.md#afficher-tableau-associatif)
 ```bash
 #!/bin/bash
 
@@ -1873,7 +1873,7 @@ echo ${assoc_array["prenom"]}
 $ ./main.bash
 Jack
 ```
-[Modification](036_tableaux/note.md#modification)
+[Modification](cours/036_tableaux/note.md#modification)
 ```bash
 #!/bin/bash
 
@@ -1911,7 +1911,7 @@ echo ${!assoc_array[@]}
 $ ./main.bash
 prenom nom
 ```
-[Taille](036_tableaux/note.md#taille)
+[Taille](cours/036_tableaux/note.md#taille)
 ```bash
 #!/bin/bash
 
@@ -1924,7 +1924,7 @@ $ ./main.bash
 2
 4
 ```
-[Ajouter](036_tableaux/note.md#ajouter)
+[Ajouter](cours/036_tableaux/note.md#ajouter)
 ```bash
 #!/bin/bash
 
@@ -1954,7 +1954,7 @@ echo ${new_index_array[@]}
 $ ./main.bash
 55 142 65 2 98
 ```
-[Fusion](036_tableaux/note.md#fusion)
+[Fusion](cours/036_tableaux/note.md#fusion)
 ```bash
 #!/bin/bash
 
@@ -1976,7 +1976,7 @@ $ ./main.bash
 142 65 2 98
 142 65 2 98 11
 ```
-[Suppression](036_tableaux/note.md#suppression)
+[Suppression](cours/036_tableaux/note.md#suppression)
 ```bash
 #!/bin/bash
 
@@ -2003,7 +2003,7 @@ $ ./main.bash
 142 65 2 98
 
 ```
-[Tableau à double dimensions](036_tableaux/note.md#tableau-à-double-dimensions)
+[Tableau à double dimensions](cours/036_tableaux/note.md#tableau-à-double-dimensions)
 ```bash
 #!/bin/bash
 
@@ -2021,9 +2021,9 @@ $ ./main.bash
 1 2 5 4
 ```
 
-## [Fonctions](037_fonctions/note.md)
+## [Fonctions](cours/037_fonctions/note.md)
 
-[Déclaration](037_fonctions/note.md#déclaration)
+[Déclaration](cours/037_fonctions/note.md#déclaration)
 ```bash
 #!/bin/bash
 
@@ -2033,7 +2033,7 @@ say_hello()
     #echo "Hello !"; => ; si plusieurs instructions.
 }
 ```
-[Appel](037_fonctions/note.md#appel)
+[Appel](cours/037_fonctions/note.md#appel)
 ```bash
 #!/bin/bash
 
@@ -2046,7 +2046,7 @@ say_hello
 $ ./main.bash
 Hello !
 ```
-[Local](037_fonctions/note.md#local)
+[Local](cours/037_fonctions/note.md#local)
 > $data n'est pas accessible en dehors de la fonction.
 ```bash
 #!/bin/bash
@@ -2065,7 +2065,7 @@ $ ./main.bash
 14
 
 ```
-[Paramètres](037_fonctions/note.md#paramètres)
+[Paramètres](cours/037_fonctions/note.md#paramètres)
 ```bash
 #!/bin/bash
 
@@ -2095,7 +2095,7 @@ print_number 5 233
 $ ./main.bash
 ./main.bash
 ```
-[Return](037_fonctions/note.md#return)
+[Return](cours/037_fonctions/note.md#return)
 ```bash
 #!/bin/bash
 
@@ -2136,7 +2136,7 @@ some_function()
 some_function
 echo $?
 ```
-[Source](037_fonctions/note.md#source)
+[Source](cours/037_fonctions/note.md#source)
 ```bash
 #!/bin/bash
 
@@ -2145,7 +2145,7 @@ source otherfile
 some_function
 echo$?
 ```
-[Declare f](037_fonctions/note.md#declare-f)
+[Declare f](cours/037_fonctions/note.md#declare-f)
 ```bash
 #!/bin/bash
 

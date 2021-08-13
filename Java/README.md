@@ -30,5 +30,12 @@
 |:heavy_check_mark:|[21. Polymorphisme](cours/021_polymorphisme/note.md)
 |:heavy_check_mark:|[22. Introduction collections](cours/022_introduction_collections/note.md)
 |:heavy_check_mark:|[23. Collections en liste](cours/023_collections_en_liste/note.md)
+||[24. Files](cours/024_files/note.md)
+||[25. Ensembles]((cours/025_ensembles/note.md)
+||[26. Cartes (clé-valeur)]((cours/026_cartes_clé-valeur/note.md)
 
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/java-tutoriels.md)  
+
+||notes de cours|
+-|:-|
+||[1. Introduction](cours/001_installation/note.md)
