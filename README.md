@@ -26,14 +26,14 @@
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
 |:heavy_check_mark:|[C#](CSharp/README.md)
-|:x:|[C++](C++/README.md)|*voir la dernière vidéo*
+|:x:|[C++](C++/README.md)|*3 vidéos*
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
-|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*A voir*
-|:x:|[HTML-CSS](HTML-CSS/README.md)|*Faire les exercices*
-|:x:|[Java](Java/README.md)|*2 nouvelles vidéos à voir*
+|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*
+|:x:|[HTML-CSS](HTML-CSS/README.md)|*4 exercices*
+|:x:|[Java](Java/README.md)|*3 vidéos et 1 tutoriel*
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)|
 |:heavy_check_mark:|[PHP](PHP/README.md)
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
-|:file_folder:/:x:|[Algorithmie (old)](Algorithmie/README.md)|*A voir*
+|:file_folder:/:x:|[Algorithmie (old)](Algorithmie/README.md)|*7 vidéos + 1*
