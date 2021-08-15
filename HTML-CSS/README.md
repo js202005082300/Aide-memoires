@@ -44,7 +44,7 @@
 -|:-|
 |:heavy_check_mark:|[Attributs universels](tutos/attributs_universels.md)
 |:heavy_check_mark:|[Balises obsolètes](tutos/balises_obsolètes.md)
-|:heavy_check_mark:|[Thème sombre](tutos/thème_sombre.md))
+|:heavy_check_mark:|[Thème sombre](tutos/thème_sombre.md)
 |:heavy_check_mark:|[Valider page HTML](tutos/valider_page_HTML.md)
 |:heavy_check_mark:|[Variables](tutos/variables.md)
 
@@ -53,21 +53,11 @@
 
 ||notes|
 -|:-|
-||[1. Article de blog](exos/articles_de_blog.md)
-||[2. Tableau de données](exos/tableau_de_données.md)
-||[3. Formulaire saisie patient](exos/formulaire_saisie_patient.md)
-||[4. Un peu de style](exos/un_peu_de_style.md)
-||[5. Strange news](exos/strange_news.md)
-
-<!--
-
-# [2. Tableau de données](https://www.youtube.com/watch?v=jqNCf_NRXnc)
-# [3. Formulaire saisie patient](https://www.youtube.com/watch?v=mQB-f2scL3M)
-# [4. Un peu de style](https://www.youtube.com/watch?v=Rbt9amRWfm4)
-# [5. Strange news](https://www.youtube.com/watch?v=gagqaBk3GXo)
--->
-
-
+|:heavy_check_mark:|[1. Article de blog](exos/articles_de_blog/index.html)
+|:heavy_check_mark:|[2. Tableau de données](exos/tableau_de_donnees/index.html)
+|:heavy_check_mark:|[3. Formulaire saisie patient](exos/formulaire_saisie_patient/index.html)
+|:heavy_check_mark:|[4. Un peu de style](exos/un_peu_de_style/index.html) - [style.css](exos/un_peu_de_style/style.css)
+|:heavy_check_mark:|[5. Strange news](exos/strange_news/index.html) - [style.css](exos/strange_news/style.css) - [normalize.css](exos/strange_news/normalize.css) - [correction.css](exos/strange_news/correction.css)
 
 ## [Formatage texte 1/2](cours/004_formatage_texte_(1_2)/note.md)
 

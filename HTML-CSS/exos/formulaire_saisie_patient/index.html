@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+    [3. Formulaire saisie patient](https://www.youtube.com/watch?v=mQB-f2scL3M)
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de saisie</title>
+</head>
+<body>
+    <!--
+        PATIENT
+            > Nom, prénom, sexe
+            > Adresse, code postal et ville
+            > Date et lieu de naissance
+            > Infos complémentaires (facultatif)
+    -->
+    <form method="post" action="#">
+        <!-- Le for du label correspond au champ de saisie -->
+        <fieldset>
+            <legend>CIVILITÉ</legend>
+
+            <p>
+                <label for="lastname">*Nom :</label><input id="lastname" type="f_lastname" type="text" placeholder="Non..." required>
+                
+                <label for="firstname">*Prénom :</label><input id="firstname" type="f_firstname" type="text" placeholder="Non..." required>
+            </p>
+            <p>
+                <label for="gender">*Sexe :</label>
+                    <input id="gender" name="f_gender" type="radio" value="H" required>Homme
+                    <input id="gender" name="f_gender" type="radio" value="F" required>Femme
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>NAISSANCE ET LIEU DE RÉSIDENCE</legend>
+
+            <p>
+                <label for="address">*Adresse :</label> <input id="address" name="f_adresse" type="text" required><br>
+    
+                <label for="zipcode">*Code postal :</label> <input id="zipcode" name="f_zipcode" type="text" maxlength="5" minlength="5" required>
+    
+                <label for="city">*Ville :</label> <input id="city" name="f_city" type="text" required>
+            </p>
+            <p>
+                <label for="birthday">*Date de naissance :</label> <input id="birthday" name="f_birthday" type="date" required> <label for="birthlocation">*Lieu de naissance :</label> <input id="birthlocation" name="f_birthlocation" type="text" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>DIVERS</legend>
+
+            <p>
+                <label for="infos">Informations complémentaires :</label><br>
+                <textarea id="infos" name="f_infos" rows="10" cols="80" placeholder="Allergies du patient, antécédents médicaux..."></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <input name="submit_form" type="submit" value="Enregistrer">
+            <input name="reset_form" type="reset" value="Effacer">
+        </p>
+    </form>
+</body>
+</html>

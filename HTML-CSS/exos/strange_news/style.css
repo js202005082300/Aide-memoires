@@ -1,0 +1,168 @@
+html{box-sizing:border-box;}
+*, *:before, *:after{box-sizing:inherit;}
+*{outline:none;}
+
+.button, .button:hover
+{
+	transition: all .5s linear;
+}
+
+.clear
+{
+    clear: both;
+}
+.pagination
+{
+    padding: 20px;
+    text-align: right;
+}
+.button
+{
+    background-color: #2c2119;
+    border: 2px solid #9C8070;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 8px;
+}
+.button:hover
+{
+    background-color: #9C8070;
+    color: #2c2119;
+}
+
+body
+{
+    background:#2C2119 url(img/wall.jpg) fixed;
+    background-size: cover;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size:16px;
+    margin: auto;
+    width: 1300px;
+}
+
+hr
+{
+    border: 1px dashed #9C8070;
+}
+
+nav, section, div#sidebar, footer
+{
+    box-shadow: 0 0 5px #000;
+}
+
+nav, footer
+{
+    text-align: center;
+}
+
+nav
+{
+    background-color: #403131;
+}
+
+nav li
+{
+    display: inline-block;
+    font-size: 18px;
+    font-variant: small-caps;
+    list-style: none;
+    padding: 10px;
+}
+
+nav a
+{
+    color: #F9B51D;
+}
+
+section, aside
+{
+    background-color: #4E3628;
+}
+
+article, aside
+{
+    padding: 16px;
+}
+
+section
+{
+    float: left;
+    width: 880px;
+}
+
+article img
+{
+    border: 5px solid #6B493B;
+    box-shadow: 0 0 5px #000;
+}
+
+div#sidebar
+{
+    float: right;
+    width:;
+}
+
+aside p
+{
+    font-size: 14px;
+}
+
+footer
+{
+    background-color: #403131;
+    margin-top: 25px;
+    padding: 6px;
+}
+
+h1, h2
+{
+    font-family: Charm,cursive;
+}
+
+h1
+{
+    color: #F9B51D;
+    font-size: 80px;
+}
+section h2
+{
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+aside h2
+{
+    color: #D15429;
+}
+
+a
+{
+    color: #ECDFAD;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #FCD788;
+}
+
+input
+{
+    padding: 6px;
+}
+
+input[type=text], input[type=submit]
+{
+    color: #FFF;
+}
+
+input[type=text]
+{
+    background-color: #9C8070;
+    border: 2px solid #2C2119;
+}
+input[type=submit]
+{
+	background-color: #2C2119;
+    border: 2px solid #705849;
+}
