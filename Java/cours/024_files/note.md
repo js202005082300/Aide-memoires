@@ -114,7 +114,7 @@ Alors pour PriorityQueue, la connexion est ordonnée, elle accepte les doublons,
 
 On n'aura donc pas pour les classes de cette séance de multi-threadés.
 
-##
+## PriorityQueue
 
 On va voir maintenant d'autres méthodes qui vont pas mal être pratique ici et notamment une méthode pour récupérer l'élément qui est le plus petit, si je reprends mon exemple, on a ajouté les éléments dans un certain ordre donc à la base on peut avoir des connexions qui sont ordonnées dans ce sens c'est à dire que ça va respecter l'ordre d'insertion donc le premier élément inséré sera le premier élément à affiché en cas de parcours de la connexion mais ici comment on va respecter un certain ordre naturel au niveau de l'insertion, au niveau de l'ajout des éléments, il est possible qu'on se retrouve à la fin essai même très probable que ça arrive avec un ordre qui va être différent de l'ordre dans lequel j'ai inséré ces éléments.
 
@@ -430,12 +430,292 @@ Voilà ça c'était vraiment l'essentiel avoir pour cette fil te priorité.
 
 Maintenant on va voir pour un élément doublement chaîné donc qui est un peu comme un tableau mais qui fonctionne sur ce principe de fil aussi qui est ArrayDeque qui signifie tout simplement tableau doublement chaînée même si par principe c'est tout simplement quelque chose qui implémente l'interface Deque donc c'est très important.
 
-
 ```java
+import java.util.ArrayDeque;
+
 /*
     PriorityQueue   : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
-    ArrayDeque      :
+    ArrayDeque      : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
 */
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+    }
+}
 ```
 
-16.20
+Voilà ArrayDeque est également ordonnée, ça va respecter un certain ordre et ne pas mettre les éléments n'importe où, et plus tard lorsqu'on verra tout ce qui est basé sur les Maps c'est à dire tout ce qui est associatif, on aurait évidemment des éléments qui vont être bien rangés, ordonné d'une certaine manière mais suivant le type de collection, l'ordre sera différent donc ça peut être ordre d'insertion, ordre naturel et cetera.
+
+Pareil, ça va également accepter les doublons et refuser les valeurs nulles et ce n'est pas thread-safe.
+
+Voilà c'est le même principe que ce qu'on a vu tout à l'heure, il n'y a pas de différence au niveau de chacune des files.
+
+Ainsi on a tout l'avantage de la liste doublement chaînée y compris l'usage qu'on va pouvoir en avoir, alors ici on a le terme `ArrayDeque` c'est à dire qu'on mélange le mot *Array* pour tableau, et *Deque* pour une file doublement chaînée mais en même temps vous allez voir qu'on peut parfaitement l'utiliser pour une liste chainée ou même une Pile parce que nous allons profiter de beaucoup de nos méthodes qui nous permet d'utiliser ce type là pour pouvoir travailler sur d'autres types de structure en fonction de nos besoins.
+
+Alors nous allons voir quelques petites choses assez simples, et présenter certaines de nos méthodes qui peuvent générer une exception si par exemple il y a une erreur ou bien que la structure est vide donc voilà je ne vais pas encore forcément vérifier tous avec des try catch mais il faudra faire attention à ce niveau-là.
+
+Alors ici comme on est sur quelque chose de doublement chaînée, on va pouvoir ajouter où retirer des éléments depuis le début ou depuis la fin donc plutôt d'utiliser des méthodes génériques comme `add`, `remove` et cetera, Eh bien on aura plutôt intérêt à utiliser des méthodes comme `adq.addFirst()`.
+
+Alors on importe l'ittérateur pour afficher.
+
++ Main.java
+```java
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+/*
+    PriorityQueue   : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+    ArrayDeque      : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+*/
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+
+        adq.addFirst(4);
+        adq.addFirst(15);
+        adq.addLast(0);
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext())
+            System.out.println(it.next());
+    }
+}
+```
+```powershell
+> javac Main.java
+> java Main      
+15
+4
+0
+```
+
+Voilà nous avons donc bien 15, 4 et 0 donc ça a rajouté 4 au tout début de notre file, sans problème, ensuite on a dit d'ajouter 15 dont 15 va passer devant, et ensuite comme on ajouter 0 à la fin, voilà donc là ça respecte bien l'ordre d'insertion.
+
+On peut mettre ainsi les éléments comme on veut en les rangeant du plus petit au plus grand ou l'inverse, sans respecter ainsi l'ordre dans lequel vous insérez les éléments et c'est du coup beaucoup plus pratique, ça va être du coup beaucoup plus rapide aussi.
+
+C'est par exemple on devait travailler avec une **Linked List**, une liste chaînée, Eh bien vous aurez quelque chose de plus rapide avec `ArrayDeque`. Ainsi ce sera plus rapide pour beaucoup beaucoup de raisons, ainsi on peut se référer à la séance précédente et on verra pourquoi avec des tests on a quelque chose de beaucoup plus efficace ici.
+
+D'ailleurs pour la Pile (je spoil en avance), la Pile sera également plus efficace avec `ArrayDeque`, tout simplement parce qu'ici ce n'est pas thread-safe alors que vous savez que Stack est thread-safe donc forcément comme il y a un besoin de synchronisation pour travailler dans un environnement multi-threadé, automatiquement avec `ArrayDeque` comme il n'y a pas de cette spécificité, vous aurez des méthodes qui sont beaucoup plus rapides.
+
+Ainsi on peut parfaitement utiliser cette collection, qui est très intéressant comme type parce qu'on peut l'utiliser comme une File, on peut faire de la liste chaînée avec et on peut également s'en servir comme une Pile. Ainsi on pourra avoir des équivalents, par exemple `AddFirst()` va devenir notre équivalent pour ajouter en fait nos éléments d'accord pour faire un Push, et on verra également la méthode `removeFirst()` qui elle va tout simplement permettre de faire en Pop donc avec le mot-clé First pour l'élément qui est au sommet donc on peut parfaitement utiliser `ArrayDeque` comme une Pile.
+
+Après vous l'aurez compris, si on veut la lire, on a comme une liste doublement chaînée avec ce type `ArrayDeque` donc on peut rajouter en fin `addLast()` mais on peut également rajouter au début `addFirst()`, et on peut également parcourir dans les 2 sens donc ça va pas mal pratique. On pourra mettre des itérateurs, avec les itérateurs on pourra faire des parcours dans les 2 sens.
+
+Pour removeFirst(),
+
++ Main.java
+```java
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+/*
+    PriorityQueue   : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+    ArrayDeque      : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+*/
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+
+        adq.addFirst(4);
+        adq.addFirst(15);
+        adq.addLast(0);
+        adq.removeFirst();
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext())
+            System.out.println(it.next());
+    }
+}
+```
+```powershell
+> javac Main.java
+> java Main
+4
+0
+```
+
+Voilà on a retiré l'élément qui était au début c'est à dire 15 qui était passé par devant 4 parce qu'il a été appelé après donc on peut supprimer comme ça.
+
+On a également l'inverse removeLast().
+
+On peut également accéder aux éléments en faisant un getFirst().
+
++ Main.java
+```java
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+/*
+    PriorityQueue   : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+    ArrayDeque      : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+*/
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+
+        adq.addFirst(4);
+        adq.addFirst(15);
+        adq.addLast(0);
+        adq.removeFirst();
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext())
+            System.out.println(it.next());
+
+        System.out.println(adq.getFirst());
+    }
+}
+```
+```powershell
+> javac Main.java
+> java Main
+4
+0
+4
+```
+
+Voilà, on retourne bien 4.
+
+Alors attention toutes ces méthodes addFirst(), removeFirst(), getFirst() sont des méthodes qui peuvent lever une exception :warning: !
+
+voilà donc normalement utilisé à chaque fois un bloc try catch si vous voulez vous en servir parce que si ça l'est une exception il faut traiter cette dernière, et ici je ne le fais pas pour pas rajouter plein de code et donc prendre le risque de se perdre dans toutes les vérifications alors que c'est ça qui concerne les collections directement. De toute façon maintenant on considère que ça fait partie des choses acquises en ce qui concerne toutes les ce qui est la vérification des exceptions donc ce n'est pas parce qu'on le rappelle pas à chaque vidéo que ça veut dire qu'il ne faut plus y penser. Assez considérer que tout ce qui a été vu avant, fait partie des acquis donc doit être mis en application à chaque fois ainsi ça doit être le réflexe dans un langage comme Java que dès qu'on travaille avec une méthode, une classe et cetera, on regarde où il peut y avoir des exceptions, regarde également la ou il peut y avoir des erreurs retournées (ce qui peut être des simples valeurs et on vérifie toujours tout ça). 
+
+On vérifie également les codes de retour quand c'est juste une valeur qui est retournée, on met dans un bloc try catch quand on sait qu'il peut y avoir une exception qui est levée donc ça c'est un automatisme à avoir et si on ne l'a pas, on programmera de la mauvaise manière et ce n'est évidemment pas le but de ce cours.
+
+Voilà tout ça lève des exceptions.
+
+Après on a des méthodes qui vont plutôt retourner une valeur si par exemple la collection est vide donc ça retournera nul, on peut éventuellement vérifier ça et C'est d'ailleurs pour ça que ça n'accepte pas des valeurs nulles parce que ce sera un petit peu la confusion entre on a retourné une valeur nulle qui était contenu dans la collection ou en fait nul c'est le retour d'une méthode pour dire que je retourne null parce que la collection est vide donc je ne vais pas te demander de récupérer un élément d'une collection qui est vide !
+
+Voilà pour ça.
+
+On a également d'autres méthodes tel que `offerFirst()` qui va permettre d'ajouter un élément donc là c'est pareil on met un petit peu ce que l'on veut.
+
+```java
+adq.offerFirst();
+```
+
++ Main.java
+```java
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+/*
+    PriorityQueue   : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+    ArrayDeque      : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
+*/
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+
+        adq.offerFirst(14);
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext())
+            System.out.println(it.next());
+    }
+}
+```
+```powershell
+> javac Main.java
+> java Main
+14
+```
+
+Voilà ici on va ajouter un élément, et ça ça va retourner nul c'est à dire que ça ne va pas déclencher d'exception ce genre de méthode `offerFirst()`, on a également la même chose avec `offerLast()` qui fonctionne salon le même principe.
+
+On a également ce qu'on avait vu tout à l'heure avec `pollFirst()` qui va simplement récupérer le dernier élément et le supprimer, et on à l'inverse avec `pollLast()`. On a également `peekFirst()` qui va afficher le premier élément et on a `peekLast()` qui va afficher le dernier élément parce qu'on peut encore une fois accepter du fait que c'est un élément d'une liste doublement chaînée, on peut passer par le début et par la fin donc les accès sont beaucoup plus pratique à ce niveau-là même si on n'a pas d'accès direct, on peut accéder directement au premier élément et au dernier élément très rapidement avec ces méthodes.
+
+```java
+adq.offerFirst();
+adq.offerLast();
+
+adq.pollFirst();
+adq.pollLast();
+
+adq.peekFirst();
+adq.peekLast();
+```
+
+On peut également travailler sur des occurrences, et pareil des 2 côtés, où admettons on ajoute des éléments dans l'ordre et qu'on vire une occurrence.
+
++ Main.java
+```java
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+
+        adq.addLast(14);
+        adq.addLast(-84);
+        adq.addLast(155);
+        adq.addLast(4);
+
+        adq.removeLastOccurrence(4);
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext())
+            System.out.println(it.next());
+    }
+}
+```
+```powershell
+> javac Main.java
+> java Main
+14
+-84
+155
+```
+
+Voilà donc on retirent la dernière occurrence de 4 donc il va parcourir chaque élément, il va le rencontrer une première fois jusqu'à la dernière fois où il va le rencontrer. Il va passer par la fin en fait parce que rappelez vous que c'est une liste avec double chaînage donc automatiquement en passant par la fin, il sait que c'est la dernière occurrence parce que le début de la liste c'est le début. On parle de liste mais en fait c'est une file donc il faut faire attention même si on peut avoir le comportement d'une liste par rapport aux méthodes qui sont disponibles parce que simplement beaucoup d'interfaces, simplement que ça étend beaucoup de classes qu'on peut retrouver.
+
+Voilà il y a plein d'autres méthodes, C'est toujours la même chose, `add`, `remove`, `size`, `capacity` et cetera donc aucune nouveauté ici.
+
+Ensuite si vous voulez avoir un comportement comme une Pile, vous utilisez `addFirst()`, `removeFirst()` qui sont l'équivalent d'un push et d'un pop, et si vous voulez le sommet de la pile `peekFirst()` donc avec ces 3 méthodes, vous utilisez `ArrayDeque` comme une Pile, et comme ce n'est pas encore une fois thread-safe ce sera plus rapide que d'utiliser la collection stack.
+
+La collection stack qui est par contre prévu pour travailler dans un environnement multi-thread.
+
+:warning: Quelle est la meilleure collection pour faire une Pile en Java ? c'est Stack, qui signifie Pile, tel qu'on pourrait se dire mais en fait non ça dépend. Ça dépend de l'environnement dans lequel vous l'utilisez. **ArrayDeque n'indique pas le terme Pile, sera beaucoup plus pratique pour faire une Pile dans un environnement mono-threadé**.
+
+Voilà attention à ce niveau là et n'hésitez pas à tester tout ça pour voir un petit peu ce que ça donne sur quelque chose d'un peuple complet.
+
+C'est bon et donc en pas s'arrêter là, on aurait pu montrer autre chose avec la possibilité d'avoir des types un peu plus complexes mais vous voyez que je n'ai pas travaillé comme la dernière fois lorsqu'on avait fait une classe Cat où on avait une collection avec l'ajout de petits chats mais si on peut pas parce qu'il va falloir voir comment ajouter des éléments (surtout pour la file des priorités, c'est surtout là que c'est important) même si j'aurais pu ajouter des Player mais on l'a vu déjà la dernière fois avec les listes donc je ne vais pas répéter quasiment le même code où il y aura juste le nom ici qui change parrapport à ArrayList vers LinkedList comme on l'a vu.
+
+```java
+ArrayList<Cat> group = new ArrayList<Cat>();
+//-->
+LinkedList<Cat> group = new LinkedList<Cat>();
+```
+
+Voilà ça on le sait déjà donc il y a pas mal de répétitions à savoir sur cette séance mais c'est pour ça que j'apporte quand même les types l'essentiels qui sont vraiment importants à connaître au minimum pour qu'on puisse par la suite s'intéresser aux autres.
+
+Après ça va être l'expérience et la pratique qu'on sera quel type utiliser selon les besoins et selon le contexte, ainsi c'est le travail à faire en tant que développeur.
+
+Nous verrons d'autres types de collections dans les séances prochaines, on doit encore parler mais ensemble et tout ce qui est associatif donc il y aura à priori 2 séances, et à la suite de ces deux séances, on aura la séance sur les interfaces Comparable et Comparator en Java.
+
+Ce ne sera pas d'essence très très long mais c'est vraiment très important à savoir, donc il ne faut pas passer à côté de ça en Java c'est important pour avoir ça en main pour pouvoir comparer des types complexes que vous créez dans votre programme.
+
+À bientôt, ciao

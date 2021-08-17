@@ -22,7 +22,7 @@
 [ventoy](https://github.com/ventoy/Ventoy/releases)|1.0.39|-
 [visual studio code](https://code.visualstudio.com)|1.56.2|x64 (exe)
 [virtualBox](https://www.virtualbox.org/)|6.1.22|x64 (exe)
-[vlc](https://www.videolan.org/vlc/)|3.0.14|x86
+[vlc](https://www.videolan.org/vlc/)|3.0.16|x86
 [cmake](https://github.com/Kitware/CMake/releases/download/v3.20.2/cmake-3.20.2-windows-x86_64.zip)|3.20.2|-
 
 >

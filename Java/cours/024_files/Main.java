@@ -1,23 +1,22 @@
-import java.util.PriorityQueue;
-
-/*
-    PriorityQueue : ordonnée, accepte doublons, refuse valeurs nulles, PAS thread-safe
-*/
+import java.util.ArrayDeque;
+import java.util.Iterator;
 
 public class Main
 {
     public static void main(String []args)
     {
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
 
-        pq.add(155);
-        pq.add(8);
-        pq.add(0);
-        pq.add(8);
-        pq.add(-14);
-        pq.add(365);
+        adq.addLast(14);
+        adq.addLast(-84);
+        adq.addLast(155);
+        adq.addLast(4);
 
-        System.out.println(pq.poll());
-        System.out.println(pq.peek());
+        adq.removeLastOccurrence(4);
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext())
+            System.out.println(it.next());
     }
 }

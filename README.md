@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 15-08-2021 
+> 🧭 Màj le 17-08-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -30,7 +30,7 @@
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
-|:x:|[Java](Java/README.md)|*3 vidéos et 1 tutoriel*
+|:x:|[Java](Java/README.md)|*1 vidéo et 1 tutoriel*
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)|
 |:heavy_check_mark:|[PHP](PHP/README.md)
 |:heavy_check_mark:|[Python](Python/README.md)

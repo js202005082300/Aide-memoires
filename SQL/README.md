@@ -48,9 +48,9 @@
 mkdir C:\MyWAMP\mysql\my.ini
 ```
 ```ini
-	[mysqld]
-	basedir=C:/MyWAMP/mysql
-	datadir=C:/MyWAMP/mysql/data
+[mysqld]
+basedir=C:/MyWAMP/mysql
+datadir=C:/MyWAMP/mysql/data
 ```
 ```sql
 cd C:/MyWAMP/mysql/bin
@@ -93,17 +93,17 @@ mysql -u root -p
 ```ini
 C:\MyWAMP\mysql\my.ini
 
-	[mysqld]
-	basedir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql
-	datadir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql/data
-	character-set-server = utf8mb4
-	collation-server = utf8mb4_unicode_ci
+[mysqld]
+basedir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql
+datadir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql/data
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
 
-	[mysql]
-	default-character-set = utf8mb4
+[mysql]
+default-character-set = utf8mb4
 
-	[client]
-	default-character-set = utf8mb4
+[client]
+default-character-set = utf8mb4
 ```
 ```sql
 show variables like 'char%';
@@ -113,15 +113,15 @@ show variables like 'collation%';
 ```ini
 sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf
 
-	[mysqld]
-	character-set-server=utf8mb4
-	collation-server=utf8mb4_unicode_ci
-	
-	[mysql]
-	default-character-set=utf8mb4
-	
-	[client]
-	default-character-set=utf8mb4
+[mysqld]
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
+
+[mysql]
+default-character-set=utf8mb4
+
+[client]
+default-character-set=utf8mb4
 ```
 ```sql
 sudo service mysql start
@@ -155,18 +155,18 @@ SET default_storage_engine = InnoDB;
 C:\MyWAMP\mysql\my.ini
 ```
 ```ini
-	[mysqld]
-	basedir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql
-	datadir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql/data
-	character-set-server = utf8mb4
-	collation-server = utf8mb4_unicode_ci
-	default-storage-engine = InnoDB
+[mysqld]
+basedir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql
+datadir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql/data
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+default-storage-engine = InnoDB
 
-	[mysql]
-	default-character-set = utf8mb4
+[mysql]
+default-character-set = utf8mb4
 
-	[client]
-	default-character-set = utf8mb4
+[client]
+default-character-set = utf8mb4
 ```
 ## [Gestion bases](cours/005_Gestion_bases/note.md)
 ```sql
