@@ -26,7 +26,7 @@
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
 |:heavy_check_mark:|[C#](CSharp/README.md)
-|:x:|[C++](C++/README.md)|*3 vidéos*
+|:x:|[C++](C++/README.md)|*2 vidéos*
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
 |:heavy_check_mark:|[Java](Java/README.md)|
@@ -35,5 +35,5 @@
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
-|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*
 |:file_folder:/:x:|[Algorithmie (old)](Algorithmie/README.md)|*7 vidéos + 1*
+|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*

@@ -11,6 +11,9 @@
 |:heavy_check_mark:|[2. premier code](cours/002_premier_code/note.md)
 |:heavy_check_mark:|[3. affichage console](cours/003_affichage_console/note.md)
 |:heavy_check_mark:|[4. variables](cours/004_variables/note.md)
+|:heavy_check_mark:|[5. Saisie utilisateur](cours/005_saisie_utilisateur/note.md)
+||[6. Opérations](cours/006_operations/note.md)
+||[7. Conditions](cours/007_conditions/note.md)
 
 ## [Playlist C++ cours ARCHIVE](https://youtube.com/playlist?list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB)
 

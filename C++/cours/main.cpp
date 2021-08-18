@@ -3,10 +3,18 @@
 
 int main()
 {
-    using namespace std::literals;
+    std::cout << "Tapez un nombre entier : ";
+    int number;
+    std::cin >> number;
 
-    auto some_string{"Hello World"s};
-    std::cout << some_string << std::endl;
+    std::cin.ignore(255, '\n');
+
+    std::string username;
+    std::cout << "Tapez votre nom complet : ";
+    std::getline(std::cin, username);
+
+    std::cout << "Nombre saisi : " << number << std::endl;
+    std::cout << "Vous vous appelez : " << username << std::endl;
 
     return 0;
 }
