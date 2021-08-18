@@ -38,4 +38,4 @@
 
 ||notes|
 -|:-|
-||[créer_exécutable_JAR](cours/créer_exécutable_JAR.md)
+|:heavy_check_mark:|[créer_exécutable_JAR](cours/créer_exécutable_JAR.md)
