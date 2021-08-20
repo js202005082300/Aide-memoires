@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 18-08-2021 
+> 🧭 Màj le 20-08-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -26,7 +26,7 @@
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
 |:heavy_check_mark:|[C#](CSharp/README.md)
-|:x:|[C++](C++/README.md)|*2 vidéos*
+|:heavy_check_mark:|[C++](C++/README.md)|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
 |:heavy_check_mark:|[Java](Java/README.md)|
@@ -37,3 +37,6 @@
 |:heavy_check_mark:|[Windows](Windows/README.md)
 |:file_folder:/:x:|[Algorithmie (old)](Algorithmie/README.md)|*7 vidéos + 1*
 |:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*
+
+### [Environnement de développement](#)
+[DJANGO](#)

@@ -3,18 +3,17 @@
 
 int main()
 {
-    std::cout << "Tapez un nombre entier : ";
-    int number;
-    std::cin >> number;
+    int number{15};
+    std::string s{"Hello"};
 
-    std::cin.ignore(255, '\n');
+    std::cout << s << std::endl;
 
-    std::string username;
-    std::cout << "Tapez votre nom complet : ";
-    std::getline(std::cin, username);
+    if(number == 15)
+    {
+        std::cout << number << std::endl;
+        s = "Hello World !";
+    }
 
-    std::cout << "Nombre saisi : " << number << std::endl;
-    std::cout << "Vous vous appelez : " << username << std::endl;
-
+    std::cout << s << std::endl;
     return 0;
 }
