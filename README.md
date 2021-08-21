@@ -11,7 +11,6 @@
 ## Formations Informatique
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
 + [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)
-+ [Notes d'aide](Aide/README.md)
 + [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)
 
 ### [Prises de notes](#)
@@ -30,6 +29,8 @@
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
+
+> [Notes d'aide](Aide/README.md)
 
 ### [Environnement de développement](#)
 ||notes|toWatch
