@@ -15,9 +15,9 @@
 
 ## Formations Informatique
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
-> [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)
-> [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)
-> [Notes d'aide](Aide/README.md) :wink:
+> [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)  
+> [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
+> [Notes d'aide](Aide/README.md) :wink:  
 
 ### [Prises de notes](#)
 ||notes|toWatch
