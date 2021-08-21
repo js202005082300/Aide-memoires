@@ -8,11 +8,6 @@
 
 ---
 
-## Formations langues
-:label: [guide néerlandais](https://www.nlfacile.com/guide/) -
-[guide anglais](https://www.anglaisfacile.com/guide/) -
-[guide allemand](https://www.allemandfacile.com/guide/)
-
 ## Formations Informatique
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
 + [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)
@@ -20,7 +15,7 @@
 + [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)
 
 ### [Prises de notes](#)
-||notes|todo
+||notes|toWatch
 -|:-|:-
 |:heavy_check_mark:|[Architecture](Architecture/README.md)
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
@@ -35,8 +30,19 @@
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
+
+### [Environnement de développement](#)
+||notes|toWatch
+-|:-|:-
+||[DJANGO](Django)|*-*
+
+### [Archives]
+||notes|toWatch
+-|:-|:-
 |:file_folder:/:x:|[Algorithmie (old)](Algorithmie/README.md)|*3 vidéos + 1*
 |:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*
 
-### [Environnement de développement](#)
-[DJANGO](#)
+## Formations langues
+:label: [guide néerlandais](https://www.nlfacile.com/guide/) -
+[guide anglais](https://www.anglaisfacile.com/guide/) -
+[guide allemand](https://www.allemandfacile.com/guide/)
