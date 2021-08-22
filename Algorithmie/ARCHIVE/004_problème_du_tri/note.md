@@ -9,9 +9,9 @@
     + comparaisons et tests
 
 + Prise en compte à ce phénomène du tri :
-    + algorithme stable ? (un algorithme est dit stable s'il conserve un ordre relatif par rapport aux données renseignées. Ex. un dictionnaire, un ordre croissant de coordonnées)
-    + algorithme en place ? (un algorithme de tri est **en place** si il modifie les données (données non triés de base, travailler sur des copies en C, ect))
-    + opération en interne ou externe ? (Un algorithme de tri va traiter sur la mémoire interne ou sur une mémoire, des fichiers externes, etc.)
+    + algorithme stable ? *(un algorithme est dit stable s'il conserve un ordre relatif par rapport aux données renseignées. Ex. un dictionnaire, un ordre croissant de coordonnées)*
+    + algorithme en place ? *(un algorithme de tri est **en place** s'il modifie directement la structure de données qu'il est en train de trier (données non triés de base, ne pas travailler sur des copies en C))*
+    + opération en interne ou externe ? *(Un algorithme de tri va traiter sur la mémoire interne ou sur une mémoire, des fichiers externes, etc.)*
 
 Au final, de comment bien choisir le bon algorithme !
 
@@ -35,7 +35,3 @@ Au final, de comment bien choisir le bon algorithme !
 
 - de nos jours, on retrouve des mélanges d'algorithme de tri dans Python, C++, PHP, etc qui reprènnent les avantages de plusieurs algorithmes pour optimiser...
 - certains algorithme nécessite de tout traiter avant de retourner un résultat, d'autres retournerons un résultat au fur et à mesure ...
-
-
-
-
