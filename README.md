@@ -35,6 +35,6 @@
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
-|:x:|[DJANGO](Django)|*-*
+|:x:|[DJANGO](Django)|*4 vidéos*
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)|
-|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos*
+|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos + 1 tuto*

@@ -1,14 +1,22 @@
-# [shells Windows](https://ss64.com/)
-[ss64.com](https://ss64.com/)
+# [shells Windows](#)
 
 ## [Powershell](https://ss64.com/ps/)
+> [Doc Scripting PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01?view=powershell-7.1)
++ Change le prompt
+```powershell
+function prompt {"> "}
+```
++ Simple boucle
 ```powershell
 for ($i=1;$i -le 10;$i++){echo dossier$i}
 for ($i=1;$i -le 10;$i++){mkdir dossier$i}
 for ($i=1;$i -le 10;$i++){rm dossier$i}
 Remove-Item test.txt
 ```
-## [Batch](https://ss64.com/nt/)
+
+## [Batch](#)
+
+> [Source](https://ss64.com/nt/)
 ```batch
 @echo off &::affiche le résultat uniquement
 chcp 65001 &::encodage UTF-8
@@ -168,7 +176,7 @@ set str=!str:P=%%!
 echo %str%
 endlocal
 ```
-> src :  
+> Sources et curiosités :  
 https://ss64.com/nt/syntax-replace.html  
 https://ss64.com/nt/syntax-substring.html  
 https://www.dostips.com/DtTipsStringManipulation.php  
