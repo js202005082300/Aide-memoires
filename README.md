@@ -37,4 +37,4 @@
 |:heavy_check_mark:|[Windows](Windows/README.md)
 |:x:|[DJANGO](Django)|*4 vidéos*
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)|
-|:file_folder:/:x:|[Hacking (old)](Hacking/README.md)|*3 vidéos + 1 tuto*
+|:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)|
