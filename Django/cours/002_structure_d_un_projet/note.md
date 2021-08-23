@@ -20,13 +20,13 @@ C.
     |   |_ asgi.py
     |   |_ settings.py
     |   |_ urls.py
-    |   |_ vsgi.py
+    |   |_ wsgi.py
     |
     |_ db.sqlite3
     |_ manage.py
 ```
 + données regroupées dans un fichier sqlite.
-+ déploiement du serveur web dit classique grâçe à vsgi.py, et le serveur web dit asynchrone asgi.py mais on va se soucier de lancer le projet sur le serveur natif.
++ déploiement du serveur web dit classique grâçe à wsgi.py, et le serveur web dit asynchrone asgi.py mais on va se soucier de lancer le projet sur le serveur natif.
 + configurations avec settings.py
 + urls.py sont les liens de notre application
 

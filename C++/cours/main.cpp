@@ -3,17 +3,12 @@
 
 int main()
 {
-    int number{15};
-    std::string s{"Hello"};
+    std::string sentence{"Hello world, how are you?"};
 
-    std::cout << s << std::endl;
-
-    if(number == 15)
+    for(const auto letter : sentence) // pour chaque "letter" de "sentence"
     {
-        std::cout << number << std::endl;
-        s = "Hello World !";
+        std::cout << letter << "\n";
     }
-
-    std::cout << s << std::endl;
+    
     return 0;
 }

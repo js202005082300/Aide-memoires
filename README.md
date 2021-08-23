@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 23-08-2021 
+> 🧭 Màj le 24-08-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -19,6 +19,8 @@
 > [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
 > [Notes d'aide](Aide/README.md) :wink:  
 
+:partying_face: Officiellement à jour ce 24/08/2021 :partying_face:
+
 ### [Prises de notes](#)
 ||notes|toWatch
 -|:-|:-
@@ -26,7 +28,7 @@
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
 |:heavy_check_mark:|[C#](CSharp/README.md)
-|:x:|[C++](C++/README.md)|*les boucles*
+|:heavy_check_mark:|[C++](C++/README.md)|*les boucles*
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
 |:heavy_check_mark:|[Java](Java/README.md)|
@@ -35,6 +37,6 @@
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
-|:x:|[DJANGO](Django)|*Chargement template*
+|:heavy_check_mark:|[DJANGO](Django)|
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)|
 |:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)|
