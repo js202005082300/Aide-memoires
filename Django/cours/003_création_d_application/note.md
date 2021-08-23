@@ -7,7 +7,7 @@
     PS C:\MyDjango\FV> python manage.py runserver
     ```
     + [Créer un fichier URL : .FV/mangalib/urls.py](#Créer-un-fichier-URL)
-    + [Créer cette vue : .FV/mangalib/views.py](Créer-cette-vue)
+    + [Créer cette vue : .FV/mangalib/views.py](#Créer-cette-vue)
 + [Indiquer l'url de notre application](#Indiquer-le-url-de-notre-application)
     + [Éditer le fichier urls existant : .FV/FV/urls.py](#Éditer-le-fichier-urls-existant)
 + [Ajouter notre projets dans les configurations](#Ajouter-notre-projets-dans-les-configurations)
