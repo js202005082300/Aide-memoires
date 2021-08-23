@@ -24,6 +24,5 @@
     + Autres :  duodécimale (12 : années, fractions)
                 sexagésimale (60 : heure)
 ```
-```txt
+
 Nb. On parlera de bit de poids fort, bit de poids faible au niveau du binaire, complément à deux, addition et soustraction dans les différentes bases, conversions...
-```
