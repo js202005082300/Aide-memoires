@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 22-08-2021 
+> 🧭 Màj le 23-08-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -35,6 +35,6 @@
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
-|:x:|[DJANGO](Django)|*4 vidéos*
+|:x:|[DJANGO](Django)|*Chargement template*
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)|
 |:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)|
