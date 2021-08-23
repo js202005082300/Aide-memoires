@@ -8,7 +8,7 @@
     ```
     + [Créer un fichier URL : .FV/mangalib/urls.py](#Créer-un-fichier-URL)
     + [Créer cette vue : .FV/mangalib/views.py](Créer-cette-vue)
-+ [Indiquer l'url de notre application](#Indiquer-l-url-de-notre-application)
++ [Indiquer l'url de notre application](#Indiquer-le-url-de-notre-application)
     + [Éditer le fichier urls existant : .FV/FV/urls.py](#Éditer-le-fichier-urls-existant)
 + [Ajouter notre projets dans les configurations](#Ajouter-notre-projets-dans-les-configurations)
     + [Éditer le fichier des configurations : .FV/FV/settings.py](#Éditer-le-fichier-des-configurations)
@@ -127,6 +127,7 @@ def index(request):
     return HttpResponse("Bienvenue sur MangaLib !")
 ```
 *nb. envoyer une réponse http avec `HttpResponse`, un simple message au lieu d'un rendu pour le moment ! On commence par envoyer une requête Http auprès de notre navigateur pour récupérer quelque chose et ici pour l'instant on a une réponse erreur 404 (Page non trouvé). On y voit l'url demandé, la méthode GET.*
+
 ![06](06.PNG)
 
 ## Indiquer le url de notre application
