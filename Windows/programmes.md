@@ -19,7 +19,7 @@
 [Git](https://git-scm.com/)|2.32.0|x64 (exe)
 [python](https://www.python.org/)|3.9.3|x64
 [vc_redist](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|2015|x64
-[ventoy](https://github.com/ventoy/Ventoy/releases)|1.0.39|-
+[ventoy](https://github.com/ventoy/Ventoy/releases)|1.0.50|-
 [visual studio code](https://code.visualstudio.com)|1.56.2|x64 (exe)
 [virtualBox](https://www.virtualbox.org/)|6.1.22|x64 (exe)
 [vlc](https://www.videolan.org/vlc/)|3.0.16|x86
