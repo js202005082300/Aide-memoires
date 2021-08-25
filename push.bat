@@ -7,6 +7,9 @@ set t=%time:~0,2%:%time:~3,2%:%time:~6,2%
 set t=%t: =%
 if not exist ".git" ( git init )
 if not exist "README.md" ( echo # Aide-mémoires>> README.md )
+
+::/!\ utiliser token pour la première utilisation après réinitialisation machine.
+
 if %a%==0 (
     git config --global user.email "js201910271836@outlook.com"
     git config --global user.name "js"
@@ -20,6 +23,6 @@ if %a%==0 (
     git pull %g%
     git add *
     git commit -a -m "%d% %t%"
-    git push %g%
+    git push %g% master
 )
 exit
