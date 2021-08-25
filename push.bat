@@ -23,6 +23,6 @@ if %a%==0 (
     git pull %g%
     git add *
     git commit -a -m "%d% %t%"
-    git push %g% master
+    git push %g%
 )
 exit
