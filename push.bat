@@ -23,6 +23,6 @@ if "%~1" NEQ "" ( echo git remote add origin https://js202005082300:%~1@github.c
 git pull
 git add *
 git commit -a -m "%d% %t%"
-git push -u origin main
+git push
 
 exit
