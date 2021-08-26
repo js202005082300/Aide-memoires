@@ -1,28 +1,28 @@
 @echo off
 chcp 65001
+
+::@param token Github
+
 set a=1;
 set "g=https://github.com/js202005082300/Aide-memoires.git"
 set d=%date:~0,2%-%date:~3,2%-%date:~6,4%
 set t=%time:~0,2%:%time:~3,2%:%time:~6,2%
 set t=%t: =%
-if not exist ".git" ( git init )
-if not exist "README.md" ( echo # Aide-mémoires>> README.md )
 
-::/!\ utiliser token pour la première utilisation après réinitialisation machine.
 
-if %a%==0 (
+if not exist ".git" ( 
+    git init 
     git config --global user.email "js201910271836@outlook.com"
     git config --global user.name "js"
-    git remote add origin %g%
     git branch -M main
-    git pull %g%
-    git add *
-    git commit -a -m "%d% %t%"
-    git push -u origin main
-) else ( 
-    git pull %g%
-    git add *
-    git commit -a -m "%d% %t%"
-    git push %g%
+    if not exist "README.md" ( echo # Aide-mémoires>> README.md )
 )
+
+if "%~1" NEQ "" ( echo git remote add origin https://js202005082300:%~1@github.com/js202005082300/Aide-memoires.git )
+
+git pull
+git add *
+git commit -a -m "%d% %t%"
+git push -u origin main
+
 exit
