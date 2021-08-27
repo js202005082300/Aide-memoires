@@ -64,57 +64,31 @@ Au niveau du fichier html vous allez remarquer très vite donc j'ai fait un peti
 
 Donc le `<body>` sera le conteneur "container" d'accord de la grille et chaque partie ici seront des items "item".
 
-On a un `<header>` où on a juste mit un petit titre `<h1>`. On a ensuite la partie <section> d'accord qui sera la partie principale de notre site si on veut faire ça donc j'ai fait un truc très basique mais c'est comme ça qu'il faut le voir. `<aside>` sera la barre latérale d'accord le aside et on aura le pied de page `<footer>`.
+On a un `<header>` où on a juste mit un petit titre `<h1>`. On a ensuite la partie `<section>` d'accord qui sera la partie principale de notre site si on veut faire ça donc j'ai fait un truc très basique mais c'est comme ça qu'il faut le voir. `<aside>` sera la barre latérale d'accord le aside et on aura le pied de page `<footer>`.
 
 Voilà donc chaque élément "item", tous à l'intérieur du `<body>` qui est le contenu d'accord.
 
 Au niveau css.
 ```css
-	body
-	{
-		background-color:#EEE;
-	}
-	
-	img
-	{
-		max-width:100%;
-		height:auto;
-	}
+body
+{
+	background-color:#EEE;
+}
+
+img
+{
+	max-width:100%;
+	height:auto;
+}
 ```
+![01.jpeg](img/01.jpeg)
+
 Tout simplement, j'ai un petit peu réduit la couleur blanche donc couleur de fond ici #EEE. Ensuite simplement une image qui est affichée pour l'avoir de manière responsive donc si vous voulez notamment c'est une première chose que vous allez voir sur cette vidéo, vous allez afficher une image en responsive voilà les deux propriétés à appliquer dessus pour dire ici 'max-width' que nous spécifions une l'ageur maximale de 100 % d'accord ce sont des propriétés que vous connaissez. Tout ça on l'a déjà vu et la hauteur s'adapte automatiquement d'où la valeur "auto" en fonction des autres paramètres donc en l'occurrence de la largeur.
 
 Selon la largeur que fera votre image sans jamais dépasser le maximum qu'elle fait réellement d'accord que le fichier de l'image fait sinon elle serait étirée du coup elle se pixeliserait et ce ne serait pas très agréable à l'oeil et bien la hauteur s'adaptera automatiquement en fonction.
 
 Voilà donc c'est juste ça d'accord et au niveau rendu de base voilà ce que ça donne d'accord.
-```txt
-	Le Kebabiste
-	Lorem ipsum ...
-
-	* One
-	* Two
-	* Three
-	* etc.
-	Lorem ipsum ...
-	+-----------+
-	|img		|
-	|			|
-	|			|
-	|			|
-	+-----------+
-	Lorem ...
-
-	Recherche
-	+---------------+
-	|Rechercher...	|
-	+---------------+
-	 
-
-	Liens
-	A propos
-	Mentions légales
-
-	Copyright © 2018 - Toutes sauces réservées
-```
+![01.jpeg](img/01.jpeg)
 Donc là on a un exemple d'un tout petit contenu même si encore une fois c'est très succinct, très rapide et très court de petit site web en fait sur lequel on pourrait définir un petit peu les différentes portions.
 
 Je vous avais dit que le système de grille était justement conçu et prévu pour gérer les gabarits de notre site web c'est-à-dire les grosses portions de ce site et là ça tombe bien puisque chacune ces parties est présente. Nous avons une en-tête, un pied de page et les différentes grosse section de notre site donc `<section>` et `<aside>` en l'occurrence.
@@ -216,230 +190,148 @@ Ensuite on aura section, ici on n'utilise pas de classe d'accord j'utilise direc
 ```
 Ensuite le `<aside>` alors même chose, 'grid-area' et le `<footer>` c'était pour le pied.
 ```css
-	body
-	{
-		background-color:#EEE;
-	}
-	
-	img
-	{
-		max-width:100%;
-		height:auto;
-	}
+body
+{
+	background-color:#EEE;
+}
 
-	.container
-	{
-		display:grid;
-		grid-template-columns: auto minmax(150px, 300px);
-		grid-template-areas:"entete entete"
-							"principal bare"
-							"pied pied";
-	}
-	
-	header
-	{
-		grid-area:entete;
-	}
-	
-	section
-	{
-		grid-area:principal;
-	}
-	
-	aside
-	{
-		grid-area:bare;
-	}
+img
+{
+	max-width:100%;
+	height:auto;
+}
 
-	pied
-	{
-		grid-area:pied;
-	}
+.container
+{
+	display:grid;
+	grid-template-columns: auto minmax(150px, 300px);
+	grid-template-areas:"entete entete"
+						"principal bare"
+						"pied pied";
+}
+
+header
+{
+	grid-area:entete;
+}
+
+section
+{
+	grid-area:principal;
+}
+
+aside
+{
+	grid-area:bare;
+}
+
+pied
+{
+	grid-area:pied;
+}
 ```
 Voilà pour cette partie là nous avons cette mise en page d'accord si j'actualise nous obtenons ceci d'accord alors on ne s'en rend pas forcément compte d'ailleurs mais on va mieux le faire par la suite.
-```txt
-	Le Kebabiste
-	Lorem ipsum ...			Recherche
-							+---------------+
-	* One					|Rechercher...	|
-	* Two					+---------------+
-	* Three					Liens
-	* etc.					A propos
-	Lorem ipsum ...			Mentions légales
-	+-----------+
-	|img		|
-	|			|
-	|			|
-	|			|
-	+-----------+
-	Lorem ...
+![02.jpeg](img/02.jpeg)
 
-	Copyright © 2018
-```
 Comment on peut faire ça ? `<section>`, on va lui mettre une autre couleur ce sera mieux qu'on puisse voir un petit peu comment ça se représente #DDD. `<aside>` on va le mettre en un peu plus foncée voilà #AAA. J'actualise toujours et voilà comment ça se représente.
 ```css
-	body
-	{
-		background-color:#EEE;
-	}
-	
-	img
-	{
-		max-width:100%;
-		height:auto;
-	}
+body
+{
+	background-color:#EEE;
+}
 
-	.container
-	{
-		display:grid;
-		grid-template-columns: auto minmax(150px, 300px);
-		grid-template-areas:"entete entete"
-							"principal bare"
-							"pied pied";
-	}
-	
-	header
-	{
-		grid-area:entete;
-	}
-	
-	section
-	{
-		background-color:#DDD;
-		grid-area:principal;
-	}
-	
-	aside
-	{
-		background-color:#AAA;
-		grid-area:bare;
-	}
+img
+{
+	max-width:100%;
+	height:auto;
+}
 
-	pied
-	{
-		grid-area:pied;
-	}
+.container
+{
+	display:grid;
+	grid-template-columns: auto minmax(150px, 300px);
+	grid-template-areas:"entete entete"
+						"principal bare"
+						"pied pied";
+}
+
+header
+{
+	grid-area:entete;
+}
+
+section
+{
+	background-color:#DDD;
+	grid-area:principal;
+}
+
+aside
+{
+	background-color:#AAA;
+	grid-area:bare;
+}
+
+pied
+{
+	grid-area:pied;
+}
 ```
-```txt
-	.............................................
-	: Le Kebabiste								:
-	+-------------------+-----------------------+
-	| Lorem ipsum ...	|	Recherche			|
-	| 					|	+---------------+	|
-	| * One				|	|Rechercher...	|	|
-	| * Two				|	+---------------+	|
-	| * Three			|	Liens				|
-	| * etc.			|	A propos			|
-	| Lorem ipsum ...	|	Mentions légales	|
-	| +-----------+		|						|
-	| |img		  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| +-----------+		|						|
-	| Lorem ...			|						|
-	+-------------------+-----------------------+
-	: Copyright © 2018							:
-	:...........................................:
-```
+![03.jpeg](img/03.jpeg)
 Ok donc là grosso modo donc on a bien notre en-tête ici "Le Kebabiste" on voit bien nos deux parties qui se mettent bien côte-à-côte d'accord donc on peut gérer ces parties là alors j'ai pas mis de 'padding' mais évidemment je pourrais le faire pour ceux qui veulent chipoter mais encore une fois le but n'est pas de faire un vrai design ici, c'est vraiment juste de montrer le principe des requêtes médias que nous allons voir par la suite.
 
 Alors comme je répète l'élément, on va le mettre à la fois pour `<section>` et `<aside>` voilà donc optimise un maximum tout ça.
 ```css
-	body
-	{
-		background-color:#EEE;
-	}
-	
-	img
-	{
-		max-width:100%;
-		height:auto;
-	}
+body
+{
+	background-color:#EEE;
+}
 
-	.container
-	{
-		display:grid;
-		grid-template-columns: auto minmax(150px, 300px);
-		grid-template-areas:"entete entete"
-							"principal bare"
-							"pied pied";
-	}
-	
-	header
-	{
-		grid-area:entete;
-	}
-	
-	section,aside
-	{
-		padding:20px;
-	}
-	
-	section
-	{
-		background-color:#DDD;
-		grid-area:principal;
-	}
-	
-	aside
-	{
-		background-color:#AAA;
-		grid-area:bare;
-	}
+img
+{
+	max-width:100%;
+	height:auto;
+}
 
-	pied
-	{
-		grid-area:pied;
-	}
+.container
+{
+	display:grid;
+	grid-template-columns: auto minmax(150px, 300px);
+	grid-template-areas:"entete entete"
+						"principal bare"
+						"pied pied";
+}
+
+header
+{
+	grid-area:entete;
+}
+
+section,aside
+{
+	padding:20px;
+}
+
+section
+{
+	background-color:#DDD;
+	grid-area:principal;
+}
+
+aside
+{
+	background-color:#AAA;
+	grid-area:bare;
+}
+
+pied
+{
+	grid-area:pied;
+}
 ```
-```txt
-	.............................................
-	: Le Kebabiste								:
-	+-------------------+-----------------------+
-	| Lorem ipsum ...	|	Recherche			|
-	| 					|	+---------------+	|
-	| * One				|	|Rechercher...	|	|
-	| * Two				|	+---------------+	|
-	| * Three			|	Liens				|
-	| * etc.			|	A propos			|
-	| Lorem ipsum ...	|	Mentions légales	|
-	| +-----------+		|						|
-	| |img		  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| +-----------+		|						|
-	| Lorem ...			|						|
-	+-------------------+-----------------------+
-	: Copyright © 2018							:
-	:...........................................:
-```
+![04.jpeg](img/04.jpeg)
 Comme ça voyez ça évite que ça touche les bords ici "25px" au niveau des parties et on gère notre contenu sous forme de grille et donc si on change la résolution on voit que ça s'adapte d'accord.
-```txt
-	.........................#
-	: Le Kebabiste			:#
-	+-----------+-----------+#
-	| Lorem 	| Recherche	|#
-	| ipsum ...	|			|#
-	| 			| +----------#
-	| * One		| |Rechercher#
-	| * Two		| +----------#
-	| * Three	| Liens		|#
-	| * etc.	| A propos	|#
-	| Lorem		| Mentions 	|#
-	| ipsum ... | légales	|#
-	| +-----+	|			|#
-	| |img	|	|			|#
-	| |		|	|			|#
-	| |		|	|			|#
-	| +-----+	|			|#
-	| Lorem ...	|			|#
-	+-----------+-----------+#
-	: Copyright © 2018		:#
-	:.......................:#
-	##########################
-```
+![04B.jpeg](img/04B.jpeg)
 j'arrive évidemment avec une partie de défillement horizontale puisqu'encore une fois je n'ai pas rendu tout le site responsif, on voit que tout s'adapte et mon image tel que je l'ai fais ici avec les propriétés que nous avons là 'max-width' et 'height' d'accord s'adapte aussi d'accord en fonction jusqu'à atteindre sa taille de 100 % et sans jamais bien sûr la dépasser, on voit qu'en engrandissant la page, l'image ne continue pas de grandir sinon on aurait quelque chose qui se pixelise.
 
 Voilà pour cette partie là donc on a quelque chose qui ressemble un peu plus à un site web, une base en tout cas ici.
@@ -754,28 +646,7 @@ Admettons voyez le fond de la page est de cette couleur là #EEE et bien on pour
 	}
 ```
 Voyez je met le sélecteur de `<body>` et la propriété 'background-color' donc je peux très bien les réutiliser. Je pourrais tout reprendre si je veux, si je voulais tout modifier et ici je vais dire en fait ce ne sera pas de cette couleur là, ça va être par exemple en #BBB; donc un petit peu moins blanc donc un peu plus foncée et on va tester ça donc on y va et on va actualiser.
-```txt
-	.............................................
-	: Le Kebabiste								:
-	+-------------------+-----------------------+
-	| Lorem ipsum ...	|	Recherche			|
-	| 					|	+---------------+	|
-	| * One				|	|Rechercher...	|	|
-	| * Two				|	+---------------+	|
-	| * Three			|	Liens				|
-	| * etc.			|	A propos			|
-	| Lorem ipsum ...	|	Mentions légales	|
-	| +-----------+		|						|
-	| |img		  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| +-----------+		|						|
-	| Lorem ...			|						|
-	+-------------------+-----------------------+
-	: Copyright © 2018							:
-	:...........................................:
-```
+![05.jpeg](img/05.jpeg)
 Voilà donc là on n'observe aucun changement d'accord normale et dès que je vais réduire, dès que je vais arriver à 600 pixels, regarder la couleur de fond va changer voilà.
 
 
@@ -856,57 +727,13 @@ On pourra faire ça sur tout un tas de choses vraiment après changer n'importe 
 		}
 	}
 ```
-```txt
-	.............................................
-	: Le Kebabiste								:
-	+-------------------+-----------------------+
-	| Lorem ipsum ...	|	Recherche			|
-	| 					|	+---------------+	|
-	| * One				|	|Rechercher...	|	|
-	| * Two				|	+---------------+	|
-	| * Three			|	Liens				|
-	| * etc.			|	A propos			|
-	| Lorem ipsum ...	|	Mentions légales	|
-	| +-----------+		|						|
-	| |img		  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| +-----------+		|						|
-	| Lorem ...			|						|
-	+-------------------+-----------------------+
-	: Copyright © 2018							:
-	:...........................................:
-```
+![06.jpeg](img/06.jpeg)
 Voilà si je passe cette valeur limite, hop on change toutes les couleurs d'accord donc en fait ces requêtes médias permettent de gérer des comportements adaptatifs d'accord de nos fichiers css, de nos propriétés css et là ça a vraiment complètement son intérêt par la suite donc voilà ce que je voulais vous montrer.
 
 Alors évidemment on ne va pas forcément s'amuser à tout reprendre mais ce qui peut être intéressant et là c'est ce qui nous intéresse nous c'est par exemple, c'est un départ on va dire c'est un début de réponse aux designs responsives, au design adaptatif pour les smartphones, tout ça parce que c'est l'intérêt quand même des médias queries même si je ne vous fais pas une vidéo que sur ça je vous montre un point de départ.
 
 Comment je peux faire et ça vous l'avez peut-être vu sur les sites justement qui sont optimisés pour mobiles pour me dire que quand j'arrive à une résolution trop petite ça devient vraiment pas lisible du tout.
-```txt
-	.........................#
-	: Le Kebabiste			:#
-	+-----------+-----------+#
-	| Lorem 	| Recherche	|#
-	| ipsum ...	|			|#
-	| 			| +----------#
-	| * One		| |Rechercher#
-	| * Two		| +----------#
-	| * Three	| Liens		|#
-	| * etc.	| A propos	|#
-	| Lorem		| Mentions 	|#
-	| ipsum ... | légales	|#
-	| +-----+	|			|#
-	| |img	|	|			|#
-	| |		|	|			|#
-	| |		|	|			|#
-	| +-----+	|			|#
-	| Lorem ...	|			|#
-	+-----------+-----------+#
-	: Copyright © 2018		:#
-	:.......................:#
-	##########################
-```
+![06B.jpeg](img/06B.jpeg)
 Là on a un truc tout petit et là on a une colonne qui rend toute petite et du coup c'est pas franchement très très lisible, imaginez quelqu'un sur un smartphone qui a cette résolution là ou une tablette, c'est franchement pas agréable à lire d'accord.
 
 Ce qu'on aimerait peut-être c'est de dire la colonne ici qui a une barre latérale c'est pourquoi pas la passer en dessous d'accord de notre partie principale de notre site parce que c'est pas forcément très important donc à la rigueur on peut mettre en dessous, c'est moins important que la partie qui à gauche.
@@ -1023,122 +850,72 @@ Et ensuite dans 'grid-template-areas' vous répartissez les parties de votre sit
 ```
 Voilà `<aside>` devait arriver juste en dessous donc je le met ici, vous voyez tout est sur une colonne on arrive bien encore une fois ça je vous l'avais dit dans la vidéo précédente c'est que visuellement on arrive bien à se représenter comment est conçu la grille de notre site quand on en a évidemment pas trop parce que si on a 25 colonnes et 48 lignes là ça deviendrait un petit peu du n'importe quoi mais là comme on a quand même très peu de choses dans la majorité des cas, c'est très lisible et là on y va.
 ```css
-	body
-	{
-		background-color:#EEE;
-	}
+body
+{
+	background-color:#EEE;
+}
 
-	img
-	{
-		max-width:100%;
-		height:auto;
-	}
+img
+{
+	max-width:100%;
+	height:auto;
+}
 
+.container
+{
+	display:grid;
+	grid-template-columns: auto minmax(150px, 300px);
+	grid-template-areas:"entete entete"
+						"principal bare"
+						"pied pied";
+}
+
+header
+{
+	grid-area:entete;
+}
+
+section,aside
+{
+	padding:20px;
+}
+
+section
+{
+	background-color:#DDD;
+	grid-area:principal;
+}
+
+aside
+{
+	background-color:#AAA;
+	grid-area:bare;
+}
+
+pied
+{
+	grid-area:pied;
+}
+
+@media(max-width:600px)
+{
 	.container
 	{
-		display:grid;
-		grid-template-columns: auto minmax(150px, 300px);
-		grid-template-areas:"entete entete"
-							"principal bare"
-							"pied pied";
+		grid-template-columns: 1fr;
+		grid-template-areas:"entete"
+							"principal"
+							"bare"
+							"pied";
 	}
-	
-	header
-	{
-		grid-area:entete;
-	}
-	
-	section,aside
-	{
-		padding:20px;
-	}
-	
-	section
-	{
-		background-color:#DDD;
-		grid-area:principal;
-	}
-	
-	aside
-	{
-		background-color:#AAA;
-		grid-area:bare;
-	}
-
-	pied
-	{
-		grid-area:pied;
-	}
-
-	@media(max-width:600px)
-	{
-		.container
-		{
-			grid-template-columns: 1fr;
-			grid-template-areas:"entete"
-								"principal"
-								"bare"
-								"pied";
-		}
-	}
+}
 ```
-```txt
-	>600px
-	-------
-	.............................................
-	: Le Kebabiste								:
-	+-------------------+-----------------------+
-	| Lorem ipsum ...	|	Recherche			|
-	| 					|	+---------------+	|
-	| * One				|	|Rechercher...	|	|
-	| * Two				|	+---------------+	|
-	| * Three			|	Liens				|
-	| * etc.			|	A propos			|
-	| Lorem ipsum ...	|	Mentions légales	|
-	| +-----------+		|						|
-	| |img		  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| +-----------+		|						|
-	| Lorem ...			|						|
-	+-------------------+-----------------------+
-	: Copyright © 2018							:
-	:...........................................:
+> `>600px`
 
-	<600px
-	-------
-	.....................
-	: Le Kebabiste		:
-	+-------------------+
-	| Lorem ipsum ...	|
-	| 					|
-	| * One				|
-	| * Two				|
-	| * Three			|
-	| * etc.			|
-	| Lorem ipsum ...	|
-	| +-----------+		|
-	| |img		  |		|
-	| |			  |		|
-	| |			  |		|
-	| |			  |		|
-	| +-----------+		|
-	| Lorem ...			|
-	+-------------------+
-	| Recherche			|
-	| +---------------+	|
-	| |Rechercher...  |	|
-	| +---------------+	|
-	| Liens				|
-	| A propos			|
-	| Mentions légales	|
-	|					|
-	|					|
-	+-------------------+
-	: Copyright © 2018	:
-	:...................:
-```
+![07.jpeg](img/07.jpeg)
+
+> `<600px`
+
+![07B.jpeg](img/07B.jpeg)
 On va mettre comme ça, on actualise et tant que je suis sur une résolution au dessus de 600 pixels donc des grands écrans et des grandes résolutions aucun problème, on a la place pour avoir deux colonnes donc c'est plus agréable d'avoir deux colonnes d'ailleurs on a un meilleur design.
 
 Par contre plus on s'approche d'une résolution petite et du coup qui devient inconfortable pour la lecture.
@@ -1146,38 +923,7 @@ Par contre plus on s'approche d'une résolution petite et du coup qui devient in
 Automatiquement, voyez donc 600 pixels ça fait quand même déjà assez large donc avant que ça devienne vraiment trop écrasé et du coup trop désagréable à la lecture, on a passé cette partie de notre site en dessous et là évidemment on garde cette largeur qui est quand même beaucoup plus agréable pour les deux.
 
 Et si je réduit même au minimum minimum donc là bon après ça dépend de mon navigateur mais sur un smartphone on va pas non plus être comme ça mais on va plus tôt être comme ça.
-```txt
-	.....................
-	: Le Kebabiste		:
-	+-------------------+
-	| Lorem ipsum ...	|
-	| 					|
-	| * One				|
-	| * Two				|
-	| * Three			|
-	| * etc.			|
-	| Lorem ipsum ...	|
-	| +-----------+		|
-	| |img		  |		|
-	| |			  |		|
-	| |			  |		|
-	| |			  |		|
-	| +-----------+		|
-	| Lorem ...			|
-	+-------------------+
-	| Recherche			|
-	| +---------------+	|
-	| |Rechercher...  |	|
-	| +---------------+	|
-	| Liens				|
-	| A propos			|
-	| Mentions légales	|
-	|					|
-	|					|
-	+-------------------+
-	: Copyright © 2018	:
-	:...................:
-```
+![07B.jpeg](img/07B.jpeg)
 Vous voyez que ça reste quand même beaucoup plus lisible d'accord tout reste parfaitement lisible et il y a un meilleur confort pour tout alors encore une fois je suis pas là pour vous montrer comment on fait un site responsive, il faudrait modifier beaucoup de choses par exemple l'affichage donc la taille des polices, comment on gère les marges, comment on gère les alignements, tout ça et c'est encore une fois pas le but de cette vidéo.
 
 Là le but c'était vraiment de vous montrer l'intérêt et la puissance d'accord, l'utilité de ces requêtes médias et ce qu'elle va vous permettre de faire.
@@ -1463,61 +1209,9 @@ On va tout simplement définir des points de rupture pour dire eh bien que ça o
 Vous allez créer votre site au départ de manière normale d'accord vous allez faire en fait un site normal qui n'est pas responsif et après le meilleur moyen de faire les vérifications, une fois que votre site est responsive, enfin est développé c'est tout simplement de gérer en fait l'espacement.
 
 Vous avez ici donc votre écran de pc.
-```txt
-	.............................................
-	: Le Kebabiste								:
-	+-------------------+-----------------------+
-	| Lorem ipsum ...	|	Recherche			|
-	| 					|	+---------------+	|
-	| * One				|	|Rechercher...	|	|
-	| * Two				|	+---------------+	|
-	| * Three			|	Liens				|
-	| * etc.			|	A propos			|
-	| Lorem ipsum ...	|	Mentions légales	|
-	| +-----------+		|						|
-	| |img		  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| |			  |		|						|
-	| +-----------+		|						|
-	| Lorem ...			|						|
-	+-------------------+-----------------------+
-	: Copyright © 2018							:
-	:...........................................:
-```
+![08.jpeg](img/08.jpeg)
 Vous avez votre écran de pc, vous avez l'affichage de votre site, vous avez l'affichage de votre site, vous vérifier comment se passe l'affichage. Est ce que c'est pas trop large ? Est ce que le confort de lecture est correct ? Est ce que c'est pas voilà trop illisible ? Est ce que c'est pas écrit en trop petit ? Est ce que les lignes ne sont pas trop longue d'accord en largeur ? et qui du coup rendent la lecture trop fatigante et après vous allez jouer vous même sur le changement de résolution ce que vous pouvez faire notamment sur un pc en changeant la résolution de votre navigateur web d'accord la fenêtre de votre navigateur (redimentionnement manuel) et vous voyez en fonction de comment vous le réduisez d'accord donc là bon moi j'ai déjà un truc de responsif avec ça donc ça ne compte pas.
-```txt
-	.....................
-	: Le Kebabiste		:
-	+-------------------+
-	| Lorem ipsum ...	|
-	| 					|
-	| * One				|
-	| * Two				|
-	| * Three			|
-	| * etc.			|
-	| Lorem ipsum ...	|
-	| +-----------+		|
-	| |img		  |		|
-	| |			  |		|
-	| |			  |		|
-	| |			  |		|
-	| +-----------+		|
-	| Lorem ...			|
-	+-------------------+
-	| Recherche			|
-	| +---------------+	|
-	| |Rechercher...  |	|
-	| +---------------+	|
-	| Liens				|
-	| A propos			|
-	| Mentions légales	|
-	|					|
-	|					|
-	+-------------------+
-	: Copyright © 2018	:
-	:...................:
-```
+![08B.jpeg](img/08B.jpeg)
 Alors vous mettez en commentaire les medias queries.
 ```css
 	body

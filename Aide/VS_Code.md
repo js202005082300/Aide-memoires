@@ -5,20 +5,11 @@ Editeur, Environnement de développement, gratuite, en partie Open Source et mul
 
 Installer par défaut, pas besoin de cocher la variable PATH.
 
-Agrandir l'interface
-
-	ctrl +
+`ctrl +` Agrandir l'interface
 	
-Réduire l'interface
+`ctrl -` Réduire l'interface
 
-	ctrl -
-
-Chercher "French dans les extensions"
-
-	ctrl+Shift+X
-
-## Install -> Module linguistique français pour VS Code
-
+`ctrl+Shift+X` Chercher "French dans les extensions"
 > French Language Pack for Visual Studio Code
 
 En bas à droite, vérifier:
@@ -26,59 +17,33 @@ En bas à droite, vérifier:
 	UTF-8
 	Taille des tabulations:4
 
-Avance
-
-	Tab
+`Tab` Avance
 	
-Recule
+`Maj+Tab` Recule
 
-	Maj+Tab
+`Alt` Curseur multiple
 
-Curseur multiple
-
-	Alt
-
-Paramètre
-
-	Ctrl+,
+`Ctrl+,` Paramètre
 	
 Voir,
-Modifier dans settings.json
-C:\Users\sam\AppData\Roaming\Code\User\settings.json
+Modifier dans settings.json : 
+`C:\Users\sam\AppData\Roaming\Code\User\settings.json`
 
-Thème de couleur
+`ctrl+K ctrl+T` : Thème de couleur
 
-	ctrl+K ctrl+T
+`ctrl+Alt+flèche` Ajouter curseur en dessous ou au-dessus
 
-## Install -> Tomorrow_Night_Eighties Theme
-
-> Tomorrow_Night_Eighties
-
-Ajouter curseur en dessous ou au-dessus
-
-	ctrl+Alt+flèche
-
-Terminal
-
-	ctrl+Maj+ù
+`ctrl+Maj+ù` Terminal
 
 De plus, 
 
-Monter, désecendre une ligne.
+Monter, désecendre une ligne : `Alt+flèche`
 	
-	Alt+flèche
-	
-Remplacer,
-	
-	ctrl+H (valider : ctrl+Alt+Enter)
+Remplacer, `ctrl+H` (valider : ctrl+Alt+Enter)
 
-Commenter
-
-	Ctrl+K ctrl+C
+`Ctrl+K ctrl+C` Commenter
 	
-Retourne à la fonction en programmation.
-	
-	Click+F12
+`Click+F12` : retourne à la fonction en programmation.
 	
 Emmet, par exemple le code source Html pour un fichier .html
 
@@ -109,4 +74,8 @@ Emmet, par exemple le code source Html pour un fichier .html
 }
 ```
 
-085234706
+## Modules
+
++ Microsoft Edge Tools for VS Code
++ Tomorrow_Night_Eighties Theme
++ French Language Pack for Visual Studio Code
