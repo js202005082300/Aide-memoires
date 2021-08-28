@@ -1098,7 +1098,7 @@ Et là {} on va avoir un certains nombres de choses qui vont être gérées. Ens
 	@media screen and (min-width:600px;){}
 	@media screen and (min-width:768px;){}
 ```
-C'est pas des valeurs que je prends au pif, c'est des valeurs qu'on retrouve dans beaucoup de frameworks, dans beuacoup d'outils justement qui font ce qu'on appelle des points de ruptures et vous allez comprendre pourquoi...
+C'est pas des valeurs que je prends au pif, c'est des valeurs qu'on retrouve dans beaucoup de frameworks, dans beaucoup d'outils justement qui font ce qu'on appelle des points de ruptures et vous allez comprendre pourquoi...
 
 Ensuite 'min-width' de 992px, je crois.
 ```css
