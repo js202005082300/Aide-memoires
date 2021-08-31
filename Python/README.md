@@ -66,6 +66,7 @@
 |:heavy_check_mark:|[Formatage de texte](tutos/Formatage_de_texte/note.md)
 |:heavy_check_mark:|[Installer des paquets](tutos/Installer_des_paquets/note.md)
 |:heavy_check_mark:|[Introspection](tutos/Introspection/note.md)
+|:heavy_check_mark:|[Itérateurs](tutos/Itérateurs/note.md)
 |:heavy_check_mark:|[Méthodes spéciales](tutos/Méthodes_spéciales/note.md)
 |:heavy_check_mark:|[Portée variables](tutos/Portée_variables/note.md)
 |:heavy_check_mark:|[Tests unitaires](tutos/Tests_unitaires/note.md)
