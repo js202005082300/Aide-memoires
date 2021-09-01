@@ -22,7 +22,7 @@
 |:heavy_check_mark:|[10. Preprocesseurs](cours/010_preprocesseurs)|[main.c](cours/010_preprocesseurs/main.c) [bibli.h](cours/010_preprocesseurs/bibli.h)|[:memo:](#Preprocesseurs)
 |:heavy_check_mark:|[11. Pointeurs](cours/011_pointeurs)|[main.c](cours/011_pointeurs/main.c)|[:memo:](#Pointeurs)
 |:heavy_check_mark:|[12. Tableaux](cours/012_tableaux)|[main.c](cours/012_tableaux/main.c)|[:memo:](#Tableaux)
-|:heavy_check_mark:|[13. Chaines de caractères](cours/013_chaînes_de_caractères)|[main.c](cours/013_chaînes_de_caractères/main.c)|[:memo:](#Chaînes-de-caractères)
+|:heavy_check_mark:|[13. Chaines de caractères](cours/013_chaines_de_caractères)|[main.c](cours/013_chaines_de_caractères/main.c)|[:memo:](#Chaînes-de-caractères)
 |:heavy_check_mark:|[14. Structures et types](cours/014_structures_et_types)|[main.c](cours/014_structures_et_types/main.c)|[:memo:](#Structures-et-types)
 |:heavy_check_mark:|[15. Allocation dynamique mémoire](cours/015_allocation_dynamique_mémoire)|[main.c](cours/015_allocation_dynamique_mémoire/main.c) [types_variables.png](cours/015_allocation_dynamique_mémoire/types_variables.png)|[:memo:](#Allocation-dynamique-mémoire)
 |:heavy_check_mark:|[16. Fichiers](cours/016_fichiers)|[main.c](cours/016_fichiers/main.c) [016-R.txt](cours/016_fichiers/016-R.txt) [016-W.txt](cours/016_fichiers/016-W.txt)|[:memo:](#Fichiers)
