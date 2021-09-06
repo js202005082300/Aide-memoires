@@ -20,6 +20,7 @@ sudo apt install git
 #sudo apt-get install ksh
 #sudo apt install vlc-bin
 sudo apt-get install imagemagick
+sudo apt  install valgrind
 
 #Formations vidéo
 sudo apt-get install make

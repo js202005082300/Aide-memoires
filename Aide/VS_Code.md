@@ -57,14 +57,15 @@ Emmet, par exemple le code source Html pour un fichier .html
 //https://code.visualstudio.com/docs/getstarted/settings
 
 {
-    "workbench.welcome.enabled": false,
+    "workbench.welcome.enabled": true,
     "workbench.colorTheme": "Tomorrow_Night_Eighties",
     "files.autoSave": "afterDelay",
     "editor.cursorStyle": "line",
     "editor.tabSize": 4,
     "editor.fontLigatures": false,
     "editor.wordWrap": "on",
-    "window.zoomLevel": -1,
+    "editor.bracketPairColorization.enabled": true,
+    "window.zoomLevel": -2,
     // GIT.
     "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
     "git.enableSmartCommit": true,
