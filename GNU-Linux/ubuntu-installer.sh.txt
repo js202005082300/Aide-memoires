@@ -20,7 +20,6 @@ sudo apt install git
 #sudo apt-get install ksh
 #sudo apt install vlc-bin
 sudo apt-get install imagemagick
-sudo apt  install valgrind
 
 #Formations vidéo
 sudo apt-get install make
@@ -33,6 +32,10 @@ sudo apt-get install icoutils
 sudo apt install mlocate
 sudo apt-get install exfat-fuse exfat-utils
 sudo apt install nasm
+
+#Projets
+sudo apt-get unistall libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
+sudo apt install valgrind
 
 #Config
 git config --global user.email "js201910271836@outlook.com"
