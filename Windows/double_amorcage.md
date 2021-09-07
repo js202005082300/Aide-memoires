@@ -156,6 +156,12 @@ Monter juste après la partion Windows
 
 	sudo mount -a
 
+> Pour monter un dossier partagé avec VBox
+```sh
+#C:\Users\sam\OneDrive\MyGame (MyGame)
+sudo mount -t vboxsf MyGame ~/Bureau/MyGame/
+```
+
 ### Démarrer Windows par défaut
 
 Editer le fichier de configuration GRUB
