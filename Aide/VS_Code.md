@@ -51,10 +51,12 @@ Emmet, par exemple le code source Html pour un fichier .html
 
 ## Configuration
 
-> C:\Users\sam\AppData\Roaming\Code\User\settings.json
+> Windows : C:\Users\sam\AppData\Roaming\Code\User\settings.json
+> Linux : ~/.config/Code/User/settings.json
 
 ```json
 //https://code.visualstudio.com/docs/getstarted/settings
+//
 
 {
     "workbench.welcome.enabled": true,

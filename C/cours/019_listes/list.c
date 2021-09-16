@@ -236,3 +236,89 @@ List clear_list(List li)
 
 	return li;
 }
+
+/*---------------------------------------------------------------------*/
+
+ListElement *initList(void)
+{
+	ListElement *li = NULL;
+	li = malloc(sizeof(*li));
+	if(li == NULL)
+	{
+		fprintf(stderr, "Erreur : probleme allocation dynamique.\n");
+		exit(EXIT_FAILURE);
+	}
+
+	return li;
+}
+
+/**
+* Supprime les éléments choisi dans une Liste
+* @param li La liste
+* @param x L'entier de l'élément à supprimer
+* @return Une List
+*/
+ListElement *delElement(ListElement *lptr, int x)
+{
+	ListElement *aptr, *pptr, *nptr;
+	pptr = NULL;
+	aptr = lptr;
+	nptr = initList();
+
+	if(is_empty_list(lptr))
+		return new_list();
+
+	while(aptr != NULL)
+	{	
+		if(aptr->value == x && pptr == NULL)
+		{
+			pptr = aptr->next;
+			//free(aptr);
+			aptr = pptr;
+		}
+		else if(aptr->value == x)
+		{
+			pptr->next = aptr->next;
+			free(aptr);
+			aptr = pptr;
+		}
+		pptr = aptr;
+		aptr = aptr->next;
+	}
+
+	return lptr;
+}
+
+/**
+* Insère un élément dans une Liste
+* @param li La liste
+* @param x L'entier de l'élément à insérer
+* @return Une List
+*/
+ListElement *insertSorted(ListElement *lptr, int x)
+{
+	
+	Bool found = false;
+
+	ListElement *pptr = NULL;
+	ListElement *nptr = initList();
+	ListElement *aptr = lptr;
+
+	while(aptr != NULL && !found)
+	{
+		if(aptr->value <= x)
+		{
+			pptr = aptr;
+			aptr = aptr->next;
+		} else
+			found = true;
+	}
+	nptr->value = x;
+	nptr->next = aptr;
+	if(pptr != NULL)
+		pptr->next = nptr;
+	else
+		lptr = nptr;
+
+	return lptr;
+}

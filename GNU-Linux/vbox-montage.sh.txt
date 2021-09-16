@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo mount -t vboxsf MyGame ~/Bureau/MyGame/

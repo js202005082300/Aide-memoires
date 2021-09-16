@@ -161,6 +161,17 @@ Monter juste après la partion Windows
 #C:\Users\sam\OneDrive\MyGame (MyGame)
 mkdir ~/Bureau/MyGame/
 sudo mount -t vboxsf MyGame ~/Bureau/MyGame/
+
+# Pour bien faire monter dans `/mnt/MyGame/`
+```
+Editer fstab (étape adaptée de : https://gist.github.com/kentwait/ea49b270f4f7480541409c5ded093ec9).
+```sh
+$ echo $UID
+$ echo $GID
+sudo nano /etc/fstab
+```
+```conf
+MyGame    ~/Bureau/MyGame/    vboxsf    defaults,uid=1000,gid=,umask=0022    0    0
 ```
 
 ### Démarrer Windows par défaut

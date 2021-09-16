@@ -78,7 +78,13 @@ Fusionner plusieurs fichiers en un seul (sans ré-encodage) :
 	
 	ffmpeg -i img2.png -vf scale=15:-1 img22.png
 
-src: https://trac.ffmpeg.org/wiki/Scaling
++ [Info source](https://trac.ffmpeg.org/wiki/Scaling)
+
+## Rotation
+
+	ffmpeg -i pic.png -vf "transpose=2, transpose=2" pic-180degre.png
+
++ [Info source](https://stackoverflow.com/questions/3937387/rotating-videos-with-ffmpeg#:~:text=To%20rotate%20the%20picture%20clockwise%20you%20can%20use,out.mp4%20for%20counter-clockwise%20the%20angle%20must%20be%20negative)
 
 ## Alpha mask
 
