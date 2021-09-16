@@ -253,43 +253,6 @@ ListElement *initList(void)
 }
 
 /**
-* Supprime les éléments choisi dans une Liste
-* @param li La liste
-* @param x L'entier de l'élément à supprimer
-* @return Une List
-*/
-ListElement *delElement(ListElement *lptr, int x)
-{
-	ListElement *aptr, *pptr, *nptr;
-	pptr = NULL;
-	aptr = lptr;
-	nptr = initList();
-
-	if(is_empty_list(lptr))
-		return new_list();
-
-	while(aptr != NULL)
-	{	
-		if(aptr->value == x && pptr == NULL)
-		{
-			pptr = aptr->next;
-			//free(aptr);
-			aptr = pptr;
-		}
-		else if(aptr->value == x)
-		{
-			pptr->next = aptr->next;
-			free(aptr);
-			aptr = pptr;
-		}
-		pptr = aptr;
-		aptr = aptr->next;
-	}
-
-	return lptr;
-}
-
-/**
 * Insère un élément dans une Liste
 * @param li La liste
 * @param x L'entier de l'élément à insérer
@@ -299,10 +262,11 @@ ListElement *insertSorted(ListElement *lptr, int x)
 {
 	
 	Bool found = false;
+	ListElement *pptr, *nptr, *aptr;
 
-	ListElement *pptr = NULL;
-	ListElement *nptr = initList();
-	ListElement *aptr = lptr;
+	pptr = NULL;
+	nptr = initList();
+	aptr = lptr;
 
 	while(aptr != NULL && !found)
 	{
@@ -319,6 +283,44 @@ ListElement *insertSorted(ListElement *lptr, int x)
 		pptr->next = nptr;
 	else
 		lptr = nptr;
+
+	return lptr;
+}
+
+/**
+* Supprime les éléments choisi dans une Liste
+* @param li La liste
+* @param x L'entier de l'élément à supprimer
+* @return Une List
+*/
+ListElement *deleteElement(ListElement *lptr, int x)
+{
+	ListElement *aptr, *pptr;
+	pptr = NULL;
+
+	if(is_empty_list(lptr))
+		return new_list();
+
+	while(lptr->value == x)
+	{
+		aptr = lptr->next;
+		free(lptr);
+		lptr = aptr;
+	}
+
+	aptr = lptr;
+
+	while(aptr != NULL)
+	{		
+		if(aptr->value == x)
+		{
+			pptr->next = aptr->next;
+			free(aptr);
+			aptr = pptr;
+		}
+		pptr = aptr;
+		aptr = aptr->next;
+	}
 
 	return lptr;
 }

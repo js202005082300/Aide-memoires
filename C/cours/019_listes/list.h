@@ -33,7 +33,7 @@
 	List pop_front_list(List li);
 	List clear_list(List li);
 
-	ListElement *delElement(ListElement *lptr, int x);
+	ListElement *deleteElement(ListElement *lptr, int x);
 	ListElement *insertSorted(ListElement  *lptr, int x);
 
 #endif

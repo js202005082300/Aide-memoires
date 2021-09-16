@@ -36,32 +36,6 @@
         printf("Liste a des éléments.\n");
     /* #3# Afficher une Liste.*/
     print_list(mylist);
-
-
-
-
-    printf("*-----------*\n");
-    mylist = push_back_list(mylist,1);
-    mylist = push_back_list(mylist,2);
-    mylist = push_back_list(mylist,3);
-    mylist = push_back_list(mylist,4);
-    mylist = push_back_list(mylist,5);
-    mylist = push_back_list(mylist,12);
-    mylist = push_back_list(mylist,7);
-    mylist = push_back_list(mylist,7);
-    mylist = push_back_list(mylist,8);
-    mylist = push_back_list(mylist,12);
-    mylist = push_back_list(mylist,10);
-    mylist = push_back_list(mylist,11);
-    mylist = push_back_list(mylist,12);
-    print_list(mylist);
-    /****/
-    mylist = delElement(mylist, 12);
-    print_list(mylist);
-    printf("*-----------*\n");
-
-
-
     /* #4# Retourner le nombre d'élements de la Liste.*/
     printf("Nombre d'element : %d\n", list_length(mylist));
     /* #5# push_back_list() : Retourner la liste avec le nouvel élement ajouté.*/
@@ -82,6 +56,20 @@
     /* #9# Retourner une Liste vide.*/
     mylist = clear_list(mylist); // Eviter les fuites mémoires.
     print_list(mylist);
+
+    printf("*-----------*\n");
+    mylist = push_back_list(mylist,1);
+    mylist = push_back_list(mylist,2);
+    mylist = push_back_list(mylist,3);
+    mylist = push_back_list(mylist,4);
+    mylist = push_back_list(mylist,6);
+    mylist = push_back_list(mylist,3);
+    print_list(mylist);
+    mylist = insertSorted(mylist, 5);
+    print_list(mylist);
+    mylist = deleteElement(mylist, 3);
+    print_list(mylist);
+    printf("*-----------*\n");
 
     return 0;
  }
