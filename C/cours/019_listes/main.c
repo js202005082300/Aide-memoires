@@ -3,7 +3,9 @@
  *      Description:  Langage C #19 - listes
  *      Created:  29-01-20 | Revision: --.
  *      Compiler:  GNU Compiler - GCC.
- *      Compilation: gcc main.c list.c -o prog
+ *      Compilation:
+ *          gcc main.c list.c -o prog
+ *          gcc -g -Wall -Wextra -Werror -std=c11 -pedantic-errors *.c -o pro
  *      Author:  Samuel Jacquet
  */
 
