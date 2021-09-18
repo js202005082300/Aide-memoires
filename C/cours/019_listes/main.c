@@ -5,7 +5,7 @@
  *      Compiler:  GNU Compiler - GCC.
  *      Compilation:
  *          gcc main.c list.c -o prog
- *          gcc -g -Wall -Wextra -Werror -std=c11 -pedantic-errors *.c -o pro
+ *          gcc -g -Wall -Wextra -Werror -std=c11 -pedantic-errors *.c -o prog
  *      Author:  Samuel Jacquet
  */
 
@@ -61,6 +61,7 @@
 
     printf("*-----------*\n");
     mylist = push_back_list(mylist,1);
+    mylist = push_back_list(mylist,1);
     mylist = push_back_list(mylist,2);
     mylist = push_back_list(mylist,3);
     mylist = push_back_list(mylist,4);
@@ -69,7 +70,7 @@
     print_list(mylist);
     mylist = insertSorted(mylist, 5);
     print_list(mylist);
-    mylist = deleteElement(mylist, 3);
+    mylist = deleteElement(mylist, 1);
     print_list(mylist);
     printf("*-----------*\n");
 

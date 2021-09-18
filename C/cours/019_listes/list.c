@@ -298,9 +298,11 @@ ListElement *deleteElement(ListElement *lptr, int x)
 	ListElement *aptr, *pptr;
 	pptr = NULL;
 
+	// retourner une liste vide si la liste est vide
 	if(is_empty_list(lptr))
 		return new_list();
 
+	// supprimer les éléments x en début de liste
 	while(lptr->value == x)
 	{
 		aptr = lptr->next;
@@ -310,6 +312,7 @@ ListElement *deleteElement(ListElement *lptr, int x)
 
 	aptr = lptr;
 
+	// supprimer les éléments x au milieu et en fin de liste
 	while(aptr != NULL)
 	{		
 		if(aptr->value == x)
@@ -324,3 +327,11 @@ ListElement *deleteElement(ListElement *lptr, int x)
 
 	return lptr;
 }
+
+
+// List deleteElementOptimised(List lptr, int x)
+// {
+// 	//...
+
+// 	return lptr;
+// }

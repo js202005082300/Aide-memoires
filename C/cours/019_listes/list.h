@@ -36,4 +36,5 @@
 	ListElement *deleteElement(ListElement *lptr, int x);
 	ListElement *insertSorted(ListElement  *lptr, int x);
 
+	//List deleteElementOptimised(List lptr, int x);
 #endif
