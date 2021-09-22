@@ -292,7 +292,7 @@ function is_admin() : bool
 }
 ```
 
-Tester user_rank mémorisé en variable de session et si c'est le cas un return true; sinon un return false;
+Tester user_rank mémorisé en variable de session et si c'est le cas un `return true;` sinon un `return false;`
 
 On complétera pas la suite.
 

@@ -253,7 +253,7 @@ Voilà comme ça on a toute l'information qui va.
 
 Alors moi je vais démarrer notre serveur Apache.
 ```powershell
-	C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\apache\bin\httpd.exe
+	C:\Users\sam\OneDrive\MyWAMP\mysql\bin\httpd.exe
 ```
 On démarre le serveur, on réduit seulement la page parce qu'on doit laisser tourner. 
 
@@ -332,7 +332,7 @@ Alors on va voir pour activer ce driver donc déjà avec notre installation qu'o
 
 Alors je vous rassure sur les versions de PHP actuelle, il est déjà installé d'accord il y a tous les fichiers qui sont présents et le meilleur moyen de s'en assurer c'est d'aller dans :
 ```txt
-	C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\php\ext
+	C:\Users\sam\OneDrive\MyWAMP\php\ext
 ```
 Et de vérifier, voilà de trouver des fichiers PDO qui sont ici.
 ```txt
@@ -357,7 +357,7 @@ Maintenant il n'a pas l'air d'être activé.
 
 Comme ça concerne PHP donc on va aller dans php.ini qui je rappelle est dans Apache.
 ```txt
-	C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\apache\php.ini
+	C:\Users\sam\OneDrive\MyWAMP\apache\php.ini
 ```
 Et ici nous allons chercher l'extension, je vais cherché pdo_mysql c'est comme ça que ça s'appelle. Et on voit que toutes les extensions sont commentées donc en fait elles sont désactivées par défaut ce qui est logique parce qu'on ne va pas activer tous les drivers en même temps sinon ça va tout charger alors qu'on n'a pas besoin d'utiliser tout donc c'est pour ça que par défaut ce n'était pas activé donc on active que ce qu'on a besoin. 
 
@@ -375,7 +375,7 @@ Donc là l'extension est activée.
 
 On va relancer le serveur parce que comme on a modifié le php.ini, il faut quitter le serveur Apache donc il faut bien y penser à chaque modification. 
 ```powershell
-	C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\apache\bin\httpd.exe
+	C:\Users\sam\OneDrive\MyWAMP\apache\bin\httpd.exe
 ```
 On relance et une fois que c'est relancer on va réactualiser et on regarde s'il y a mieux. Est-ce qu'il a trouvé le driver ?
 ```txt
@@ -435,7 +435,7 @@ Pour éviter de revenir dans des répertoires précédents, pour ne pas s'embêt
 
 Je vais simplement récupérer tout le chemin en absolu de ext comme ça pas de problème.
 ```ini
-	extension_dir = "C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\php\ext"
+	extension_dir = "C:\Users\sam\OneDrive\MyWAMP\php\ext"
 ```
 On fait ça. 
 
@@ -443,7 +443,7 @@ Je rappelle que pour les fichiers de config même sur Windows, ce sont des slash
 ```ini
 	+-----------------------------------------------------------------------------------+
 	| extension=pdo_mysql																|
-	| extension_dir = "C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/php/ext"	|
+	| extension_dir = "C:/Users/sam/OneDrive/MyWAMP/php/ext"	|
 	+-----------------------------------------------------------------------------------+
 ```
 Et là comme ça je suis sûr que le chemin sera bon, ça c'est obligatoire et celui-là il fonctionnera sans problème. 
@@ -452,7 +452,7 @@ On y retourne et on fait tout bien par étape. La vidéo sera un peu longue mais
 
 On redémarre le serveur et logiquement ça devrait être bon, j'actualise le driver MySQL a bien été reconnu et est bien activée.
 ```txt
-	C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\apache\bin\httpd.exe
+	C:\Users\sam\OneDrive\MyWAMP\apache\bin\httpd.exe
 	
 	http://localhost/PHP/cours/029_introductionPDO/
 	...
@@ -502,16 +502,16 @@ Toujours pareil et je rappelle que c'est comme dans le cours MySQL, on utilise c
 	serveur
 	-------
 	
-	cd C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\mysql\bin
+	cd C:\Users\sam\OneDrive\MyWAMP\mysql\bin
 	
 	>mysqld --console
-	2020-12-21T11:00:04.538511Z 0 [System] [MY-010116] [Server] C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\mysql\bin\mysqld.exe (mysqld 8.0.22) starting as process 10148
+	2020-12-21T11:00:04.538511Z 0 [System] [MY-010116] [Server] C:\Users\sam\OneDrive\MyWAMP\mysql\bin\mysqld.exe (mysqld 8.0.22) starting as process 10148
 	2020-12-21T11:00:04.614686Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
 	2020-12-21T11:00:05.682709Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
 	2020-12-21T11:00:05.904001Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
 	2020-12-21T11:00:06.177924Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
 	2020-12-21T11:00:06.178349Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-	2020-12-21T11:00:06.251509Z 0 [System] [MY-010931] [Server] C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\mysql\bin\mysqld.exe: ready for connections. Version: '8.0.22'  socket: ''  port: 3306  MySQL Community Server - GPL.
+	2020-12-21T11:00:06.251509Z 0 [System] [MY-010931] [Server] C:\Users\sam\OneDrive\MyWAMP\mysql\bin\mysqld.exe: ready for connections. Version: '8.0.22'  socket: ''  port: 3306  MySQL Community Server - GPL.
 
 	client
 	------
@@ -562,7 +562,7 @@ Alors cela provient des utilisateurs et surtout si comme moi vous utilisez la ve
 
 Ils ont rendu un petit peu plus sécurisé l'authentification de l'utilisateur et comme ce n'est pas encore compatible avec les versions PHP actuelles en tout cas moi avec la version récente, ça n'avait pas l'air de bien fonctionner donc je suis repassé en fait vers le système d'authentification natif de MySQL et pour faire ça ? C'est très simple donc là le serveur MySQL est démarrer et on va juste aller sur une autre console et je vais me connecter au client cette fois-ci.
 ```powershell
-	cd C:\Users\sam\OneDrive\Formations\FormationVideo\MyWAMP\mysql\bin
+	cd C:\Users\sam\OneDrive\MyWAMP\mysql\bin
 
 	> mysql -u root -p
 	Enter password:
@@ -644,8 +644,8 @@ Si vous voulez dans MyWAMP\mysql\my.ini soit le fichier de configuration qu'on a
 + my.ini
 ```ini
 	[mysqld]
-	basedir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql
-	datadir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql/data
+	basedir=C:/Users/sam/OneDrive/MyWAMP/mysql
+	datadir=C:/Users/sam/OneDrive/MyWAMP/mysql/data
 	character-set-server = utf8mb4
 	collation-server = utf8mb4_unicode_ci
 
@@ -671,8 +671,8 @@ Pareil des fois ça fonctionne et des fois ça ne passe pas très bien comme par
 + my.ini
 ```ini
 	[mysqld]
-	basedir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql
-	datadir=C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/mysql/data
+	basedir=C:/Users/sam/OneDrive/MyWAMP/mysql
+	datadir=C:/Users/sam/OneDrive/MyWAMP/mysql/data
 	character-set-server = utf8mb4
 	collation-server = utf8mb4_unicode_ci
 >	default_authentication_plugin = mysql_native_password
@@ -697,7 +697,7 @@ Voilà il ne devrait pas y avoir de problème.
 ```ini
 	+-----------------------------------------------------------------------------------+
 	| extension=pdo_mysql																|
-	| extension_dir = "C:/Users/sam/OneDrive/Formations/FormationVideo/MyWAMP/php/ext"	|
+	| extension_dir = "C:/Users/sam/OneDrive/MyWAMP/php/ext"	|
 	+-----------------------------------------------------------------------------------+
 ```
 Voilà je pense qu'on a fait le tour donc je vais couper mon serveur MySQL donc on va faire ça.

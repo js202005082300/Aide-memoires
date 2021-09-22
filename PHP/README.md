@@ -45,7 +45,7 @@
 
 ||notes|
 -|:-|
-|:heavy_check_mark:|[Inclure code dans HTML](tutos/inclure_code_dans_HTML.md)
-|:heavy_check_mark:|[Installer phpMyAdmin](tutos/installer_phpMyAdmin.md)
-|:heavy_check_mark:|[Mettre à jour l'interpréteur](tutos/mettre_à_jour_l'interpréteur.md)
-|:heavy_check_mark:|[Système d'authentification](tutos/système_d'authentification.md)
+|:heavy_check_mark:|[Inclure code dans HTML](tutos/inclure_code_dans_HTML/note.md)
+|:heavy_check_mark:|[Installer phpMyAdmin](tutos/installer_phpMyAdmin/note.md)
+|:heavy_check_mark:|[Mettre à jour l'interpréteur](tutos/mettre_à_jour_interpréteur/note.md)
+|:heavy_check_mark:|[Système d'authentification](tutos/système_authentification/note.md)
