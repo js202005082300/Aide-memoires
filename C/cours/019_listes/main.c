@@ -64,10 +64,15 @@
     mylist = push_back_list(mylist,1);
     mylist = push_back_list(mylist,2);
     mylist = push_back_list(mylist,3);
+    mylist = push_back_list(mylist,1);
+    mylist = push_back_list(mylist,1);
     mylist = push_back_list(mylist,4);
     mylist = push_back_list(mylist,6);
     mylist = push_back_list(mylist,3);
+    mylist = push_back_list(mylist,1);
+    mylist = push_back_list(mylist,1);
     print_list(mylist);
+
     mylist = insertSorted(mylist, 5);
     print_list(mylist);
     mylist = deleteElement(mylist, 1);

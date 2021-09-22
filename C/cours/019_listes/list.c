@@ -295,43 +295,32 @@ ListElement *insertSorted(ListElement *lptr, int x)
 */
 ListElement *deleteElement(ListElement *lptr, int x)
 {
-	ListElement *aptr, *pptr;
-	pptr = NULL;
+	ListElement *ptr, *before;
+	ptr = lptr;
+	before = NULL;
 
-	// retourner une liste vide si la liste est vide
 	if(is_empty_list(lptr))
 		return new_list();
 
-	// supprimer les éléments x en début de liste
-	while(lptr->value == x)
-	{
-		aptr = lptr->next;
-		free(lptr);
-		lptr = aptr;
-	}
-
-	aptr = lptr;
-
-	// supprimer les éléments x au milieu et en fin de liste
-	while(aptr != NULL)
-	{		
-		if(aptr->value == x)
+	while(ptr != NULL)
+	{					
+		if(ptr->value == x)
 		{
-			pptr->next = aptr->next;
-			free(aptr);
-			aptr = pptr;
+			if(lptr->value == x)
+			{
+				before = lptr->next;
+				lptr = before;
+			}
+			else
+			{
+				before->next = ptr->next;
+				free(ptr);
+			}
+			ptr = before;
 		}
-		pptr = aptr;
-		aptr = aptr->next;
+		before = ptr;
+		ptr = ptr->next;
 	}
 
 	return lptr;
 }
-
-
-// List deleteElementOptimised(List lptr, int x)
-// {
-// 	//...
-
-// 	return lptr;
-// }
