@@ -1,732 +1,593 @@
-# [29. Introduction PDO](https://www.youtube.com/watch?v=ZXekAnqLwe0)
-13-12-20
+# Tutoriel PHP - système d'authentification
+@https://www.youtube.com/watch?v=u5HqEgBxtss
+19-02-21
 
-Bonjour à tous et bienvenue pour ce court numéro 29 en PHP. 
+## Quid session?
 
-Nous allons attaquer un dernier chapitre et le dernier de ce cours avec l'introduction à PDO. 
+La session est un outil que nous allons utiliser pour mettre en place le système d'authentification.
 
-Alors PDO c'est tout simplement une interface qui va nous permettre de travailler, de manipuler nos bases de données quel que soit le SGBD que vous utilisez. 
+Par contre la session peut être utilisée pour autre chose que l'authentification d'un utilisateur, on pourrait utiliser la session pour un panier sur un site marchand ou autre.
 
-Alors je vais faire une petite parenthèse avant d'aborder la PDO avec d'autres moyens qui existaient ou qui existe même encore avec PHP pour pouvoir travailler sur des bases de données SQL. 
+La session c'est tout simplement un moyen de transmettre des informations sur toute la durée de la navigation.
 
-Vous avez peut-être pour certains si vous avez déjà utilisé PHP et manipuler des bases de données, utilisé mysql_connect alors ça c'est le genre de fonction qui est absolument obsolète aujourd'hui mais qui de toute façon ne marche plus avec PHP 7 ça a été complètement supprimé et qui est obsolète depuis PHP 5.5.
+Là où on va transmettre des informations d'une page à une autre avec notamment un formulaire, des variables super globales GET ou POST par exemple, ou via une url parce qu'on peut passer par une url pas besoin de passer par un formulaire. Là on a l'information qui va être transmise d'une page à une autre et ensuite elle est perdue.
 
-	https://www.php.net/manual/fr/function.mysql-connect.php
+L'avantage des sessions, c'est une super globale pour rappel en php, c'est que durant toute la session donc la navigation de l'utilisateur avant une durée d'expériration ou la fermeture du navigateur les informations pourront être transmises de pages en pages.
 
-Je vous le déconseille donc évidemment et de toute façon vous êtes censé être au minimum sur PHP 7. 
+Les sessions interviennent dans un système d'authentification donc tout un système utilisateur parce qu'on va avoir besoin d'informations par exemple si l'utilisateur est connecté, s'il est administrateur (accès à espace réservé sur le site) ou visiteur ou la collecte de données ratachées à tel ou tel utilisateur suivant son rôle.
 
-Je vous déconseille ainsi d'utiliser ce genre de fonctions, tout ce qui est mysql_connect, mysql_ et cetera. 
-```txt
-	Fonctions MySQL
-	mysql_​affected_​rows
-	mysql_​client_​encoding
-	mysql_​close
-	mysql_​connect
-	mysql_​create_​db
-	mysql_​data_​seek
-	mysql_​db_​name
-	mysql_​db_​query
-	mysql_​drop_​db
-	mysql_​errno
-	...
-```
-Alors toutes ces fonctions là ne sont absolument plus utilisé en PHP pour manipuler tout simplement ou en tout cas interroger une base de données SQL. 
+## Codes
 
-Si maintenant vous voulez rester exclusivement sur de la base de données MySQL et j'insiste bien sur le système MySQL et qu'il travaillait avec quelque chose qui ressemblait avec ses anciennes fonctions devenues obsolète, vous avez l'équivalent qui fonctionne avec le paradigme objet qui est "mysqli". 
+index.php
 ```php
-	mysqli_connect()
+<?php
+    if(isset($_POST['valid_connection']))
+        if(isset($_POST['form_username']) && !empty($_POST['form_username']) && isset($_POST['form_password']) && !empty($_POST['form_password']))
+        {
+            echo '<pre>';
+            print_r($_POST);
+            echo '<pre>';
+        }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d acceuil</title>
+</head>
+<body>
+    <h1>Page d acceuil</h1>
+
+    <p>Bienvenue sur la page d acceuil</p>
+
+    <hr>
+    <h2>Se connecter</h2>
+
+    <form method="post">
+        <input type="text" name="form_username" placehomder="Identification...">
+        <input type="password" name="form_password" placeholder="Mot de passe...">
+        <input type="submit" name="valid_connection" value="Connexion">
+    </form>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="content.php">Page</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
-C'est donc tout simplement les mêmes fonctions mais en rajoutant un i avant le underscore donc par exemple pour mysql_connect() qui est obsolète nous avons son équivalent objet qui est mysqli_connect() et ça vous pouvez parfaitement l'utiliser même avec PHP 7. Il n'y a aucun problème. 
 
-Alors moi je ne le aborderais pas sur le cours parce que je ne peux pas tout aborder en ce qui concerne tous les moyens qui existent pour manipuler les bases de données puis ce n'est pas forcément celui qui m'intéresse le plus pour le coup mais pour MySQL vous pouvez sans problème utiliser "mysqli" et la doc de PHP est de toute façon suffisamment fournie pour vous donner tout le détail de comment se connecter, comment faire des requêtes et cetera. 
+La partie php c'est pour vérifier si le formulaire a été valider et si c'est le cas que les infos ont bien été rempli et si c'est le cas on fait un petit print_r().
 
-Nous nous allons du coup utiliser l'objet ou en tout cas l'interface PDO c'est-à-dire que c'est une interface qui apporte une couche d'abstraction. 
-
-Là où mysqli va fonctionner que pour un système MySQL, PDO va pouvoir interroger une base de données MySQL, PostgreSQL, MS Server, Oracle … Voilà n'importe quel type de base de données comme ça sans se soucier de ce qu'il y a en fait dessous c'est-à-dire que vous allez utiliser exactement les mêmes méthodes en PHP via l'interface PDO pour interroger n'importe quel SGBD. 
-
-C'est pour ça que j'ai choisi celui-là pour le cours PHP parce qu'on n'a pas mal de choses à voir et c'est le plus intéressant dans ce cas de figure. 
-
-Voilà pour ça. 
-
-Regardons un petit peu Comment ça va fonctionner. 
-
-Alors on dit PDO de pour PHP Data Object pour ceux qui se poseraient la question déjà on va tout préparer au niveau de l'introduction de cette interface là pour cette séance, et par la suite on verra comment utiliser quelques méthodes liées justement à cette interface PDO. 
-
-Pour suivre ce nouveau et dernier chapitre sur ce cours PHP, je vous invite obligatoirement en tout cas c'est un prérequis, à avoir vu au minimum les 5 premières séances de mon cours SQL parce que tout ce qui est lié à SQL, je ne vais évidemment pas revenir là-dessus.
-
-Vous êtes censé le connaître et vous avez besoin au moins des 5 premières vidéos du cours SQL de la chaîne pour pouvoir suivre convenablement ce nouveau chapitre et en tout cas ce dernier chapitre PHP concernant justement les bases de données. 
-
-Alors nous on y va parce qu'on a pas mal de choses à voir et qu'est-ce qu'on va faire ? On va déjà essayer de se connecter avec l'interface PDO. 
-
-Et on va voir déjà un petit peu si on arrive déjà à se connecter et sinon est-ce qu'il n'y a pas des choses à corriger.
-
-Je vais faire ça en vidéo comme ça on verra un petit peu ce qui ne va pas éventuellement et pouvoir tout configurer. 
-
-L'avantage du cours que je vous avais proposé comme vous l'avez bien vu dans les vidéos précédentes, ce que nous avons tout installé à la main manuellement chaque outil séparément donc on va pouvoir véritablement garder le contrôle et la main sur tout ce que nous avons et au moindre problème on sera comment le résoudre et qu'est-ce qui permet d'activer toutes les options nécessaires. 
-
-Rappelez-vous sur la vidéo précédente on avait parlé des exceptions pour pouvoir gérer en tout cas et convenablement nos erreurs ici en PHP. 
-
-Eh bien on va utiliser un petit peu ce système là puisque une connexion à une base de données n'est pas assurée c'est-à-dire qu'on va essayer de se connecter à la base de données et si jamais ça n'a pas fonctionné on aimerait avoir une erreur, on aimerait qu'on nous retourne une erreur pour savoir quoi faire. 
-
-On va donc utiliser le fameux bloc try catch et ça c'est quelque chose qu'on a vu récemment et pour PDO nous avons un type d'exception particulier qui héritent des exceptions générales qui est PDOException et on peut donner un nom de variable `$pe` par exemple mais vous mettez le nom de la variable que vous voulez évidemment et on pourra comme ça travailler là-dessus.
+content.php
 ```php
-	try
-	{
-		
-	}
-	catch(PDOException $pe)
-	{
-		
-	}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Autre page</title>
+</head>
+<body>
+    <h1>Autre page</h1>
+
+    <p>Bonjour, je sais toujours qui vous êtes ! :)</p>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="content.php">Page</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
-Comme PDOException est une classe spécialisée de Exception, évidemment elle hérite de toutes les méthodes de Exception donc je peux sans problème faire un 'ERREUR : ' comme ceci et de faire un $pre->… pour utiliser la méthode getMessage(). 
-```php
-	try
-	{
-		
-	}
-	catch(PDOException $pe)
-	{
-		echo 'ERREUR : '.$pe->getMessage();
-	}
+
+```sql
+CREATE DATABASE IF NOT EXISTS `formationvideo_db`;
+USE `formationvideo_db`;
+
+CREATE TABLE IF NOT EXISTS `site_users`
+(
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `user_name` VARCHAR(25) NOT NULL,
+    `user_password` VARCHAR(255) NOT NULL,
+    `user_registerDate` DATETIME NOT NULL,
+    `user_admin` TINYINT(1) NOT NULL DEFAULT '0',
+    PRIMARY KEY(`id`)
+);
+
+INSERT INTO `site_users`(`user_name`, `user_password`, `user_registerDate`, `user_admin`)
+VALUES
+('jachampagne', 'ahdhdo123', NOW(), 1),
+('ChuckNORRIS', 'bfjdjj8888', NOW(), 0),
+('BobLePêcheur', '12jjj222', NOW(), 0);
 ```
-Comme ça s'il y a une exception qui est levée donc une erreur qui survient, on aura le message affiché et on pourra du coup travailler dessus. 
 
-Alors au niveau de la connexion comment est-ce que ça va se passer ? On va instancier c'est à dire que pdo possède un constructeur et nous allons créer une instance de pdo pour obtenir un objet pdo sur lequel nous allons pouvoir travailler par la suite. 
-
-Je vais donc appeler ma variable `$PDO`, je veux rester très simple au niveau du nom comme ça je serai automatiquement que c'est mon instance et ensuite je mets new PDO() comme ceci pour instancier cet objet-là, en tout cas cette classe.
-```php
-	try
-	{
-		$PDO = new PDO();
-	}
-	catch(PDOException $pe)
-	{
-		echo 'ERREUR : '.$pe->getMessage();
-	}
-```
-Au niveau des paramètres on va en avoir plusieurs, on va avoir un paramètre qui va spécifier le moteur à utiliser, en l'occurrence même le driver donc le pilote de base de données à utiliser : MySQL, Oracle, PostgreSQL, SQLite et cetera. 
-
-Et des informations comme l'identifiant donc l'utilisateur et le mot de passe sql avec lequel nous allons nous connecter. 
-
-Alors je vous déconseille de mettre toutes ces informations là directement en dur `''` dans `PDO('', '', '')`  parce que ça va être sous forme de 3 chaînes en fait. Une pour toutes les informations liées aux drivers et à la base de données. Une pour le user et le password tout simplement parce que c'est déjà pas très propre de mettre ces informations là en dur et ça risque de mélanger un petit peu tout. 
-
-Au minimum ce que vous pouvez vous amuser à faire, vous pouvez mettre ces informations là en dehors c'est-à-dire qu'on va faire par exemple un `$DB_DSN` je vous expliquerai pourquoi j'appelle ça comme ça parce que c'est un nom plus pratique pour moi. On va avoir un `$DB_USER` et on aura un `$DB_PASSWORD`. 
-```php
-	$DB_DSN = '';
-	$DB_USER = '';
-	$DB_PASS = '';
-	
-	try
-	{
-		$PDO = new PDO();
-	}
-	catch(PDOException $pe)
-	{
-		echo 'ERREUR : '.$pe->getMessage();
-	}
-```
-Voilà et le mieux aussi, et ça ça arrivera surtout quand vous travaillerez sur des projets plus concrets, c'est même de sortir ces éléments parce que ce sont des éléments de configuration dans un fichier à part. 
-
-Moi je préférerais faire carrément un require et d'avoir un  'db-config.php' admettons comme ça et qui va demander, exiger, qui requiert obligatoirement ce fichier là dans lequel on aura éventuellement ces infos pour se connecter à la base de données.
-```php
-	require 'db-config.php';
-	
-	try
-	{
-		$PDO = new PDO();
-	}
-	catch(PDOException $pe)
-	{
-		echo 'ERREUR : '.$pe->getMessage();
-	}
-```
-Ensuite je vais créer un nouveau fichier db-config.php voilà et je passe les paramètres.
-
-+ db-config.php
-```php	
-	<?php
-	$DB_DSN = '';
-	$DB_USER = '';
-	$DB_PASS = '';
-```
-Alors vous pouvez utiliser des variables comme ça, vous pouvez passer par un tableau associatif. 
-
-Vous pouvez même carrément faire des constantes avec un define(); voilà c'est vous qui voyez.
-
-+ db-config.php
-```php	
-	<?php
-	$DB_DSN = '';
-	$DB_USER = '';
-	$DB_PASS = '';
-	
-	define();
-```
-Je ne vous impose rien du tout, vous voyez en fonction et vous savez de toute façon comment faire donc vous pouvez gérer par rapport à ça. 
-
-Vous voyez en fonction et vous savez de toute manière comment faire donc vous pouvez gérer par rapport à ça. 
-
-En gros ces informations là, on va déjà remplir ici et comme vous le savez il fallait déjà avoir vu le cours sql donc normalement vous avez une base de données MySQL qui est prête puisque nous allons travailler sur MySQL en l'occurrence ici on ne va pas travailler sur Oracle parce que je n'ai pas Oracle sur mon PC donc on travaillera sur MySQL. 
-
-Pour ceux qui avaient vu, et c'est un prérequis, les vidéos sur le cours SQL. Moi j'avais un USER qui s'appelle 'root' ensuite je n'avais pas de mot de passe parce que j'étais en local donc pas besoin de mot de passe ''. 
-
-+ db-config.php
-```php
-	<?php
-	$DB_DSN = '';
-	$DB_USER = 'root';
-	$DB_PASS = '';
-```
-Vous évidemment vous remplissez avec les informations qui correspondent à votre configuration. 
-
-Et le DSN justement a un format un peu particulier.
-
-Alors pour DSN, en premier on va lui passer le driver à utiliser. 
-
-Comme on a dit qu'on allait travailler sur mysql, je le mets directement ici suivi de : et attention pas d'espace et cetera sinon vous aurez des erreurs pour ça que je dis que c'est très important le format à respecter et ensuite 2 informations. La première qui est très importante c'est l'ôte sur lequel se connecter donc ça c'est obligatoire donc nous ce sera host=localhost parce qu'on est en local sinon ce serait un nom de domaine, une adresse IP ou autre chose. Et pour éviter de devoir spécifier manuellement sur quelle base de données on va se connecter, on va mettre la suite qu'on va se connecter sur une base en particulier donc je mets un ; dbname= et là pour ceux qui ont vu de toute manière le cours sql, j'avais fait une base de données qui s'appelait fv_database.
-
-+ db-config.php
-```php
-	<?php
-	$DB_DSN = 'mysql:host=localhost;dbname=fv_database';
-	$DB_USER = 'root';
-	$DB_PASS = '';
-```
-Pareil vous éditez en fonction.
-
-Vous pouvez très bien démarrer votre client en MySQL, vous créez une base de données avec le nom que vous voulez comme ça vous pourrez directement vous connecter dessus pour faire des tests et des requêtes par la suite.
-
-Voilà les 3 informations dont nous avions besoin. 
-
-Du coup c'est beaucoup plus pratique parce que comme j'ai directement inclus mon fichier. Ainsi je n'ai plus qu'à appeler ces 3 informations en séparant par des virgules. 
-
-+ index.php
-```php
-	<?php
->	require 'db-config.php';
-
-	try
-	{
->		$PDO = new PDO($DB_DSN, $DB_USER, $DB_PASS);
-	}
-	catch(PDOException $pe)
-	{
-		echo 'ERREUR : '.$pe->getMessage();
-	}
-```
-Déjà ça évite de faire des erreurs parce qu'on aurait déjà eu toute cette chaîne là `'mysql:host=localhost;dbname=fv_database'` à donner en premier paramètre.
-
-Et comme vous voyez qu'il y a plein de deux-points, de virgule puis ensuite des paramètres, c'est un coup à se trompait et en plus ça mélange les informations de connexion donc de configuration avec directement à l'instance. 
-
-Alors comme ça c'est beaucoup plus propre, comme ça le jour où vous modifier ces informations là tout est dans le fichier de config et en plus ça permet de sécuriser un peu plus plutôt que de tout avoir dans index.php donc on garde bien sa part et ce qui est beaucoup plus pratique. 
-
-Voilà pour ça et ensuite je peux simplement en faire un `'Connexion &eacute;tablie !'`. eacute Pour afficher les actions parce que je n'ai pas du tout de code HTML. On mettra ainsi un petit message comme ça, connexion établie !
-```php
-require 'db-config.php';
-
-try
-{
-	$PDO = new PDO($DB_DSN, $DB_USER, $DB_PASS);
-	
-	echo 'Connexion &eacute;tablie !';
-}
-catch(PDOException $pe)
-{
-	echo 'ERREUR : '.$pe->getMessage();
-}
-```
-En gros si on arrive sur ce echo et que le message s'affiche c'est que la connexion a réussi. 
-
-Sinon une exception va être lever par le instanciation ici, new PDO(), le constructeur.
-```php
-	$PDO = new PDO($DB_DSN, $DB_USER, $DB_PASS);
-```
-Ça va nous renvoyer dans le catch() parce qu'on va capturer l'exception dans `$pe` qui sera éventuellement noté ' PDEException' et on affichera du coup l'erreur qui survient.
-```php
-	catch(PDOException $pe)
-	{
-		echo 'ERREUR : '.$pe->getMessage();
-	}
-```
-Voilà comme ça on a toute l'information qui va. 
-
-Alors moi je vais démarrer notre serveur Apache.
 ```powershell
-	C:\Users\sam\OneDrive\MyWAMP\mysql\bin\httpd.exe
+mysql> SHOW tables;
++-----------------------------+
+| Tables_in_formationvideo_db |
++-----------------------------+
+| site_users                  |
++-----------------------------+
+1 row in set (0.01 sec)
+
+mysql> DESCRIBE site_users;
++-------------------+--------------+------+-----+---------+----------------+
+| Field             | Type         | Null | Key | Default | Extra          |
++-------------------+--------------+------+-----+---------+----------------+
+| id                | int          | NO   | PRI | NULL    | auto_increment |
+| user_name         | varchar(25)  | NO   |     | NULL    |                |
+| user_password     | varchar(255) | NO   |     | NULL    |                |
+| user_registerDate | datetime     | NO   |     | NULL    |                |
+| user_admin        | tinyint(1)   | NO   |     | 0       |                |
++-------------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM site_users;
++----+---------------+---------------+---------------------+------------+
+| id | user_name     | user_password | user_registerDate   | user_admin |
++----+---------------+---------------+---------------------+------------+
+|  1 | jachampagne   | ahdhdo123     | 2021-02-20 00:17:50 |          1 |
+|  2 | ChuckNORRIS   | bfjdjj8888    | 2021-02-20 00:17:50 |          0 |
+|  3 | BobLePêcheur  | 12jjj222      | 2021-02-20 00:17:50 |          0 |
++----+---------------+---------------+---------------------+------------+
+3 rows in set (0.00 sec)
 ```
-On démarre le serveur, on réduit seulement la page parce qu'on doit laisser tourner. 
+On considère un compte administrateur lorsque le champ user_admin est à '1' c'est comme un booléen et si c'est '0' par défaut c'est un utilisateur standard et du coup le visiteur ça peut être 1 ou -1 ou de pas de valeur du tout.
 
-On va laisser ça comme ça et ensuite on va dans notre sous-dossier localhost sur le navigateur.
-```txt
-	http://localhost/PHP/cours/029_introductionPDO/
-	ERREUR : could not find driver
-```
-Normalement j'arrive sur cette page qui nous met ERREUR: could not find driver.
+On va voir également pourquoi user_password s'étend jusqu'à 255 charactères.
 
-On a donc un premier problème et ça tombe bien on va justement voir pourquoi. 
+Pour l'exemple, on ne met pas d'e-mail ou autre.
 
-Rappelez-vous au niveau du cours nous avons installé notre serveur Apache, serveur web pas de souci. 
+Alors généralement quand on créé son propre site, on crée son propre utilisateur/administrateur en base de données et après d'autres utilisateurs viendrons s'ajouter à la base de données en s'inscrivant.
 
-On a installé l'interpréteur PHP, on a configuré tout ça pour que ça fonctionne ensemble. 
+Dans cet exemple nous n'avons pas fait de formulaire d'inscription mais ça on l'a vu en PHP/SQL.
 
-Et sur le cours SQL nous avons installé MySQL. On a configuré rappelez vous la création du répertoire data. On s'est arrangé pour avoir un utilisateur sur lequel on pouvait se connecter donc en l'occurrence l'utilisateur root même si on a vu dans des vidéos comment créer de nouveaux utilisateurs donc c'est au-delà de la séance 5 en SQL d'ailleurs. 
+## Alors comment passe t'on d'un état visiteur à connecté ?
 
-Enfin bref nous avons vu tout ce qu'il fallait par rapport à ça. 
+C'est état grâce à une information qui change et cette information on va pouvoir l'utiliser via notre super globale càd les sessions. On pourra travailler avec la super globale des sessions pour ça et on aura une simple information qui dira que tel utilisateur est connecté ou non.
 
-Et c'est grosso modo nous ne trouvons pas le driver donc en l'occurrence le driver MySQL pour se connecter donc ça c'est un premier problème que nous avons. 
+On présentera chaque page du site de manière différente si l'utilisateur est connecté ou non.
 
-Alors ce qu'on va faire déjà, c'est faire un phpinfo() et je vais exit directement pour ne pas lancer le reste de l'exécution de la page, pour voir un petit peu si mon driver est chargé ou en tout cas qu'est-ce que j'ai comme information. 
+Admettons si l'utilisateur est connecté j'affiche un message de bienvenue avec son pseudonyme récupéré en base de données, une information qu'on va avoir besoin de mémoriser en session et sinon on lui affiche un formulaire. On ne va pas afficher un formulaire de connection si l'utilisateur est déjà connecté.
 
-J'actualise ma page.
+Voilà pensez au visuel, l'uilisateur connecté ne doit pas voir un formulaire de connection.
+
+Si on voit qu'on est connecté avec bienvenue avec pseudonyme, on comprend qu'on est visuellement connecté mais nous au niveau du code c'est qu'on a mémorisé des informations en variable de session.
+
+## init_php_session()
+
+### initialiser la session
+
+Alors un fichier util.php pour mettre des fonctions qu'on va réutiliser souvent.
+
+util.php
 ```php
 <?php
 
-require 'db-config.php';
+function init_php_session() : bool
+{
+    if(!session_id())
+    {
+        session_start(); // 1e info à mettre, démarrer la session.
+        session_regenerate_id(); // régénérer l'id à chaque fois par sécurité.
+        return true; // si ce qui prècède c'est bien passé.
+    }
+    return false; // si on est là, la connection a échouée ou l'utilisateur est déjà connecté.
+}
+```
 
-phpinfo();
+On fait appel à cette fonction.
+
+    require 'util.php';
+    login();
+
+index.php
+```php
+<?php
+    require 'util.php';
+    init_php_session();
+
+    if(isset($_POST['valid_connection']))
+        if(isset($_POST['form_username']) && !empty($_POST['form_username']) && isset($_POST['form_password']) && !empty($_POST['form_password']))
+        {
+            echo '<pre>';
+            print_r($_POST);
+            echo '<pre>';
+        }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d acceuil</title>
+</head>
+<body>
+    <h1>Page d acceuil</h1>
+
+    <p>Bienvenue sur la page d acceuil</p>
+
+    <hr>
+    <h2>Se connecter</h2>
+
+    <form method="post">
+        <input type="text" name="form_username" placehomder="Identification...">
+        <input type="password" name="form_password" placeholder="Mot de passe...">
+        <input type="submit" name="valid_connection" value="Connexion">
+    </form>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="content.php">Page</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+```
+
+Alors pour le faire encore plus proprement, on ne rappel pas login() car générallement on le fait dans un seul fichier pour faire un système de template et après on peut faire appel au contenu du fichier de template et ça évite de répeter ce code.
+
+Par exemple, on répète plusieurs fois ce menu mais bien sûr on ne va pas s'amuser à dupliquer à chaque fois ce menu `<nav>` sinon on aurais un menu statique.
+
+En gros toute les pages de notre site ont besoin d'initialiser les sessions.
+
+content.php
+```php
+<?php
+    require 'util.php';
+    init_php_session();
+>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Autre page</title>
+</head>
+<body>
+    <h1>Autre page</h1>
+
+    <p>Bonjour, je sais toujours qui vous êtes !</p>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="content.php">Page</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+```
+
+Voilà on a juste initialiser les sessions php.
+
+### détruire la session
+
+Pour détruire les sessions mais on l'avait déjà vu, c'est tout simplement 2 fonctions avec session_unset() pour enlever tout les contenus qui ont été mémorisés et session_detroy() pour enlever tout simplement les sessions.
+
+```php
+function clean_php_session() : void
+{
+    session_unset();
+    session_destroy();
+}
+```
+
+Voilà très simple.
+
+## is_admin()
+
+Alors pour permettre de distinguer un utilisateur standard par rapport à un utilisateur root, il faut choisir comment les distinguer mais pour l'exemple de la vidéo:
+
+* un visiteur ne possède pas de rang parce qu'il n'a aucun compte en base de données.
+* un utilisateur standard a la valeur '0' pour le champ user_admin.
+* un utilisateur root a la valeur '1' pour le champ user_admin.
+
+```php
+function is_admin() : bool
+{
+    // si user_rank
+}
+```
+
+Tester user_rank mémorisé en variable de session et si c'est le cas un return true; sinon un return false;
+
+On complétera pas la suite.
+
+## is_logged()
+
+Tester si l'utilisateur est connecté.
+
+```php
+function is_logged() : bool
+{
+    return true;
+}
+```
+
+Par exemple, on veux interdire l'accès ou un service à utilisateur qui serrait juste un visiteur dans ce cas on se servirais de is_logged(). Si la fonction valide l'utilisateur c'est qu'il est connecté sinon il ne l'est pas et on pourra gérer le traitement de nos pages en fonction.
+
+Ici pareil, on met par défaut true et on complétera par la suite.
+
+util.php
+```php
+<?php
+
+function init_php_session() : bool
+{
+    if(!session_id())
+    {
+        session_start();
+        session_regenerate_id();
+        return true;
+    }
+    return false; 
+}
+
+function clean_php_session() : void
+{
+    session_unset();
+    session_destroy();
+}
+
+function is_logged() : bool
+{
+    return true;
+}
+
+function is_admin() : bool
+{
+    return true;
+}
+```
+
+Très important de distinguer les rôles des utilisateurs où on doit choisir ce qu'on utilise en base de données ou qu'est-ce qu'on utilise dans notre implémentation pour définir des rôles entre chacun des utilisateurs et du coup des droits.
+
+Chaque rôle obtient certains type de droits et pas les mêmes non plus.
+
+On ne veux pas qu'un simple utilisateur ait accès à la partie administration.
+
+## Teste du formulaire
+
+    Se connecter
+    [Identifiant] [Mot de passe...] [Connexion]
+
+Si je n'écrit qu'une seule information, en fait ça renvoie sur la même page, ça n'affiche rien, et dés que je saisis l'identifiant et le mot de passe, on récupère bien les informations.
+
+```powershell
+Array
+(
+    [form_username] => Jason
+    [form_password] => passe
+    [valid_connection] => Connexion
+)
+```
+## Sécurité
+
+On demandera à l'utilisateur de changer ses identifiants plutôt que de lui renvoyer bêtement sur son e-mail donc ne pas céder aux caprices d'un utilisateur un peu fainéant de peur de perdre quelques client sur un site de commerce.
+
+Voilà on ne veux pas mettre à mal l'ensemble des données des autres utilisateurs parce que juridiquement parlant ça posera des problèmes.
+
+En terme de sécurité que stockons-nous ? et comment ?
+
+L'identifiant et le mot de passe.
+
+Attention on ne stocke pas le mot de passe en clair.
+
+    Un hash de "passe" : $2y$10$FCdhOhUhxZNLOP46n4fD0uADTI5W4NyxCPnhdyVrVA4lLAaaT.YHa
+
+Voilà ça ça correspond bien à pass1 et pas autre chose donc on risquerais de ne jamais pouvoir se connecter si on n'a pas l'information nécessaire. 
+
+### Chiffrement vs. hashage
+
+On a deux solutions, la première c'est le chiffrement.
+
+Le chiffrement on a une information en clair, on utilise une clé de chiffrement d'accord qui va chiffrer l'information en clair pour produire une information chiffrée mais au niveau chiffrement on peut revenir à l'inverse c'est-à-dire en ayant la clé de déchiffrement ou en tout cas la clé qui a permis de chiffrer, on peut revenir à l'étape en clair.
+
+En gros, B une information chiffrée qui serra stockée dans nos base de données.
+```
+    /*
+        Chiffrement : A + <clé> => B
+    */
+```
+Jamais on ne stockera A càd le mot de passe que l'utilisateur va entrer avec son clavier par exemple sur un formulaire de connexion.
+
+Et donc si on perd notre clé de chiffrement, vous ne pourrez pas déchiffrer vous aurez perdus vos données.
+
+Il faut B et la clé pour revenir à l'information en clair.
+```
+    /*
+        Chiffrement     : A + <clé> => B
+        Déchiffrement   : B + <clé> => A
+    */
+```
+Ca c'est la première méthode, la moins recommandée au niveau web parce qu'il y a possibilité de revenir à l'inverse. Si le pirate arrive a récupérer l'information chiffrée et la clé, il pourra aisement retrouver le mot de passe en clair.
+
+La deuxième méthode, on utilise le principe de hashage.
+
+Le hashage c'est simplement une information en clair A qui va produire l'information B via un algorythme.
+
+```
+    /*
+        Hash : A -> B
+    */
+```
+Elle peut utiliser également ce qu'on appelle un sel c'est tout simplement une suite de caractères qui va permettre en fait via différentes opérations, itérations complexifier le schéma qui est produit au final.
+
+Et là c'est comme dans la cuisine, on met le salage pour le hash !
+
+Attention ici on n'a pas la possibilité de revenir à l'envers. Il n'y a pas de clé de chiffrement, de déchiffrement ou autre d'accord c'est une fois qu'on a obtenu une information B eh bien ça restera la information B d'accord on ne peut pas faire l'étape inverse mais c'est du coup plus intéressant.
+
+Par exemple, dans notre base de données, on a mit "passe" notre mot de passe en clair pour le premier exemple et ça a donné tout ça.
+
+    Un hash de "passe" : $2y$10$FCdhOhUhxZNLOP46n4fD0uADTI5W4NyxCPnhdyVrVA4lLAaaT.YHa
+
+Voilà ça utilise blowfish comme algorythme mais on ne rentre pas dans les détails. On n'est pas là pour parler des algorythme de chiffrement.
+
+En base de données, on va stocker le hash d'un utilisateur ce qui assure la sécurité point de vue du chiffrement.
+
+Craquer le mot de passe pour revenir en arrière mais il s'agit d'algorythme de hashage qui sont éprouvé d'accord ils sont suffisament fiable pour empêcher cela et en plus de cela, en tant qu'utilisateur root, on ne possède pas le mot de passe de nos utilisateurs. C'est gage de sureté et de confiance supplémentaire. En tant que responsable du site, on n'a pas accès aux mots de passe des autres utilisateurs.
+
+Encore une fois ne jamais faire confiance à l'utilisateur, admettons qu'on récupère l'information en clair, par exemple avec un mot de passe identique à celui utilisé sur d'autres comptes tel que Paypal ou autre. On ne doit pas faire confiance aux autres administrateurs non plus.
+
+Le désavantage c'est que si demain Chuck Norris me demande son mot de passe, je suis incapable de lui donner.
+
+Par ailleurs même si un pirate accède à la base de données, il pourra récupérer un nom d'utilisateur, des dates et hash dont l ne pourra rien faire.
+
+## L'étape de hashage
+
+Comment fait on pour enregistrer cette information ?
+
+Simplement avant de créer son système d'authentification, on créé directement dans la base de données son utilisateur à nous d'accord et du coup vous aurez besoin d'avoir déjà le mot de passe hashé.
+
+On utilise la constante PASSWORD_BCRYPT càd l'algorythme Blowfish qui est à ce jour le plus utile, celui qui est le mieux prit en charge, le mieux éprouvé et celui qui est le plus éfficace.
+
+```php
+<?php
+$pass = 'passe';
+echo password_hash($pass, PASSWORD_BCRYPT);
+```
+
+En 3e paramètre de password_hash() on peut mettre le nombre de fois où on va éffectuer des itérations pour en fait éffectuer le hashage et par défaut c'est 10, on peut aller de 4 à 31 mais comprenez que les différentes itération que prendra l'algorythme prendra un certains nombre de temps. Par défaut, dans un tableau associatif on a ça ['cost' => 10].
+
+```php
+<?php
+$pass = 'passe';
+echo password_hash($pass, PASSWORD_BCRYPT, ['cost' => 10]);
+```
+Si on met ça c'est comme ne rien mettre en 3e argument.
+
+Plus le hash serra long, plus le hash serra éfficace mais le problème c'est que le temps d'exécution pour produire le hash serra long. Idéallement la production d'un hash ne doit pas prendre plus d'1/2 seconde ce qui est une bonne référence. Si ça prend 0,6 ou 1 seconde c'est qu'évidemment le coût est beaucoup trop grand par rapport à la machine. Si ça prend trop de temps pour produire le hash c'est que pour le coup ça devient contre-productif.
+
+Par ailleurs il faut vérifier également le retour de la fonction password_hash() parce que si une erreur est survenue elle ne retournera pas le hash mais elle retournera false.
+
+Un autre avantage c'est que le mot de passe produit à la fin ne serra pas le même dés qu'on actualise la page.
+
+```php
+<?php
+$pass = 'passe';
+echo password_hash($pass, PASSWORD_BCRYPT);
 exit;
-
-try
-{
-	$PDO = new PDO($DB_DSN, $DB_USER, $DB_PASS);
-	
-	echo 'Connexion &eacute;tablie !';
-}
-catch(PDOException $pe)
-{
-	echo 'ERREUR : '.$pe->getMessage();
-}
 ```
-```txt
-	http://localhost/PHP/cours/029_introductionPDO/
-	PHP Version 7.4.7
-	...
-```
-Je suis donc à jour. 
 
-Alors un autre petit conseil c'est que si vous avez une nouvelle version de PHP n'hésitez pas à la mettre à jour d'ailleurs vous avez ma playlist PHP tutoriel où j'ai fait une vidéo justement pour mettre à jour PHP donc n'hésitez pas à aller voir si vous voulez pour être sur la version la plus récente possible que vous pouvez avoir pour ne pas avoir de problème et surtout pour avoir de nouvelles fonctionnalités. 
+    $2y$10$FCdhOhUhxZNLOP46n4fD0uADTI5W4NyxCPnhdyVrVA4lLAaaT.YHa
+    $2y$10$qlAFX0nqaytU9.hr.oOTr.ukD9ud5bvHQtfCcF/57au592sPEqVMW
+    $2y$10$dRhrMUku2sUlVY5yprUdS.l94RAY4T7bkGvDhy0DE.4/Hf4c1io0q
+    $2y$10$YmZG9vom/vgxqQ5F.M821eAhzW5ExqVhawOgCxdkoIArTl5Ioeql2
 
-Surtout que PHP 7 permettre d'avoir de gros gros gains en performance, en vitesse d'exécution. 
+A chaque fois que je actualise la page le hash change c'est pour ça qu'au final c'est d'autant plus efficace de hacher un mot de passe plutôt que simplement le chiffrer puisque le hash produit à la fin ne sera pas le même d'accord parce qu'il n'y a pas en fait d'effet inverse c'est-à-dire de partir du hash et revenir à un mot en clair.
 
-Voilà ils se sont vraiment bien rattrapé avec la version 7 de PHP par rapport à la version 5. 
+Alors si on a le hash qui change à chaque fois sachant que c'est ça qu'on va stocker en base de données, comment on va vérifier qu'un utilisateur est bien connecté parce que si on fait la compraison des deux, il nous dira que c'est pas bon et l'utilisateur ne pourra pas se connecter.
 
-Il faut vraiment profiter de tout ça donc n'hésitez pas à mettre à jour PHP. 
-
-Moi il est mis à jour comme j'avais fait ma vidéo de mise à jour avant, j'ai pu le mettre à jour récemment donc pas de problème. 
-
-Alors je vais descendre dans mes infos et je vais chercher du coup pdo parce que ça c'est ce qui m'intéresse en fait. 
-
-Voilà la partie pdo et je regarde dans les drivers.
-```txt
-	http://localhost/PHP/cours/029_introductionPDO/
-	PHP Version 7.4.7
-	...
-	PDO
-	PDO support				enabled
-	PDO drivers				no value
-```
-Je regarde dans les drivers et je vois qu'il y a no value donc déjà là il y a un problème parce que je n'ai aucun driver d'activé ce qui explique pourquoi j'ai cette fameuse erreur Not find drivers. 
-
-Alors on va voir pour activer ce driver donc déjà avec notre installation qu'on a fait précédemment, pdo n'est pas activé par défaut. 
-
-Alors je vous rassure sur les versions de PHP actuelle, il est déjà installé d'accord il y a tous les fichiers qui sont présents et le meilleur moyen de s'en assurer c'est d'aller dans :
-```txt
-	C:\Users\sam\OneDrive\MyWAMP\php\ext
-```
-Et de vérifier, voilà de trouver des fichiers PDO qui sont ici.
-```txt
-	php_pdo_firebird.dll
-	php_pdo_mysql.dll
-	php_pdo_oci.dll
-	php_pdo_odbc.dll
-	php_pdo_pgsql.dll
-	php_pdo_sqlite.dll
-```
-Voilà php_pdo et notamment php_pdo_mysql, vous en avez pour chaque Firebird, ODBC, PostgreSQL, SQLite et cetera. 
-
-On a même pour Oracle. 
-
-On a tout ce qu'il nous faut même php_mysqli.dll que vous pouvez trouver. 
-
-Si vous voulez utiliser mysqli c'est cette extension là qui va être utilisée. 
-
-On veut donc MySQL qui est bien présent php_pdo_mysql.dll donc pas de problème. 
-
-Maintenant il n'a pas l'air d'être activé.
-
-Comme ça concerne PHP donc on va aller dans php.ini qui je rappelle est dans Apache.
-```txt
-	C:\Users\sam\OneDrive\MyWAMP\apache\php.ini
-```
-Et ici nous allons chercher l'extension, je vais cherché pdo_mysql c'est comme ça que ça s'appelle. Et on voit que toutes les extensions sont commentées donc en fait elles sont désactivées par défaut ce qui est logique parce qu'on ne va pas activer tous les drivers en même temps sinon ça va tout charger alors qu'on n'a pas besoin d'utiliser tout donc c'est pour ça que par défaut ce n'était pas activé donc on active que ce qu'on a besoin. 
-
-Si vous voulez utiliser mysqli, vous allez décommenter cette ligne.
-```ini
-	;extension=mysqli
-```
-Mais nous comme on travaille sur MySQL, on va décommenter cette ligne.
-```ini
-	+-------------------------------+
-	| extension=pdo_mysql			|
-	+-------------------------------+
-```
-Donc là l'extension est activée. 
-
-On va relancer le serveur parce que comme on a modifié le php.ini, il faut quitter le serveur Apache donc il faut bien y penser à chaque modification. 
-```powershell
-	C:\Users\sam\OneDrive\MyWAMP\apache\bin\httpd.exe
-```
-On relance et une fois que c'est relancer on va réactualiser et on regarde s'il y a mieux. Est-ce qu'il a trouvé le driver ?
-```txt
-	http://localhost/PHP/cours/029_introductionPDO/
-	PHP Version 7.4.7
-	...
-	PDO
-	PDO support				enabled
-	PDO drivers				no value
-```
-Est-ce qu'il a trouvé le driver ? non. 
-
-Alors là et ça vous ne pouviez pas le deviner, il fallait peut-être voir un petit peu par rapport à ça. 
-
-Le driver a bien été activé, il est bien présent dans mes fichiers et je pense que c'est un problème d'accès aux extensions. 
-
-Ce qu'on va donc faire au niveau du php.ini, on va cherché ce qui permet d'accéder à ce fameux répertoire.
-```txt
-	C:\MyWAMP\php\ext
-```
-On doit pouvoir accéder à ce fichier php_pdo_mysql.dll donc apparemment ma configuration de PHP n'arrive pas à accéder à ce répertoire et donc à ce fichier. 
-
-Ainsi vous cherchez la ligne extension_dir et normalement vous avez... pas pour SQLite 3, on s'en fiche mais on a ligne 757.
-```ini
-	; Directory in which the loadable extensions (modules) reside.
-	; http://php.net/extension-dir
-	;extension_dir = "./"
-	; On windows:
->	;extension_dir = "ext"
-```
-On a cette ligne là où il nous dit quel est le répertoire pour charger les extensions, les modules, et vous indiquent pour Windows, il faut décommenter ça.
-```ini
-	extension_dir = "ext"
-```
-On va donc décommenter cette ligne.
-```ini
-	+-------------------------------+
-	| extension=pdo_mysql			|
-	| extension_dir = "ext"			|
-	+-------------------------------+
-```
-Je vais couper mon serveur encore une fois. 
-
-Je le relance. 
-
-Je vais réactualiser ma page et on n'a pas encore le problème qui est résolu encore une fois.
-
-Il y a donc ici un souci de chemin apparemment par rapport à ça. 
-
-Il n'arrive pas à trouver "ext" et C'est d'ailleurs un souci qu'on a vu sur d'autres chemins, je vous avais même dit pour ne pas avoir de problème de mettre le chemin en absolu parce que un chemin comme ça relatif c'est un petit peu galère. 
-
-Alors pourquoi est-ce que c'est galère, tout simplement parce que mon php.ini, mon fichier de configuration PHP par habitude je le mets dans apache, il n'est pas mis dans PHP. 
-
-S'il était dans MyWAMP/php/ je pense que le chemin aurait marché parce qu'en partant de la racine, il accède directement au répertoire ext et là du coup ça ne va pas. 
-
-Pour éviter de revenir dans des répertoires précédents, pour ne pas s'embêter, puisque moi je garde toujours cette configuration en mettant toujours mon fichier php.ini dans MyWAMP/apache/.
-
-Je vais simplement récupérer tout le chemin en absolu de ext comme ça pas de problème.
-```ini
-	extension_dir = "C:\Users\sam\OneDrive\MyWAMP\php\ext"
-```
-On fait ça. 
-
-Je rappelle que pour les fichiers de config même sur Windows, ce sont des slashs et pas des antislashs et là comme ça je suis sûr que le chemin sera bon.
-```ini
-	+-----------------------------------------------------------------------------------+
-	| extension=pdo_mysql																|
-	| extension_dir = "C:/Users/sam/OneDrive/MyWAMP/php/ext"	|
-	+-----------------------------------------------------------------------------------+
-```
-Et là comme ça je suis sûr que le chemin sera bon, ça c'est obligatoire et celui-là il fonctionnera sans problème. 
-
-On y retourne et on fait tout bien par étape. La vidéo sera un peu longue mais comme ça on aura vraiment toutes les étapes pour être sûr de configurer tout comme il faut. 
-
-On redémarre le serveur et logiquement ça devrait être bon, j'actualise le driver MySQL a bien été reconnu et est bien activée.
-```txt
-	C:\Users\sam\OneDrive\MyWAMP\apache\bin\httpd.exe
-	
-	http://localhost/PHP/cours/029_introductionPDO/
-	...
-	PDO
-	PDO support	enabled
-	PDO drivers	mysql
-	...
-```
-Ça c'est bon, au moins pas de problème à ce niveau-là. 
-
-Alors on vire phpinfo() et maintenant on s'attend à être connecté.
+Pour le hashage, on a cette fonction password_hash() qui génère le hash à un instant t et celle qui va le vérifier c'est la fonction password_verif() qui prend en compte le mot de passe en question et le hash qui est stocké en base de donnée.
 ```php
-require 'db-config.php';
+<?php
+$pass = 'passe';
+$hash = password_hash($pass, PASSWORD_BCRYPT);
 
-try
-{
-	$PDO = new PDO($DB_DSN, $DB_USER, $DB_PASS);
-	
-	echo 'Connexion &eacute;tablie !';
-}
-catch(PDOException $pe)
-{
-	echo 'ERREUR : '.$pe->getMessage();
-}
+echo password_verify($pass, $hash);
+exit;
 ```
-Et maintenant on s'attend à être connecté. 
+Ca retournera 1 si ça correspond.
 
-Maintenant que tout est connecté que le driver est bon donc il peut utiliser pdo_mysql. 
+Si j'actualise ça fonctionne toujours donc le hash qui est généré à chaque fois est différent pour autant c'est toujours vérifier convaneblement, c'est bien valide et ça nous suffit à valider ce hash en base de données.
 
-Voilà on charge la page. 
-```txt
-	http://localhost/PHP/cours/029_introductionPDO/
-	ERREUR : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
-```
-Voilà on charge la page et là il nous met qu'aucune connexion n'a pu être établie car l'ordinateur cible l'a expressément refusée donc c'est parfaitement logique et je pense que beaucoup l'aurons compris d'où vient cette erreur. 
+    1
+    1
+    1
+    1
 
-On a simplement démarrer notre serveur apache, notre serveur web mais est-ce qu'on a démarré notre serveur MySQL pas du tout. 
+Ensuite on va effectuer une requête pour récupérer les informations, pour voir qu'elles existent bien et si elle existe on va vérifier le mot de passe via cette fonction-là donc pour faire une simple comparaison, le user_name correspond à celui que vous avez récupéré de la base de données et pour le mot de passe on utilisera password_verify().
 
-Donc évidemment on démarre notre serveur MySQL, c'est comme pour accéder avec le client MySQL parce que si on ne démarre pas notre serveur on ne pourra pas se connecter dessus. 
-
-Si on ne peut pas accéder nous, PHP ne va pas pouvoir y accéder pour autant. 
-
-Donc c'est dans mysql\bin\.
-
-Toujours pareil et je rappelle que c'est comme dans le cours MySQL, on utilise cette commande.
-```powershell
-	serveur
-	-------
-	
-	cd C:\Users\sam\OneDrive\MyWAMP\mysql\bin
-	
-	>mysqld --console
-	2020-12-21T11:00:04.538511Z 0 [System] [MY-010116] [Server] C:\Users\sam\OneDrive\MyWAMP\mysql\bin\mysqld.exe (mysqld 8.0.22) starting as process 10148
-	2020-12-21T11:00:04.614686Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-	2020-12-21T11:00:05.682709Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-	2020-12-21T11:00:05.904001Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
-	2020-12-21T11:00:06.177924Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-	2020-12-21T11:00:06.178349Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-	2020-12-21T11:00:06.251509Z 0 [System] [MY-010931] [Server] C:\Users\sam\OneDrive\MyWAMP\mysql\bin\mysqld.exe: ready for connections. Version: '8.0.22'  socket: ''  port: 3306  MySQL Community Server - GPL.
-
-	client
-	------
-	
-	> mysql -u root -p
-	Enter password:
-	Welcome to the MySQL monitor.  Commands end with ; or \g.
-	Your MySQL connection id is 12
-	Server version: 8.0.22 MySQL Community Server - GPL
-
-	Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
-
-	Oracle is a registered trademark of Oracle Corporation and/or its
-	affiliates. Other names may be trademarks of their respective
-	owners.
-
-	Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-	mysql> CREATE DATABASE `fv_database`;
-	Query OK, 1 row affected (0.01 sec)
-
-	mysql> SHOW DATABASES;
-	+--------------------+
-	| Database           |
-	+--------------------+
-	| cours_sql          |
-	| fv_database        |
-	| information_schema |
-	| mysql              |
-	| performance_schema |
-	| sys                |
-	+--------------------+
-	6 rows in set (0.01 sec)
-```
-
-Et on démarre notre serveur, on attend un petit peu. Une fois qu'il y a le socket, port 3306 qui est marqué et cetera, c'est bon. 
-
-Moi je rappelle que je suis sur MySQL version 8 donc une des plus récentes. 
-
-Ensuite on actualise la page et là la connexion est établie.
-```txt
-	http://localhost/PHP/cours/029_introductionPDO/
-	Connexion établie !
-```
-Connexion établie ! donc la connexion est réussie, alors il y a de fortes chances que parmi vous certains ait un problème d'authentification que ça vous mette Requested authentification unknown et cetera, enfin bref vous aurez un message d'erreur qui vous indique que l'authentification a échoué et que du coup vous ne pouvez pas vous connecter. 
-
-Alors cela provient des utilisateurs et surtout si comme moi vous utilisez la version de MySQL 8 c'est-à-dire que pour la version MySQL 5, vous ne devriez pas avoir de problème par contre avec la version 8 ils ont changé un petit peu les méthodes d'authentification. 
-
-Ils ont rendu un petit peu plus sécurisé l'authentification de l'utilisateur et comme ce n'est pas encore compatible avec les versions PHP actuelles en tout cas moi avec la version récente, ça n'avait pas l'air de bien fonctionner donc je suis repassé en fait vers le système d'authentification natif de MySQL et pour faire ça ? C'est très simple donc là le serveur MySQL est démarrer et on va juste aller sur une autre console et je vais me connecter au client cette fois-ci.
-```powershell
-	cd C:\Users\sam\OneDrive\MyWAMP\mysql\bin
-
-	> mysql -u root -p
-	Enter password:
-	Welcome to the MySQL monitor.  Commands end with ; or \g.
-	Your MySQL connection id is 14
-	Server version: 8.0.22 MySQL Community Server - GPL
-
-	Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
-
-	Oracle is a registered trademark of Oracle Corporation and/or its
-	affiliates. Other names may be trademarks of their respective
-	owners.
-
-	Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-	mysql>
-```
-Voilà donc mon utilisateur root je précise qui n'a pas de mot de passe voilà et une fois que je suis connecté là. 
-
-Je rappelle comme d'habitude pour ceux qui viennent du cours SQL, je l'ai bien ma fv_database qui est là.
-```sql
-	mysql> show databases;
-	+--------------------+
-	| Database           |
-	+--------------------+
-	| cours_sql          |
-	| fv_database        |
-	| information_schema |
-	| mysql              |
-	| performance_schema |
-	| sys                |
-	+--------------------+
-	6 rows in set (0.00 sec)
-```
-Et là je vais tout simplement faire cette commande là que je n'ai pas besoin de refaire parce que je l'ai déjà fait et que ça fonctionne déjà mais vous vous aurez besoin de faire ça. 
-
-Vous aurez besoin de faire `ALTER USER` donc on va altérer la table des utilisateurs, ensuite l'utilisateur en question entre quote et donc moi c'est `'root'@`, voilà avec notre `@` qui est en dehors des doubles quotes donc faites attention à ne pas vous tromper dans l'écriture et ensuite vous écrivez `'root'@'localhost'` donc ça c'est l'hôte, c'est l'hôte local et ensuite on va simplement faire IDENTIFIED WITH donc attention au niveau de l'écriture et ce qu'il va falloir faire ce n'est pas un BY mais un WITH parce que BY c'était la version par défaut et terminer par `mysql_native_password by '';` Et ensuite entre code vous mettez le mot de passe que vous voulez et moi comme je n'ai pas de mot de passe je laisse vide, une chaîne vide mais vous pouvez mettre un mot de passe à l'intérieur il n'y a pas de problème.
+Très rapidement vous avez d'autres fonctions qui sont éventuellement pratique, vous avez aussi password_get_info() qui va renvoyer un tableau d'accord sur le $hash, il faut passer le $hach en arguments et ça vous retournera tout simplement un tableau avec toutes les informations: l'algorithme utilisé, le coup utilisés, etc.
 ```php
-	/*
-		alter user 'root'@'localhost' identified with mysql_native_password by '';
-	*/
+    /*
+        password_get_info($hash)
+    */
+
+<?php
+$pass = 'passe';
+$hash = password_hash($pass, PASSWORD_BCRYPT);
+
+echo password_verify($pass, $hash);
+exit;
 ```
-```sql
-	mysql> alter user 'root'@'localhost' identified with mysql_native_password by '';
-	Query OK, 0 rows affected (0.01 sec)
+
+### password_needs_rehash()
+@https://www.php.net/manual/fr/function.password-needs-rehash.php
+
+```php
+<?php
+$pass = 'passe';
+$hash = password_hash($pass, PASSWORD_BCRYPT);
+
+password_needs_rehash($pass, $hash);
+
+echo password_verify($pass, $hash);
+exit;
 ```
-Voilà moi je fais ça, il suffit juste de faire ça et ça change ici la méthode d'authentification de l'utilisateur. 
 
-On peut quitter le client à partir de là et normalement ça doit être pris en compte tout de suite.
-```sql
-	mysql> exit
-	Bye
+Si un jour, on change le côut (par exemple de 10 à 13) ou bien d'algorythme PASSWORD_BCRYPT, cette fonction va faire à nouveau le hashage de tout les ancien mot de passe si on met d'autres options. On applique aux ancien mots de passe le nouveau hash avec éventuellement le nouvelle algorythme que l'on choisie et éventuellement les nouvelles options.
+
+Voilà si un jour on met à jour notre fonction de hashage, on fait appel à password_needs_rehash() à l'endroit où se connecte l'utilisateur.
+
+### En pratique
+
+index.php
+```php
+<?php
+    require 'Database.php';
+    require 'util.php';
+    init_php_session();
+
+    if(isset($_POST['valid_connection']))
+        if(isset($_POST['form_username']) && !empty($_POST['form_username']) && isset($_POST['form_password']) && !empty($_POST['form_password']))
+        {
+            $username = $_POST['form_username'];
+            $password = $_POST['form_password'];
+
+            $sql = 'SELECT * FROM site_users WHERE user_name = :name';
+            $fields = ['name' => $username];
+
+            $req = Database::getInstance()->request($sql, $fields);
+
+            echo '<pre>';
+            print_r($req);
+            echo '<pre>';
+        }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d acceuil</title>
+</head>
+<body>
+    <h1>Page d acceuil</h1>
+
+    <p>Bienvenue sur la page d acceuil</p>
+
+    <hr>
+    <h2>Se connecter</h2>
+
+    <form method="post">
+        <input type="text" name="form_username" placehomder="Identification...">
+        <input type="password" name="form_password" placeholder="Mot de passe...">
+        <input type="submit" name="valid_connection" value="Connexion">
+    </form>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="content.php">Page</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
-Sinon redémarrez au pire le serveur MySQL si ce n'est pas pris en compte mais logiquement ça devrait être bon, et après vous aurez du coup comme moi la connexion qui est établie donc ça devrait être bon. 
 
-Logiquement vous ne devriez pas avoir d'erreur donc ça devait être la seule erreur. 
-
-Ça c'est encore une fois parce que MySQL 8 a changé beaucoup de choses dans l'authentification des utilisateurs et PHP a du coup besoin de se mettre à jour par rapport à ça et ce n'est pas toujours forcément le cas. 
-
-D'ailleurs comment est-ce que j'ai corrigé l'erreur parce que je l'ai évidemment pas deviné comme ça au départ, j'ai eu le fameux message d'erreur que l'on va retrouver et en cherchant avec ce message dans le navigateur, j'ai écrit PDO MySQL PHP et je suis allé voir sur la doc.
-
-https://www.bing.com/search?q=PDO+MySQL+PHP
-https://www.php.net/manual/fr/ref.pdo-mysql.php
-
-Voilà et j'ai du coup retrouvé le message que j'avais rencontré, c'est pas tout à fait le même mais vous devriez avoir un gros ce genre de messages.
-```txt
-	The server requested authentication method unknown to the client
-```
-Alors moi j'avais eu ce message là et en cherchant du coup PDO MySQL sur la doc, je suis tombé là-dessus, et on vous dit en gros que si vous avez une version trop ancienne de PHP, même de PHP 7, Eh bien il va falloir passer le plug-in avec le mode natif. 
-
-On vous dit que de toute façon la nouvelle méthode d'authentification de MySQL, caching_sha2_password pour MySQL 8 sera supporté dans une version future de PHP. 
-
-Après là ils disent que apparemment au-dessus de la version 7.2.4 et plus, ça marchait mais moi je suis en 7.3.4 et ça n'avait pas l'air de marcher pour autant donc du coup j'ai fait la petite commande SQL que je vous ai montré tout à l'heure et ça marchait sans problème. 
-
-Après éventuellement une autre chose que l'on peut rajouter surtout pour les prochains utilisateurs que vous allez créer. 
-
-Si vous voulez dans MyWAMP\mysql\my.ini soit le fichier de configuration qu'on avait fait pour MySQL.
-	
-+ my.ini
-```ini
-	[mysqld]
-	basedir=C:/Users/sam/OneDrive/MyWAMP/mysql
-	datadir=C:/Users/sam/OneDrive/MyWAMP/mysql/data
-	character-set-server = utf8mb4
-	collation-server = utf8mb4_unicode_ci
-
-	[mysql]
-	default-character-set = utf8mb4
-
-	[client]
-	default-character-set = utf8mb4
-```
-Alors vous allez pouvoir ajouter, il s'agit de la fameuse ligne qui était donnée dans la doc.
-```powershell
-	https://www.php.net/manual/fr/ref.pdo-mysql.php
-	...
-	Ceci est dû au fait que MySQL 8 utilise par défaut caching_sha2_password, un plugin qui n'est pas reconnu par les anciennes versions de PHP (mysqlnd). À la place il faut modifier le paramètre default_authentication_plugin=mysql_native_password dans my.cnf. Le plugin caching_sha2_password sera surporté dans une version future de PHP.
-	...
-```
-Voilà elle est ici, cette ligne là : `default_authentication_plugin=mysql_native_password`
-
-Pour que par défaut le plug-in d'authentification utilisé soit la version native. 
-
-Pareil des fois ça fonctionne et des fois ça ne passe pas très bien comme paramètre.
-
-+ my.ini
-```ini
-	[mysqld]
-	basedir=C:/Users/sam/OneDrive/MyWAMP/mysql
-	datadir=C:/Users/sam/OneDrive/MyWAMP/mysql/data
-	character-set-server = utf8mb4
-	collation-server = utf8mb4_unicode_ci
->	default_authentication_plugin = mysql_native_password
-
-	[mysql]
-	default-character-set = utf8mb4
-
-	[client]
-	default-character-set = utf8mb4
-```
-Voilà ça ce n'est pas sûr que ça résolve tout seul les problèmes mais vous pouvez toujours le rajouter ça ne fait pas de mal par rapport à ça mais sinon avec la requête ALTER USER que je vous ai montré normalement ça change l'authentification de votre utilisateur donc moi en l'occurrence root Et ça corrigera le problème justement, cette fameuse erreur :
-```txt
-	The server requested authentication method unknown to the client
-```
-Et si ce n'est toujours pas résolu n'hésitez pas en commentaire de la vidéo, à me le dire si vous avez encore des problèmes pour vous connecter malgré tous les changements qui ont été faits. 
-
-Logiquement si vous avez une version de PHP suffisamment récente donc essayer de mettre la plus récente possible tant qu'à faire. 
-
-Si vous avez bien fait la commande SQL que je vous ai montré pour changer la méthode d'authentification de l'utilisateur, et que vous avez bien modifié votre php.ini au niveau du chemin pour activer l'extension pdo_mysql, logiquement tout le monde devrait arriver à Connexion établie ! 
-
-Voilà il ne devrait pas y avoir de problème.
-```ini
-	+-----------------------------------------------------------------------------------+
-	| extension=pdo_mysql																|
-	| extension_dir = "C:/Users/sam/OneDrive/MyWAMP/php/ext"	|
-	+-----------------------------------------------------------------------------------+
-```
-Voilà je pense qu'on a fait le tour donc je vais couper mon serveur MySQL donc on va faire ça.
-```powershell
-	client
-	------
-	
-	mysql> exit
-	Bye
-	
-	PS C:\Users\sam> mysqladmin -u root -p shutdown
-	Enter password:
-```
-Voilà histoire de quitter le serveur proprement et on va quitter également le serveur Apache [x]. 
-
-Et voilà on a vu comment faire l'introduction par rapport à PDO, alors je viens de voir que je n'aurais peut-être pas dû tout quitter maintenant parce que j'avais d'autres choses à vous montrer. 
-
-Je viens de penser à quelque chose qui aurait pu être intéressant à vous montrer mais on verra ça pour la vidéo prochaine, ce n'est pas grave comment on va commencer de toute façon à faire des requêtes pour interroger une base de données.
-
-On verra au niveau des paramètres pour la prochaine fois ce n'est pas bien grave alors que la vidéo était déjà pas mal longue.
-
-Au moins si vous êtes déjà bien connecté à votre base de données déjà c'est pas mal, vous avez tout qui y est prêt pour la suite. 
-
-Voilà j'espère que cette vidéo vous a plu.
-
-Pour la prochaine séance de PHP, on verra comment interroger du coup notre base de données et on verra comment spécifier un petit peu des options un peu particulière pour la connexion à PDO pour avoir des paramètres qui vont bien par rapport à l'utilisation que nous en aurons. 
-
-Et après on verra comment faire des requêtes tout simplement, à utiliser tout ce que vous avez vu en SQL, tous les types de requêtes que vous avez appris sur le cours SQL que vous allez pouvoir du coup utiliser en appelant des méthodes de PDO en PHP. 
-
-Je vous dis à bientôt pour la prochaine séance sur formation vidéo.
-
-Ciao tout le monde
+45.00
+Database.php
