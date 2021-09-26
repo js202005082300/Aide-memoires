@@ -19,10 +19,17 @@ function clean_php_session() : void
 
 function is_logged() : bool
 {
-    return true;
+    if(isset($_SESSION['username']))
+        return true;
+
+    return false;
 }
 
 function is_admin() : bool
 {
-    return true;
+    if(is_logged())
+        if(isset($_SESSION['rank']) && $_SESSION['rank'] == 1)
+            return true;
+
+    return false;
 }

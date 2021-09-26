@@ -3,6 +3,12 @@
     require 'util.php';
     init_php_session();
 
+    if(isset($_GET['action']) && !empty($_GET['action'] && $_GET['action'] == "logout"))
+    {
+        clean_php_session();
+        header('Location: index.php');
+    }
+
     if(isset($_POST['valid_connection']))
         if(isset($_POST['form_username']) && !empty($_POST['form_username']) && isset($_POST['form_password']) && !empty($_POST['form_password']))
         {
@@ -14,9 +20,15 @@
 
             $req = Database::getInstance()->request($sql, $fields);
 
-            echo '<pre>';
-            print_r($req);
-            echo '<pre>';
+            if($req && password_verify($password, $req['user_password']))
+            {
+                init_php_session();
+
+                $_SESSION['username'] = $username;
+                $_SESSION['rank'] = $req['user_admin'];
+            }
+            else
+                echo 'Identifiant ou mot de passe incorrect';
         }
 ?>
 <!DOCTYPE html>
@@ -33,11 +45,15 @@
     <hr>
     <h2>Se connecter</h2>
 
-    <form method="post">
-        <input type="text" name="form_username" placehomder="Identification...">
-        <input type="password" name="form_password" placeholder="Mot de passe...">
-        <input type="submit" name="valid_connection" value="Connexion">
-    </form>
+    <?php if(is_logged()): ?>
+        <p>Bienvenue <?= htmlspecialchars($_SESSION['username']) ?> | <a href="index.php?action=logout">Se déconnecter</a></p>
+    <?php else: ?>
+        <form method="post">
+            <input type="text" name="form_username" placehomder="Identification...">
+            <input type="password" name="form_password" placeholder="Mot de passe...">
+            <input type="submit" name="valid_connection" value="Connexion">
+        </form>
+    <?php endif; ?>
 
     <nav>
         <ul>

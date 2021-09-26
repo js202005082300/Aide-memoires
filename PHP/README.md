@@ -21,7 +21,7 @@
 |:heavy_check_mark:|[12. Tableaux](cours/012_tableaux/note.md)
 |:heavy_check_mark:|[13. Gestion erreurs](cours/013_gestion_erreurs/note.md)
 |:heavy_check_mark:|[14. Fichiers](cours/014_fichiers/note.md)
-|:heavy_check_mark:|[15. Traiter formulaire HTM](cours/015_forrmulaireHTML/note.md)
+|:heavy_check_mark:|[15. Traiter formulaire HTML](cours/015_forrmulaireHTML/note.md)
 |:heavy_check_mark:|[16. Programmation modulaire](cours/016_programmationModulaire/note.md)
 |:heavy_check_mark:|[17. Cookies](cours/017_cookies/note.md)
 |:heavy_check_mark:|[18. Sessions](cours/018_sessions/note.md)
@@ -49,3 +49,4 @@
 |:heavy_check_mark:|[Installer phpMyAdmin](tutos/installer_phpMyAdmin/note.md)
 |:heavy_check_mark:|[Mettre à jour l'interpréteur](tutos/mettre_à_jour_interpréteur/note.md)
 |:heavy_check_mark:|[Système d'authentification](tutos/système_authentification/note.md)
+|:x:|[Tutoriel PHP - envoi mail() en local](tutos/envoi_mail_en_local/note.md)

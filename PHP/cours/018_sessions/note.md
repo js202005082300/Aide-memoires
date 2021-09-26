@@ -1066,7 +1066,7 @@ On lui met la valeur vide '' voilà aucune valeur. L'expiration c'est tout de su
 Et ensuite la régénération de l'identifiant que l'on met à true pour enlever l'ancien.
 ```php
 	<?php
-	/ 
+	/* 
 		session_id()
 		session_name()
 		session_start()
@@ -1074,7 +1074,7 @@ Et ensuite la régénération de l'identifiant que l'on met à true pour enlever
 		session_unset()
 		session_destroy()
 		session_write_close()
-	/
+	*/
 		
 		session_start();
 >		session_unset();
