@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 07-09-2021 
+> 🧭 Màj le 26-09-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -33,7 +33,7 @@
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
 |:heavy_check_mark:|[Java](Java/README.md)|
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)|
-|:x:|[PHP](PHP/README.md)|*tutos : Authentification et mailing*
+|:x:|[PHP](PHP/README.md)|*tuto mailing*
 |:heavy_check_mark:|[Python](Python/README.md)
 |:heavy_check_mark:|[SQL](SQL/README.md)
 |:heavy_check_mark:|[Windows](Windows/README.md)
