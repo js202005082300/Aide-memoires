@@ -49,4 +49,4 @@
 |:heavy_check_mark:|[Installer phpMyAdmin](tutos/installer_phpMyAdmin/note.md)
 |:heavy_check_mark:|[Mettre à jour l'interpréteur](tutos/mettre_à_jour_interpréteur/note.md)
 |:heavy_check_mark:|[Système d'authentification](tutos/système_authentification/note.md)
-|:x:|[Tutoriel PHP - envoi mail() en local](tutos/envoi_mail_en_local/note.md)
+|:heavy_check_mark:|[Tutoriel PHP - envoi mail() en local](tutos/envoi_mail_en_local/note.md)
