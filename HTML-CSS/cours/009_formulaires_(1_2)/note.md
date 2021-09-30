@@ -378,7 +378,8 @@ Tout simplement aussi puisqu'il va permettre de spécifier un texte par défaut 
 ```
 ![04](img/04.jpeg)
 J'actualise et voyez il met un texte dedans, on pourrait penser que c'est un texte qu'il faut que j'enlève de mon champ mais regardez en fait quand je fais le curseur voyez il l'enlève tout seul.
-![05](img/05.jpeg)
+
+![05](img/05.jpeg)  
 Si j'éfface tout, il va réafficher le 'placeholder' donc c'est pas du texte qui est déjà mis à l'intérieur du champ c'est juste voilà un petit modèle, un petit schéma pour vous guider, une petite description pour savoir quoi mettre dans ce champ donc c'est plutôt très pratique à ce niveau là voilà.
 
 Donc là on a tout ici le 'placeholder' et cetera.
