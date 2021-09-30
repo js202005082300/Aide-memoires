@@ -295,11 +295,7 @@ Pour cela on va tout simplement s'occuper de mettre un champ de saisie au niveau
 Là je ne m'embête pas trop au niveau de la présentation, vous verez que par défaut, rappelez-vous html n'est pas fait pour faire de la mise en page, on n'aura pas quelque chose de très joli mais encore une fois le but ici c'est de voir la sémantique, la partie contenu plus que la mise en page, le design.
 
 Donc `<input name="username">` ensuite on actualise et dès le début nous avons notre petit texte avec le champ de saisie ou je peux évidemment écrire le nom dedans sans problème, ça fonctionnera d'accord donc ça pas de souci.
-```txt
-		  +-----------------+
-	Nom : |Jason			|
-		  +-----------------+
-```
+![01](img/01.jpeg)
 Du coup ce qui est important de voir par rapport à ça c'est que nous allons pouvoir renseigner beaucoup beaucoup beaucoup d'informations notamment via des attributs au niveau de ce champ `<input>` d'accord donc ça c'est vraiment important.
 
 Alors déjà pour faire plus proprement au niveau du texte ici nous allons en faire un label.
@@ -330,11 +326,7 @@ Et donc on peut mettre un attribut 'for' avec ici un identificateur "prenom" en 
 </html>
 ```
 Voilà donc c'est important pour le label le nom "prenom" ici au niveau du 'for' doit être le même qu'au niveau du 'id' pour l'input comme ça si je fait tab il me donne directement le focus sur le champ de saisie donc j'ai pas besoin de la souris en fait pour le faire.
-```txt
-		  +-----------------+
-	Nom : ||				|
-		  +-----------------+
-```
+![02](img/02.jpeg)
 Je réactualise tout simplement hop j'appuie sur la touche tab et j'arrive sur le formulaire ça peut être tout à fait pratique et encore une fois vous allez vraiment faciliter le travail en tout cas la saisie pour ceux qui n'utilise pas la souris donc ça c'est des choses à savoir donc tout simplement.
 
 Et là on peut mettre deux points et présenter ainsi.
@@ -360,11 +352,7 @@ Voilà donc on va dire pour ce qui est le strict minimum d'accord on va faire le
 </body>
 </html>
 ```
-```txt
-		  +-----------------+
-	Nom : ||				|
-		  +-----------------+
-```
+![03](img/03.jpeg)
 Voilà `<p>` si on veut mettre un champ par ligne comme ça plus tard on pourra le mettre en page correctement avec du css comme on le verra dans les vidéos prochainement donc là on a vraiment quelque chose de simple encore une fois voyez c'est vraiment par défaut mais les informations en tout cas principales sont transcrits.
 
 On peut également et ça c'est aussi un attribut qu'on peut retrouver sur pas mal de balises qui est l'attribut 'placeholder'.
@@ -388,17 +376,9 @@ Tout simplement aussi puisqu'il va permettre de spécifier un texte par défaut 
 </body>
 </html>
 ```
-```txt
-		  +---------------------+
-	Nom : |Entrez votre nom...	|
-		  +---------------------+
-```
+![04](img/04.jpeg)
 J'actualise et voyez il met un texte dedans, on pourrait penser que c'est un texte qu'il faut que j'enlève de mon champ mais regardez en fait quand je fais le curseur voyez il l'enlève tout seul.
-```txt
-		  +---------------------+
-	Nom : |dddd					|
-		  +---------------------+
-```
+![05](img/05.jpeg)
 Si j'éfface tout, il va réafficher le 'placeholder' donc c'est pas du texte qui est déjà mis à l'intérieur du champ c'est juste voilà un petit modèle, un petit schéma pour vous guider, une petite description pour savoir quoi mettre dans ce champ donc c'est plutôt très pratique à ce niveau là voilà.
 
 Donc là on a tout ici le 'placeholder' et cetera.
@@ -434,11 +414,7 @@ Par défaut le plus courant c'est le type "text" donc c'est en anglais rappelez-
 </body>
 </html>
 ```
-```txt
-		  +---------------------+
-	Nom : |						|
-		  +---------------------+
-```
+![06](img/06.jpeg)
 Là vous allez gérer un texte standard d'accord pas de problème, bien sûr voilà il n'y aura pas de souci à ce niveau là pour gérer le texte donc ça c'est des choses à savoir.
 
 On peut également spécifier, ça j'en parle parce que c'est quand même assez récurrent sur les formulaires sur internet, un champ pour les mots de passe qui va être du coup en valeur "password" tout simplement.
@@ -456,11 +432,7 @@ On peut également spécifier, ça j'en parle parce que c'est quand même assez 
 </body>
 </html>
 ```
-```txt
-		  +---------------------+
-	Nom : |*****				|
-		  +---------------------+
-```
+![07](img/07.jpeg)
 Là c'est la même chose sauf que vous voyez je n'affiche rien tout simplement `*****` donc ça se remplit comme ça par défaut, ça permet de masquer en fait les caractères pour saisir un mot de passe mais ça c'est des choses que vous avez déjà vu, vous avez probablement de toute manière déjà utilisé, déjà pratiqué sur un site quelconque quand vous êtes inscrit par exemple dessus.
 
 Deux choses intéressantes à savoir, "text", "password" ça c'est vraiment la base.
@@ -484,11 +456,7 @@ Il y a le type "checkbox", celui là, il est bien à connaître que je vais note
 </body>
 </html>
 ```
-```txt
-					  +-+
-	Publier la news ? |	|
-					  +-+
-```
+![08](img/08.jpeg)
 Vous allez avoir un champ comme ceci tout simplement, une case à cocher donc c'est pas obligatoire comme ça vous pouvez lui préciser et éventuellement une valeur donc "publishNews", veut simplement dire si je la publier par exemple je coche.
 
 Si elle n'est pas cochée dans tous les cas, ce ne sera pas publié.
@@ -516,9 +484,7 @@ Si on veut avoir quelque chose d'obligatoire, on peux utiliser le type "radio" c
 </body>
 </html>
 ```
-```txt
-	Votre choix O
-```
+![09](img/09.jpeg)
 Si je met comme ceci, on a pas de texte bien évidemment.
 
 Voyez que par défaut si je clic après je ne peux plus l'enlever parce que là ça va être un choix obligatoire.
@@ -538,9 +504,7 @@ Moi ce que je vais faire plutôt que de mettre un 'value' ici bien sûr pour que
 </body>
 </html>
 ```
-```txt
-	Votre choix 	O Oui  O Nom
-```
+![10](img/10.jpeg)
 Alors là du fait que mes deux champs "radio" ont le même nom voyez 'name' c'est "choice" des deux cotés, automatiquement je ne peux que sélectionner qu'un des deux d'accord.
 
 Alors il faudrait utiliser bien sûr un attribut "name" et cetera mais encore une fois pour la récupération de données ... encore une fois pour ne pas trop allonger sur la vidéo, je ne vais pas vous montrer tout ça parce que de toute façon on ne fera pas de récupération.
@@ -550,9 +514,7 @@ Je vous montre donc juste comment ça fonctionne au niveau du type de champ puis
 Là de toute façon comme on fera un formulaire qui fonctionne vraiment qu'on va utiliser, on fera le code vraiment comme il faut pour que ça fonctionne et que ce soit récupérables par la suite.
 
 Donc là voyez on peut du coup récupérer les 2 données de cette manière.
-```txt
-	Votre choix 	O Oui  O Nom
-```
+![10](img/10.jpeg)
 Alors si le texte est gros pareil petite parenthèse c'est normal j'ai zoomé à 200% le navigateur pour que se soit plus lisible pour vous dans les vidéos.
 
 Du coup ça c'est bon donc ça c'est un champ voilà voyez c'est un champ en fait il faut obligatoirement remplir mais on peut sélectionner qu'un seul choix parmi tous en fait.
@@ -572,11 +534,7 @@ On peut avoir également alors là je vais allez très vite aussi un champ de ty
 </body>
 </html>
 ```
-```txt
-	+-----------+
-	|			|
-	+-----------+
-```
+![11](img/11.jpeg)
 Vous cliquez dessus, ça vous fait une gestion de couleur, on pas également avoir d'autres attributs universels comme par exemple l'attribut 'value' pour mettre une valeur par défaut si vous voulez par exemple du blanc voilà ceci.
 ```html
 <!DOCTYPE html>
@@ -592,11 +550,7 @@ Vous cliquez dessus, ça vous fait une gestion de couleur, on pas également avo
 </body>
 </html>
 ```
-```txt
-	+-----------+
-	|			|
-	+-----------+
-```
+![12](img/12.jpeg)
 Voilà si value="" n'est pas pris en compte il faut savoir aussi que le problème avec beaucoup de standards tout ça c'est qu'il y a peut-être certains navigateurs qui sont un peu en retard ou autres mais si en plus on change assez récemment il est possible qu'ici ça ne fonctionne pas, que ce ne soit pas pris en charge 
 
 Voilà c'est l'attribut 'value' qui permet de spécifier une couleur par défaut en tout cas sur le sectionneur de couleur mais peu importe dans tous les cas sachez que type="color" permet vraiment ici de choisir une couleur.
@@ -618,11 +572,7 @@ Qu'est-ce qu'on peut avoir d'autres également ? on a des des champs aussi inté
 </body>
 </html>
 ```
-```txt
-	+---------------+
-	| jj/mm/aaaa	|
-	+---------------+
-```
+![13](img/13.jpeg)
 Comme vous voyez quand vous allez cliquer dessus, il vous affiche un petit calendrier pareil l'affichage du calendrier va changer suivant le navigateur que vous avez que soit edge, que ce soit Firefox, que soit Opera, Chrome, etc vous n'aurait évidemment pas le même design puisque c'est propre au navigateur donc voyez comme ça on peut choisir un jour et ça complète, on peut re effacer tout.
 
 Voilà ça c'est géré par navigateur d'accord c'est les navigateurs qui gèrent ce standard là, c'est pas que html mais c'est vraiment de pair ensemble.
@@ -643,11 +593,7 @@ syntaxe.
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| jj/mm/aaaa --:--	|
-	+-------------------+
-```
+![14](img/14.jpeg)
 Ne fonctionne pas dans la vidéo du cours !
 
 En tout cas il faut savoir c'est que ça existe, on vérifiera après sur le sur le site du w3c, on regardera un petit peu tout ça pour être sûr.
@@ -667,11 +613,7 @@ Qu'est-ce qu'on peut regarder aussi ? pour les emails enfin les informations hab
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| @					|
-	+-------------------+
-```
+![15](img/15.jpeg)
 Vous ne voyez rien de différent en fait c'est normal c'est juste parce qu'en fait il va s'assurer que vous gérez ici une saisie d'émail donc si vous êtes sur mobile par exemple il va vous afficher un clavier optimisé pour la saisie d'un email notamment l'arobase @ tout ça, le point, voilà des informations précises.
 
 Si vous mettez "tel" pour un téléphone vous aurez un clavier numérique pareil.
@@ -689,11 +631,7 @@ Si vous mettez "tel" pour un téléphone vous aurez un clavier numérique pareil
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| 					|
-	+-------------------+
-```
+![16](img/16.jpeg)
 Donc là moi je suis sur pc donc pas de différence mais pour ceux qui sont sûrement gsm ou tablette, vous allez voir que ça va vraiment vous faire gagner quelques précieuses secondes.
 
 On a aussi "month", je vais assez vite parce qu'il y en a beaucoup mais on va revenir dessus après.
@@ -711,21 +649,13 @@ On a aussi "month", je vais assez vite parce qu'il y en a beaucoup mais on va re
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| --------- --		|
-	+-------------------+
-```
+![17](img/17.jpeg)
 Bizarre, vraiment énormément de champs que firefox ne gère pas.
 
 Par contre c'est quand même bizarre parce que je suis sûr que sur chrome il passerait mais là comme je suis passé assez récemment sur firefox, la nouvelle version et je suis étonné.
 
 Normalement "month" ça devrait un champ de cette forme là avec l'année tiret le mois. 
-```txt
-	+-------------------+
-	| février 2021		|
-	+-------------------+
-```
+![18](img/18.jpeg)
 Il devrait afficher un calendrier ou quelque chose mais Firefox ne le prends pas donc peu importe dans tous les cas il est comme ceci donc il gère le mois y'a pas de soucis.
 
 On a également pour la semaine pareil donc "week" donc "week" c'est le numéro de la semaine ok.
@@ -743,11 +673,7 @@ On a également pour la semaine pareil donc "week" donc "week" c'est le numéro 
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| Semaine --, ----	|
-	+-------------------+
-```
+![19](img/19.jpeg)
 Pareil c'est le numéro de la semaine, vous pouvez noter comme ça le numéro.
 
 Je pense qu'on a déjà fait le tour des choses assez courante en fait.
@@ -769,11 +695,7 @@ Voilà on va retrouver "search" aussi.
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| 					|
-	+-------------------+
-```
+![20](img/20.jpeg)
 Voilà donc ça c'est spécifique ça va retirer en fait tous les passages à la ligne ou autre, c'est typique le type de champ de saisie que vous devez faire si vous voulez par exemple faire un petit moteur de recherche sur votre site, votre blog ou autre.
 
 Vous allez utiliser cet attribut avec cette valeur là pour par exemple y spécifier des mots-clés donc ça c'est plutôt sympa à utiliser.
@@ -793,9 +715,7 @@ Après on a des choses un peu plus exotiques comme par exemple "range".
 </body>
 </html>
 ```
-```txt
-	+---------0---------+
-```
+![21](img/21.jpeg)
 Comme ceci et par défaut on peut gérer d'autres champs, on peut mettre une valeur minimale "min", on peut mettre une valeur maximale "max" d'accord, on peut mettre une étape "step" là par exemple ça se déplace de "0.1" en "0.1" ou de "1" en "1" ou voilà pourquoi pas même de "5" en "5", on est fou on est fou.
 ```html
 <!DOCTYPE html>
@@ -811,9 +731,7 @@ Comme ceci et par défaut on peut gérer d'autres champs, on peut mettre une val
 </body>
 </html>
 ```
-```txt
-	+---------0---------+
-```
+![21](img/21.jpeg)
 Et là voyez ça se dépasse de 5 en 5 en fait, des petits sauts comme ça de 5 donc ça pareil ça peut être sympa à gérer.
 
 On a également la même chose pour les nombres puisqu'on peut faire également "number" donc "number" on peut laisser ces attributs là (min="0" max="100" step="5") ils fonctionneront, ils sont valides voilà.
@@ -831,11 +749,7 @@ On a également la même chose pour les nombres puisqu'on peut faire également 
 </body>
 </html>
 ```
-```txt
-	+-------------------+    +-------------------+ 	  +-------------------+
-	| 5				  ##| => | 10			   ##| => | 15			  	##|
-	+-------------------+    +-------------------+ 	  +-------------------+
-```
+![22](img/22.jpeg)
 Voyez il va de 5 en 5,  on peut même afficher normalement avec l'attribut universel value une valeur par défaut, 100 par exemple.
 ```html
 <!DOCTYPE html>
@@ -851,11 +765,7 @@ Voyez il va de 5 en 5,  on peut même afficher normalement avec l'attribut unive
 </body>
 </html>
 ```
-```txt
-	+-------------------+
-	| 100			  ##|
-	+-------------------+
-```
+![23](img/23.jpeg)
 Il m'affiche 0 par défaut sur Firefox voilà il faut rafraîchir le cache en fait c'est peut-être pour ça qu'il y avaient des soucis mène tout à l'heure, il faut que je vide le cache du navigateur donc là voyez par défaut il affiche une valeur et on peut changer.
 
 C'est ça c'est le cash qui s'enregistre juste en fait hop je suis obligé de faire ctrl+F5, ça pareil si vous ne savez pas ces ctrl+F5 sur les navigateurs pour  rafraîchir le cashe.
@@ -929,11 +839,7 @@ Mais on va aussi pouvoir après après valider notre formulaire donc on va faire
 </body>
 </html>
 ```
-```txt
-		  +-----------------+
-	Nom : |					| Se connecter
-		  +-----------------+
-```
+![24](img/24.jpeg)
 D'accord donc il va avoir l'information et c'est justement grâce au type="submit" que là ça va valider le formulaire donc là ça va renvoyer sur la même page puisqu'au niveau de 'action' je n'ai rien mis du tout donc ça c'est important aussi à connaître.
 
 Si on veux vider le formulaire, l'éffacer, le réinitialiser on va avoir la valeur "reset". Sur les formulaires, on retrouve souvent les deux boutons comme ça que je vais mettre à la ligne `<br>` voilà.
@@ -953,12 +859,7 @@ Si on veux vider le formulaire, l'éffacer, le réinitialiser on va avoir la val
 </body>
 </html>
 ```
-```txt
-		  +-----------------+
-	Nom : |					|
-		  +-----------------+
-	Effacer  Se connecter
-```
+![25](img/25.jpeg)
 Comme ça je rentre quelque chose et hop Effacer d'accord et sinon je fait ça Se connecter voilà.
 
 Le formulaire est du coup soumis pour un traitement éventuel par la suite donc voilà toutes ces valeurs d'attributs en tout cas enfin pour l'attribut 'type' comme vous le voyez il y a beaucoup beaucoup et faut les utiliser voilà je ne peux pas vous dire grand chose là dessus.
@@ -1004,12 +905,7 @@ Cela veut simplement dire que la page ici qui est donnée statiquement et bien v
 </body>
 </html>
 ```
-```txt
-		  +-----------------+
-	Nom : |					|
-		  +-----------------+
-	Effacer  Se connecter
-```
+![25](img/25.jpeg)
 Voilà de a à z, mettre voilà de a à z, un truc au pif comme ça par défaut donc ceci donc rien n'empêchera à une personne d'afficher le code source et puis bah d'enlever ce petit champ là carrément de formulaire en faisant un petit suppr et de valider pour renvoyer le formulaire sans ce champ pattern et du coup votre vérification qui était sensé pour vous en tout cas, si vous pensez que c'était une sécurité et ben il y en a plus du tout.
 
 Donc n'oubliez pas que la vérification, la protection et la récupération de données se fera avec un langage de programmation d'accord.
@@ -1033,12 +929,7 @@ Pareil si vous utilisez ce fameux attribut-là qui n'a pas de valeur 'required' 
 </body>
 </html>
 ```
-```txt
-		  +-----------------+
-	Nom : |					|
-		  +-----------------+
-	Effacer  Se connecter
-```
+![25](img/25.jpeg)
 alors ici si je ne rempli pas le champ voyez ici c'est firefox d'accord, c'est pas html mais c'est firefox qui la entouré en rouge en me disant "Veillez compléter ce
 champ" il considère que le champ ici doit être obligatoire il doit être rempli.
 

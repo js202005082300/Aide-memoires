@@ -20,7 +20,7 @@ Alors on va prendre quelques petits exemples très simples parce que voilà j'ai
 	<title>Formulaire HTML</title>
 </head>
 <body>
-	<h1>Saisie d'informations</h1>
+	<h1>Saisie d informations</h1>
 
 	<form method="get" action="result.php">
 		<p><label for="iduser">Utilisateur :</label> <input type="text" id="iduser" name="user"></p>
@@ -99,7 +99,7 @@ Et on va pouvoir en définir plusieurs par exemple var1 égal un nombre.
 ```txt
 http://localhost/PHP/cours/015_forrmulaireHTML/result.php?var1=154
 ```
-Si je veux en mettre d'autres, je peux les séparer avec le fameux symbole et commercial, et là par exemple je peux faire var2 égal Bonjour et pas besoin de mettre des doubles quotes.
+Si je veux en mettre d'autres, je peux les séparer avec le fameux symbole et commercial, et là par exemple je peux faire var2 égal Bonjour et pas besoin de mettre des doubles quottes.
 ```txt
 http://localhost/PHP/cours/015_forrmulaireHTML/result.php?var1=154&var2=bonjour
 ```
@@ -118,7 +118,7 @@ C'est une url valide dans lequel et vous l'avez peut-être remarqué si vous nav
 
 Ces choses-là vont être transmises via http, le protocole http mais par méthode GET c'est-à-dire visible depuis ici l'url et récupérable dans cette variable super globale `$_GET`. 
 
-Alors ça tombe bien on va les afficher, on va afficher le contenu de cette variable super global. Alors on l'entoure de <pre></pre> pour que ce soit plus lisible pour nous et je vais juste faire un `print_r($_GET);` pour voir ce qu'elle contient donc à partir de l'url.
+Alors ça tombe bien on va les afficher, on va afficher le contenu de cette variable super global. Alors on l'entoure de `<pre></pre>` pour que ce soit plus lisible pour nous et je vais juste faire un `print_r($_GET);` pour voir ce qu'elle contient donc à partir de l'url.
 
 + result.php
 ```txt
@@ -198,9 +198,9 @@ Par défaut tel que ça géré à la base, une url peut faire jusqu'à un peu pl
 
 Je crois qu'il y a des navigateurs comme opéra prévois des valeurs impossible genre plusieurs dizaines de milliers de caractères possibles c'est-à-dire d'un nombre absolument astronomique qui ne servirait d'ailleurs pas à grand-chose à mon sens mais en tout cas voilà certains navigateurs peuvent le gérer. 
 
-Tout ce qu'il y a à savoir, c'est que par défaut en tout cas, on gère jusqu'à un peu plus de 2000 caractères possibles dans une url donc vous pouvez passer plein plein plein d'informations de cette manière. 
+Tout ce qu'il y a à savoir, c'est que par défaut en tout cas, on gère jusqu'à un peu plus de 2000 caractères possibles dans une url donc vous pouvez passer plein plein d'informations de cette manière. 
 
-Alors comment récupérer notamment par GET des données issues d'un formulaire ? parce que là moi je les ai passer manuellement de cette manière mais alors comment est-ce que je peux faire ça ? 
+Alors comment récupérer notamment par GET des données issues d'un formulaire ? parce que là moi je les ai passés manuellement de cette manière mais alors comment est-ce que je peux faire ça ? 
 
 Mais avant, je vais virer mon echo.
 
@@ -271,7 +271,7 @@ Alors si je ne rentre pas d'information et presse Valider, on va avoir ça.
 ```
 Alors là vous voyez que `[user]` est vide.
 
-Comme je n'ai pas choisi au niveau de la liste, le choix unique, on n'a pas évidemment renvoyé cette donnée là. 
+Comme je n'ai pas choisi au niveau de la liste, le choix unique, on n'a pas évidemment renvoyé cette donnée-là. 
 
 Et on a la validation du formulaire `[valid_form]`.
 
@@ -308,7 +308,7 @@ Regardez ici au niveau de GET, il a bien envoyé toutes les informations, il a m
 ```
 Alors toutes ces informations ont bien été récupérées, et on va pouvoir les exploiter. 
 
-C'est là tout l'intérêt de pouvoir travailler avec des formulaires HTML dans ce sens-là, c'est que le formulaire HTML en lui-même vous ne ferez pas grand chose avec. Il faudra forcément un langage de programmation comme PHP où python ou du javascript côté serveur pour exploiter ces informations là, les traiter, les stocker en base de données, les enregistrer dans un fichier ou éventuellement même les afficher.
+C'est là tout l'intérêt de pouvoir travailler avec des formulaires HTML dans ce sens-là, c'est que le formulaire HTML en lui-même vous ne ferez pas grand-chose avec. Il faudra forcément un langage de programmation comme PHP où python ou du javascript côté serveur pour exploiter ces informations-là, les traiter, les stocker en base de données, les enregistrer dans un fichier ou éventuellement même les afficher.
 
 Donc toutes ces choses-là que nous allons pouvoir faire. 
 
@@ -374,13 +374,13 @@ Alors je vais retourner au formulaire, je vais remettre d'autres informations et
 		[valid_form] => valider
 	)
 ```
-Voyez que au niveau de POST, on récupère bien les informations aussi simplement que au niveau de l'url on a rien qui est visible.
+Voyez qu’au niveau de POST, on récupère bien les informations aussi simplement que au niveau de l'url on a rien qui est visible.
 
 C'est masqué. 
 
 C'est à vous de voir en fonction, dans quel cas ça peut être utile d'afficher dans l'url ou pas. 
 
-Là où ça peut être utile par exemple on voit souvent les moteurs de recherche utilisent GET pour faire des recherches parce que par exemple ils vont vous mettre la requête de recherche genre `?q=` et vous pouvez chercher différents mots-clés.
+Là où ça peut être utile par exemple on voit souvent les moteurs de recherche utilisent GET pour effectuer des recherches parce que par exemple ils vont vous mettre la requête de recherche genre `?q=` et vous pouvez chercher différents mots-clés.
 
 Par exemple si vous cherchez 2 mots, cours et PHP admettons, vous avez voté comme ça avec des `+` pour séparer les 2 mots parce qu'il n'y a pas d'espace dans un url.
 ```txt
@@ -396,15 +396,15 @@ Par contre si c'est pour enregistrer un utilisateur sur un site pour l'inscrire 
 
 C'est à vous de voir, c'est selon les cas où une des 2 méthodes sera plus intéressante que l'autre, de choisir entre GET ou POST en fonction évidemment du projet sur lequel vous travaillez donc ce sera à voir en fonction. 
 
-Voilà pour ces 2 là.
+Voilà pour ces 2 -là.
 
 Alors là on a juste vu comment traiter les données sur l'une ou l'autre des méthodes d'accord et ça c'était le point le plus important qu'il fallait voir par rapport à ça.
 
-Maintenant on va voir comment on va pouvoir récupérer ces données et travaillé avec parce qu'il ne suffit pas juste comme ça de faire un print_r() de `$_POST` ou `$_GET`, il faut bien pouvoir travailler avec ces données là.
+Maintenant on va voir comment on va pouvoir récupérer ces données et travaillé avec parce qu'il ne suffit pas juste comme ça de faire un print_r() de `$_POST` ou `$_GET`, il faut bien pouvoir travailler avec ces données-là.
 
-Et là on va énormément insister donc ça va être un peu long à expliquer parce qu'il faut voir cette partie là mais on va pas mal parler sécurité. 
+Et là on va énormément insister donc ça va être un peu long à expliquer parce qu'il faut voir cette partie-là mais on va pas mal parler sécurité. 
 
-Parce que évidemment puisqu'on va parler de formulaire c'est-à-dire qu'on va avoir des données saisies par un utilisateur, et que l'utilisateur par définition sur internet vous ne devez pas lui faire confiance. 
+Parce qu’évidemment puisqu'on va parler de formulaire c'est-à-dire qu'on va avoir des données saisies par un utilisateur, et que l'utilisateur par définition sur internet vous ne devez pas lui faire confiance. 
 
 Il peut absolument noter n'importe quoi, il pourrait aussi simplement se trompait involontairement où indiquer des mauvaises informations volontairement dans le but par exemple de casser votre site voir pire dans le cas d'une tentative de piratage. 
 
@@ -412,9 +412,9 @@ Donc tout ça est important à prendre en compte, et à partir de maintenant on 
 
 Alors Comment ça va se passer ? Alors premier point, il y a ce qu'on appelle un web différentes failles de vulnérabilités qui peuvent mettre à mal votre site, mettre à mal votre application et dont il faut faire attention lorsque vous développez.
 
-Une des premières failles très reconnue au niveau du web, ce sont les failles X2S.
+Une des premières failles très reconnues au niveau du web, ce sont les failles X2S.
 
-Une failles c'est simplement l'injection de données via la transmission de données et notamment par exemple via le url.
+Une faille c'est simplement l'injection de données via la transmission de données et notamment par exemple via le url.
 
 Alors comment est-ce que ça peut se passer ? Aura montré ça très simplement utiliser un petit script en javascript donc ici un langage de programmation côté client. 
 
@@ -481,7 +481,7 @@ Et Pour rappel vous voyez qu'on pouvait récupérer tout un tas d'informations.
 ```
 Voilà on est au nom de quelque chose et on récupère la information dans le navigateur c'est-à-dire que vous voyez qu'on a un contrôle sur les données ici parce qu'au niveau du script je me charge directement d'afficher print_r() le contenu de la variable super global `$_GET` sans contrôler quoi que ce soit.
 
-Si un petit malin a envie d'injecter du code javascript donc si je ne vais rien faire de très avancé mais juste en incluant du HTML en utilisant la balise script et entre les balises, je mets du code HTML quel qu'il soit ça peut être par exemple juste un petit message comme une pop up, juste ça.
+Si un petit malin a envie d'injecter du code javascript donc si je ne vais rien faire de très avancé mais juste en incluant du HTML en utilisant la balise script et entre les balises, je mets du code HTML quel qu'il soit ça peut être par exemple juste un petit message comme une pop-up, juste ça.
 ```txt
 	http://localhost/PHP/cours/015_forrmulaireHTML/result.php?prenom=<script>alert("hacked");</script>
 	
@@ -492,9 +492,9 @@ Si un petit malin a envie d'injecter du code javascript donc si je ne vais rien 
 	|				OK	|
 	+-------------------+
 ```
-On entre la page et là vous voyez que j'arrive à exécuter la page web ... la page web exécute parce qu'elle interprête le javascript comme ça, ici du code non autorisé.
+On entre la page et là vous voyez que j'arrive à exécuter la page web ... la page web exécute parce qu'elle interprète le javascript comme ça, ici du code non autorisé.
 
-C'est-à-dire qu'on a fait exécuter un code Javascript même si là ce n'est pas grave de faire afficher qu'une pop up avec un message, c'est rien du tout.
+C'est-à-dire qu'on a fait exécuter un code Javascript même si là ce n'est pas grave de faire afficher qu'une pop-up avec un message, c'est rien du tout.
 
 Mais on pourrait de la même manière, récupérer des cookies ou accéder à des informations confidentielles sur votre ordinateur de cette manière.
 
@@ -513,9 +513,9 @@ Eh bien il va faire ça.
 ```txt
 	<script>alert("hacked");</script>
 ```
-Et bien là, le navigateur au lieu simplement afficher ce texte là, Il va l'exécuter et il va voir que c'est un script que l'on veut exécuter.
+Et bien là, le navigateur au lieu simplement afficher ce texte-là, Il va l'exécuter et il va voir que c'est un script que l'on veut exécuter.
 
-La commande alert() en Javascript, il va l'exécuter et donc afficher la fameuse pop up.
+La commande alert() en Javascript, il va l'exécuter et donc afficher la fameuse pop-up.
 
 Donc ça on va évidemment pouvoir le sécuriser à l'affichage au niveau des données qu'on récupère et ça c'est une règle essentielle en web d'accord c'est-à-dire que pour toute donnée Vous allez pouvoir afficher surtout si c'est une donnée qui provient d'un utilisateur ou qui a été récupérée par quelqu'un, on doit être sécurisé.
 
@@ -529,7 +529,7 @@ Si une personne n'est par exemple ça.
 ```php
 	<script>alert("hacked");</script>
 ```
-Admettons que dans cette base de données je vais enregistrer cette information comme prénom, ça ne présentera aucun risque et ça va juste enregistrer ce texte là `<script>alert("hacked");</script>` et cetera. 
+Admettons que dans cette base de données je vais enregistrer cette information comme prénom, ça ne présentera aucun risque et ça va juste enregistrer ce texte-là `<script>alert("hacked");</script>` et cetera. 
 
 Par contre c'est au moment où je vais vouloir l'afficher que là le navigateur va l'exécuter, c'est là qu'il y a un danger. 
 
@@ -569,7 +569,7 @@ Donc au lieu de faire ça ce qui n'est évidemment pas sécurisé et qui entrain
 ```
 ... et bien on va utiliser une fonction de PHP qui permet de sécuriser cette information.
 
-Et en PHP, on a pas mal de petites fonctions qui permettent de le faire en l'occurence on en a 2.
+Et en PHP, on a pas mal de petites fonctions qui permettent de le faire en l'occurrence on en a 2.
 
 Vous allez principalement utiliser celle que je vous donne en premier.
 ```php
@@ -578,7 +578,7 @@ Vous allez principalement utiliser celle que je vous donne en premier.
 		htmlentities($str)
 	*/
 ```
-On a la fonction `htmlspecialchars($str)` qui va prendre une chaîne donc je met `$str`. Et on a `htmlentities($str)`, alors comment vont-elles fonctionner ?
+On a la fonction `htmlspecialchars($str)` qui va prendre une chaîne donc je mets `$str`. Et on a `htmlentities($str)`, alors comment vont-elles fonctionner ?
 
 htmlspecialchars() va remplacer tous ce qui caractères spéciaux et notamment des caractères liés à du HTML par un code ... ce qu'on appelle une entité HTML correspondante.
 
@@ -586,7 +586,7 @@ Par exemple vous avez vu qu'au niveau de ma page, j'avais ici l'ouverture d'une 
 ```php
 	<script>alert("hacked");</script>
 ```
-Nous ce qu'on va faire c'est que gràce à notre fonction PHP va remplacer le symbole `<` par son équivalent, son entité HTML, c'est-à-dire qu'il va vraiment après le considérer comme un texte c'est-à-dire qu'il va afficher réellement ce symbole et le navigateur ne va plus l'interprêter comme étant du code HTML.
+Nous ce qu'on va faire c'est que grâce à notre fonction PHP va remplacer le symbole `<` par son équivalent, son entité HTML, c'est-à-dire qu'il va vraiment après le considérer comme un texte c'est-à-dire qu'il va afficher réellement ce symbole et le navigateur ne va plus l'interpréter comme étant du code HTML.
 
 Donc En bref ce que ça va faire, c'est que le symbole `<` sera remplacé par le symbole `&lt;` (lower than).
 ```php
@@ -595,9 +595,9 @@ Donc En bref ce que ça va faire, c'est que le symbole `<` sera remplacé par le
 		htmlentities($str)
 	*/
 ```
-Et ça évidemment à l'affichage, un navigateur web va l'afficher … quand il voit &lt; que ce soit Firefox, Chrome, ce que vous voulez, il va réellement afficher ce caractère-là `<` et non plus l'interprêter comme étant une balise html parce que vous savez pour ceux qui font du html que les balises sont représentées comme ça par une fermeture `<` donc un chevron ouvrant et un chevron fermant `>`. Ou un symbole inférieur et supérieur.
+Et ça évidemment à l'affichage, un navigateur web va l'afficher … quand il voit &lt; que ce soit Firefox, Chrome, ce que vous voulez, il va réellement afficher ce caractère-là `<` et non plus l'interpréter comme étant une balise html parce que vous savez pour ceux qui font du html que les balises sont représentées comme ça par une fermeture `<` donc un chevron ouvrant et un chevron fermant `>`. Ou un symbole inférieur et supérieur.
 
-Il pourrait également sécuriser sur les quotes ou ce genre de chose.
+Il pourrait également sécuriser sur les quottes ou ce genre de chose.
 
 Par exemple ce symbole & pourrait être remplacé par ce symbole &amp.
 ```php
@@ -606,7 +606,7 @@ Par exemple ce symbole & pourrait être remplacé par ce symbole &amp.
 		htmlentities($str)
 	*/
 ```
-Et puis la double et simple quote, il pourrait la remplacer par ce symbole `&quot;`
+Et puis la double et simple quotte, il pourrait la remplacer par ce symbole `&quot;`
 ```php
 	/*
 		htmlspecialchars($str)	:	< par &lt; & par &amp; ' par &quot;
@@ -615,9 +615,9 @@ Et puis la double et simple quote, il pourrait la remplacer par ce symbole `&quo
 ```
 Et cetera.
 
-Donc c'est simplement de la sécurisation pour tout ce qui est balises HTML parce que c'est ça qu'on ne veut pas qu'il exécute éventuellement un code inatendu.
+Donc c'est simplement de la sécurisation pour tout ce qui est balises HTML parce que c'est ça qu'on ne veut pas qu'il exécute éventuellement un code inattendu.
 
-Donc on a juste à faire ça, htmlspecialchars() à l'affichage de la donnée sensible c'est-à-dire celle qui risque peut être évidemment d'avoir quelque chose d'inatendu. 
+Donc on a juste à faire ça, htmlspecialchars() à l'affichage de la donnée sensible c'est-à-dire celle qui risque peut-être évidemment d'avoir quelque chose d'inattendu. 
 
 + result.php
 ```php	
@@ -658,7 +658,7 @@ Et cetera.
 
 Donc automatiquement, Eh bien on a cassé l'exécution possible du javascript donc on a sécurisé, on a empêché l'exécution ou en tout cas l'exploitation d'une faille XSS au niveau de notre navigateur web donc c'est évidemment très intéressant de procéder comme ça. 
 
-Si vous avez besoin éventuellement de transformer encore plus d'entités spécifiques en HTML par exemple si vous ne travaillez pas en utf 8 et j'espère pour vous que vous travaillez en utf 8 c'est ce que je vous ai recommandé dans toutes les vidéos mais si vous avez un vieux au script ou un vieux code ou je ne sais quoi qui est en ISO ou un latin ou ce genre de chose qui ne travaille ni en utf 8 ou alors qui nécessite d'avoir des conversions supplémentaires alors à la place de htmlspecialchars() vous pouvez utilisez htmlentities().
+Si vous avez besoin éventuellement de transformer encore plus d'entités spécifiques en HTML par exemple si vous ne travaillez pas en utf 8 et j'espère pour vous que vous travaillez en utf 8 c'est ce que je vous ai recommandé dans toutes les vidéos mais si vous avez un vieux au script ou un vieux code ou je ne sais quoi qui est en ISO ou un latin ou ce genre de chose qui ne travaille ni en utf 8 ou alors qui nécessite d'avoir des conversions supplémentaires alors à la place de htmlspecialchars() vous pouvez utiliser htmlentities().
 
 + result.php
 ```php	
@@ -688,13 +688,13 @@ Si vous ne protégez pas l'affichage au moment de l'affichage du titre, vous ris
 
 Pensez toujours c'est la règle à l'affichage donc l'exécution de quelque chose, d'une donnée qui peut être vérifiée d'un utilisateur et si c'est une donnée à vous à priori il n'y a pas de risque, vous n'allez pas vous pirater vous-même mais si c'est une donnée qui a pu être entrée par un utilisateur.
 
-imaginez un message d'un forum, un message d'un chat, un titre rentré par un rédacteur tout ça qui pourrait potentiellement contenir du texte ou quelque chose non autorisé, on va protéger cet affichage tout le temps avec l'utilisation de l'une de ces 2 fonctions là tout le temps.
+Imaginez un message d'un forum, un message d'un chat, un titre rentré par un rédacteur tout ça qui pourrait potentiellement contenir du texte ou quelque chose non autorisé, on va protéger cet affichage tout le temps avec l'utilisation de l'une de ces 2 fonctions là tout le temps.
 
 Voilà ce que j'avais à dire à ce niveau-là pour tout ce qui est sécurité au niveau GET ou POST qu'importe d'ailleurs que ça fonctionne pareil que ce soit `$_GET` ou `$_POST`.
 
-À chaque fois qu'il y a un affichage d'un formulaire donc au niveau d'une donnée saisie par l'utilisateur, je ne fait pas confiance à l'utilisateur donc je sécurise mon affichage avec cette fonction htmlspecialchars().
+À chaque fois qu'il y a un affichage d'un formulaire donc au niveau d'une donnée saisie par l'utilisateur, je ne fais pas confiance à l'utilisateur donc je sécurise mon affichage avec cette fonction htmlspecialchars().
 
-Comme ça si l'utilisateur rentre quelque chose qu'il ne faut pas, Eh bien ce sera affiché en tant que texte comme ici même si ce n'est pas propre plutôt que d'exécuter ce script là.
+Comme ça si l'utilisateur rentre quelque chose qu'il ne faut pas, Eh bien ce sera affiché en tant que texte comme ici même si ce n'est pas propre plutôt que d'exécuter ce script-là.
 ```txt
 	http://localhost/PHP/cours/015_forrmulaireHTML/result.php?prenom=<script>alert("hacked");</script>
 	« Retour au formulaire
@@ -780,7 +780,7 @@ Et voilà ce qui s'était passé, on récupère un [user] qui est vide.
 
 On récupère [valid_form] parce qu'on a cliquez sur le bouton. 
 
-Et encore ça [valid_form] en modifiant le code source du HTML et en utilisant notre formulaire, on pourrait ne pas avoir cette valeur là.
+Et encore ça [valid_form] en modifiant le code source du HTML et en utilisant notre formulaire, on pourrait ne pas avoir cette valeur-là.
 
 Et on n'a carrément pas le [choice] donc on a même perdu une variable.
 
@@ -819,7 +819,7 @@ Ainsi on va utiliser certaines fonctions de PHP, et là aussi ce que je vais vou
 
 À partir du moment où vous allez travailler avec des formulaires HTML avec PHP, vous aurez besoin obligatoirement d'utiliser les fonctions que je vais vous montrer maintenant donc c'est vraiment important. 
 
-Il y a 3 fonctions à connaître principalement bien qu'il y en a évidemment d'autres mais avec ces 3 là vous pourrez pratiquement tout faire et je vais vous les montrer ici donc on a : la fonction isset(), la fonction empty() et la fonction is_null().
+Il y a 3 fonctions à connaître principalement bien qu'il y en a évidemment d'autres mais avec ces 3 -là vous pourrez pratiquement tout faire et je vais vous les montrer ici donc on a : la fonction isset(), la fonction empty() et la fonction is_null().
 ```php
 	/*
 		isset()
@@ -845,7 +845,7 @@ Donc grosso modo ce qu'il faut comprendre, ce que isset() est l'opposé de is_nu
 
 D'ailleurs on va faire le test en faisant ça. 
 
-on est d'accord que je n'ai pas de variable `$prenom` et j'essaie alors de faire ce test là. En fait c'est isset() c'est-à-dire est définis... est-ce qu'elle est définie ? est-ce qu'elle est non nulle ? donc il ffaut ces deux choses là.
+On est d'accord que je n'ai pas de variable `$prenom` et j'essaie alors de faire ce test-là. En fait c'est isset() c'est-à-dire est définis... est-ce qu'elle est définie ? est-ce qu'elle est non nulle ? donc il faut ces deux choses-là.
 
 + result.php
 ```php
@@ -870,7 +870,7 @@ Donc si j'essaye de faire ça, on voit qu'on a Non.
 
 	NON
 ```
-On voit qu'on a Non parce que là variable n'existe pas donc on ne va même pas s'amuser à chercher si elle est nulle ou non, n existe pas donc pas de problème. 
+On voit qu'on a Non parce que là variable n'existe pas donc on ne va même pas s'amuser à chercher si elle est nulle ou non, n’existe pas donc pas de problème. 
 
 Par contre si on fait un is_null() de `$prenom`, là on va obtenir ceci. 
 
@@ -901,13 +901,13 @@ On obtient oui, pourquoi est-ce qu'on obtient oui ? tout simplement parce que is
 
 C'est pour ça qu'il va falloir faire attention à la fonction que vous allez utiliser par rapport à l'information à vérifier.
 
-Ça je vais prendre le temps de vous l'expliquer parce que le but c'est que vous ayez quand même bien compris là dessus et que ce n'est pas forcément évident. Je vous avouerais que c'est pas évident à expliquer parce qu'il y a beaucoup de cas à prendre en compte mais grosso modo ce qu'il faut juste retenir c'est que isset() vérifie que quelque chose n'est pas nul et c'est l'opposé de is_null() qui vérifie qu'une information est nulle d'accord elle vaut null. 
+Ça je vais prendre le temps de vous l'expliquer parce que le but c'est que vous ayez quand même bien compris là-dessus et que ce n'est pas forcément évident. Je vous avouerais que c'est pas évident à expliquer parce qu'il y a beaucoup de cas à prendre en compte mais grosso modo ce qu'il faut juste retenir c'est que isset() vérifie que quelque chose n'est pas nul et c'est l'opposé de is_null() qui vérifie qu'une information est nulle d'accord elle vaut null. 
 
 empty() c'est juste pour le fait que l'information est vide. 
 
 Alors je tiens à faire une parenthèse très importante d'accord sur l'utilisation de ces 2 fonctions.
 
-Il y a des moments où des gens ont peut être dit ou vous dirons par exemple que ça ne sert à rien d'utiliser les 2 et que empty() suffit. 
+Il y a des moments où des gens ont peut-être dit ou vous dirons par exemple que ça ne sert à rien d'utiliser les 2 et que empty() suffit. 
 
 Il suffit de faire empty() de $prenom.
 
@@ -933,11 +933,11 @@ Il suffit de faire empty() de $prenom.
 ```
 Et donc là $prenom n'existe évidemment pas et là on voit qu'on obtient … alors ici on va arrêter de tout le temps passer par le formulaire … là il nous met vide mais ce n'est pas forcément clair comme information. 
 
-Il nous dit que c'est vide mais c'est pire que ça, ce n'est pas que là variable $prenom est vide c'est surtout que là variable n'existe même pas. 
+Il nous dit que c'est vide mais c'est pire que ça, ce n'est pas que la variable $prenom est vide c'est surtout que là variable n'existe même pas. 
 
 D'accord donc ça c'est important à prendre en compte parce qu'en réalité pour faire un test suffisamment complet, vous allez devoir bien souvent utiliser les 2 fonctions ici à la fois. Pourquoi ? Parce qu'elles ne vont pas avoir les mêmes comportements selon les cas.
 
-Alors les fonctions isset() et empty() si on prend les 2 là donc celle qui vérifie qu'une variable existe et quel est non nul donc elle est définie et non nul. Et celle qui vérifie qu'une variable est vide, elles vont être d'accord donc elles vont renvoyer la même chose, elles vont par exemple renvoyer vrai dans certains cas similaires. 
+Alors les fonctions isset() et empty() si on prend les 2 -là donc celle qui vérifie qu'une variable existe et quel est non nul donc elle est définie et non nul. Et celle qui vérifie qu'une variable est vide, elles vont être d'accord donc elles vont renvoyer la même chose, elles vont par exemple renvoyer vrai dans certains cas similaires. 
 
 Dans le cas où vous avez … et ça je vous le dis n'hésitez pas à prendre des notes au fur et à mesure, je vais vous noter d'ailleurs ici donc au sujet de isset() + empty() pour ces deux-là, elles vont renvoyer true donc vrai selon plusieurs cas.
 
@@ -953,7 +953,7 @@ Voilà c'est comme si je faisais ça, `$str = "";`
 
 D'accord ça c'est une chaîne vide ou ça, `$str = '';`
 
-Voilà alors ça, elles vont renvoyer toutes les 2 true, d'accord elles vont renvoyer la même chose du coup on pourrait se dire que ça sert à rien d'utiliser les 2. 
+Voilà alors ça, elles vont renvoyer toutes les 2 true, d'accord elles vont renvoyer la même chose du coup on pourrait se dire que ça ne sert à rien d'utiliser les 2. 
 
 Si on veut vérifier qu'une chaîne est vide, inutile d'utiliser ces 2 fonctions, vous pouvez en utiliser qu'une seule des 2. 
 
@@ -977,13 +977,13 @@ Si je fais `$maVariable = FALSE;` ça ne sert à rien d'utiliser les 2 ça sert 
 				FALSE
 	*/
 ```
-D'accord parce que pour elle, false correspond à null en informatique ici donc isset() va forcément retourner vrai mais c'est surtout que $maVariable est égal à FALSE donc c'est égal à faux donc elle est ni nulle et ni non définie parceque la variable existe.
+D'accord parce que pour elle, false correspond à null en informatique ici donc isset() va forcément retourner vrai mais c'est surtout que $maVariable est égal à FALSE donc c'est égal à faux donc elle n’est ni nulle et ni non définie parce que la variable existe.
 
 Et empty() va considérer que c'est vrai parce que pour lui FALSE c'est quelque chose de vide. Ce n'est pas une donnée qui existe au niveau de empty(). 
 
 Donc c'est pour ça qu'il faut faire attention à ça. 
 
-Alors elles vont retourner true en-cas de chaîne vide, en cas de valeur FALSE donc vous voyez on pourrait penser que empty() ça retourne vrai que quand il n'y a rien mais vous voyez que au final pas forcément parce que FALSE est une valeur booléenne, c'est 0, et pourtant empty() va vous retourner true dans ce genre de cas donc faites attention à ça. 
+Alors elles vont retourner true en cas de chaîne vide, en cas de valeur FALSE donc vous voyez on pourrait penser que empty() ça retourne vrai que quand il n'y a rien mais vous voyez que au final pas forcément parce que FALSE est une valeur booléenne, c'est 0, et pourtant empty() va vous retourner true dans ce genre de cas donc faites attention à ça. 
 
 Alors ça peut être aussi dans le cadre d'un tableau vide, que vous l'écrivez avec des crochets [] ou bien avec le mot-clé array() avec des parenthèses. 
 ```php
@@ -1118,7 +1118,7 @@ Alors isset() va retourner FALSE dans certains cas et empty() va tourner FALSE d
 		empty() : FALSE ->
 	*/
 ```
-Et c'est là qu'il faut effectivement utiliser les 2, que se dire que j'utilise que empty() et que c'est suffisant. Se dire que empty() ça suffit, qu'en fait c'est comme si on testait le isset() en même temps ce n'est pas vrai dans tout les cas.
+Et c'est là qu'il faut effectivement utiliser les 2, que se dire que j'utilise que empty() et que c'est suffisant. Se dire que empty() ça suffit, qu'en fait c'est comme si on testait le isset() en même temps ce n'est pas vrai dans tous les cas.
 
 Sinon dites-vous tout simplement qu'il n'aurait pas créé 2 fonctions différentes.
 

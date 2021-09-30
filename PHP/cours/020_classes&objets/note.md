@@ -583,9 +583,9 @@ Vous pouvez très bien créer un nouvel objet new et ensuite faire ceci `$name()
 ```php
 	class Vehicle
 	{
-		/
+		/*
 			$this
-		/		
+		*/		
 		public function __construct()
 		{
 			echo 'Je suis construit !';
@@ -606,9 +606,9 @@ On arrive à comprendre qu'en réalité ça va faire new de Vehicle();
 ```php
 	class Vehicle
 	{
-		/
+		/*
 			$this
-		/		
+		*/		
 		public function __construct()
 		{
 			echo 'Je suis construit !';
