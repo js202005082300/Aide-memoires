@@ -777,7 +777,7 @@ Alors qu'est-ce qu'on peut y faire ? On peut ajouter une colonne, je peux très 
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
@@ -806,7 +806,7 @@ On peut supprimer une colonne, et là je vais supprimer celle que je viens de cr
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
@@ -846,7 +846,7 @@ Alors moi ce que je vais faire c'est un SMALLINT.
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
@@ -898,7 +898,7 @@ Alors ici on va mettre tout simplement CHANGE `user_birthday` et puis ensuite un
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 
 	DESCRIBE `t_users`; -- EXPLAIN / DESC
@@ -956,7 +956,7 @@ Pour supprimer notre table nous allons tout simplement faire la commande et je p
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 
 	DROP TABLE `t_users`;
@@ -978,7 +978,7 @@ Comme le DROP DATABASE, on peut toujours pareil préciser le IF EXISTS pour dire
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 
 	DROP TABLE IF EXISTS `t_users`;
@@ -1018,7 +1018,7 @@ Il suffit de faire SHOW TABLE STATUS tout simplement et pas besoin de préciser 
 		`id_user` MEDIUMINT,
 		`user_name` VARCHAR(65),
 		`user_birthday` DATE,
-		`ùser_is_subscriber` ENUM(`N`, `Y`)
+		`user_is_subscriber` ENUM(`N`, `Y`)
 	);
 	
 	SHOW TABLE STATUS;
