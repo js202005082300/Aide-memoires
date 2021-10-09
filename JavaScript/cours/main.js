@@ -1,2 +1,5 @@
-let bn = BigInt(14633264618181);
-document.write(bn);
+let s = "123:456";
+
+let a = s.split(":");
+
+document.write(a);

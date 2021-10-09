@@ -4,6 +4,7 @@
 -|:-:|:-:
 [7-zip](https://www.7-zip.org/)|19.00|x64
 [apache](https://apache.org/)|2.4.43|x64
+[arduino](https://www.arduino.cc/)|1.8.16|x64  
 [ccleaner](https://www.ccleaner.com/)|5.78.8558|x64
 [ffmpeg](https://ffmpeg.org/)|N-99876-g04b37b5d7f|x86
 [gcc](http://winlibs.com/)|10.2.0|x86-64
@@ -29,6 +30,7 @@
 
 ## Microsoft Store
 [Netflix](https://www.microsoft.com/store/productId/9WZDNCRFJ3TJ)  
+[Arduino]()  
 
 >
 

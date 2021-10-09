@@ -57,23 +57,37 @@ Emmet, par exemple le code source Html pour un fichier .html
 ```json
 //https://code.visualstudio.com/docs/getstarted/settings
 //
-
 {
     "workbench.welcome.enabled": true,
-    "workbench.colorTheme": "Tomorrow_Night_Eighties",
+    "workbench.colorTheme": "Monokai",
     "files.autoSave": "afterDelay",
     "editor.cursorStyle": "line",
     "editor.tabSize": 4,
     "editor.fontLigatures": false,
     "editor.wordWrap": "on",
     "editor.bracketPairColorization.enabled": true,
-    "window.zoomLevel": -2,
     // GIT.
     "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.allowForcePush": true,
     "git.ignoreMissingGitWarning": true,
+    "window.zoomLevel": -1,
+    "vscode-edge-devtools.mirrorEdits": true,
+    // ARDUINO.
+    "arduino.path": "C:/_Applis/arduino",
+    "arduino.commandPath": "arduino_debug.exe",
+    "arduino.logLevel": "info",
+    "arduino.allowPDEFiletype": false,
+    "arduino.enableUSBDetection": true,
+    "arduino.disableTestingOpen": false,
+    "arduino.skipHeaderProvider": false,
+    "arduino.additionalUrls": [
+        "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json",
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "arduino.defaultBaudRate": 115200,
+    "C_Cpp.updateChannel": "Insiders"
 }
 ```
 
