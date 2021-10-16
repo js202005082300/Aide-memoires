@@ -17,6 +17,7 @@
 |:heavy_check_mark:|[8. Lecture au clavier](cours/008_lecture_au_clavier/note.md)|-|[:memo:](#Lecture-au-clavier)
 |:heavy_check_mark:|[9. Méthodes](cours/009_méthodes/note.md)|-|[:memo:](#Méthodes)
 |:heavy_check_mark:|[10. Structures et classes](cours/010_structures_et_classes/note.md)|-|[:memo:](#Structures-et-classes)
+|:heavy_check_mark:|[11. Énumérations](cours/011_énumérations/note.md)|-|[:memo:](#Énumérations)
 
 ## Introduction
 
@@ -130,3 +131,8 @@
         + [le mot-clé static](cours/010_structures_et_classes/note.md#le-mot-clé-static)
         + [Le mot-clé partial](cours/010_structures_et_classes/note.md#Le-mot-clé-partial)
 + [Modularité](cours/010_structures_et_classes/note.md#Modularité)
+
+## Énumérations
+
++ [Usage de enum](cours/011_énumérations/note.md#Usage-de-enum)
++ [Une méthode extension](cours/011_énumérations/note.md#Une-méthode-extension)

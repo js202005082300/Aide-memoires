@@ -1,0 +1,13 @@
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\bin\Debug\netcoreapp3.1\App.exe
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\bin\Debug\netcoreapp3.1\App.deps.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\bin\Debug\netcoreapp3.1\App.runtimeconfig.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\bin\Debug\netcoreapp3.1\App.runtimeconfig.dev.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\bin\Debug\netcoreapp3.1\App.dll
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\bin\Debug\netcoreapp3.1\App.pdb
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.csprojAssemblyReference.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.AssemblyInfoInputs.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.AssemblyInfo.cs
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.csproj.CoreCompileInputs.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.dll
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.pdb
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\011_énumérations\App\obj\Debug\netcoreapp3.1\App.genruntimeconfig.cache
