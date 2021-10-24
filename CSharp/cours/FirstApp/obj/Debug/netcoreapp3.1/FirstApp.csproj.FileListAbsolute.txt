@@ -17,3 +17,10 @@ C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\netcoreapp
 C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\netcoreapp3.1\FirstApp.csproj.CoreCompileInputs.cache
 C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\netcoreapp3.1\FirstApp.dll
 C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\netcoreapp3.1\FirstApp.pdb
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\netcoreapp3.1\FirstApp.exe
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\netcoreapp3.1\FirstApp.deps.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\netcoreapp3.1\FirstApp.runtimeconfig.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\netcoreapp3.1\FirstApp.runtimeconfig.dev.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\netcoreapp3.1\FirstApp.dll
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\netcoreapp3.1\FirstApp.pdb
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\netcoreapp3.1\FirstApp.genruntimeconfig.cache

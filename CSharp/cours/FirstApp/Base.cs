@@ -2,14 +2,20 @@
 
 namespace App
 {
-    class Base
+    class Window
+    {
+        public string Title { get; set; } = "Nouvelle fenetre";
+    }
+    
+    class Program
     {
         static void Main(string[] args)
         {
-            Stock stock_disks = new Stock();
-            Stock stock_mouses = new Stock(25);
+            Window win = new Window();
+            Console.WriteLine(win.Title);
 
-            Console.WriteLine(stock_disks);
+            win.Title = "Nouveau nom";
+            Console.WriteLine(win.Title);
         }
     }
 }

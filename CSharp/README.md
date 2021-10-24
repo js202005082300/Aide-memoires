@@ -18,6 +18,7 @@
 |:heavy_check_mark:|[9. Méthodes](cours/009_méthodes/note.md)|-|[:memo:](#Méthodes)
 |:heavy_check_mark:|[10. Structures et classes](cours/010_structures_et_classes/note.md)|-|[:memo:](#Structures-et-classes)
 |:heavy_check_mark:|[11. Énumérations](cours/011_énumérations/note.md)|-|[:memo:](#Énumérations)
+|:heavy_check_mark:|[12. Propriétés d'encapsulation](cours/012_propriétés_encapsulation/note.md)|-|[:memo:](#Propriétés-encapsulation)
 
 ## Introduction
 
@@ -136,3 +137,9 @@
 
 + [Usage de enum](cours/011_énumérations/note.md#Usage-de-enum)
 + [Une méthode extension](cours/011_énumérations/note.md#Une-méthode-extension)
+
+## Propriétés encapsulation
+
++ [Usage de propriétés](cours/012_propriétés_encapsulation/note.md#Usage-de-propriétés)
++ [Réduire en corps d'expression](cours/012_propriétés_encapsulation/note.md#Réduire-en-corps-d-expression)
++ [Réduire la propriété en une ligne](cours/012_propriétés_encapsulation/note.md#Réduire-la-propriété-en-une-ligne)
