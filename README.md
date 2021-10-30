@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 24-10-2021 
+> 🧭 Màj le 30-10-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -22,12 +22,12 @@
 :partying_face: Officiellement à jour ce 24/08/2021 :partying_face:
 
 ### [Prises de notes](#)
-||notes|toWatch
+||notes|toDo
 -|:-|:-
 |:heavy_check_mark:|[Architecture](Architecture/README.md)
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)
+|:heavy_check_mark:|[C#](CSharp/README.md)|*En progression*
 |:heavy_check_mark:|[C++](C++/README.md)|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|

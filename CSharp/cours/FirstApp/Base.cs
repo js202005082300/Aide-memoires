@@ -2,20 +2,45 @@
 
 namespace App
 {
-    class Window
+    // Parent
+    class Widget
     {
-        public string Title { get; set; } = "Nouvelle fenetre";
+        protected string Title { get; set; } = "Widget";
+        public Widget(string title) => this.Title = title;
+
+        public virtual void Test()
+        {
+            Console.WriteLine($"Widget {this.Title} est fonctionnel.");
+        }
     }
-    
+
+    // Enfant de Widget
+    class Button : Widget
+    {
+        public int Color { get; set; } = 0;
+
+        public Button(string title, int color) : base(title)
+        {
+            this.Color = color;
+        }
+
+        public override void Test()
+        {
+            Console.WriteLine($"Bouton {this.Title} {this.Color} est fonctionnel.");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Window win = new Window();
-            Console.WriteLine(win.Title);
+            Widget w = new Widget("Programme en C#");
+            Console.WriteLine(w.Title);
 
-            win.Title = "Nouveau nom";
-            Console.WriteLine(win.Title);
+            Button btn = new Button("OK", 15);
+            Console.WriteLine(btn.Title);
+            Console.WriteLine(btn.Color);
+            btn.Test();
         }
     }
 }
