@@ -155,7 +155,7 @@
 
 ## Surcharge opérateurs
 
-+ [Que signifie additionner une armure avec une autre ?](cours/014_surcharge_opérateurs/Que-signifie-additionner-une-armure-avec-une-autre)
-+ [Surcharge implicite](cours/014_surcharge_opérateurs/Surcharge-implicite)
-+ [Surcharge par pair : cas de true/false](cours/014_surcharge_opérateurs/Surcharge-par-pair)
++ [Que signifie additionner une armure avec une autre ?](cours/014_surcharge_opérateurs/note.md#Que-signifie-additionner-une-armure-avec-une-autre)
++ [Surcharge implicite](cours/014_surcharge_opérateurs/note.md#Surcharge-implicite)
++ [Surcharge par pair : cas de true/false](cours/014_surcharge_opérateurs/note.md#Surcharge-par-pair)
 
