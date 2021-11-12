@@ -20,6 +20,7 @@
 |:heavy_check_mark:|[11. Énumérations](cours/011_énumérations/note.md)|-|[:memo:](#Énumérations)
 |:heavy_check_mark:|[12. Propriétés d'encapsulation](cours/012_propriétés_encapsulation/note.md)|-|[:memo:](#Propriétés-encapsulation)
 |:heavy_check_mark:|[13. Héritage](cours/013_héritage/note.md)|-|[:memo:](#Héritage)
+|:heavy_check_mark:|[14. Surcharge d'opérateurs](cours/014_surcharge_opérateurs/note.md)|-|[:memo:](#Surcharge-opérateurs)
 
 ## Introduction
 
@@ -151,3 +152,10 @@
 + [virtual et override](cours/013_héritage/note.md#virtual-et-override)
 + [base()](cours/013_héritage/note.md#base)
 + [protected](cours/013_héritage/note.md#protected)
+
+## Surcharge opérateurs
+
++ [Que signifie additionner une armure avec une autre ?](cours/014_surcharges_opérateurs/Que-signifie-additionner-une-armure-avec-une-autre)
++ [Surcharge implicite](cours/014_surcharges_opérateurs/Surcharge-implicite)
++ [Surcharge par pair : cas de true/false](cours/014_surcharges_opérateurs/Surcharge-par-pair)
+

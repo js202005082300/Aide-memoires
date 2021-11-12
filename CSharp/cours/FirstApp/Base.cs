@@ -1,46 +1,37 @@
 ﻿using System;
 
 namespace App
-{
-    // Parent
-    class Widget
+{   
+    public class Armor
     {
-        protected string Title { get; set; } = "Widget";
-        public Widget(string title) => this.Title = title;
+        public int Defense { get; set; }    
+        public int Durability { get; set; }
 
-        public virtual void Test()
+        public Armor(int defense = 250, int durability = 100)
         {
-            Console.WriteLine($"Widget {this.Title} est fonctionnel.");
+            this.Defense = defense;
+            this.Durability = durability;
         }
+
+        public static Armor operator +(Armor a, Armor b)
+        {
+            return new Armor(a.Defense + b.Defense, a.Durability + b.Durability);
+        }
+
+        public static bool operator true(Armor a) => a.Defense >= 100;
+        public static bool operator false(Armor a) => a.Defense < 100;
     }
-
-    // Enfant de Widget
-    class Button : Widget
-    {
-        public int Color { get; set; } = 0;
-
-        public Button(string title, int color) : base(title)
-        {
-            this.Color = color;
-        }
-
-        public override void Test()
-        {
-            Console.WriteLine($"Bouton {this.Title} {this.Color} est fonctionnel.");
-        }
-    }
-
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Widget w = new Widget("Programme en C#");
-            Console.WriteLine(w.Title);
+            Armor ar = new Armor(80);
 
-            Button btn = new Button("OK", 15);
-            Console.WriteLine(btn.Title);
-            Console.WriteLine(btn.Color);
-            btn.Test();
+            if(ar)
+                Console.WriteLine("Oui !");
+            else
+                Console.WriteLine("Non...");
         }
     }
 }
