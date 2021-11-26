@@ -236,7 +236,7 @@ Voilà ça c'est important.
 
 Dans ce cas là à partir du moment où vous utilisez des balises HTML qui vont être affichées notamment avec un echo, il faut fermer la balise PHP seulement à la fin. 
 
-S'il y a que du PHP sans balise HTML, vous ne fermez pas la balise, ça c'est la petite différence à bien savoir et là évidemment le acheter ml peut être géré. 
+S'il y a que du PHP sans balise HTML, vous ne fermez pas la balise, ça c'est la petite différence à bien savoir et là évidemment le HTML peut être géré. 
 ```php
 <?php
 echo "Bonjour à tout le monde<br>";
@@ -312,7 +312,7 @@ echo "Bonjour", "	à tout le monde";
 ```
 Là par contre mon navigateur me fait un changement et du coup il enlève la tabulation et il le gère comme un espace donc ça après c'est encore au niveau des navigateurs que des fois ils se permettent certaines choses à ce niveau-là mais vous allez pouvoir gérer éventuellement tout ça. 
 
-Après vous avez vu en acheter un mail qu'il y avait des commandes comme `&nbsp;` qui permettait soit de faire des espaces soit de faire des tabulations et cetera.
+Après vous avez vu en HTML qu'il y avait des commandes comme `&nbsp;` qui permettait soit de faire des espaces soit de faire des tabulations et cetera.
 ```php
 	<?php
 	echo "Bonjour", "&nbsp;à tout le monde";
@@ -371,7 +371,7 @@ le monde";
 	Bonjour à tout
 	le monde
 ```
-Si on regarde le code source, vous voyez qu'on a effectivement les balises HTML d'afficher puisque le acheter ml est affiché au niveau du code source, pas le PHP mais le HTML donc ça montre bien qu'on en a.
+Si on regarde le code source, vous voyez qu'on a effectivement les balises HTML d'afficher puisque le HTML est affiché au niveau du code source, pas le PHP mais le HTML donc ça montre bien qu'on en a.
 ```html
 	<html><head></head><body>Bonjour à tout<br>
 	le monde</body></html>
