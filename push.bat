@@ -20,6 +20,8 @@ if not exist ".git" (
 
 if "%~1" NEQ "" ( echo git remote add origin https://%UTILISATEUR%:%~1@github.com/%UTILISATEUR%/%DEPOT%.git )
 
+git remote add origin https://github.com/js202005082300/%DEPOT%.git
+git branch -M main
 git pull %LIEN%
 git add *
 git commit -a -m "%d% %t%"

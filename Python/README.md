@@ -70,6 +70,7 @@
 |:heavy_check_mark:|[Méthodes spéciales](tutos/Méthodes_spéciales/note.md)
 |:heavy_check_mark:|[Portée variables](tutos/Portée_variables/note.md)
 |:heavy_check_mark:|[Tests unitaires](tutos/Tests_unitaires/note.md)
+|:heavy_check_mark:|[Liste en compréhension](tutos/Liste_en_compréhension/note.md)
 
 [[ARCHIVE] Tutoriel Python - créer exécutable (cx_Freeze)](https://www.youtube.com/watch?v=essSa78iv-A&list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB&index=29)
 
@@ -85,6 +86,7 @@
 |:heavy_check_mark:|[6. Jeu de l'étudiant](exos/06_Jeu_de_l_étudiant/main.py)
 |:heavy_check_mark:|[7. Famille bouftou](exos/07_Famille_bouftou/main.py)
 |:heavy_check_mark:|[8. Where is Bryan ?](exos/08_Where_is_Bryan/main.py)
+|:heavy_check_mark:|[9. Tuple or not tuple](exos/09_tuple_or_not_tuple/main.py)
 
 > -----------------------
 
