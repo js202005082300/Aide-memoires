@@ -74,26 +74,8 @@ Grosso modo nous avons donc ici et ça on le verra par rapport à un schéma que
 		padding:10px;
 	}
 ```
-```txt
-	+---------------------------------------------------+
-	| A													|
-	+---------------------------------------------------+
-	| B 												|
-	+---------------------------------------------------+
-	| C													|
-	+---------------------------------------------------+
-	| D													|
-	+---------------------------------------------------+
-	| E													|
-	+---------------------------------------------------+
-	| F													|
-	+---------------------------------------------------+
-	:													:
-	:													:
-	:													:
-	:													:
-	.....................................................
-```
+![01.jpeg](img/01.jpeg)  
+
 A partir de là j'applique un petit effet très rapide en css en plus d'un petit fond gris mais ça peu importe, le conteneur a une bordure orange, a une certaine hauteur, une certaine largeur prédéfinie.
 ```css
 	.container
@@ -115,26 +97,9 @@ Et les objets auront donc une couleur bleu donc avec un texte en blanc, un texte
 	}
 ```
 On obtient par défaut ce type d'effets visuels d'accord ce rendu ici.
-```txt
-	+---------------------------------------------------+
-	| A													|
-	+---------------------------------------------------+
-	| B 												|
-	+---------------------------------------------------+
-	| C													|
-	+---------------------------------------------------+
-	| D													|
-	+---------------------------------------------------+
-	| E													|
-	+---------------------------------------------------+
-	| F													|
-	+---------------------------------------------------+
-	:													:
-	:													:
-	:													:
-	:													:
-	.....................................................
-```
+
+![01.jpeg](img/01.jpeg)  
+
 Par défaut on a plusieurs `<div>` qui se mettent évidemment les uns à la suite des autres puisque je rappelle que `<div>` est un élément de type bloc par défaut et donc les éléments de type blocs se mettent les uns en dessous des autres par rapport à l'ordre dans les quelles ils sont écrits et définit dans le fichier html.
 
 Voilà, au niveau de grid donc vous allez voir qu'il y a pas mal de similitudes avec flexbox sauf que nous allons travailler sur quelque chose ici de plus général d'accord on ne travaille pas forcément que sur des détails et en plus il est bidimensionnel c'est à dire qu'il va pouvoir travailler à la fois sur les lignes et les colonnes alors que flexbox ne peut travailler que sur l'un ou l'autre d'accord donc ça c'est l'avantage que tire justement cette technique là et vous verrez aussi que ça permet de l'associé par la suite avec flybox donc n'hésitez pas.
@@ -150,68 +115,25 @@ On va aller sur la page de Twitch bas par rapport à ma page où je fait mes liv
 Système de grille faut simplement comprendre des lignes et des colonnes d'accord comme on l'aurait dans un tableau, comme on l'aurait dans un logiciel de tableur comme Excel, comme Calk ou ce genre de choses pour mettre tout ça à disposition.
 
 Là on se rend très vite compte qu'on peut par exemple retrouver une ligne, on identifie facilement des colonnes et on voit qu'on peut retrouver par exemple d'autres colonnes à l'intérieur de cette colonne du milieu, vous voyez très vite qu'on peut trouver comme ça plusieurs éléments.
-```txt
-	+-----------------------------------+
-	| Twitch							|
-	+-------+---------------+-----------+
-	|		|				|			|
-	|		|				|			|
-	|		|				|			|
-	|		|				|			|
-	|		|				|			|
-	|		|				|			|
-	|		|				|			|
-	|		|				|			|
-	+-------+---------------+-----------+
-```
+
+![twitch.JPG](img/twitch.JPG)  
+
 Je ne veux pas ralonger la vidéo mais je voulais vous donner quelques exemples concrets pour que vous puissiez bien vous illustrer ça sur ce site par exemple on voit également très vite d'accord comment on peut identifier des lignes d'accord.
-```txt
-	+-----------------------------------+
-	| Topachat							|
-	+-----------------------------------+
-	+-----------------------------------+
-	|									|
-	|									|
-	+--------+--------+--------+--------+
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	|		 |		  |		   |	    |
-	+--------+--------+--------+--------+
-```
+
+![topachat.JPG](img/topachat.JPG)
+
 On peut bien apercevoir les lignes rapidement ok et on voit aussi évidemment les colonnes d'accord, on voit qu'il y a 4 colonnes alors il pourrait y en avoir que deux, on pourrait très bien dire qu'il y a en fait que deux colonnes mais qu' il y a ici deux parties pour chaque colonne.
 
 On peut en imaginer qu'une seule qui est centré mais on peut en imaginer 7 puis beaucoup d'autres aussi.
-```txt
-	+---------------------------------------------------------------+
-	|																|
-	|	+-------+		+-------+		+-------+		+-------+	|
-	|	|		|		|		|		|		|		|	    |	|
-	|	|		|		|		|		|		|		|	    |	|
-	|	+-------+		+-------+		+-------+		+-------+	|
-	|																|
-	+---------------------------------------------------------------+
-```
+
+![](img/content.png)  
+
 Ici on a tout simplement ici un conteneur flexbox pour le coup qui peut être mit à l'intérieur d'un grid donc d'une ligne de grill et les éléments flexbox sont mis comme ça avec des espaces qui sont bien arrangé comme on a vu par exemple dans la vidéo d'avant donc c'est des choses tout à fait possibles.
 
 Voilà et puis sur ce site là qui est un peu plus un peu plus épurée.
-```txt
-	+---------------------------+
-	| Elementary				|
-	|							|
-	|	##	##	##	##	##		|
-	|							|
-	|	##	##	##	##	##		|
-	|							|
-	|							|
-	+---------------------------+
-```
+
+![elementary.JPG](img/elementary.JPG)  
+
 Sur ce site là c'est pareil, on arrive facilement à identifier des colonnes, des lignes, etc donc on se rend bien compte que le principe de grid notamment pour les gabarits fonctionnera dans tous les cas puisqu'on va vraiment pouvoir créer comme des lego en fait, on va pouvoir dire exactement comment sont disposés nos éléments sur combien de lignes, combien de colonne, de quelle taille, quel espace, quelle séparation entre chaque etc etc.
 
 Comme pour flexbox on va vraiment pouvoir modifier le comportement de tout ça aussi bien pour le conteneur que les éléments qu'il contient et tout ça on va le regarder par la suite.
@@ -345,26 +267,9 @@ On peut mettre plusieurs classes sur un seul élément, c'est un petit rappel de
 	}
 ```
 Donc ça n'a rien changé de toute façon au niveau de l'affichage là parce qu'on applique rien d'autre en particulier.
-```txt
-	+---------------------------------------------------+
-	| A													|
-	+---------------------------------------------------+
-	| B 												|
-	+---------------------------------------------------+
-	| C													|
-	+---------------------------------------------------+
-	| D													|
-	+---------------------------------------------------+
-	| E													|
-	+---------------------------------------------------+
-	| F													|
-	+---------------------------------------------------+
-	:													:
-	:													:
-	:													:
-	:													:
-	.....................................................
-```
+
+![](img/02.jpeg)
+
 Donc on y va, comment va-t-on utiliser ce système de grille ? on va travailler déjà sur le conteneur.
 
 On va utiliser la fameuse propriété 'display' qu'on connaît bien, ce n'est plus nouveau maintenant sauf qu'au lieu d'avoir une valeur en "flex", on utilisera une valeur en "grid".
@@ -454,27 +359,9 @@ Nous pour des raisons évidentes puisqu'on est sur firefox on va rester sur "gri
 		padding:10px;
 	}
 ```
-```txt
-	+---------------------------------------------------+
-	| A													|
-	|													|
-	+---------------------------------------------------+
-	| B 												|
-	|													|
-	+---------------------------------------------------+
-	| C													|
-	|													|
-	+---------------------------------------------------+
-	| D													|
-	|													|
-	+---------------------------------------------------+
-	| E													|
-	|													|
-	+---------------------------------------------------+
-	| F													|
-	|													|
-	+---------------------------------------------------+
-```
+
+![](img/03.jpeg)  
+
 Si j'actualise pas de changement à part ces petits comportement par défaut au niveau du remplissage mais on va très vite l'expliquer par la suite.
 
 On a vraiment que ça qui change mais sinon au niveau comportement comme on n'a rien spécifié particulier pour le moment on a vraiment un comportement par défaut donc ça et on verra pourquoi là ça a changé au niveau du remplissage.
@@ -641,51 +528,19 @@ Je vais actualiser et voilà ce que nous obtenons.
 	}
 ```
 Je vais actualiser et voilà ce que nous obtenons.
-```txt
-	+-------+-------+-------+...............+
-	| A		| B		| C		|				:
-	|		|		|		|				:
-	|		|		|		|				:
-	|		|		|		|				:
-	+-------+-------+-------+				:
-	| D		| E		| F		|				:
-	|		|		|		|				:
-	|		|		|		|				:
-	|		|		|		|				:
-	+-------+-------+-------+				:
-	| G		| H		|						:
-	|		|		|						:
-	|		|		|						:
-	|		|		|						:
-	|		|		|						:
-    +-------+-------+.......................+
-```
+
+![](img/04.jpeg)
+
 Et là on arrive très vite à se rendre compte de ce qui se passe alors où est la grille ? d'accords la réelle grille que nous avons faites ? et bien elle est ici alors c'est tout ça bien évidemment parce que vous voyez que le conteneur est encadré en orange et on voit bien que tout est dedans du coup on peut dire bah la grille c'est tout ça en fait mais en réalité la grille que nous avons explicitement positionner elle est là, elle va de A à F.
-```txt
-	+-------+-------+-------+
-	| A		| B		| C		|
-	|		|		|		|
-	|		|		|		|
-	|		|		|		|
-	+-------+-------+-------+
-	| D		| E		| F		|
-	|		|		|		|
-	|		|		|		|
-	|		|		|		|
-	+-------+-------+-------+
-```
+
+![](img/04A.png)  
+
 Les éléments G et H sont dits en dehors ils sont en fait des cellules de la grille qui ont été automatiquement générée par le navigateur d'accord.
 
 Nous on a choisi de définir ceci d'ailleurs vous voyez qu'elles ont effectivement une hauteur égale, une hauteur que nous avons définie qui est la hauteur de 150 pixels d'accord chacune et là.
-```txt
-	+-------+-------+
-	| G		| H		|
-	|		|		|
-	|		|		|
-	|		|		|
-	|		|		|
-	+-------+-------+
-```
+
+![](img/04B.png)  
+
 Là vous voyez qu'elles sont un peu plus grande parce qu'il a simplement pris l'espace qui restait dans le conteneur.
 
 Et ça on verra, on va pouvoir faire des choses aussi sur ce qui n'est pas considéré comme faisant partie de la grille explicitement définie par nous mêmes au niveau du CSS, on aura des propriétés pour travailler là dessus.
@@ -733,26 +588,9 @@ Voilà une première manière de faire par rapport à ça, on peut également tr
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+............+
-```
+
+![](img/05.jpeg)  
+
 Ici il se passera ça et automatiquement tu règles en fonction de l'espace que tu as choisi plutôt sympa à connaître.
 
 On peut évidemment mélanger les deux, on peut mélanger plusieurs notation différente pas de problème.
@@ -796,46 +634,15 @@ On peut évidemment mélanger les deux, on peut mélanger plusieurs notation dif
 		padding:10px;
 	}
 ```
-```txt
-	+-------------+---------+------------+
-	| A			  | B	    | C		     |
-	|			  |		    |			 |
-	|			  |		    |			 |
-	|			  |		    |			 |
-	+-------------+---------+------------+
-	| D 		  | E	    | F		     |
-	|			  |		    |			 |
-	|			  |		    |			 |
-	|			  |		    |			 |
-	+-------------+---------+------------+
-	| G			  | H	    |			 :
-	|			  |		    |			 :
-	|			  |		    |			 :
-	|			  |		    |			 :
-	|			  |		    |			 :
-	|			  |		    |			 :
-	+-------------+---------+............+
-```
+
+![](img/06.jpeg)  
+
 Là où c'est intéressant c'est ce qui en automatique va se régler et ce qui ne l'est pas sera là.
 
 Là l'automatique ne se règle pas (A) puisqu'il choisit en fait sur le reste et il calcule en fait une valeur fixe au niveau du navigateur donc là si j'arrive à cette largeur, automatiquement on aperçoit un scrolling obligatoire d'ailleurs on a aussi un scrolling vertical.
-```txt
-	+-------------+---------+-----#
-	| A			  | B	    | C	  #
-	|			  |		    |	  #
-	|			  |		    |	  #
-	|			  |		    |	  #
-	+-------------+---------+-----#
-	| D 		  | E	    | F	  #
-	|			  |		    |	  #
-	|			  |		    |	  #
-	|			  |		    |	  #
-	+-------------+---------+-----#
-	| G			  | H	    |	  #
-	|			  |		    |	  #
-	|			  |		    |	  #
-	###############################
-```
+
+![](img/06A.png)  
+
 Si on veut maintenant des choses beaucoup plus flexible on va pouvoir parler non pas en calcul fixe gérer automatiquement par le navigateur mais de calcul dynamique géré par navigateur, et pour ça nous avons quelque chose d'intéressant qui est cette notation "1fr 1fr 1fr".
 ```css
 	/*
@@ -880,24 +687,9 @@ Si on veut maintenant des choses beaucoup plus flexible on va pouvoir parler non
 Le fameux "fr" qui désigne en fait un espace libre un free space d'accord comme là j'ai mit trois fois 1 pour chacun, chaque colonne donc il y en a 3, vont prendre chacune la même portion d'accord la même proportion donc 1/3 1/3 1/3.
 
 Donc là le navigateur va calculer ça de manière dynamique et voyez d'ailleurs que les cellules qui ne font pas partie explicitement de la grille que nous avons définie sont également coupées de la même manière sauf celle-là "I" qui du coup est absente mais ça c'est normal.
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+............+
-```
+
+![](img/07.jpeg)  
+
 Et là on va pouvoir donc gérer cette partie là.
 
 Alors oui on n'a pas de flexibilité mais ça c'est normal, si vous voyez qu'il y a le scroll quand on redimentionne la fenêtre c'est pourquoi ? tout simplement parce que j'ai défini ici des tailles.
@@ -949,22 +741,9 @@ On peut l'enlever pour le moment et comme ça on se rend bien compte de ce qui s
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/08.jepg)  
+
 Il faudra que j'enlève pour que vous ayez le résultat attendus assez visuel.
 
 Voilà ce que nous avons ici pour cette partie là alors là on voit qu'on a répété quelque chose "1fr 1fr 1fr" admettons que je veuille que ma colonne du milieu soit un peu plus importante que celles sur les côtés.
@@ -1024,39 +803,13 @@ Et comment ça fonctionne au niveau réflexion ? comme ont réfléchi à ça ? c
 		padding:10px;
 	}
 ```
-```txt
-	+------------+--------------------+------------+
-	| A			 | B		          | C		   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	+------------+--------------------+------------+
-	| D 		 | E		          | F		   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	+------------+--------------------+------------+
-	| G			 | H		          |			   :
-	|			 |			          |			   :
-	+..............................................+
-```
+
+![](img/09.jpeg)  
+
 Et paris c'est calculé automatiquement d'accord peu importe la largeur que vous allez avoir, la colonne au centre occupera toujours 2/4 de la largeur qui est actuellement disponibles et eux occuperont toujours 1/4.
-```txt
-	+-------+----------+--------+
-	| A		| B		   | C		|
-	|		|		   |		|
-	|		|		   |		|
-	|		|		   |		|
-	+-------+----------+--------+
-	| D 	| E		   | F	    |
-	|		|		   |		|
-	|		|		   |		|
-	|		|		   |		|
-	+-------+----------+--------+
-	| G		| H		   |		:
-	|		|		   |		:
-	+...........................+
-```
+
+![](img/09A.jpeg) 
+
 Ca ne changera pas ce sera toujours calculé comme ça donc là on a bien un calcul dynamique pour le coup, ce n'est plus quelque chose de fixe comme on l'avait tout à l'heure alors si éventuellement on a comme j'ai fait tout à l'heure là quand on a "1fr" d'accord comme ça qui se répète on peut utiliser une petite commande de répétition pour éviter de devoir le taper à chaque fois comme là on a trois fois "1fr" je peux utiliser la valeur "repeat()" qui va répeter 3 fois "1fr" et vous pouvez répéter ça comme ça.
 ```css
 	/*
@@ -1098,22 +851,9 @@ Ca ne changera pas ce sera toujours calculé comme ça donc là on a bien un cal
 		padding:10px;
 	}
 ```
-```txt
-	+------------+--------------------+------------+
-	| A			 | B		          | C		   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	+------------+--------------------+------------+
-	| D 		 | E		          | F		   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	|			 |			          |			   |
-	+------------+--------------------+------------+
-	| G			 | H		          |			   :
-	|			 |			          |			   :
-	+..............................................+
-```
+
+![](img/010.jpeg)  
+
 C'est simplement une autre manière de noter plutôt que de noter "1fr" "1fr" "1fr" autant de fois que nécessaire, vous mettez ça "repeat(3, 1fr)".
 
 Si on voulait 5 colonnes, on mettra ça "repeat(5, 1fr)" sur deux lignes et là voyez le changement est directe d'accord.
@@ -1157,21 +897,9 @@ Si on voulait 5 colonnes, on mettra ça "repeat(5, 1fr)" sur deux lignes et là 
 		padding:10px;
 	}
 ```
-```txt
-	+-----------+-----------+------------+-----------+-----------+
-	| A			| B		 	| C		     | D		 | E		 |
-	|			|			|			 | 		     |		     |
-	|			|			|			 |  		 |		     |
-	|			|			|			 |  		 |		     |
-	|			|			|			 |  		 |		     |
-	+-----------+-----------+------------+-----------+-----------+
-	| F			| G		 	| H		     |
-    |			|			|			 |
-    |			|			|			 |
-    |			|			|			 |
-    |			|			|			 |
-    +-----------+-----------+------------+
-```
+
+![](img/011.jpeg)  
+
 On a nos cinq colonnes, nos deux lignes donc tout s'adapte en fonction par rapport à ça et le redimentionnement.
 
 C'est important de le voir.
@@ -1217,22 +945,9 @@ On va rester sur 3, on va garder comme ça: repeat(3, 1fr).
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/012.jpeg)  
+
 G et H évidemment ne sont pas impactés je rappelle par le choix de la hauteur 250 pixels parce que ça ne fait pas partie de ce que nous avons définit ok.
 
 Donc on a vu ça.
@@ -1290,23 +1005,9 @@ Donc là comment je fais pour indiquer que certaines lignes ne font pas partie d
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :	\
-	|			 |			  |			   :	| 100px
-	|			 |			  |			   :	/
-	+......................................+
-```
+
+![](img/012A.png)
+
 Voilà on aura les 100 pixels de choisi dans tous les cas.
 
 Comme ça vous pouvez vraiment gérer ce qui est en dehors et y compris des cellules qui sont implicitement créer parce en bas à droite en fait c'est une cellule (#) même si on ne voit pas de couleurs qui a été créée. Vous voyez bien qu'ici même si c'est un espace vide, elle fait quand même partie de cette de cette section là.
@@ -1363,22 +1064,9 @@ Pour 'grid-auto-flow' alors là je ne sais pas si on verra bien visuellement ce 
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/013.jpeg)
+
 Ca ne change rien mais si vous voulez si on a par exemple des éléments libres d'accord les éléments qui ne font pas partie de ce que nous avons définies explicitement vont s'empiler en ligne donc si on met cette valeur là 'grid-auto-flow:row;' d'accord et si on met en colonne 'grid-auto-flow:column;' ils vont s'empiler plus tôt par colonnes si on a par exemple plusieurs emplacements de libres en colonnes.
 ```css
 	/*
@@ -1420,19 +1108,10 @@ Ca ne change rien mais si vous voulez si on a par exemple des éléments libres 
 		font-weight:bolder;
 		padding:10px;
 	}
-	
-	+------------+------------+------------+---+
-	| A			 | C		  | E		   | G |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	+------------+------------+------------+---+
-	| B 		 | D		  | F		   | H |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	+------------+------------+------------+---+
 ```
+
+![](img/014.jpeg)  
+
 Là comme j'ai dis en fait et bien les éléments restant tu les additionne en fait à une suite en tant que colonnes eh bien ils se sont mis à la suite càd là on a vu au départ qu'on avait ce schéma là d'accord.
 
 ![grids.JPG](grids.JPG)
@@ -1503,22 +1182,9 @@ Par défaut c'est ça.
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/015.jpeg)  
+
 Voilà c'est pour ça qu'on a notre fameuse troisième initié alors que quand on regarde notre schéma et ce qu'on a avait mis ici 'grid-template-rows:150px 150px;' on a dit qu'on avait que deux lignes mais lui vous voyez on a créé implicitement donc c'est le navigateur qui en a défini une troisième qui est la fameuse troisième ligne pour le coup automatique et si on veut changer ce comportement par défaut, encore une fois on met 'column'.
 ```css
 	body
@@ -1546,33 +1212,13 @@ Voilà c'est pour ça qu'on a notre fameuse troisième initié alors que quand o
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+---+
-	| A			 | C		  | E		   | G |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	+------------+------------+------------+---+
-	| B 		 | D		  | F		   | H |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	|			 |			  |			   |   |
-	+------------+------------+------------+---+
-```
+
+![](016.jpeg)  
+
 Et là ça va ajouter éventuellement des colonnes supplémentaires s'il y a des éléments en trop d'accord qui ne rentre pas dans ce que nous avons définie comme grille donc ça c'est la grille défini de A à F. Ensuite G et H, les cellules en tout cas implicite mais qui font évidemment partie de tout notre conteneur. Ca ne dépasse jamais le conteneur on est bien à l'intérieur tout le temps quoi qu'il arrive... (redimentionnement de la fenêtre).
-```txt
-	+---+---+---+---+		+-------+-------+-------+---+
-	| A | C | E | G |		| A 	| C 	| E 	| G |
-	|   |   |   |   |		|   	|   	|   	|   |
-	|   |   |   |   |		|   	|   	|   	|   |
-	|   |   |   |   |		|   	|   	|   	|   |
-	+---+---+---+---+		+-------+-------+-------+---+
-	| B | D | F | H |		| B 	| D 	| F 	| H |
-	|   |   |   |   |		|   	|   	|   	|   |
-	|   |   |   |   |		|   	|   	|   	|   |
-	|   |   |   |   |		|   	|   	|   	|   |
-	+---+---+---+---+		+-------+-------+-------+---+
-```
+
+![](img/016A.png)  
+
 Donc G et F ne bouge pas parce qu'on n'a rien définit comme taille ou autre actuellement, ensuite A,B,C,D,E,F a été défini par des valeurs dynamiques donc c'est réglé dynamiquement (redimentionnement), le reste ça reste fixe sauf si on venait éventuellement à préciser quelque chose avec les fameux 'grid-auto-columns' et 'grid-auto-rows' donc là d'ailleurs comme un ami sous forme de colonne on pourrait le faire, `grid-auto-columns:100px;`
 ```css
 	/*
@@ -1616,37 +1262,13 @@ Donc G et F ne bouge pas parce qu'on n'a rien définit comme taille ou autre act
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+-----+
-	| A			 | C		  | E		   |   G |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	+------------+------------+------------+-----+
-	| B 		 | D		  | F		   |   H |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	+------------+------------+------------+-----+
-											\____/
-											 100px
-```									 
+
+![](img/017A.png)  
+
 Voilà hé là automatiquement ça passe à une largeur de 100 pixels puisqu'on a dit que la colonne devait faire 100 pixels vous voyez elle prend plus de place que le reste et éventuellement des fois elle dépasse puisque la largeur ne suffit plus donc on se retrouve avec un scroll éventuellement (voir redimentionnement).
-```txt
-	+---+---+---+-----------+
-	| A | C | E | G 		|
-	|   |   |   |   		|
-	|   |   |   |   		|
-	|   |   |   |   		|
-	+---+---+---+-----------+
-	| B | D | F | H 		|
-	|   |   |   |   		|
-	|   |   |   |   		|
-	|   |   |   |   		|
-	+---+---+---+-----------+
-				\___________/
-					100px
-```
+
+![](img/017B.png)  
+
 Voilà pour ça donc on a vu pas mal de choses, je vous ai montré ça.
 ```txt
 		CONTAINER :	display
@@ -1682,15 +1304,9 @@ Donc les cellules en particulier je rappelle qu'elles sont là.
 	</div>
 ```
 Il y en a de A à H donc c'est pour ça que j'ai mis des classes particulières, ensuite comment ça se calcule ? ben c'est simple c'est par rapport à l'endroit de la cellule.
-```txt
-	+------------+------------+------------+
-	| (1,1)		 | (1,2)	  | (1,3)	   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| (2,1)		 | (2,2)	  | (2,3)	   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-```
+
+![](img/018.png)  
+
 C'est comme si on mettait des coordonnées pour chacune de ces cellules, eh bien on va pouvoir l'explicité. Par défaut c'est calculé comme ça mais on peut très bien dire mais moi F par exemple "iF" donc là je rappelle que les propriétés ici on les fait sur le "container" et puis les propriétés sur des items.
 ```css
 	/*
@@ -1756,21 +1372,9 @@ Donc sur un item particulier .iF ou éventuellement .item si on veut le faire su
 >		grid-column:1;
 	}
 ```
-```txt
-	+------------+------------+------------+-----+
-	| F			 | B		  | D		   |   G |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	+------------+------------+------------+-----+
-	| A 		 | C		  | E		   |   H |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	|			 |			  |			   |     |
-	+------------+------------+------------+-----+
-											\____/
-											 100px
-```
+
+![](img/019.png)  
+
 Là j'actualise la page et voyez ce qui se passe F fini en première colonne donc automatiquement il a changé de position d'accord il est déscendu et tout est décalé.
 
 Alors on va virer ça.
@@ -1824,35 +1428,15 @@ Je vais l'enlever pour l'exemple.
 		grid-column:1;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | 		   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+------------+
-	| F			 | G 		  | H		   |
-	+--------------------------------------+
-```										
+
+![](img/020.jpeg)  
+
 Voilà comme ça on se rend mieux compte de ce qui se passe a,b,c,d voilà tous les éléments se mettent à la suite.
 
 F normalement se met ici.
-```txt
-	+------+------+------+
-	|      |      |      |
-	|      |      |      |
-	+------+------+------+
-	|      |      | (F)   
-	|      |      |      
-	+------+------+------+
-	|      |      |      |
-    +------+------+------+
-```
+
+![](img/020A.png)  
+
 Mais là exceptionnellement comme on lui a dit qu'il était en première colonne hé bien il ne va pas se trouver en troisième colonne donc il va laisser un emplacement libre sans problème donc là on a créé en fait implicitement une autre cellule d'accord un autre emplacement de notre grille qui fait partie de notre conteneurs donc voilà comment on peut faire.
 
 Si on avait décalé à la deuxième voilà 'grid-column:2;', comment ça se serait passé ?
@@ -1901,23 +1485,9 @@ Si on avait décalé à la deuxième voilà 'grid-column:2;', comment ça se ser
 		grid-column:2;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | 		   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+------------+
-	:			 | F 		  | G		   |
-	+------------+-------------------------+
-	| H			 |						   :
-	+------------+.........................+
-```
+
+![](img/021.jpeg)  
+
 Comme F n'est pas la troisième il ne peut pas se mettre après E, comme ce n'est pas la première il ne peut pas se mettre avant F donc la deuxième colonne disponible suivante après là où est F donc ça décale forcément tout le reste mais là on se retrouve du coup avec 4 lignes donc ça c'est vraiment à prendre bien en compte 1 donc c'est des choses qui vont peut-être prendre un petit peu compliqué au départ mais vous verrez par la suite avec la pratique tout ça ça finira par rentrer donc c'est normal si vous ne retenez pas tout.
 
 Pareil pour les propriétés comme il y a vraiment beaucoup si vous ne les retenez pas par coeur c'est normal aussi.
@@ -1972,23 +1542,9 @@ On peut également dire pour compter plus facilement, on voit qu'on a trois colo
 >		grid-column:2 / 2;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | 		   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+------------+
-	:			 | F 		  | G		   |
-	+------------+-------------------------+
-	| H			 |						   :
-	+------------+.........................+
-```
+
+![](img/022.jpeg)  
+
 Ce serra la même chose juste que c'est beaucoup plus explicite et si vous voulez que ça occupe une colonne complète ou une ligne complète donc ça marcherais pareil avec 'grid-row' que je ne vous montre pas parce que c'est la même chose, vous mettez la valeur positive et la valeur négative, 2/-2.
 ```css
 	.iF
@@ -2044,23 +1600,9 @@ Alors là "2 / -2" évidemment là ça n'a pas occupée, on va plutôt "1 / -1" 
 >		grid-column:1 / -1;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | 		   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+------------+
-	| F 		  						   |
-	+------------+-------------------------+
-	| G			 | H		  |			   :
-	+------------+------------+............:
-```
+
+![](img/023.jpeg)  
+
 Il faut le faire avec "1 / -1" parce qu'il n'y a pas besoin de 2 - 2 pour le coup donc vous mettez "1 / -1" et vous avez un remplissage complet d'accord voilà il occupe vraiment tout en en lui même donc il prend toute la place qu'il faut éventuellement.
 
 Alors là comme il n'a pas pu tout occuper, on peut également faire ça, grid-row:1 / -1; On remplace 'grid-column' par 'grid-row'.
@@ -2109,19 +1651,9 @@ Alors là comme il n'a pas pu tout occuper, on peut également faire ça, grid-r
 >		grid-row:1 / -1;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| F			 | A		  | B		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 +------------+------------+
-	|	 		 | C		  | D		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| E			 | G		  | H		   |
-	+------------+------------+------------+
-```
+
+![](img/024.jpeg)  
+
 Comme vous voyez ça occupera tout ce qu'il faut donc
 en fonction s'il y a besoin.
 
@@ -2166,22 +1698,9 @@ Voilà donc ça je vais le retirer pour le moment, on ne va pas compliquer les c
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/025.jpeg)  
+
 Qu'est-ce que je dois vous montrer aussi ? parce il faut vraiment pas que j'oublie, il y a vraiment plein de choses plein de choses, il faut surtout pas que j'oublie les choses que je voulais vous montrer.
 
 Au niveau de repeat(), ce qu'on peut voir aussi pour lui ici voilà on peut avoir cette ici.
@@ -2218,22 +1737,9 @@ Alors on va revenir à "1fr 1fr 1fr".
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/026.jpeg)
+
 Il existe des petites valeurs un peu différente, on a vu le retour, on a vu les valeurs en pixels, les valeurs avec le "fr", le repeat() ce genre de choses mais il y en a également une qui s'appelle "min-content". On va mettre "min-content" et voyez ce qui change.
 ```css
 	/*
@@ -2275,22 +1781,9 @@ Il existe des petites valeurs un peu différente, on a vu le retour, on a vu les
 		padding:10px;
 	}
 ```
-```txt
-	+---+------------+------------+
-	| A	| B		  	 | C		  |
-	|	|			 |			  |
-	|	|			 |			  |
-	|	|			 |			  |
-	+---+------------+------------+
-	| D | E		  	 | F		  |
-	|	|			 |			  |
-	|	|			 |			  |
-	|	|			 |			  |
-	+---+------------+------------+
-	| G	| H		  	 |			  :
-	|	|			 |			  :
-	+...+............+............+
-```
+
+![](img/027.jpeg)
+
 On met "min-content" et regardez ce qui ce qui change en fait, le comportement que ça a.
 
 Automatiquement "min-content" va occuper l'espace minimum par rapport à ce que vous avez à l'intérieur de l'item donc à la place de du caractère A et le fameux padding que voyez j'ai appliqué de 10 pixels partout.
@@ -2328,22 +1821,9 @@ Si on fait le maximum donc l'inverse "max-content" on aura évidemment l'inverse
 		padding:10px;
 	}
 ```
-```txt
-	+---+------------+------------+
-	| A	| B		  	 | C		  |
-	|	|			 |			  |
-	|	|			 |			  |
-	|	|			 |			  |
-	+---+------------+------------+
-	| D | E		  	 | F		  |
-	|	|			 |			  |
-	|	|			 |			  |
-	|	|			 |			  |
-	+---+------------+------------+
-	| G	| H		  	 |			  :
-	|	|			 |			  :
-	+...+............+............+
-```
+
+![](img/028.jpeg)  
+
 Donc là pourquoi ça ne change rien ? tout simplement parce que c'est le maximum par rapport à l'élément que nous avons ok.
 
 Alors là où ça peut être utile si je reviens sur "min-content" ici c'est qu'évidemment en ajoutant quelque chose dans ma cellule `<div>` "Cellule A" comme il a besoin de ce minimum de place voilà comment ça se passera d'accord.
@@ -2409,22 +1889,9 @@ Alors là où ça peut être utile si je reviens sur "min-content" ici c'est qu'
 		padding:10px;
 	}
 ```
-```txt
-	+-------+------------+------------+
-	|Cellule| B		  	 | C		  |
-	| A		|			 |			  |
-	|		|			 |			  |
-	|		|			 |			  |
-	+-------+------------+------------+
-	| D 	| E		  	 | F		  |
-	|		|			 |			  |
-	|		|			 |			  |
-	|		|			 |			  |
-	+-------+------------+------------+
-	| G		| H		  	 |			  :
-	|		|			 |			  :
-	+.......+............+............+
-```
+
+![](img/029.jpeg)  
+
 Donc il va évidemment ajouter l'espace nécessaire en conséquence voilà et si je mets "max-content" on a évidemment ici tout sur la même ligne puisque c'est la largeur maximale par rapport à ce que j'ai défini dans mon fichier.
 ```css
 	/*
@@ -2466,22 +1933,9 @@ Donc il va évidemment ajouter l'espace nécessaire en conséquence voilà et si
 		padding:10px;
 	}
 ```
-```txt
-	+---------+------------+------------+
-	|Cellule A| B		   | C		    |
-	|         |			   |			|
-	|		  |			   |			|
-	|		  |			   |			|
-	+---------+------------+------------+
-	| D 	  | E		   | F		    |
-	|		  |			   |			|
-	|		  |			   |			|
-	|		  |			   |			|
-	+---------+------------+------------+
-	| G		  | H		   |			:
-	|		  |			   |			:
-	+.........+............+............+
-```
+
+![](img/030.jpeg)  
+
 Vous voyez un petit peu la différence de comportement entre "min-content" et "max-content", on n'a pas la même chose donc ça c'est une autre possibilité.
 
 On a également des valeurs en "auto" (auto-fill) pour des valeurs en fait précise, pas forcément utile là d'ailleurs.
@@ -2549,22 +2003,9 @@ Qu'est ce que j'aurais pu montrer ? je ne vais pas montrer "auto-fill" tout de s
 		padding:10px;
 	}
 ```
-```txt
-	+---+------------+------------+
-	| A	| B		  	 | C		  |
-	|	|			 |			  |
-	|	|			 |			  |
-	|	|			 |			  |
-	+---+------------+------------+
-	| D | E		  	 | F		  |
-	|	|			 |			  |
-	|	|			 |			  |
-	|	|			 |			  |
-	+---+------------+------------+
-	| G	| H		  	 |			  :
-	|	|			 |			  :
-	+...+............+............+
-```
+
+![](img/031.jpeg)  
+
 "fit-content" pareil va prendre juste l'espace nécessaire ici d'accord ce n'est pas une question de minimal ou de maximum c'est une question en fait de l'emplacement qu'il a juste besoin d'accord sans poser question du maximum et minimum, il prend juste l'emplacement qu'il a besoin.
 
 Je vous les montre rapidement parce que ça peut être intéressant à utiliser et on a éventuellement et ça je le fait avec le repeat() puisque c'est souvent utilisé comme ça, on fait par exemple un repeat(3, minmax()), on note minmax() et on lui donne, lui dit la valeur minimale.
@@ -2599,45 +2040,11 @@ Voyez, on peut vraiment adapter en fait, mélanger les différentes syntaxes. J'
 					justify-self ; align-self ; place-self
 	*/
 ```
-```txt
- class="container"
 
-	+-------+-------+-------+
-	| A		| B		| C	    |
-	|		|		|		|
-	|		|		|		|
-	|		|		|		|
-	+-------+-------+-------+
-	| D 	| E		| F	    |
-	|		|		|		|
-	|		|		|		|
-	|		|		|		|
-	+-------+-------+-------+
-	| G		| H		|		:
-	|		|		|		:
-	+.......+.......+.......+
-	
-	
-	  100px   100px
-	|-------|-------|
-	
-	+-------+-------#
-	| A		| B		#
-	|		|		#
-	|		|		#
-	|		|		#
-	+-------+-------#
-	| D 	| E		#
-	|		|		#
-	|		|		#
-	|		|		#
-	+-------+-------#
-	| G		| H		#
-	|		|		#
-	+.......+.......#
-	
-	#################
-```
+![](img.032A.png)
+
+![](img/032.jpeg)  
+
 Voilà donc là on aura toujours donc une valeur max on peut éventuellement rétrécir jusqu'à 100 pixels, une fois qu'on a rétréci jusque là voyez une fois qu'on passe en dessous des 100 pixels automatiquement on bloque la réduction et là bas on a évidemment un scrolling parce qu'on peut pas réduire plus que 100 pixels au minimum donc ça ça peut être bien dans certain cas par exemple si vous ne voulez pas qu'une des cellules soit vraiment écrasée ou écrase le contenu que vous avez genre une image ou un texte ou un logo au point qu'il soit limite  plus lisible hé bien vous pouvez vraiment mettre une valeur minimale et ça c'est bien pratique.
 
 minmax(100px, 200px) ça propose les deux à la fois donc plutôt sympa et plutôt à connaître aussi pour mélanger un petit peu les choses comme ça.
@@ -2697,26 +2104,9 @@ Et normalement il va gérer d'ailleurs par rapport à l'espace disponible.
 		padding:10px;
 	}
 ```
-```txt
-	+---+---+---+............................
-	| A | B | C |							:
-	|	|	|	|							:
-	|	|	|	|							:
-	|	|	|	|							:
-	|	|	|	|							:
-	|	|	|	|							:
-	+---+---+---+							:
-	| D | E | F |							:
-	|	|	|	|							:
-	|	|	|	|							:
-	|	|	|	|							:
-	|	|	|	|							:
-	|	|	|	|							:
-	+---+---+---+							:
-	| G | H | 								:
-	|	|	|								:
-	.........................................
-```
+
+![](img/033.jpeg)  
+
 Voilà il prend vraiment le minimum d'accord en fonction donc sans plus par rapport à la place qu'il y a besoin.
 
 Comme vous voyez les lettres sont toutes petites, c'est un seul caractère, il n'a pas besoin de faire des cellules qui sont énormes par rapport à ça vraiment pratique aussi à gérer en fonction de ce que l'on veut.
@@ -2792,22 +2182,9 @@ Je peux très bien dire que .iB commence à 2.
 >		grid-row-start:2;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | C		  | D		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| B 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/034.jpeg)  
+
 Voilà on lui a dit de commencer à la ligne 2 et on peut faire ça, grid-row-start:3;
 ```css
 	.iB
@@ -2815,22 +2192,9 @@ Voilà on lui a dit de commencer à la ligne 2 et on peut faire ça, grid-row-st
 >		grid-row-start:3;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | C		  | D		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| E 		 | F		  | G		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| B			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/035.jpeg)  
+
 Si je fait ça, là il est en ligne 3 pourtant on a jamais spécifier ici qu'il y avait deux lignes.
 ```css
 	.container
@@ -2882,24 +2246,9 @@ Comme on n'a pas spécifié qu'il y avait que deux lignes, il fait partie du cou
 		grid-row-start:3;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | C		  | D		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| E 		 | F		  | G		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| B			 | H		  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/036.jpeg)  
+
 Ainsi une nouvelle hauteur de 150px serra affecté à notre section.
 
 Voilà on peut gérer comme ça et dire où commence la ligne pour cet élément là, où est-ce qu'elle se termine, où commence la colonne, où est ce qu'elle se termine ...
@@ -2974,24 +2323,9 @@ C'est juste un raccourci voilà une propriété raccourci ça fait évidemment e
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/037.jpeg)  
+
 On a viré où on commencait la ligne .iB donc c'est normal que vous avez vu que ça s'actualise.
 
 Si on fait que ça admettons.
@@ -3040,33 +2374,9 @@ Si vous ne mettez qu'un seul ensemble de valeurs et que le CSS ne voit pas de sl
 		padding:10px;
 	}
 ```
-```txt
-	+-------------------------------+
-	| A								|
-	|								|
-	+-------------------------------+
-	| B								|
-	|								|
-	+-------------------------------+
-	| C								|
-	|								|
-	+-------------------------------+
-	| D								|
-	|								|
-	+-------------------------------+
-	| E								|
-	|								|
-	+-------------------------------+
-	| F								|
-	|								|
-	+-------------------------------+
-	| G								|
-	|								|
-	+-------------------------------+
-	| H								|
-	|								|
-	+-------------------------------+
-```
+
+![](img/038.jpeg)  
+
 On enlève ça, `grid-auto-rows:150px;`
 ```css
 	/*
@@ -3102,25 +2412,9 @@ On enlève ça, `grid-auto-rows:150px;`
 		padding:10px;
 	}
 ```
-```txt
-	+-------------------------------+
-	| A								|
-	+-------------------------------+
-	| B								|
-	+-------------------------------+
-	| C								|
-	+-------------------------------+
-	| D								|
-	+-------------------------------+
-	| E								|
-	+-------------------------------+
-	| F								|
-	+-------------------------------+
-	| G								|
-	+-------------------------------+
-	| H								|
-	+-------------------------------+
-```
+
+![](img/039.jpeg)  
+
 Donc voilà c'est surtout mieux comme ça donc évidemment pas de gros changement parce qu'on n'a pas spécifié autre chose.
 
 On va avancer sur autre chose maintenant quelque chose d'un peu plus visuel donc je ne vais pas perdre trop de temps pour que vous voyez un petit peu tout ça au niveau visuel pour notre grille, grid.
@@ -3193,19 +2487,9 @@ Voilà je n'ai pas mis de `<nav>` encore une fois, on s'en fiche c'est vraiment 
 	}
 ```
 Par défaut on a ça, ce serait simple `<div>` voilà ce qu'on obtiendrais.
-```txt
-	.....................................
-	: MonSite							:
-	: Lorem ipsum ...					:
-	: 									:
-	: Lorem ipsum ...					:
-	: 									:
-	: Une sidebar						:
-	: Lorem ipsum ...					:
-	: 									:
-	: Copyright 2018 - Monsite			:
-	.....................................
-```
+
+![](img/040.jpeg)  
+
 Déjà quand on voit ça, on voit que le html est bien organisé, on bien tous les éléments qui s'affichent, toutes les informations sont là encore une fois notre html semble correcte.
 
 Maintenant on aimerais modifier ça juste en modifiant le css sans toucher au html. On va organiser ça avec un design précis.
@@ -3323,17 +2607,9 @@ Si je récrit dans une nouvelle chaîne c'est que c'est la deuxième ligne donc 
 	footer{grid-area:pied;}
 ```
 Juste avec ça j'actualise et voilà.
-```txt
-	.....................................
-	: MonSite							:
-	:									:
-	: Lorem ipsum ...	Une sidebar		:
-	: 									:
-	: Lorem ipsum ...	Lorem ipsum ...	:
-	: 									:
-	: Copyright 2018					:
-	.....................................
-```
+
+![](img/041.jpeg)  
+
 Voilà le changement que nous avons, tout est géré automatiquement avec les éléments.
 
 `<h1>MonSite</h1>` donc on ne le voit pas mais il prend toute la largeur en réalité alors on va le voir vraiment si on met des couleurs.
@@ -3401,33 +2677,13 @@ Idem avec des couleurs et des cadres.
 	aside{grid-area:lateral;}
 	footer{grid-area:pied;}
 ```
-```txt
-	+-------------------------------------+
-	| MonSite							  |
-	+-------------------+-----------------+
-	|					|				  |
-	| Lorem ipsum ...	| Une sidebar	  |
-	| 					|				  |
-	| Lorem ipsum ...	| Lorem ipsum ... |
-	| 					|				  |
-	+-------------------+-----------------+
-	| Copyright 2018					  |
-	+-------------------------------------+
-```
+
+![](img/042.jpeg)  
+
 On voit bien comment ça se passe et l'avantage c'est que du coup tout est géré comme ça lorsqu'on redimentionne pas de problème.
-```txt
-	+------------------------+
-	| MonSite				 |
-	+-----------+------------+
-	|			|		     |
-	| Lorem 	| Une sidebar|
-	| ipsum ...	|			 |
-	| Lorem		| Lorem 	 |
-	| ipsum ...	| ipsum ...	 |
-	+-----------+------------+
-	| Copyright 2018		 |
-	+------------------------+ <--
-```
+
+![](img/043.jpeg)  
+
 Alors attention, on ne fait pas du responsive encore une fois c'est pas le thème de cette vidéo mais ce sera la prochaine mais voit déjà qu'on a quand même des contenus flexible très facilement donc plutôt pratique par rapport à ça.
 
 Ainsi en changeant css, on a pu créer notre fameuse grille d'accords qui est sous forme de 3 lignes / 2 colonnes et on s'en rend bien compte ici juste à la lecture du css 1, 2, 3 lignes et nous avons 2 colonnes puisque nous avons deux mots par ligne.
@@ -3486,19 +2742,9 @@ Vous pouvez faire ça, si j'en met qu'un seul ça veut dire qu'il va créer une 
 	aside{grid-area:lateral;}
 	footer{grid-area:pied;}
 ```
-```txt
-	+-------------------------------------+
-	| MonSite							  |
-	+-------------------+-----------------+
-	|					|				  |
-	| Lorem ipsum ...	| Une sidebar	  |
-	| 					|				  |
-	| Lorem ipsum ...	| Lorem ipsum ... |
-	| 					|				  |
-	+-------------------+-----------------+
-	| Copyright 2018					  |
-	+-------------------------------------+
-```
+
+![](img/044.jpeg)  
+
 Alors là on ne le voit pas parce qu'évidemment nous n'avons pas de largeur ou quoi que ce soit mais on pourra avoir comme ça un élément vide donc ça peut être utile.
 
 Là où ça va être du coup beaucoup plus intéressant et il faut le faire dans 'grid-template-rows' pour le quel on va dire "1fr 1fr 1fr", on pourrait mettre repeat(3, 1fr) mais c'est pareil de toute façon. Vous pouvez utiliser la syntaxe avec le repeat() ce serait encore mieux et ici 'grid-template-columns' donc nous avons 3 colonnes dans le quel on va mettre par exemple "1fr 25px 1fr" voilà.
@@ -3550,23 +2796,9 @@ Ici pareil "pied pied pied" voyez le fait de mettre toujours le même nom ça va
 C'est là où ça va différer pour le "principal" qui fera "1fr", la cellule vide "." qui fera 25 pixels et le reste qui fera "1fr".
 
 Et là du coup nous avons ça et on voit bien qu'effectivement on avait donc implicitement une cellule vide qui s'est créée donc elle n'est pas de la couleur du reste parce qu'elle n'est pas considérée comme un grid item mais elle fait partie de la grille quand même voilà.
-```txt
-	+-------------------------------------+
-	| MonSite							  |
-	|									  |
-	|									  |
-	+------------------+-+----------------+
-	|				   | |				  |
-	| Lorem ipsum ...  | | Une sidebar	  |
-	| 				   | |				  |
-	| Lorem ipsum ...  | | Lorem ipsum ...|
-	| 				   | |				  |
-	+------------------+-+----------------+
-	| Copyright 2018					  |
-	|									  |
-	|									  |
-	+-------------------------------------+
-```
+
+![](img/045.jpeg)  
+
 Voilà comme ça vous pourrez gérer des espaces entre vos différentes cellules.
 
 voilà comment c'est géré donc ça peut être plutôt utile en fonction.
@@ -3615,19 +2847,9 @@ On peut mettre en "auto" ce serra peut être mieux.
 	aside{grid-area:lateral;}
 	footer{grid-area:pied;}
 ```
-```txt
-	+-------------------------------------+
-	| MonSite							  |
-	+------------------+-+----------------+
-	|				   | |				  |
-	| Lorem ipsum ...  | | Une sidebar	  |
-	| 				   | |				  |
-	| Lorem ipsum ...  | | Lorem ipsum ...|
-	| 				   | |				  |
-	+------------------+-+----------------+
-	| Copyright 2018					  |
-	+-------------------------------------+
-```
+
+![](img/046.jpeg)  
+
 Voilà en "auto" c'est un peu plus agréable de gérer ça comme ça, c'est géré par rapport à l'espace. On a mit des 'padding' mais sinon tout est géré de cette manière.
 
 Voyez très rapidement on arrive visuellement avec cette partie là à voir quelle design on veut obtenir juste en lisant ça.
@@ -3707,67 +2929,23 @@ Voilà on va retourner sur quelque chose d'un peu plus simple, on va revenir sur
 		padding:10px;
 	}
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/047.jpeg)  
+
 On revient à l'exemple de tout à l'heure pas de problème avec ça alors maintenant on va pouvoir parler des alignements voilà ça va être intéressant. On va pratiquement finir avec ça. La vidéo est bientôt terminée rassurez-vous, il n'y a pas 150 000 me propriété à voir mais vous avez vu que c'était quand même assez complet au niveau des grilles. C'est pour ça que ça prend du temps du coup d'être vraiment pris en charge complètement par les navigateurs parce qu'il y a beaucoup beaucoup de choses à corriger et les navigateurs sont censés calculer via des algorithmes, tout ça, donc c'est le motif, l'explication, la raison pour laquelle ça prend du temps est vraiment pris en charge partout parce que ça demande énormément d'ajouts sur les navigateurs internet.
 
 Alors à partir de ça pour l'alignement ça va être très simple.
-```txt
-	GRIDS CSS
-	
-	JUSTIFY
-A	+---------------------------------------------------------------- >
-L	|						COLUMN
-I	|		+-----------+-----------+-----------+ row1-start
-G	|		| Item		| Item		| Item		|
-N	|	ROW	| (cellule)	| (cellule)	| (cellule)	|
-	|		|			|			|			|
-	|		+-----------+-----------+-----------+ row1-end/row2-start
-	|		| Item		| Item		| Item		|
-	|		| (cellule)	| (cellule)	| (cellule)	|
-	|		|			|			|			|
-	|		+-----------+-----------+-----------+ row2-end
-	|		:
-	|		column1-start
-	|
-	|		\_______container (conténeur)_______/
-	v
-```
+
+![](grids.JPG)  
+
 Alors je rapelle que 'justify' c'est tout ce qui va se régler sur l'horizontale, 'align' c'est tout ce qui va se régler sur la verticale.
 
 On va pouvoir jouer sur toute la grille càd que c'est toute la grille que nous allons déplacer d'accord en méttant au début, à la fin, centré, etc.
 
 On va pouvoir également bouger tout une colonne ou toute une ligne ou éventuellement un seul des éléments présents d'accord alors plutôt que ça s'étale par défaut comme ça le fait là voyez comme ça remplit en fait tous l'élément sur toute la place qu'il a, on pourrait dire par exemple ici B occupe que cette partie là d'accord.
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	+......................................+
-```
+
+![](img/048.png)  
+
 Et ça on pourra dire dans le conteneur ça occupe une certaine place ou autre donc c'est là que va intervenir les dimensions fixe que j'avais mit pour le conteneur parce que sinon on ne verra pas visuellement ce que ça donne voilà et là on va mieux se rendre compte de ce qui se passe.
 ```css
 		height:500px;
@@ -3788,25 +2966,9 @@ Si je fais ça 'justify-content' à "start" et j'actualise.
 	}
 	...
 ```
-```txt
-	+------------+------------+------------+
-	| A			 | B		  | C		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| D 		 | E		  | F		   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	|			 |			  |			   |
-	+------------+------------+------------+
-	| G			 | H		  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	|			 |			  |			   :
-	+------------+------------+............+
-```
+
+![](img/049.png)  
+
 Si je fait "start", aucun changement c'est le comportement par défaut de la grille.
 
 Si je met maintenant "end" ça va tout simplement tout basculer à la fin et là évidemment pour que ça fonctionne il ne faut pas mettre "1fr 1fr 1fr" mais par exemple mettons `grid-template-columns:100px 100px 100px`.
@@ -3843,24 +3005,9 @@ Si je met maintenant "end" ça va tout simplement tout basculer à la fin et là
 		padding:10px;
 	}
 ```
-```txt
-	............+-------+-------+-------+
-	:			| A		| B		| C		|
-	:			|		|		|		|
-	:			|		|		|		|
-	:			|		|		|		|
-	:			+-------+-------+-------+
-	:			| D 	| E 	| F 	|
-	:			|		|		|		|
-	:			|		|		|		|
-	:			|		|		|		|
-	:			+-------+-------+-------+
-	:			| G		| H		| 		:
-	:			|		|		|		:
-	:			|		|		|		:
-	:			|		|		|		:
-	:...........+-------+-------+.......:
-```
+
+![](img/050.jpeg)  
+
 Si j'utilise "1fr" ça ne bouge pas.
 
 C'est ça qui est embêtant avec ces vidéos-là à vous montrer parce qu'il faut vraiment que je pense à presque tout les cas possibles.
@@ -3899,25 +3046,9 @@ Voilà sinon on ne se rend pas compte de la différence donc je refais "start" e
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+.......................:
-```
+
+![](img/051.jpeg)  
+
 Alors on fait `grid-auto-rows:100px;` d'ailleurs pareil parce que sinon pareil on ne verra pas quand on va faire l'autre alignement voilà il ne faut surtout pas que ça touche les bords du 'container'.
 ```css
 	/*
@@ -3953,26 +3084,9 @@ Alors on fait `grid-auto-rows:100px;` d'ailleurs pareil parce que sinon pareil o
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/052.jpeg)  
+
 Voiilà pour "start", si je fais "end".
 ```css
 	/*
@@ -4008,26 +3122,9 @@ Voiilà pour "start", si je fais "end".
 		padding:10px;
 	}
 ```
-```txt
-	................+-------+-------+-------+
-	:				| A		| B		| C		|
-	:				|		|		|		|
-	:				|		|		|		|
-	:				|		|		|		|
-	:				+-------+-------+-------+
-	:				| D 	| E 	| F 	|
-	:				|		|		|		|
-	:				|		|		|		|
-	:				|		|		|		|
-	:				+-------+-------+-------+
-	:				| G		| H		| 		:
-	:				|		|		|		:
-	:				|		|		|		:
-	:				+-------+-------+		:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/053.jpeg)  
+
 Il se passe ça.
 
 On retrouve "center" c'est pareil pour ceux qui ont vu la vidéo sur flexbox de toute façon vous êtes sensé l'avoir vu si vous en êtes là sinon c'est embêtant donc "center".
@@ -4065,26 +3162,9 @@ On retrouve "center" c'est pareil pour ceux qui ont vu la vidéo sur flexbox de 
 		padding:10px;
 	}
 ```
-```txt
-	........+-------+-------+-------+........
-	:		| A		| B		| C		|		:
-	:		|		|		|		|		:
-	:		|		|		|		|		:
-	:		|		|		|		|		:
-	:		+-------+-------+-------+		:
-	:		| D 	| E 	| F 	|		:
-	:		|		|		|		|		:
-	:		|		|		|		|		:
-	:		|		|		|		|		:
-	:		+-------+-------+-------+		:
-	:		| G		| H		| 				:
-	:		|		|		|				:
-	:		|		|		|				:
-	:		+-------+-------+				:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/054.jpeg)  
+
 Et on retrouve les mêmes valeurs que pour la flexbox donc "start", "end", "center", "stretch" comportement par défaut.
 ```css
 	/*
@@ -4120,26 +3200,9 @@ Et on retrouve les mêmes valeurs que pour la flexbox donc "start", "end", "cent
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/055.jpeg)  
+
 "stretch" non pas par défaut mais je veux dire que ça va remplir en fait l'ensemble donc ça c'est bien à savoir.
 
 On va avoir "space-between".
@@ -4177,26 +3240,9 @@ On va avoir "space-between".
 		padding:10px;
 	}
 ```
-```txt
-	+-------+.......+-------+.......+-------+
-	| A		|		| B		|		| C		|   
-	|		|		|		|		|		|   
-	|		|		|		|		|		|   
-	|		|		|		|		|		|   
-	+-------+		+-------+		+-------+   
-	| D 	|		| E 	|		| F 	|   
-	|		|		|		|		|		|   
-	|		|		|		|		|		|   
-	|		|		|		|		|		|   
-	+-------+		+-------+		+-------+	
-	| G		|		| H		| 				:	
-	|		|		|		|				:
-	|		|		|		|				:	
-	+-------+		+-------+				:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/056.jpeg)  
+
 Je vous montre vite pace que ce sont exactement les mêmes exemples, ensuite "space-around".
 ```css
 	/*
@@ -4232,26 +3278,9 @@ Je vous montre vite pace que ce sont exactement les mêmes exemples, ensuite "sp
 		padding:10px;
 	}
 ```
-```txt
-	....+-------+.......+-------+.......+-------+....
-	:	| A		|		| B		|		| C		|	:   
-	:	|		|		|		|		|		|	:   
-	:	|		|		|		|		|		|	:   
-	:	|		|		|		|		|		|	:   
-	:	+-------+		+-------+		+-------+	:   
-	:	| D 	|		| E 	|		| F 	|	:   
-	:	|		|		|		|		|		|	:   
-	:	|		|		|		|		|		|	:   
-	:	|		|		|		|		|		|	:   
-	:	+-------+		+-------+		+-------+	:	
-	:	| G		|		| H		| 					:	
-	:	|		|		|		|					:
-	:	|		|		|		|					:	
-	:	+-------+		+-------+					:
-	:												:
-	:												:
-	:...............................................:
-```
+
+![](img/057.jpeg)  
+
 C'est exactement les mêmes exemples "space-around" qui met des espaces partout mais pas forcément équilibré d'accord et si on veut des espaces égaux on mettra "space-evenly".
 ```css
 	/*
@@ -4287,26 +3316,9 @@ C'est exactement les mêmes exemples "space-around" qui met des espaces partout 
 		padding:10px;
 	}
 ```
-```txt
-	....+-------+...+-------+...+-------+....
-	:	| A		|	| B		|	| C		|	:   
-	:	|		|	|		|	|		|	:   
-	:	|		|	|		|	|		|	:   
-	:	|		|	|		|	|		|	:   
-	:	+-------+	+-------+	+-------+	:   
-	:	| D 	|	| E 	|	| F 	|	:   
-	:	|		|	|		|	|		|	:   
-	:	|		|	|		|	|		|	:   
-	:	|		|	|		|	|		|	:   
-	:	+-------+	+-------+	+-------+	:	
-	:	| G		|	| H		| 				:	
-	:	|		|	|		|				:
-	:	|		|	|		|				:	
-	:	+-------+	+-------+				:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/058.jpeg)  
+
 "space-evenly" avec des espaces extérieurs et entre les différentes colonnes enfin les différentes items sont égaux, voilà.
 
 On peut faire exactement la même chose avec l'alignement verticale, c'est exactement exactement pareil donc je le fais très vite parce que c'est exactement la même chose sauf qu'au lieu de le faire sur l'horizontale ça se fait sur la verticale.
@@ -4337,26 +3349,9 @@ On peut faire exactement la même chose avec l'alignement verticale, c'est exact
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/059.jpeg)  
+
 ```css
 	body
 	{
@@ -4384,27 +3379,9 @@ On peut faire exactement la même chose avec l'alignement verticale, c'est exact
 		padding:10px;
 	}
 ```
-```txt
-	.........................................
-	:										:
-	:										:
-	:										:
-	+-------+-------+-------+				:
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+.......................:
-```
+
+![](img/060.jpeg)  
+
 ```css
 	body
 	{
@@ -4432,26 +3409,8 @@ On peut faire exactement la même chose avec l'alignement verticale, c'est exact
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/061.jpeg)  
 
 Après c'est à vous de voir en fonction après bon là comme j'ai mit certaine valeur fixe il y a des trucs qui ne changent pas forcément ça changera quand vous aurez des valeurs un peu plus dynamique c'est normal.
 
@@ -4499,28 +3458,9 @@ En premier ça prend l'alignement donc il ne faut pas se tromper d'accord le pre
 		padding:10px;
 	}
 ```
-```txt
-		.................................
-		:								:
-		:								:
-		:	+-------+-------+-------+	:
-		:	| A		| B		| C		|   :
-		:	|		|		|		|   :
-		:	|		|		|		|   :
-		:	|		|		|		|   :
-		:	+-------+-------+-------+   :
-		:	| D 	| E 	| F 	|   :
-		:	|		|		|		|   :
-		:	|		|		|		|   :
-		:	|		|		|		|   :
-		:	+-------+-------+-------+	:
-		:	| G		| H		| 			:
-		:	|		|		|			:
-		:	|		|		|			:
-		:	+-------+-------+			:
-		:								:
-		:...............................:
-```
+
+![](img/062.jpeg)  
+
 Voilà si jamais sur Firefox, il n'est pas prit en compte.
 ```css
 	-webkit-place-content:center center;
@@ -4571,26 +3511,9 @@ Et là nous avions vu pour tout l'ensemble de la grille mais nous pouvons voir a
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/063.jpeg)  
+
 'justify-items', on met "start".
 ```css
 	/*
@@ -4627,26 +3550,9 @@ Et là nous avions vu pour tout l'ensemble de la grille mais nous pouvons voir a
 		padding:10px;
 	}
 ```
-```txt
-	+---+.......+---+.......+---+................
-	| A	|		| B	|		| C	|				:   
-	|	|		|	|		|	|				:   
-	|	|		|	|		|	|				:   
-	|	|		|	|		|	|				:   
-	+---+		+---+		+---+				:   
-	| D |		| E |		| F |				:   
-	|	|		|	|		|	|				:   
-	|	|		|	|		|	|				:   
-	|	|		|	|		|	|				:   
-	+---+		+---+		+---+				:	
-	| G	|		| H	| 							:	
-	|	|		|	|							:
-	|	|		|	|							:	
-	+---+		+---+							:
-	:											:
-	:											:
-	:...........................................:
-```
+
+![](img/064.jpeg)  
+
 'justify-items', on met "end".
 ```css
 	/*
@@ -4683,26 +3589,9 @@ Et là nous avions vu pour tout l'ensemble de la grille mais nous pouvons voir a
 		padding:10px;
 	}
 ```
-```txt
-	........+---+.......+---+.......+---+............
-	:		| A	|		| B	|		| C	|			:   
-	:		|	|		|	|		|	|			:   
-	:		|	|		|	|		|	|			:   
-	:		|	|		|	|		|	|			:   
-	:		+---+		+---+		+---+			:   
-	:		| D |		| E |		| F |			:   
-	:		|	|		|	|		|	|			:   
-	:		|	|		|	|		|	|			:   
-	:		|	|		|	|		|	|			:   
-	:		+---+		+---+		+---+			:	
-	:		| G	|		| H	| 						:	
-	:		|	|		|	|						:
-	:		|	|		|	|						:	
-	:		+---+		+---+						:
-	:												:
-	:												:
-	:...............................................:
-```
+
+![](img/065.jpeg)  
+
 'justify-items', on met "stretch".
 ```css
 	/*
@@ -4739,26 +3628,9 @@ Et là nous avions vu pour tout l'ensemble de la grille mais nous pouvons voir a
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	........................................:
-```
+
+![](img/066.jpeg)  
+
 Et cetera, et cetera.
 
 Voilà je pense que vous avez un peu compris le principe.
@@ -4824,26 +3696,9 @@ N	|	ROW	| (cellule)	| (cellule)	| (cellule)	|
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	+-------+-------+						:
-	| G		| H		| 						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/067.jpeg)  
+
 'align-items', on met "end".
 ```css
 	/*
@@ -4880,81 +3735,23 @@ N	|	ROW	| (cellule)	| (cellule)	| (cellule)	|
 		padding:10px;
 	}
 ```
-```txt
-	.........................................
-	:										:
-	:										:
-	+-------+-------+-------+               :
-	| A		| B		| C		|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	+-------+-------+						:
-	| G		| H		| 						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/068.jpeg)
+
 Voilà ça décale les éléments parce qu'en fait A fait tout ça d'accord.
-```txt
-	+-------+................................
-	| A		|								:
-	|		|								:
-	|		+-------+-------+               :
-	|		| B		| C		|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	+-------+-------+						:
-	| G		| H		| 						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/068A.png)  
+
 Il faut imaginer ça, il faut le voir de cette manière en fait, notre cellule (A) est là d'accord mais l'élément voyez est situé au bas de la cellule donc il faudrait que je mette une autre couleur mais comme ce n'est pas forcément pratique.
 
 Voilà il faut le voir comme ça là on a une cellule.
-```txt
-	+-------+
-    | A		|
-    |		|
-    |		|
-    |		|
-    +-------+
-```
+
+![](img/068B.png)  
+
 On en a une deuxième et on en a une troisième qui n'est pas définie explicitement donc on s'en fiche un peu.
-```txt
-	+-------+
-	| A		|
-	|		|
-	|		|
-	|		|
-	+-------+
-	| D 	|
-	|		|
-	|		|
-	|		|
-	+-------+
-	| G		|
-	|		|
-	+-------+
-```
+
+![](img/068C.png)  
+
 'align-items', on met "center".
 ```css
 	/*
@@ -4991,30 +3788,9 @@ On en a une deuxième et on en a une troisième qui n'est pas définie explicite
 		padding:10px;
 	}
 ```
-```txt
-	.........................................
-	:										:
-	+-------+-------+-------+               :
-	| A		| B		| C		|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	:										:
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	+-------+-------+-------+               :
-	:										:
-	:										:
-	:										:
-	+-------+-------+						:
-	| G		| H		| 						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/069.jpeg)  
+
 Voilà donc au centre et au centre vraiment de chaque élement.
 
 Et puis pareil si on veut les deux à la fois c'est 'place-items'.
@@ -5072,28 +3848,9 @@ Donc on va revenir sur un truc par défaut donc là c'est plus '...-content' ou 
 	
 	.iE{align-self:center;}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| 	 	| F 	|               :
-	|		+-------+		|               :
-	|		| E		|		|               :
-	|		+-------+		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/070.jpeg)  
+
 Voilà on se rend bien compte de où est réellement la cellule E en fait, on pourrait penser qu'elle est que c'est que ce qui est en bleu mais non il faut bien comprendre que c'est ça votre cellule E.
 ```txt
 	+-------+
@@ -5177,30 +3934,9 @@ Donc là on a l'élément visible, élément valide en fait par rapport au conte
 	
 	.iE{align-self:center;}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| 	 	| F 	|               :
-	|		+-------+		|               :
-	|		| E		|		|               :
-	|		| E		|		|               :
-	|		+-------+		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/071.jpeg)  
+
 Voilà d'accord ça va s'adapter évidemment jusqu'à atteindre la hauteur maximale c'est parfaitement logique.
 
 Ok donc on reste là dessus.
@@ -5262,28 +3998,9 @@ Ok donc on reste là dessus.
 	
 	.iE{align-self:center;}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| 	 	| F 	|               :
-	|		+-------+		|               :
-	|		| E		|		|               :
-	|		+-------+		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/072.jpeg)  
+
 Ben voilà on peut faire pareil pour 'justify-self' et je pense que vous avez compris le principe.
 ```css
 	/*
@@ -5321,28 +4038,9 @@ Ben voilà on peut faire pareil pour 'justify-self' et je pense que vous avez co
 	
 	.iE{justify-self:center;}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+--+--+-+-------+               :
-	| D 	|  |E | |		|				:
-	|		|  |  | |		|				:
-	|		|  |  | |		|				:
-	|		|  |  | |		|				:
-	|		|  |  | |		|				:
-	+-------+--+--+-+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/073.jpeg)  
+
 'justify-self', avec "end".
 ```css
 	/*
@@ -5380,28 +4078,9 @@ Ben voilà on peut faire pareil pour 'justify-self' et je pense que vous avez co
 	
 	.iE{justify-self:end;}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+----+--+-------+               :
-	| D 	|    | E|		|				:
-	|		|    |  |		|				:
-	|		|    |  |		|				:
-	|		|    |  |		|				:
-	|		|    |  |		|				:
-	+-------+----+--+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/074.jpeg)  
+
 Histoire que ce soit bien clair pour tout le monde.
 
 Et 'place-self' c'est l'assemblage des deux 'justify-self' et 'align-self' mais j'imagine qu'il n'est pas pris non plus, vérifiez quand même des fois, attendez on va tester.
@@ -5443,28 +4122,9 @@ Et 'place-self' c'est l'assemblage des deux 'justify-self' et 'align-self' mais 
 	
 	.iE{place-self:center center;}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	|       |		|				:
-	|		|  +-+  |		|				:
-	|		|  |E|  |		|				:
-	|		|  +-+  |		|				:
-	|		|       |		|				:
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+						:
-	:										:
-	:										:
-	:.......................................:
-```
+
+![](img/075.jpeg)  
+
 Il me semble qu'il fonctionne sur Chrome mais sur Firefox non, sur la version la plus récente au moment où je fait cette vidéo en tout cas ça n'a pas l'air de fonctionner et apparemment mon éditeur non plus ne reconnait pas non plus les propriétés, mon visual studio code alors que je suis en dernière version ici mais c'est pas bien grave, c'est très récent donc c'est normal je ne m'inquiète pas là dessus c'est logique.
 
 Ok et on a terminé avec tout ça on a fini les alignements et on n'a plus grand-chose pour finir cette vidéo.
@@ -5509,29 +4169,10 @@ Donc ça s'applique je rappelle sur le CONTAINER très important donc on va reve
 		padding:10px;
 	}
 ```
-```txt
-	+-------+...+-------+...+-------+................
-	| A		|	| B		|	| C		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	+-------+	+-------+	+-------+               :
-	| D 	|	| E 	|	| F 	|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	+-------+	+-------+	+-------+				:
-	| G		|	| H		|	 						:
-	|		|	|		|							:
-	|		|	|		|							:
-	+-------+	+-------+							:
-	:		 										:
-	:		 										:
-	:...............................................:
 
-			\__/
-			 25px
-```
+![](img/076.jpeg)  
+![](img/076.png)  
+
 Sans surprise on obtient ça, là il y a 25 pixels de largeur entre les colonnes.
 
 Si on le fait pour les lignes fait pour les lignes.
@@ -5568,29 +4209,10 @@ Si on le fait pour les lignes fait pour les lignes.
 		padding:10px;
 	}
 ```
-```txt
-	+-------+...+-------+...+-------+................
-	| A		|	| B		|	| C		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	+-------+	+-------+	+-------+               :	\
-	:												: 	| 50px
-	+-------+	+-------+	+-------+               :	/
-	| D 	|	| E 	|	| F 	|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	+-------+	+-------+	+-------+               :
-	:												:
-	+-------+	+-------+							:
-	| G		|	| H		|	 						:
-	|		|	|		|							:
-	:...............................................:
 
-			\__/
-			 25px
-```
+![](img/077.jpeg)  
+![](img/077.png)  
+
 Voilà sans surprise, comme on n'a pas défini de trucs spécifique pour G et H ils se mettent là.
 
 Et du coup si on veut les deux, on met 'grid-gap', par exemple 25 et 10 pixels.
@@ -5626,31 +4248,10 @@ Et du coup si on veut les deux, on met 'grid-gap', par exemple 25 et 10 pixels.
 		padding:10px;
 	}
 ```
-```txt
-	+-------+...+-------+...+-------+................
-	| A		|	| B		|	| C		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	+-------+	+-------+	+-------+               :	\
-	:												: 	| 25px
-	+-------+	+-------+	+-------+               :	/
-	| D 	|	| E 	|	| F 	|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	|		|	|		|	|		|               :
-	+-------+	+-------+	+-------+               :
-	:												:
-	+-------+	+-------+							:
-	| G		|	| H		|	 						:
-	|		|	|		|							:
-	+-------+	+-------+							:
-	:												:
-	:...............................................:
 
-			\__/
-			 10px
-```
+![](img/078.jpeg)  
+![](img/078.png)  
+
 Voilà en premier la ligne et ensuite les colonnes d'accord il fonctionne toujours comme ça et c'est les lignes en premier et les colonnes ensuite très important par rapport à ça.
 
 Alors à la base l'écard comme ça était prévu n'être fait que sur les grilles et finalement ils se sont dit bah pourquoi pas avoir cette propriété pour flexbox aussi après tout puisque ça suis un petit peu ce même principe donc ils ont retiré le préfixe 'grip-gap' devient 'gap' pour dire que 'gap' vous pouvez en réalité l'utiliser aussi bien avec grid et flexbox.
@@ -5815,25 +4416,9 @@ Donc ce sont les lignes en premier, ça fonctionne comme 'template' comme si je 
 		padding:10px;
 	}
 ```
-```txt
-	+-------+-------+-------+................
-	| A		| B		| C		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+               :
-	| D 	| E 	| F 	|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	|		|		|		|               :
-	+-------+-------+-------+				:
-	| G		| H		| 						:
-	|		|		|						:
-	|		|		|						:
-	|		|		|						:
-	|		|		|						:
-	+-------+-------+.......................:
-```
+
+![](img/079.jpeg)  
+
 Donc on retourne face à un comportement par défaut parce que j'ai viré les espaces donc les 'gap' ce qui est logique.
 
 Alors éventuellement on peut spécifier ça, on peut faire d'autres choses. On peut avoir l'auto flow qui est pris en charge.

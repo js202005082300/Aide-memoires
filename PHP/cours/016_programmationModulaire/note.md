@@ -362,6 +362,7 @@ require 'haut.php';
 <?php
 require 'bas.php';
 ?>
+```
 ```txt
 	http://localhost/PHP/cours/016_programmationModulaire/
 	Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat perpiciatis quae labore atque earum? Explicabo itaque eaque cupiditate option dolorem ab natus, dicta odit a atque laboriosam eius repudiandae aut.
