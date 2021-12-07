@@ -106,14 +106,9 @@ Alors de base mon fichier css j'ai simplement bon une petite couleur de fond, j'
 	}
 ```
 Donc au niveau du rendu de base on obtient ceci tout simplement.
-```txt
-	ELEMENT DEBUT
-	ELEMENT
-	ELEMENT
-	ELEMENT
-	ELEMENT
-	ELEMENT FIN
-```
+
+![](img/01.jpeg)  
+
 Comme ce sont tous des éléments mis dans des `<div>` donc des boîtes de type bloc, ils se mettent les uns à la suite des autres d'où le fait d'avoir quelque chose qui à l'air est réparti en colonnes d'accord
 
 Au niveau de 'flexbox' pour changer un petit peu le comportement de notre navigateur, nous allons changer la méthode d'affichage pour ça alors la méthode d'affichage va s'appliquer sur le conteneur donc celui où j'ai donné une classe ici "container" donc je vais reprendre cette classe là et je vais l'utiliser comme sélecteur ici.
@@ -191,11 +186,9 @@ Voilà et on pourra mettre une bordure aussi c'est pour que vous puissiez mieux 
 	}
 ```
 Donc on fait ça, j'actualise et voilà.
-```txt
-	+---------------------------------------------------------+
-	|ELEMENT DEBUT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT FIN|
-	+---------------------------------------------------------+
-```
+
+![](img/02.jpeg)  
+
 Ca fait comme des cellules d'un tableau en fait qui pour le coup ici serait sur une seule ligne mais voilà comment ça fonctionne et on se rend bien compte qu'on a donc nos différents items ici, nos différents objets qui sont à l'intérieur d'un conteneur.
 
 Le conteneur fait évidemment toute la largeur puisque j'ai appliqué comme on l'avait vu ici une largeur de 100%.
@@ -208,12 +201,9 @@ Le conteneur fait évidemment toute la largeur puisque j'ai appliqué comme on l
 Donc ça prend 100 % mon écran.
 
 D'ailleurs si je joue un petit peu sur la largeur, on voit que le conteneur ici change.
-```txt
-	+-----------------------------------------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|DEBUT	|       |       |       |       |FIN	|
-	+-----------------------------------------------+
-```
+
+![](img/03.jpeg)  
+
 Il ne s'agit pas de faire un design adaptatif c'est à dire qu'il va s'adapter de manière automatique par rapport à la résolution de votre écran, ça c'est ce qu'on verra dans le dernière dans la dernière séance de ce cours.
 
 On terminera la formation html css avec le responsive design mais en tout cas vous voyez un petit peu le principe ici pour "flexbox".
@@ -351,11 +341,9 @@ Donc si je mets "row" c'est ce que j'ai déjà donc j'aurais évidemment pas de 
 		border:1px solid #000;
 	}
 ```
-```txt
-	+---------------------------------------------------------+
-	|ELEMENT FIN|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT DEBUT|
-	+---------------------------------------------------------+
-```
+
+![](img/04.jpeg)  
+
 Donc là, regardez l'élément qui s'appelle ELEMENT DEBUT va se retrouver à la fin, ELEMENT FIN se retrouve au début.
 
 On a vraiment inverser cela mais les autres ELEMENT ont le même texte donc vous ne vous en êtes pas rendu forcément compte de l'inversion mais ils ont également été inversés en réalité.
@@ -391,21 +379,9 @@ Voilà comment que ça se passe pour ça et donc on va revenir à "row" comme c'
 	}
 ```
 Voyez on ne peut pas faire les 2, on ne peut pas dire "row" et " column" en même temps, on ne peut pas dire c'est en ligne et en colonne à la fois, on ne travaillera pas sur les deux directions, ça on pourra le faire plus tard avec les 'grid' pour 'flexbox' son principe c'est de travailler simplement sur un seul type d'alignement.
-```txt
-	+---------------+
-	|ELEMENT DEBUT	|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT FIN	|
-	+---------------+
-```
+
+![](img/05.jpeg)  
+
 Donc il a cette forme là et bien sûr on peut faire à l'envers "column-reverse".
 ```css
 	/*
@@ -434,21 +410,9 @@ Donc il a cette forme là et bien sûr on peut faire à l'envers "column-reverse
 		border:1px solid #000;
 	}
 ```
-```txt
-	+---------------+
-	|ELEMENT FIN	|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT		|
-	+---------------+
-	|ELEMENT DEBUT	|
-	+---------------+
-```
+
+![](img/06)  
+
 Et là vous voyez que l'éléments au début passe à la fin, même principe, très simple d'accord vraiment très très simple pour modifier l'orientation des éléments de notre conteneurs avec cette petite propriété là simplement.
 
 Alors ça c'est une chose et on va voir plusieurs éléments mais admettons qu'un moment donné j'ai plus d'éléments que ça par exemple une galerie d'image on aurait tout un tas d'images à la suite des autres donc là je vais tricher un petit peu, on va rajouter des éléments puisque mes blocs ne font pas énormément en largeur. 
@@ -517,11 +481,9 @@ Voilà j'en met vraiment plein.
 		border:1px solid #000;
 	}
 ```
-```txt
-	+------------------------------   --------------------+
-	|ELEMENT DEBUT|ELEMENT|ELEMENT|...|ELEMENT|ELEMENT FIN|
-	+------------------------------   --------------------+
-```
+
+![](img/07.jpeg)  
+
 Donc on imagine que ce sont là plusieurs éléments et vous voyez que là comme ça dépasse comme il n'y a plus assez de place pour chacun des éléments puisque voyez qu'on ne va pas couper le texte en fait, on ne va pas faire de cessures au niveau du texte, on obtient directement une barre de défilement horizontal pour faire passer tous les éléments puisqu'encore une fois on ne travaillera de toute façon que sur un seul alignement mais même s'il s'agit que d'une seule ligne et qu'elle travaille que sur une seule direction qu'on ne peut pas la disposer sur une autre c'est à dire on peut très bien couper cette ligne pour en faire une seconde pour avoir en fait quelque chose répartis sur plusieurs niveaux.
 
 Et pour ça comme on pourrait couper un mot avec break word `<wbr>`, words wrap ce genre de choses, on va pouvoir faire la même chose avec nos boîtes flexible grâce à la propriété 'flex-wrap' donc par défaut la valeur c'est "nowrap" càd qu'on laisse comme c'est tel que ça se passe actuellement au niveau du rendu. On aura ensuite avec une coupure "wrap" et après toujours pareil à l'envers "wrap-reverse".
@@ -563,11 +525,9 @@ Donc toujours sur le conteneur "container" d'accord nous travaillons toujours su
 	}
 ```
 Si j'actualise, on voit rien de différent.
-```txt
-	+------------------------------   --------------------+
-	|ELEMENT DEBUT|ELEMENT|ELEMENT|...|ELEMENT|ELEMENT FIN|
-	+------------------------------   --------------------+
-```
+
+![](img/08.jpeg)  
+
 Et si je veux que ça coupe la ligne pour passer en dessous, je vais mettre le mot "wrap".
 ```css
 	/*
@@ -597,15 +557,9 @@ Et si je veux que ça coupe la ligne pour passer en dessous, je vais mettre le m
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-------------------------------------------+
-	|ELEMENT DEBUT|ELEMENT|ELEMENT|ELEMENT|		|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|	|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|	|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|	|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT FIN|		|
-	+-------------------------------------------+
-```
+
+![](img/09.jpeg)  
+
 Et là vous voyez on obtient ça d'accord donc là vous avez déjà remarqué quelque chose c'est que tout à l'heure nos éléments occupaient un certain espace et là vous voyez le conteneur c'est adaptés automatiquement d'accord à la hauteur qu'il avait besoin.
 
 Alors en "nowrap" on pourrait penser que ça prend 2 lignes pourquoi ? comme ELEMENT DEBUT c'est en deux mots ici l'espace peut être coupé.
@@ -681,11 +635,9 @@ C'était vrai d'ailleurs que j'aurais pu ne pas mettre ELEMENT DEBUT et ELEMENT 
 	}
 ```
 J'actualise
-```txt
-	+------------------------------   --------------------+
-	|ELEMENT DEBUT|ELEMENT|ELEMENT|...|ELEMENT|ELEMENT FIN|
-	+------------------------------   --------------------+
-```
+
+![](img/010.jpeg)  
+
 Donc vous voyez là on a vraiment juste la hauteur nécessaire pour afficher le mot à chaque fois par contre dès que je vais ici changer le mode de coupure donc en fait de la ligne, il passe à la ligne suivante mais c'est toujours la même, il s'agit que d'une seule ligne mais qui du coup passe en dessous, qui est coupé à un certain moment au niveau des éléments et automatiquement le conteneur s'adapte d'accord il déduit un petit peu la hauteur qu'il a besoin pour accueillir tout ces éléments fils.
 ```css
 	/*
@@ -715,13 +667,9 @@ Donc vous voyez là on a vraiment juste la hauteur nécessaire pour afficher le 
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|				|
-	+-----------------------------------------------+
-```
+
+![](img/011.jpeg)  
+
 Automatiquement le conteneur s'adapte et comme un conteneur flexible tous ces éléments fils deviennent automatiquement des "flex-item" d'accord des objets flexible et bien il est capable de tout déduire. Le navigateur est capable de vraiment faire des calculs automatiquement sans que vous ayez besoin de les faire pour récupérer, englober tous les éléments.
 
 Voilà ce que nous avons ici donc ça c'est à connaître et l'inverse bien sûr vous obtiendrez ceci d'accord sans surprise.
@@ -753,13 +701,9 @@ Voilà ce que nous avons ici donc ça c'est à connaître et l'inverse bien sûr
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|				|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-----------------------------------------------+
-```
+
+![](img/012.jpeg)  
+
 C'est une coupure mais à l'envers, en fait la dernière ligne c'est le début de notre ligne et la suite viens au dessus tout simplement donc c'est comme si on avait inversé les deux lignes.
 
 Voilà pour cette petite propriété très importante à connaître aussi.
@@ -931,11 +875,9 @@ Voyez que le comportement par défaut c'est ça.
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-------------------------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------------------------------+
-```
+
+![](img/013.jpeg)  
+
 Le comportement par défaut c'est par rapport à l'axe principal donc l'axe horizontal on voit que tous les éléments sont collés les uns aux autres et ils sont à gauche de notre conteneur d'accord ils ne sont pas centrés, ils ne sont pas à droites, ils ne sont pas répartis équitablement c'est le comportement par défaut.
 
 Et au niveau verticale donc le fameux axe secondaire c'est la même chose, on a juste les éléments qui sont placés au plus haut donc c'est pour ça qu'on a une hauteur qui fait tout juste l'espace qu'il faut ici pour notre nos éléments y compris avec leurs bordures. Il faut compter la bordure de 1 pixel donc on a 1 pixel en haut, 1 pixels en bas mais tout ça est compté automatiquement. Nous on s'embête pas à calculer, le navigateur fait tout à notre place de manière automatique.
@@ -1021,12 +963,9 @@ Si je fais linverse "flex-end" en toute logique on se placera à la fin du conte
 		border:1px solid #000;
 	}
 ```
-```txt
-	------+-------------------------------+
-	      |ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-		  +-------------------------------+
-										  |
-```
+
+![](img/014.jpeg)  
+
 Voyez comme ça se passe.
 
 On a évidemment la possibilité de centrer tout ça et là c'est plus simple. La valeur c'est juste "center".
@@ -1059,12 +998,9 @@ On a évidemment la possibilité de centrer tout ça et là c'est plus simple. L
 		border:1px solid #000;
 	}
 ```
-```txt
-	+--+-------------------------------+--+
-	|  |ELEMENT|ELEMENT|ELEMENT|ELEMENT|  |
-	|  +-------------------------------+  |
-	|									  |
-```
+
+![](img/015.jpeg)  
+
 Là on centre nos éléments d'accord quoi qu'il arrive même si on change la largeur voyez ça reste toujours parfaitement centré il n'y a pas de problème là dessus et on va pouvoir maintenant définir éventuellement des espaces donc pour ça nous avons par exemple la valeur "space-between" qui permet des espaces entre donc entre nos éléments.
 ```css
 	/*
@@ -1095,12 +1031,9 @@ Là on centre nos éléments d'accord quoi qu'il arrive même si on change la la
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-------+-+-------+-+-------+-+-------+
-	|ELEMENT| |ELEMENT| |ELEMENT| |ELEMENT|
-	+-------+-+-------+-+-------+-+-------+
-	|									  |
-```
+
+![](img/016.jpeg)  
+
 Donc on obtient ceci, voyez le premier est tout collé à gauche, le dernier tout collé à la fin du conteneur. On ne va pas dire à gauche, à droite parce que ce ne serait pas forcément logique mais on va plutôt dire au début du conteneur et à la fin du conteneur et les autres voyez se répartissent comme il faut pour que les espaces soient égaux à chaque fois.
 
 Si on veut des espaces partout d'accord autour de tous nos éléments, on mettra "space-around" qui veut dire des espaces tout autour donc à la fois entre, et autour de.
@@ -1133,12 +1066,9 @@ Si on veut des espaces partout d'accord autour de tous nos éléments, on mettra
 		border:1px solid #000;
 	}
 ```
-```txt
-  ++-------+-+-------+-+-------+-+-------++
-  ||ELEMENT| |ELEMENT| |ELEMENT| |ELEMENT||
-  ++-------+-+-------+-+-------+-+-------++
-  |									      |
-```
+
+![](img/017.jpeg)  
+
 Voilà donc là voyez ces espaces là sont équitables, sont égaux mais ici on a du coup la place qui est resté par rapport à la largeur de mon écran, vous n'aurais pas forcément les mêmes dimensions si vous êtes sur un écran plus petit ou plus grand évidemment.
 
 Mais ici c'est diviser en deux pour récupérer l'espace nécessairement et si on veut absolument que des espaces égaux et bien on peut utiliser la valeur "space-evenly" et là ils seront absolument égaux partout partout et compris entre les éléments et à l'extérieur voilà donc tous les espaces-là en bleu sont les mêmes partout.
@@ -1171,12 +1101,9 @@ Mais ici c'est diviser en deux pour récupérer l'espace nécessairement et si o
 		border:1px solid #000;
 	}
 ```
-```txt
-  +-+-------+-+-------+-+-------+-+-------+-+
-  | |ELEMENT| |ELEMENT| |ELEMENT| |ELEMENT| |
-  +-+-------+-+-------+-+-------+-+-------+-+
-  |									  		|
-```
+
+![](img/018.jpeg)  
+
 Pareil si je redimensionne on voit que tout s'adapte, pas de souci à ce niveau-là.
 
 Voilà pour cette partie.
@@ -1236,19 +1163,10 @@ Ce qu'on va faire pour que vous le voyez, on va juste mettre une hauteur à notr
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-------------------------------+---------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------------------------------+
-	|
-	|
-```
+
+![](img/019.jpeg)  
+
+
 Voilà comme ça on se rend bien compte d'accord de ce qui va se passer donc le comportement par défaut voyez ce qu'on obtient alors après ça pas forcément tous les navigateurs appliquerait ça par défaut mais moi ici sur firefox on voit que il affiche par défaut tout ça.
 
 Voyez que les blocs ici prennent vraiment toute la hauteur du contenu donc si j'ai mis un conteneur de 800 pixels bas à priori mes éléments ici aurait 800 pixels également de hauteur en prenant en compte bien sûr les bordures.
@@ -1358,20 +1276,9 @@ Absolument tout l'espace qui est disponible pour lui mais si vous ne voulez pas 
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------------------------------+
-	|
-	|
-```
+
+![](img/020.jpeg)  
+
 On fait "flex-start" et voilà comment que ça se passe.
 
 Comme ici dans nos objets on a juste un seul mot hé bien il n'y a pas besoin de plus de place que ça donc vous voyez que ça se met ici donc là on travaille plus sur l'axe principal qui est horizontale, on travaille vraiment sur l'axe secondaire qui est vertical.
@@ -1410,19 +1317,9 @@ Si on fait l'inverser, on retrouve toujours voyez comme pour 'justify-content' o
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------------------------------+
-	|
-	|
-```
+
+![](img/021.jpeg)  
+
 Voilà ça se met à la fin d'accord de l'axe secondaire donc logique au plus bas.
 
 On va avoir comme pour tout à l'heure "center" donc là c'est centré ok.
@@ -1457,19 +1354,9 @@ On va avoir comme pour tout à l'heure "center" donc là c'est centré ok.
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|
-```
+
+![](img/022.jpeg)  
+
 Et là c'est centré.
 
 "stretch" même si je vous l'ai déjà montré, c'est le comportement par défaut que j'ai sur mon navigateur.
@@ -1479,19 +1366,9 @@ Et là c'est centré.
 >		align-items:stretch;
 	}
 ```
-```txt
-	+-------------------------------+---------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------------------------------+
-	|
-	|
-```
+
+![](img/023.jpeg)  
+
 Voyez ça fait un remplissage complet donc ça évite d'avoir par exemple admettons d'avoir ça, si on met un comportement par défaut "flex-start" voilà ce qu'on aurait.
 ```html
 <!doctype html>
@@ -1542,20 +1419,9 @@ Voyez ça fait un remplissage complet donc ça évite d'avoir par exemple admett
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|ELEMENT|		|		|		|
-	|-------|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------------------------------+
-	|
-	|
-```
+
+![](img/024.jpeg)  
+
 Selon les boîtes, elles ne s'arrêterait pas forcément toutes au même endroit et sur certains design des fois pour certaines parties ça pourrait être gênant d'avoir ça. On aimerait que tous les éléments comme ça se complète en fait tous à même hauteur donc sur le même axe donc à ce moment là c'est tout l'intérêt d'utiliser "stretch" puisque tous les éléments vont s'adapter en fait à celui qui est le plus grand en hauteur et la hop ils vont prendre vraiment tout le conteneur.
 ```css
 	/*
@@ -1588,20 +1454,9 @@ Selon les boîtes, elles ne s'arrêterait pas forcément toutes au même endroit
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|ELEMENT|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	|		|		|		|		|
-	+-------------------------------+
-	|
-	|
-```
+
+![](img/025.jpeg)  
+
 Si évidemment on ne va faire ça ben il suffirait d'enlever height:200px; et faire ça voilà.
 ```css
 	/*
@@ -1633,14 +1488,9 @@ Si évidemment on ne va faire ça ben il suffirait d'enlever height:200px; et fa
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|ELEMENT|		|		|		|
-	+-------+-------+-------+-------+---------
-	|
-	|
-```
+
+![](img/026.jpeg)  
+
 D'accord ça prend juste la place qu'il faut.
 
 Comme j'ai rajouté un hauteur fixe donc automatiquement il remplit toute la hauteur fixé.
@@ -1679,15 +1529,9 @@ D'ailleurs je ne suis pas obligé de faire 200px, 100px c'est déjà bien.
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|ELEMENT|		|		|		|
-	|		|		|		|		|
-	+-------+-------+-------+-------+---------
-	|
-	|
-```
+
+![](img/027.jpeg)  
+
 Alors là où ça peut être utile aussi, je n'ai pas forcément montré c'est si on met par exemple une direction sous forme de colonne on aurait ça.
 ```css
 	/*
@@ -1721,20 +1565,9 @@ Alors là où ça peut être utile aussi, je n'ai pas forcément montré c'est s
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT
-	|ELEMENT
-	+-----------------------------------------
-	|ELEMENT
-	+-----------------------------------------
-	|ELEMENT
-	+-----------------------------------------
-	|ELEMENT
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/028.jpeg)  
+
 Alors il y a énormément de choses que je peux vous montrer avec 'flexbox', je ne pourrais pas forcément pensé à tous les cas de figure dans la vidéo c'est juste impossible on pourrait écrire un livre complet sur 'flexbox' tellement qu'il y a des possibilités mais voilà un petit peu comment ça se passe.
 ```css
 	/*
@@ -1768,20 +1601,9 @@ Alors il y a énormément de choses que je peux vous montrer avec 'flexbox', je 
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-------+----------------------------------
-	|ELEMENT|
-	|ELEMENT|
-	+-------+----------------------------------
-	|ELEMENT|
-	+-------+----------------------------------
-	|ELEMENT|
-	+-------+----------------------------------
-	|ELEMENT|
-	+-------+----------------------------------
-	|
-	|
-```
+
+![](img/029.jpeg)  
+
 Evidemment là ça se passe comme si c'était sur la ligne puisque comme on a disposé sous forme de colonne l'axé principal c'est comme c'était celui-là.
 ```txt
 	+-------+
@@ -1872,54 +1694,16 @@ Donc on va revenir sur un truc comme ça de base et voilà et après "stretch" p
 ```css
 >		align-items:baseline;
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+
-	|ELEMENT|
-	+-------+
-	|
-	|
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/030.jpeg)  
+
 ## "flex-start"
 ```css
 >		align-items:flex-start;
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+
-	|ELEMENT|
-	+-------+
-	|
-	|
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/031.jpeg)  
+
 ## "flex-end"
 ```css
 	/*
@@ -1953,28 +1737,9 @@ Donc on va revenir sur un truc comme ça de base et voilà et après "stretch" p
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+
-	|ELEMENT|
-	+-------+
-	|
-	|
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/032.jpeg)  
+
 ## "center"
 ```css
 	/*
@@ -2008,29 +1773,9 @@ Donc on va revenir sur un truc comme ça de base et voilà et après "stretch" p
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|
-	+-------+-------+-------+-------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+
-	|ELEMENT|
-	+-------+
-	|
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/033.jpeg)  
+
 Ca agit vraiment sur l'ensemble, ça agit vraiment comme s'il n'y avait qu'une seule ligne, on est vraiment sur ce type de comportement là.
 
 ## "stretch"
@@ -2066,23 +1811,9 @@ Ca agit vraiment sur l'ensemble, ça agit vraiment comme s'il n'y avait qu'une s
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-------+-------+-------+-------+---------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|		|		|		|		|
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|		|		|		|		|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	|		|		|		|		|
-	+-------+-------+-------+-------+
-	|ELEMENT|
-	|		|
-	+-------+---------------------------------
-	|
-	|
-```
+
+![](img/034.jpeg)  
+
 "baseline" ça va dépandre si vous n'avez pas par exemple les mêmes tailles de bloc tout simplement. 
 
 Alors en "flex-start" tout ce met au dessus absolument tous se met en haut d'accord tout en haut de notre conteneur alors qu'avec la valeur "baseline" en fait si on avait par exemple ici un bloc ou le contenu commence là.
@@ -2127,29 +1858,9 @@ Alors en "flex-start" tout ce met au dessus absolument tous se met en haut d'acc
 ```css
 >		align-items:baseline;
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+		+-------+
-	|				|		|
-	|				+-------+
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+
-	|ELEMENT|
-	+-------+
-	|
-	|
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/035.jpeg)  
+
 Avec la valeur "baseline" en fait si on avait un bloc où le contenu commence-là, hé bien tous ces autres blocs là, les petits où il a juste marqué les mains et ils se mettraient à hauteur de là où commence le contenu du bloc qui est un peu plus grand si vous comprenez un petit peu ce que je veux dire.
 
 En fait là vous prenez tous ces rectangles là |ELEMENT| ici et ceux d'après il serait juste décaler un peu plus bas alors que celui-là il resterait coller en haut.
@@ -2168,29 +1879,9 @@ Là on a fait le tour je vais revenir à un affichage normal, on va rester là d
 ```css
 >		align-items:flex-start;
 ```
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+		+-------+
-	|				|		|
-	|				+-------+
-	+-------+-------+-------+-------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+-------+---------------+
-	|ELEMENT|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+-------+
-	|
-	+-------+
-	|ELEMENT|
-	+-------+
-	|
-	|
-	+-----------------------------------------
-	|
-	|
-```
+
+![](img/036.jpeg)  
+
 Voilà on va garder quand même tous ces éléments ce sera peut-être beaucoup plus utile pour ce que j'ai à vous montrer pour la suite.
 
 Donc là on a travaillé sur le conteneur d'accord on a vu dont je rappelle un très rapidement comment gérer l'orientation d'accord de nos différents objets dans le conteneur, comment gérer la coupure des éléments pour que ça tienne éventuellement sur plusieurs lignes, comment évidemment formater tout ça ensemble grâce à la méta propriété ici 'flex-flow' et on a vu ensuite comment gérer l'alignement selon l'axe principal 'justify-content' de notre conteneurs et l'alignement pour l'axe vertical 'align-items'.
@@ -2345,13 +2036,9 @@ Je peux mettre 2 et cetera. Comme je les appelez .order1, je reste sur des terme
 	.order3{order:3;}
 ```
 Ca c'est par défaut d'accord si j'actualise.
-```txt
-	+-----------------------------------------
-	|ELEMENT|ELEMENT|ELEMENT|
-	+-------+-------+-------+
-	|
-	|
-```
+
+![](img/037.jpeg)  
+
 On voit aucune différence si j'actualise on voit que les éléments d'ailleurs sont comme ça décidément on va y arriver sinon vous allez voir aucune différence. On le refait, on va y arriver avec le html.
 ```html
 <!doctype html>
@@ -2407,13 +2094,9 @@ On voit aucune différence si j'actualise on voit que les éléments d'ailleurs 
 	.order2{order:2;}
 	.order3{order:3;}
 ```
-```txt
-	+-----------------------------------------
-	|A|B|C|
-	+-+-+-+
-	|
-	|
-```
+
+![](img/038.jpeg)  
+
 Voilà a b c, on voit ici nos trois blocs d'accord et on peut changer l'ordre càd que j'ai juste à faire ça par exemple C passe en deuxième position et lui en troisième. On peut changer les classes et là je vais modifier.
 ```html
 <!doctype html>
@@ -2469,13 +2152,9 @@ Voilà a b c, on voit ici nos trois blocs d'accord et on peut changer l'ordre c�
 	.order2{order:2;}
 	.order3{order:3;}
 ```
-```txt
-	+-----------------------------------------
-	|A|C|B|
-	+-+-+-+
-	|
-	|
-```
+
+![](img/039.jpeg)  
+
 Plus le nombre de 'order' est petit et plus l'élément sera prioritaire dans sa disposition ce sera en fait le premier affiché dans le conteneur et plus le nombre est grand et plus le nom le l'objet sera affiché en dernier voilà donc très simple vraiment order très facile à utiliser comme propriété et attention on l'utilise sur l'objet d'accords donc pas sur tout les objets parce que si vous le faites ça n'a pas d'intérêt.
 
 Le but c'est d'avoir un ordre particulier éventuellement donc de pouvoir changer la disposition en fonction donc en général on mettra une classe particulière à certains objets pour avoir ça.
@@ -2544,14 +2223,9 @@ Mais par contre l'élément qui possède la classe 'priority' donc qui est prior
 	
 >	.priority{order:1;}
 ```
-```txt
-	+-----------------------------------------
-	|B|A|C|
-	+-+-+-+
-	|
-	+-----------------------------------------
-	|
-```
+
+[](img/040.jpeg)  
+
 Je peux rajouter autant d'éléments que je peux même les mettre avant le B si je veux ça ne va absolument rien changer d'accord.
 ```html
 <!doctype html>
@@ -2619,14 +2293,9 @@ Mais par contre l'élément qui possède la classe 'priority' donc qui est prior
 	
 >	.priority{order:1;}
 ```
-```txt
-	+-----------------------------------------
-	|B|A|C|C|C|C|
-	+-+-+-+-+-+-+
-	|
-	+-----------------------------------------
-	|
-```
+
+![](img/041.jpeg)  
+
 Donc là c'est plus une question d'ordre dans lequel est écrit le code html qui va jouer sur l'ordre dans lequel est affiché ici le rendu avec l'ordre au niveau flexbox d'accord au niveau de boîte flexible on va vraiment pouvoir changer la disposition des différents éléments donc ça c'est important à voir.
 
 Voilà du coup on va revenir un exemple ici.
@@ -2681,14 +2350,9 @@ Ensuite on va enlever .priority{order:1;} et order:2; donc le order à appliquer
 		border:1px solid #000;
 	}
 ```
-```txt
-	+-----------------------------------------
-	|AAA|BBB|CCC|
-	+---+---+---+
-	|
-	+-----------------------------------------
-	|
-```
+
+![](img/042.jpeg)  
+
 Ca c'est pour order, maintenant on va voir sur les techniques de gestion de l'espace càd que chacun des objets vous voyez occupent un certain espace dans le conteneur par défaut il en occupe le moins possible mais on va voir que l'on peut également changer cette occupation de l'espace avec quelques propriétés css.
 
 La première à voir c'est la propriété pour l'espace en tant qu'agrandissement donc on va utiliser 'flex-grow'.
@@ -2767,14 +2431,9 @@ Ce n'était pas une blague il y a vraiment beaucoup de choses à voir donc  vrai
 	.obj3{flex-grow:1;}
 ```
 Voilà "1" "1" et "1" d'accord on a une répartition tel quel.
-```txt
-	+---------------------------------------+
-	|AAA		 |BBB		  |CCC			|
-	+------------+------------+-------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/043.jpeg)  
+
 Pourquoi ça ? parce que nous avons dit en fait au niveau des éléments ils vont occuper les mêmes proportions chacuns.
 
 Comme ils sont trois d'accord donc on peut dire que 100% c'est l'espace total, comme ils sont trois ils vont occuper chacun un tiers de l'espace ça paraît logique d'accord donc en fait quand on met 1 il ne faut pas imaginer qu'il compte pour 1 c'est juste qu'ils vont occuper la même unité de dimensions.
@@ -2820,14 +2479,9 @@ Alors si on mettait par exemple "2" "2" et "2" certains se pose peut être donc 
 >	.obj2{flex-grow:2;}
 >	.obj3{flex-grow:2;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA		 |BBB		  |CCC			|
-	+------------+------------+-------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/044.jpeg)  
+
 C'est exactement ce que je viens de vous dire c'est juste une unité de mesures quelconques "2" comme elle est identique cette valeur d'accord comme ils sont égaux, ils auront un espace occupé égal d'accord c'est juste cette question là qui se pose.
 
 En revanche et là c'est là où toute la différence à se faire si j'ai ça "1" "2" et "1". "2" donc l'élément en deuxième position, il est à "2" alors que les autres sont à "1" là on aura des proportions différentes d'accord.
@@ -2869,14 +2523,9 @@ En revanche et là c'est là où toute la différence à se faire si j'ai ça "1
 >	.obj2{flex-grow:2;}
 >	.obj3{flex-grow:1;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA	  |BBB		  		  |CCC		|
-	+---------+-------------------+---------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/045.jpeg)  
+
 Là on aura des proportions c'est à dire que par rapport aux autres éléments donc les éléments a et c, b va occuper deux fois plus même si ça ne veut pas dire qu'il occupe deux fois plus d'espace que les autres. C'est juste que proportionnellement a eu d'accord relativement à eux, il va prendre deux fois plus d'importance en tout cas dans l'occupation de l'espace donc on obtient ça.
 
 Et puis on va augmenter le nombre et plus évidemment il va prendre de l'espace à a et b voyez automatiquement.
@@ -2885,14 +2534,9 @@ Et puis on va augmenter le nombre et plus évidemment il va prendre de l'espace 
 	.obj2{flex-grow:4;}
 	.obj3{flex-grow:1;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA   |BBB		  		  		 |CCC	|
-	+------+-------------------------+------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/046.jpeg)  
+
 Ca se voit également ici avec "4" et même si on rediomentionne voilà comment ça se passe selon la disposition vous voyez que tout se redimensionnent et B également mais il occupera quand même on va dire une unité de 4 comme espace par rapport à A et C qui n'occupent que 1. 
 
 Voilà si vous voulez que A soit un petit peu plus grand que C mais toujours plus petit que 2 vous mettez par exemple 2 donc on peut jouer comme ça avec les unités pour prévoir les éléments.
@@ -2901,14 +2545,9 @@ Voilà si vous voulez que A soit un petit peu plus grand que C mais toujours plu
 	.obj2{flex-grow:4;}
 	.obj3{flex-grow:1;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA   	  |BBB		  		     |CCC	|
-	+---------+----------------------+------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/047.jpeg)  
+
 On peut jouer comme ça avec nos différents éléments par rapport à l'espace fournit donc la capacité à grandir donc évidemment qui dit agrandissement d'un élément avec 'flex-grow' il va y avoir des rétrécissements des autres mais le rétrécissement on peut volontairement le contrôler nous aussi avec justement la propriété 'flex-shrink' et là pareil je peux vous montrer un petit peu comment ça se passe.
 ```css
 	/*
@@ -2949,14 +2588,9 @@ On peut jouer comme ça avec nos différents éléments par rapport à l'espace 
 >	.obj2{flex-schrink:1;}
 >	.obj3{flex-schrink:1;}
 ```
-```txt
-	+-----------------------------------------
-	|AAA|BBB|CCC|
-	+---+---+---+
-	|
-	+-----------------------------------------
-	|
-```
+
+![](img/048.jpeg)  
+
 Si on met "1" partout on a ça d'accord ça veut dire quoi ? c'est à dire que les éléments comme on demande ici de se rétrécir et pas de s'agrandir, ils vont se rétrécir au maximum qu'ils peuvent d'accord donc comme on a mit ici "1" partout ils vont se rétrécir de manière égale et donc ils vont en fait avoir un comportement par défaut.
 
 Si vous mettez par exemple un 'flex-shrink' en auto vous aurez en fait une occupation de 1 c'est à dire le minimum d'accord ils vont occuper le minimum de place qu'il a donc c'est ce qu'on observe quand on n'utilise pas cette propriété.
@@ -3001,14 +2635,9 @@ Maintenant si je m'amuse à mettre 2, on va refaire pareil comme pour comme pour
 >	.obj2{flex-schrink:2;}
 >	.obj3{flex-schrink:2;}
 ```
-```txt
-	+-----------------------------------------
-	|AAA|BBB|CCC|
-	+---+---+---+
-	|
-	+-----------------------------------------
-	|
-```
+
+![](img/049.jpeg)  
+
 Qu'est ce qui se passe ? même chose comme on leur a demandé d'éventuellement se rétrécir d'accord d'avoir une capacité de rétrécissement relatives aux autres objets du conteneur d'accord donc si évidemment c'est nécessaire ainsi s'il manquait de la place les éléments comme il possède ici la même valeur pour 'flex-schrink' ils vont occuper le moins d'espace possible.
 
 Donc là où ça aura un intérêt et il faidra l'utiliser avec 'flex-grow' d'accord sinon on ne verra pas grand chose par exemple en faisant ceci.
@@ -3052,14 +2681,9 @@ Donc là où ça aura un intérêt et il faidra l'utiliser avec 'flex-grow' d'ac
 >	.obj3{flex-grow:1;flex-schrink:1;}
 ```
 Alors on va l'utiliser avec 'flex-grow' et ça va évidemment s'utiliser de pair puisque pour qu'il y ait un agrandissement, il faut qu'il y ait un rétrécissement de l'autre côté donc vous allez rarement utiliser juste le rétrécissement tout seul parce que le rétrécissement ça prendra une valeur minimale.
-```txt
-	+---------------------------------------+
-	|AAA		 |BBB		  |CCC			|
-	+------------+------------+-------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/050.jpeg)  
+
 On va avoir ça par défaut, pas de souci et logiquement si je met plus de place obj1 et surtout à obj3.
 ```css
 	/*
@@ -3100,14 +2724,9 @@ On va avoir ça par défaut, pas de souci et logiquement si je met plus de place
 >	.obj2{flex-grow:1;flex-schrink:1;}
 >	.obj3{flex-grow:4;flex-schrink:1;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA		 |BBB	|CCC				|
-	+------------+------+-------------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/051.jpeg)  
+
 Voilà comme ça on va pouvoir donner en fait une capacité de rétrécissement à l'élément ici l'objet 2 en fait d'accord on pourra vraiment influé sur le rétrécissement c'est à dire la place qu'il peut éventuellement céder quand on a besoin ici d'avoir un agrandissement pour d'autres éléments.
 
 Alors là après c'est pareil il faut avoir des calculs assez précis puisque si le navigateur est capable de déduire lui-même automatiquement certaines valeurs votre rétrécissement ne sera pas pris en compte puisque qu'il est capable de calculer l'espace nécessaire donc en général le navigateur gère bien l'espace et ces propriétés-là quand on a besoin comme ça de gérer les agrandissements/rétrécissements on va plutôt utilisé ... pour ça que là je passe assez vite sur les propriétés-là parce que vous voyez qu'il y a pas mal de choses des fois qui ne sont pas modifiés sur le rendu puisque le navigateur fait ses calculs lui-mêmes, on va plutôt utiliser la propriété 'flex' qui est la méta-propriété qui va tout simplement récupérer `<grow>` `<shrink>` et `<basis>` ici.
@@ -3185,15 +2804,9 @@ Alors je vais le mettre en commentaire et je peux très bien par exemple dire 20
 	/*.obj2{}
 	.obj3{}*/
 ```
-```txt
-	+---------------------------------------+-------+
-	|AAA		 					|BBB|CCC|		|
-	+-------------------------------+---+---+		|
-	|												|
-	+-----------------------------------------------+
-	|												|
-	|												|
-```
+
+![](img/052.jpeg)  
+
 Voyez ce qu'il se passe, initialement lui il prend 200 pixels de largeur et après il répartit l'espace restant pour les autres éléments d'accord alors les autres éléments, ils ne prennent pas vraiment tout l'espace mais c'est normal je vous rappelle on n'aura pas forcément donner une capacité de s'agrandir si nécessaire donc si on veut le faire éventuellement on peut s'amuser de dire que pour les deux autres objets d'accord hé bien on leur donne une capacité d'agrandissement et voilà.
 ```css
 	/*
@@ -3235,14 +2848,9 @@ Voyez ce qu'il se passe, initialement lui il prend 200 pixels de largeur et apr�
 	.obj1{flex-basis:200px;}
 >	.obj2, .obj3{flex-grow:1;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA	   |BBB		     |CCC			|
-	+----------+-------------+--------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/053.jpeg)  
+
 Hop et voilà, ils occuperont le reste disponible et en fonction si là je venais à changer un espace disponible genre 800 pixels pour le 1er et bien il
 occupe 800 pixels de base initialement le 'flex-basis' et les autres voyez s'étalent sur l'espace s'étale/s'étire sur l'espace disponible tout en le partageant.
 ```css
@@ -3285,14 +2893,10 @@ occupe 800 pixels de base initialement le 'flex-basis' et les autres voyez s'ét
 >	.obj1{flex-basis:800px;}
 	.obj2, .obj3{flex-grow:1;}
 ```
-```txt
-	+---------------------------------------+
-	|AAA 						|BBB  |CCC  |
-	+---------------------------+-----+-----+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/054.jpeg)  
+![](img/054bis.jpeg)  
+
 Comme ils sont tous les deux encore une fois 'flex-grow' hé bien en fait si admettons ici (après AAA) il reste 20% de l'espace d'accord eh bien ils vont partager 1/2 des 20% de l'espace restant donc il y aura 10 % d'espaces pour B, 10% d'espace pour C.
 
 On fait des petits calculs mais normalement c'est des calculs simples, comprenez que si vous avaez le nombre 100 sous le diviser par 2 et vous obtenez 50 et 50.
@@ -3418,14 +3022,9 @@ Là on aurait pu faire ça mais évidemment aucune utilité.
 		flex:auto;
 	}
 ```
-```txt
-	+---------------------------------------+
-	|AAA		 |BBB		  |CCC			|
-	+------------+------------+-------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/055.jpeg)  
+
 Ca n'a aucune utilité parce que c'est comme si on faisait un 'flex-grow' à 1 mais voilà c'est bien de le savoir ici ça met 'flex-grow' à 1, 'flex-schrink' à 1 et 'flex-basis' à 0.
 
 Voilà c'est comme si on avait utilisé les trois propriétés mais réunient en une seule et on a la propriété 'flex' qui du coup nous fait gagner beaucoup de temps donc ça c'est à connaître.
@@ -3529,14 +3128,9 @@ Voyez on a dit tous les objets du conteneur seront en "flex-start" c'est à dire
 
 	}
 ```
-```txt
-	+---------------------------------------+
-	|AAA		 |BBB		  |CCC			|
-	+------------+------------+-------------+
-	|										|
-	+---------------------------------------+
-	|										|
-```
+
+![](img/056.jpeg)  
+
 D'accord mais je peux très bien à un moment donné dire moi je veux qu'il y en a un qui à un moment donné ne respecte pas cette règle là càd l'alignement de tous les items qu'on a défini dans le conteneur et dire que je veux que mon objet 2 lui même s'aligne autrement, pas en "flex-start" mais par exemple en "stretch" et là on obtiendra ça d'accord.
 ```css
 	/*
@@ -3581,16 +3175,9 @@ D'accord mais je peux très bien à un moment donné dire moi je veux qu'il y en
 >		align-self:stretch;
 	}
 ```
-```txt
-	+---------------------------------------+
-	|AAA|BBB|CCC|							|
-	+---+	+---+							|
-	|	|	|								|
-	|	|	|								|
-	+---+---+-------------------------------+
-	|										|
-	|										|
-```
+
+![](img/057.jpeg)  
+
 Voilà indépedemment de ceci, on définit un stretch sur un objet.
 ```css
 	.container
@@ -3649,17 +3236,9 @@ Si vous avez besoin de changer le comportement d'un seul des objets de tout ceux
 >		align-self:flex-end;
 	}
 ```
-```txt
-	+---------------------------------------+
-	|AAA|	|CCC|							|
-	+---+	+---+							|
-	|										|
-	|	+---+								|
-	|	|BBB|								|
-	+---+---+-------------------------------+
-	|										|
-	|										|
-```
+
+![](img/058.jpeg)  
+
 On vraiment s'amuser à tout en fait, il y a vraiment tout ce qu'on veut, "center".
 ```css
 	/*
@@ -3706,17 +3285,9 @@ On vraiment s'amuser à tout en fait, il y a vraiment tout ce qu'on veut, "cente
 	
 >	.obj1{align-self:center;}
 ```
-```txt
-	+-------+---+---------------------------+
-	+---+	|CCC|							|
-	|AAA|	+---+							|
-	+---+									|
-	|	+---+								|
-	|	|BBB|								|
-	+---+---+-------------------------------+
-	|										|
-	|										|
-```
+
+![](img/059.jpeg)  
+
 `align-self:center;` pour montrer qu'on peut changer le comportement de tout, je rappelle qu'en CSS tout va être traité en fait au fur et à mesure de la définition du fichier, ça veut dire quoi ? ça veut dire que quand on interprète le CSS il dit bon d'accord pour le `<body>` tu veux une couleur de fond comme ça #EEE, 'margin' tu veux aligner tout comme ça "auto" et tu veux une largeur de 100%.
 ```css
 	body
@@ -3753,17 +3324,9 @@ Là on a défini pour le conteneur de dire que tout ses objets seront en "flex-s
 	}
 ```
 Au départ ils étaient partis pour tout mettre à "flex-start" mais au final on lui dit par contre attention pour l'objet 2 et l'objet 1, tu va appliquer un autre alignement que "flex-start" et à la fin quand il fait le rendu et bien il aura pris tout en compte, obj1 sera en "center" et obj2 sera en "flex-end" et au obj3 comme on a rien respicifier, il prendra ce qu'on avait déterminé au départ c'est-à-dire "flex-start" d'où ce rendu ici différent.
-```txt
-	+-------+---+---------------------------+
-	+---+	|CCC|							|
-	|AAA|	+---+							|
-	+---+									|
-	|	+---+								|
-	|	|BBB|								|
-	+---+---+-------------------------------+
-	|										|
-	|										|
-```
+
+![](img/059.jpeg)  
+
 Voilà donc ça c'était la petite petite parenthèse de fin qui était je pense importante et on en a terminé avec 'flex-box' au niveau des propriétés à voir, au niveau de toutes les choses.
 
 N'hésitez pas vraiment à faire ça sur votre code, à revoir la vidéo même si nécessaire revoir d'anciennes vidéos s'il y a encore des choses qui ne sont suffisamment clair dans ce que j'ai pu vous expliquer dans les propriétés qu'on a utilisés, dans les sélecteurs qu'on a fait sur les classes ou ce genre de choses.
