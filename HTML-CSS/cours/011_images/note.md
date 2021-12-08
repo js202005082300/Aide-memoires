@@ -107,16 +107,9 @@ Voilà alors attention pour ceux qui sont sur Windows, je le répète assez souv
 Si ce n'est pas le cas allez dans les options des dossiers depuis le panneau de configuration ou dans les paramètres pour ne pas masquer surtout l'extension des fichiers au niveau du système ça c'est super important donc ici j'ai ça.
 
 On va déjà faire un affichage simple, on va actualiser pour que vous voyez comment ça se passe d'accord donc voilà l'image qui est affiché directement sur ma page.
-```txt
-	Images et figures
-	+---------------------------+
-	|							|
-	|							|
-	|							|
-	|							|
-	|			pic-large.jpg	|
-	+---------------------------+
-```
+
+![](img/01.jpeg)  
+
 Elle est vraiment énorme, c'est pourquoi j'ai prit une image de très très grande taille mais on peut changer l'image.
 
 Alors j'avais pris la même en plus petite voilà donc on actualise comme vous voyez c'est bien géré à ce niveau-là voilà.
@@ -134,14 +127,9 @@ Alors j'avais pris la même en plus petite voilà donc on actualise comme vous v
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	pic-little.jpg	|
-	+-------------------+
-```
+
+![](img/02.jpeg)  
+
 C'est bien géré à ce niveau-là donc ce type d'image c'est la base d'accords vous avez ceci.
 
 Maintenant on va rentrer sur un point très important, question accessibilité notamment pour certaines personnes qui sont handicapés visuellement ou simplement ou des personnes qui n'utilisent pas de navigateur graphique c'est à dire qu'ils utilisent ce qu'on appelle des navigateurs textuel par exemple en ligne de commande, ça existe et mine de rien y a pas mal d'utilisateurs qui s'en servent.
@@ -203,10 +191,9 @@ Ca lui permet comme ça de ne pas perdre l'information, je peux vous montrer d'a
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	#Texte alternatif à l'image
-```
+
+![](img/03.jpeg)  
+
 C'est mieux que rien, c'est mieux d'avoir un texte alternatif pour dire quoi par exemple ici on avait cette information là d'accord si évidemment ça une pertinence.
 
 Si ce n'est pas pertinent autant que vous ne mettiez rien du tout c'est à dire une chaîne vide d'accord.
@@ -228,10 +215,9 @@ Voilà on pourrait très bien l'enlever ça ne poserait pas de souci à la compr
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	#
-```
+
+![](img/04.jpeg)  
+
 Comme ça voyez ici là ça passe simplement la chose, il n'y a pas de problème donc mettez 'alt' quand même tout le temps même si vous n'avez pas forcément prévu de mettre un texte alternatif à ce niveau là.
 
 On va réfficher l'image voilà.
@@ -249,14 +235,9 @@ On va réfficher l'image voilà.
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	pic-little.jpg	|
-	+-------------------+
-```
+
+![](img/05.jpeg)  
+
 Maintenant on va arriver dans un cas donc ça c'était grosso modo ce que je voulais vous montrer alors on a d'autres attributs qui peuvent être intéressants ici que vous pouvez utiliser en html d'accord ça ne se fera pas avec le css mais directement avec le html.
 
 Vous avez bon l'attribut 'width' comme ceci qui permet de définir une largeur à votre image d'accord.
@@ -280,14 +261,9 @@ Si admettons je veux forcer la largeur à 500 d'accord ce genre de choses, je fa
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	pic-little.jpg	|
-	+-------------------+
-```
+
+![](img/06.jpeg)  
+
 voilà comment va être l'image mais déjà d'ailleurs elle pourrait être déformée.
 
 Par la suite je vais faire même plus petit histoire que vous voyez bien, voilà ce genre de choses, 200.
@@ -305,14 +281,9 @@ Par la suite je vais faire même plus petit histoire que vous voyez bien, voilà
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	pic-little.jpg	|
-	+-------------------+
-```
+
+![](img/07.jpeg)  
+
 Là attention parce que ça ça pourrait il y a une erreur souvent fréquente pour les gens qui démarre en web vous pourriez penser que la en fait bien vous allez par exemple alléger le chargement de la page parce que ben oui l'image que vous affichez ici elle fait que 200 pixels au lieu de faire les 640 de prévu, alors c'est pas comme ça que ça fonctionne !
 
 En réalité, l'image vous ne l'avez pas changée donc c'est toujours cette image là, pic-little.jpg, qui est chargée au niveau de la page web donc celle qui fait 53,7 ko comme vous le voyez là sur l'info bulle.
@@ -346,14 +317,9 @@ C'est à dire qu'il va gérer la hauteur automatiquement en fonction de la large
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	pic-little.jpg	|
-	+-------------------+
-```
+
+![](img/08.jpeg)  
+
 Ici pas de souci parce que l'image ne pose pas de souci au redimensionnement et voyez comme ça il va bien adapter.
 
 Ca évitera par exemple de faire des choses comme ça, je peux vous montrer ce genre de chose, 300 x 1000, qui sera c'est bizarre.
@@ -371,23 +337,9 @@ Ca évitera par exemple de faire des choses comme ça, je peux vous montrer ce g
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|					|
-	|	pic-little.jpg	|
-	+-------------------+
-```
+
+![](img/09.jpeg)  
+
 Là voyez vous aurez évidemment une déformation de l'image d'accord alors que si j'avais juste mit "auto".
 ```html
 <!DOCTYPE html>
@@ -403,23 +355,9 @@ Là voyez vous aurez évidemment une déformation de l'image d'accord alors que 
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+---------------------------------------+
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|										|
-	|						pic-little.jpg	|
-	+---------------------------------------+
-```
+
+![](img/010.jpeg)  
+
 Voilà, je peux bien évidemment gérer les choses plus correctement donc la voyez en fonction de ce que j'ai voulu comme largeur il adapte donc là l'image pour le coup elle est affichée beaucoup plus grandes que ce qu'elle est de manière originale, c'est pour ça qu'on voit apparaître d'ailleurs quelques petits pixels pixels. 
 
 Voyez qu'elle se pixellise parce que c'est une image de 640 pixels et la je lui demande de s'afficher à 1000 de hauteur et une largeur du coup en proportion avec cet hauteur là.
@@ -470,14 +408,9 @@ Donc là comment que ça se passe ? on a de manière relative à partir du fichi
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	japan-girl.jpg	|
-	+-------------------+
-```
+
+![](img/011.jpeg)  
+
 Voilà on actualise et l'image et gérer d'accord et c'est pareil, je peux toujours faire la même chose 'width' par exemple à 600 et du coup la hauteur tu prends un hauteur automatique qui concerne en fait les proportions de l'image pour éviter de déformer l'image et d'avoir un résultat qui ne soit pas forcément joli.
 ```html
 <!DOCTYPE html>
@@ -493,14 +426,9 @@ Voilà on actualise et l'image et gérer d'accord et c'est pareil, je peux toujo
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	japan-girl.jpg	|
-	+-------------------+
-```
+
+![](img/012.jpeg)  
+
 Donc au moins là vous pouvez comme ça respecter les proportions donc c'est à dire le ratio entre la largeur et la hauteur.
 
 Voilà pour l'affichage d'image, je vous ai montré tout ce qu'ils avaient en tout cas d'intéressant par rapport à ça.
@@ -567,15 +495,9 @@ Et là on a mis 200 pour que soit plus petit et ici vous allez utiliser la balis
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	japan-girl.jpg	|
-	+-------------------+
-	Crédit : UnTel
-```
+
+![](img/013.jpeg)  
+
 Voyez ça se met automatiquement en dessous de l'image d'accord qui est considérée ici comme une représentation avec une légende.
 
 Vous pouvez y mettre un site, n'importe quoi genre par exemple la source d'une image si vous l'avez récupéré depuis quelque part, vous mettez la source en mettant un lien voilà.
@@ -596,15 +518,9 @@ Vous pouvez y mettre un site, n'importe quoi genre par exemple la source d'une i
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	japan-girl.jpg	|
-	+-------------------+
-	Source : lesite.com
-```
+
+![](img/014.jpeg)  
+
 D'accord vous pouvez très bien faire comme ça ou simplement mettre un descriptif.
 
 Si par exemple votre image a besoin d'être décrite voilà vous pouvez mettre aussi un descriptif, Une japonaise en robe traditionnelle.
@@ -625,15 +541,8 @@ Si par exemple votre image a besoin d'être décrite voilà vous pouvez mettre a
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|	japan-girl.jpg	|
-	+-------------------+
-	Une japonaise en robe traditionnelle
-```
+![](img/015.jpeg) 
+
 Voilà ce qui permet de décrire un peu ce que l'on voit sur l'image d'accord si vous voulez apporter une petite description courte donc il ne s'agit pas non plus de faire un paragraphe complet, écrire un pavé mais c'est d'avoir une description courte concernant l'image en question.
 
 Voilà si vous avez besoin de faire ce genre de choses sur votre site pour que ce soit beaucoup plus pertinent et beaucoup plus correct au niveau sémantique et bien mettez votre image dans un ensemble de balises `<figure>` et `<figcaption>` pour lui apporter une légende supplémentaires.
@@ -665,14 +574,9 @@ Admettons ce serait par exemple une carte du monde d'accord même si là j'ai fa
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|		carte.png	|
-	+-------------------+
-```
+
+![](img/016.jpeg)  
+
 Je remontre à l'actualisation F5 voilà ce qu'on a par défaut d'accord donc là c'est une image simple comme je vous ai montré en début de vidéo où j'ai différencié ici 4 couleurs mais vous allez voir pourquoi.
 
 A partir de là je vais pouvoir définir une map d'accord, une map c'est une zone spécifique qui aura vraiment une importance.
@@ -728,14 +632,9 @@ Alors par défaut si j'actualise, on ne vois rien qui se passe, c'est normal on 
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+
-	|					|
-	|					|
-	|		carte.png	|
-	+-------------------+
-```
+
+![](img/016.jpeg)  
+
 Moi ce que je vais faire en fait c'est permettre à l'utilisateur que quand il va cliquer en fait sur le carré rouge ici d'accord seulement sur le carré rouge pas sur les autres et bien que ça le redirige vers autre chose d'accord un autre contenu.
 
 Moi ce que je vais faire c'est que si on clique sur le carré rouge, on affichera seulement le carré rouge.
@@ -796,27 +695,9 @@ Dans le cas d'un rectangle d'accord x1 et y1 ce sont des coordonées qui vont ê
 Les coordonnées ça correspond à quoi ? ça va correspondre à la largeur donc x c'est toujours la largeur, c'est l'abscisse et y c'est l'ordonnée donc la coordonnée xy du point qui est en haut à gauche de la forme que vous voulez, rectangulaire.
 
 Donc nous au niveau de l'image, c'est pour ça que j'ai fait une image simple, le rouge vous voyez qu'il commence ici en haut à gauche donc ça veut dire que sa coordonnée x donc l'horizontale c'est zéro d'accord parce qu'elle est vraiment tout en haut à gauche ici donc c'est zéro. Et le y c'est zéro aussi parce que voilà le x il augmente au fur à mesure que vous allez là sur la droite et le y augmente au fur et à mesure que vous descendez dans l'image ok.
-```txt
-	(0, 0)
-	+---------------------------------- > X
-	|  +------------+------------+
-	|  |			|			 |
-	|  |			|			 |
-	|  |			|			 |
-	|  |			|			 |
-	|  |			|			 |
-	|  +------------+------------+
-	|  |			|			 |
-	|  |			|			 |
-	|  |			|			 |
-	|  |			|			 |
-	|  |			|			 |
-	|  +------------+------------+ (500, 500)
-	|
-	|
-	v
-	Y
-```
+
+![](img/01.png)  
+
 Donc le point de coordonnées (0, 0) est là et le point de coordonnées (500, 500) puisque j'ai fait un carré de 500 x 500 il est ici tout en bas à droite du coup c'est pour ça que j'ai fait ça parce que vous voyez que ça va être très simple à calculer du coup pour avoir que le carré rouge.
 
 Donc moi le premier point pour le carré rouge ça va être (0, 0) donc je vais le noter, j'expliquerai après pour le cercle et pour le polygone ne vous en faites pas donc vous mettez 0,0 c'est le xy.
@@ -858,34 +739,15 @@ Voilà on va pouvoir actuliser pour voir ce qu'il se passe donc là voyez que pa
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-----------+-----------+
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	+-----------+-----------+
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	+-----------+-----------+
-```
+
+![](img/018.jpeg)  
+
 Là j'actualise et là regardez, dés que je vais sur le rouge voyez c'est calculé précisément parce que c'est vraiment au pixel, je vais pouvoir cliquer d'accord c'est que sur le rouge donc on voit bien, on peut tester pour voir voyez c'est vraiment quand on rentre dans le rouge.
 
 Et là si je clique !
-```txt
-	+-----------+
-	|			|
-	|			|
-	|			|
-	|			|
-	|			|
-	+-----------+
-```
+
+![](img/018a.jpeg)  
+
 Si je clique, j'accède donc voyez à l'image que j'ai mis donc ça fonctionne d'accord.
 
 Si on veut changer admettons que maintenant je veux que la zone cliquable ce soit ce rectangle là, à la fois le carré rouge et le carré bleu.
@@ -918,22 +780,9 @@ Eh bien je vais adapter aussi donc ça part de 0, 0 ça ne change pas par contre
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-----------+-----------+
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	+-----------+-----------+
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	|			|			|
-	+-----------+-----------+
-```
+
+![](img/019.jpeg)  
+
 Le rouge et le bleu par contre le jaune et le vert ça ne fonctionne pas donc là peu importe où je clique sur ce grand rectangle d'accord qui est composé de rouge et de bleu, je vais accéder à l'image que j'ai choisi-là.
 
 Alors ça ça peut servir à quoi ce genre de fonctionnalité ? Par exemple vous voulez faire une map monde admettons, ça peut être pour un jeu, ça peut être pour n'importe quoi et quand on clique dessus en fait on peut zoomer d'accord.
@@ -985,22 +834,9 @@ Ca veut dire que si je clique sur le carré rouge ça va afficher l'image carte-
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-----------+-----------+
-	|			|			|
-	|			|			|
-	|carte-rouge|			|
-	|			|			|
-	|			|			|
-	+-----------+-----------+
-	|			|			|
-	|			|			|
-	|			| pic-large	|
-	|			|			|
-	|			|			|
-	+-----------+-----------+
-```
+
+![](img/02.png)  
+
 Voyez je peux rien faire sur le bleu, le vert non plus.
 
 Si je clique ici sur le rouge, j'ai bien carte-rouge, je fais précédent et si je clique sur le jaune j'ai bien l'image pic-large donc ça fonctionne.
@@ -1106,17 +942,9 @@ Moi ce que je peux faire ici éventuellement c'est de faire un (min-width: 600px
 </body>
 </html>
 ```
-```txt
-	Images et figures
-	+-------------------+-----------+
-	|					|			|
-	|					|			|
-	|					|			|
-	+-------------------+			|
-	|								|
-	|								|
-	+-------------------------------+
-```
+
+![](img/03.png)  
+
 Et là je vais en fait me comporter d'accord en fonction de ce qui sera fait par la suite donc là pour le moment vous ne verrez rien de particulier donc là on le voit un petit peu.
 
 L'image change si on élargit la fênetre, on voit l'image en large, on réduit et on voit l'image en little.
