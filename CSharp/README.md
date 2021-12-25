@@ -21,7 +21,7 @@
 |:heavy_check_mark:|[12. Propriétés d'encapsulation](cours/012_propriétés_encapsulation/note.md)|-|[:memo:](#Propriétés-encapsulation)
 |:heavy_check_mark:|[13. Héritage](cours/013_héritage/note.md)|-|[:memo:](#Héritage)
 |:heavy_check_mark:|[14. Surcharge d'opérateurs](cours/014_surcharge_opérateurs/note.md)|-|[:memo:](#Surcharge-opérateurs)
-|:heavy_check_mark:|[15. Classes abstraites](cours/015_classes_abstraites/note.md)|-|[:memo:](#Classes_abstraites)
+|:heavy_check_mark:|[15. Classes abstraites](cours/015_classes_abstraites/note.md)|-|[:memo:](#Classes-abstraites)
 
 ## Introduction
 
