@@ -21,6 +21,7 @@
 |:heavy_check_mark:|[12. Propriétés d'encapsulation](cours/012_propriétés_encapsulation/note.md)|-|[:memo:](#Propriétés-encapsulation)
 |:heavy_check_mark:|[13. Héritage](cours/013_héritage/note.md)|-|[:memo:](#Héritage)
 |:heavy_check_mark:|[14. Surcharge d'opérateurs](cours/014_surcharge_opérateurs/note.md)|-|[:memo:](#Surcharge-opérateurs)
+|:heavy_check_mark:|[15. Classes abstraites](cours/015_classes_abstraites/note.md)|-|[:memo:](#Classes_abstraites)
 
 ## Introduction
 
@@ -155,7 +156,10 @@
 
 ## Surcharge opérateurs
 
-+ [Que signifie additionner une armure avec une autre ?](cours/014_surcharge_opérateurs/note.md#Que-signifie-additionner-une-armure-avec-une-autre)
++ [Que signifie additionner une classe armure avec une autre ?](cours/014_surcharge_opérateurs/note.md#Que-signifie-additionner-une-armure-avec-une-autre)
 + [Surcharge implicite](cours/014_surcharge_opérateurs/note.md#Surcharge-implicite)
 + [Surcharge par pair : cas de true/false](cours/014_surcharge_opérateurs/note.md#Surcharge-par-pair)
 
+## Classes abstraites
+
++ [Courte vidéo sur les classes abstraites](cours/015_classes_abstraites/note.md)  

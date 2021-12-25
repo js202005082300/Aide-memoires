@@ -1,37 +1,45 @@
 ﻿using System;
 
 namespace App
-{   
-    public class Armor
+{
+    abstract class Consumable
     {
-        public int Defense { get; set; }    
-        public int Durability { get; set; }
-
-        public Armor(int defense = 250, int durability = 100)
+        public void SellToMerchant()
         {
-            this.Defense = defense;
-            this.Durability = durability;
+            Console.WriteLine("Je vends au marchand...");
         }
 
-        public static Armor operator +(Armor a, Armor b)
-        {
-            return new Armor(a.Defense + b.Defense, a.Durability + b.Durability);
-        }
-
-        public static bool operator true(Armor a) => a.Defense >= 100;
-        public static bool operator false(Armor a) => a.Defense < 100;
+        public abstract void BuyToMarket();
     }
-    
+
+    class MagicalBook : Consumable
+    {
+        public override void BuyToMarket()
+        {
+            Console.WriteLine("J'achète auprès d'un Magicien");
+        }
+    }
+
+    class Sandwich : Consumable
+    {
+        public override void BuyToMarket()
+        {
+            Console.WriteLine("J'achète sur le marché de fournitures");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Armor ar = new Armor(80);
+            Sandwich s = new Sandwich();
+            MagicalBook m = new MagicalBook();
 
-            if(ar)
-                Console.WriteLine("Oui !");
-            else
-                Console.WriteLine("Non...");
+            s.BuyToMarket();
+            m.BuyToMarket();
+
+            s.SellToMerchant();
+            m.SellToMerchant();
         }
     }
 }
