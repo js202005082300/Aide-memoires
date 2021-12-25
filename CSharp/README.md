@@ -162,4 +162,4 @@
 
 ## Classes abstraites
 
-+ [Courte vidéo sur les classes abstraites](cours/015_classes_abstraites/note.md)  
++ [Notion de classes abstraites](cours/015_classes_abstraites/note.md)  
