@@ -22,6 +22,7 @@
 |:heavy_check_mark:|[13. Héritage](cours/013_héritage/note.md)|-|[:memo:](#Héritage)
 |:heavy_check_mark:|[14. Surcharge d'opérateurs](cours/014_surcharge_opérateurs/note.md)|-|[:memo:](#Surcharge-opérateurs)
 |:heavy_check_mark:|[15. Classes abstraites](cours/015_classes_abstraites/note.md)|-|[:memo:](#Classes-abstraites)
+||[16. Interfaces](cours/016_interfaces/note.md)|-|[:memo:](#Interfaces)
 
 ## Introduction
 
@@ -163,3 +164,7 @@
 ## Classes abstraites
 
 + [Notion de classes abstraites](cours/015_classes_abstraites/note.md)  
+
+## Interfaces
+
++[](cours/016_interfaces/note.md)  

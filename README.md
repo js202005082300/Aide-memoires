@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 25-12-2021 
+> 🧭 Màj le 08-01-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -27,7 +27,7 @@
 |:heavy_check_mark:|[Architecture](Architecture/README.md)
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)|
+|:x:|[C#](CSharp/README.md)|Séance 16 - Les interfaces|
 |:heavy_check_mark:|[C++](C++/README.md)|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
