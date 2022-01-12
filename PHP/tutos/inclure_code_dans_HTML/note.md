@@ -224,7 +224,7 @@ $number = 10;
         <p>OK</p>
     <?php else: ?>
         <p>PAS OK</p>
-    <?php endif>
+    <?php endif; ?>
 </body>
 </html>
 ```
