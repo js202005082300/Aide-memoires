@@ -27,7 +27,7 @@
 |:heavy_check_mark:|[Architecture](Architecture/README.md)
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)|(en suivre) Séance 17 - Le polymorphisme|
+|:heavy_check_mark:|[C#](CSharp/README.md)|Séance 17 - Le polymorphisme|
 |:heavy_check_mark:|[C++](C++/README.md)|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
