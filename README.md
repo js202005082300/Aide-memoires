@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 12-01-2021 
+> 🧭 Màj le 13-02-2021 
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -24,7 +24,7 @@
 ### [Prises de notes](#)
 ||notes|toDo
 -|:-|:-
-|:heavy_check_mark:|[Architecture](Architecture/README.md)
+|:heavy_check_mark:|[Architecture](Architecture/README.md)|Séance 5 sur les processeurs est en ordre. Prochaine séance, les registres.
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
 |:heavy_check_mark:|[C#](CSharp/README.md)|Séance 17 - Le polymorphisme|
