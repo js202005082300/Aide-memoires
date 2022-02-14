@@ -24,10 +24,10 @@
 ### [Prises de notes](#)
 ||notes|toDo
 -|:-|:-
-|:heavy_check_mark:|[Architecture](Architecture/README.md)|Séance 5 sur les processeurs est en ordre. Prochaine séance, les registres.
+|:heavy_check_mark:|[Architecture](Architecture/README.md)|Séance 5 sur les processeurs est en ordre. Prochaine séance, les registres.|
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)|Séance 17 - Le polymorphisme|
+|:heavy_check_mark:|[C#](CSharp/README.md)|Séance 17 sur le polymorphisme est en ordre. Prochaine séance, les tableaux.|
 |:heavy_check_mark:|[C++](C++/README.md)|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|

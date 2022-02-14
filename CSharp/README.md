@@ -23,6 +23,8 @@
 |:heavy_check_mark:|[14. Surcharge d'opérateurs](cours/014_surcharge_opérateurs/note.md)|-|[:memo:](#Surcharge-opérateurs)
 |:heavy_check_mark:|[15. Classes abstraites](cours/015_classes_abstraites/note.md)|-|[:memo:](#Classes-abstraites)
 |:heavy_check_mark:|[16. Interfaces](cours/016_interfaces/note.md)|-|[:memo:](#Interfaces)
+|:heavy_check_mark:|[17. Polymorphisme](cours/017_polymorphisme/note.md)|-|[:memo:](#Polymorphisme)
+||[18. Tableaux](cours/018_tableaux/note.md)|-|[:memo:](#Tableaux)
 
 ## Introduction
 
@@ -167,4 +169,14 @@
 
 ## Interfaces
 
-+[](cours/016_interfaces/note.md)  
++ [interface](cours/016_interfaces/note.md#interface)  
+
+## Polymorphisme
+
++ [virtual & override](cours/017_polymorphisme/note.md#virtual-&-override)
++ [new](cours/017_polymorphisme/note.md#new)
++ [sealed](cours/017_polymorphisme/note.md#sealed)
+
+## Tableaux
+
++ [](cours/018_tableaux/note.md)

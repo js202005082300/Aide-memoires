@@ -2,44 +2,24 @@
 
 namespace App
 {
-    abstract class Consumable
+    class Fighter
     {
-        public void SellToMerchant()
-        {
-            Console.WriteLine("Je vends au marchand...");
-        }
-
-        public abstract void BuyToMarket();
+        public static int lifePoints = 1000;
+    }
+    
+    class Human : Fighter
+    {
+        new public int lifePoints = 2500;
     }
 
-    class MagicalBook : Consumable
-    {
-        public override void BuyToMarket()
-        {
-            Console.WriteLine("J'achète auprès d'un Magicien");
-        }
-    }
-
-    class Sandwich : Consumable
-    {
-        public override void BuyToMarket()
-        {
-            Console.WriteLine("J'achète sur le marché de fournitures");
-        }
-    }
+    /*---------------------------------------------------------------*/
 
     class Program
     {
         static void Main(string[] args)
         {
-            Sandwich s = new Sandwich();
-            MagicalBook m = new MagicalBook();
-
-            s.BuyToMarket();
-            m.BuyToMarket();
-
-            s.SellToMerchant();
-            m.SellToMerchant();
+            var h = new Human();
+            Console.WriteLine(Fighter.lifePoints);
         }
     }
 }

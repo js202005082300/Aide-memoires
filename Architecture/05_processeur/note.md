@@ -50,7 +50,7 @@ Les données vont circuler via des chemin, des bus d'adresses, des bus de donné
 
 ![](img/08.PNG) 
 
-Voilà un shéma de Von Neuman.
+Voilà un schéma de Von Neuman.
 
 ![](img/09.PNG) 
 

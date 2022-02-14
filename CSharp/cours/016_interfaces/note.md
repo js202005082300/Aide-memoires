@@ -48,6 +48,8 @@ namespace App
 }
 ```
 
+## interface
+
 Utilisation du mot clé `interface` et on va le représenter par convention par `I` majuscule suivie du nom que l'on veut Et pour un terme pression utilisera également une majuscule, par exemple `ISome` mais ce n'est pas obligatoire on peut aussi très bien commencer par n'importe quel nom commençant par une majuscule `interface Some`.
 
 Contrairement aux classes abstraites, l'interface ne concerne pas des classes qui auraient un comportement commun c'est à dire qu'on peut avoir une interface qui est utilisé par des classes complètement différentes, qui ne partage aucun comportement similaire et c’est là tout l'intérêt des interfaces.
