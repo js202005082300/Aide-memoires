@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 14-02-2021 
+> 🧭 Màj le 14-02-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
