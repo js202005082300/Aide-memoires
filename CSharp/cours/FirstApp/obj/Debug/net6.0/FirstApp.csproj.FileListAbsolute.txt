@@ -1,0 +1,15 @@
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\net6.0\FirstApp.exe
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\net6.0\FirstApp.deps.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\net6.0\FirstApp.runtimeconfig.json
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\net6.0\FirstApp.dll
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\bin\Debug\net6.0\FirstApp.pdb
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.csproj.AssemblyReference.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.AssemblyInfoInputs.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.AssemblyInfo.cs
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.csproj.CoreCompileInputs.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.dll
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\refint\FirstApp.dll
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.pdb
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\FirstApp.genruntimeconfig.cache
+C:\Users\sam\OneDrive\Bureau\Mementos\CSharp\cours\FirstApp\obj\Debug\net6.0\ref\FirstApp.dll

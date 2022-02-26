@@ -179,4 +179,31 @@
 
 ## Tableaux
 
-+ [](cours/018_tableaux/note.md)
++[Simple tableau](cours/018_tableaux/note.md#Simple-tableau)
+    + [Déclaration et initialisation par défaut](cours/018_tableaux/note.md#Déclaration-et-initialisation-par-défaut)
+    + [Initialiser des valeurs](cours/018_tableaux/note.md#Initialiser-des-valeurs)
+    + [Accéder à un élément](cours/018_tableaux/note.md#Accéder-à-un-élément)
+    + [Modifier un élément](cours/018_tableaux/note.md#Modifier-un-élément)
+    + [Parcourir un tableau](cours/018_tableaux/note.md#Parcourir-un-tableau)
+        + [foreach](cours/018_tableaux/note.md#foreach)
+        + [for](cours/018_tableaux/note.md#for)
+    + [Type de tableau](cours/018_tableaux/note.md#Type-de-tableau)
+
++ [Tableau multidimentionnel](cours/018_tableaux/note.md#Tableau-multidimentionnel)
+    + [Afficher un tableau à 2 dimensions](cours/018_tableaux/note.md#Afficher-un-tableau-à-2-dimensions)
+    + [Parcourir un tableau à 2 dimensions](cours/018_tableaux/note.md#Parcourir-un-tableau-à-2-dimensions)
+
++ [Tableau de tableaux](cours/018_tableaux/note.md#Tableau-de-tableaux)
+    + afficher un élément simple
+    + afficher tous les éléments
+    + afficher ou modifier les éléments
+
++ [La classe Array](cours/018_tableaux/note.md#La-classe-Array)  
+    + [La propriété MaxLength](cours/018_tableaux/note.md#La-propriété-MaxLength)
+    + [La propriété Rank](cours/018_tableaux/note.md#La-propriété-Rank)
+    + [La méthode Reverse](cours/018_tableaux/note.md#La-propriété-Reverse)
+    + [La méthode Clear](cours/018_tableaux/note.md#La-propriété-Clear)
+    + [La méthode Fill](cours/018_tableaux/note.md#La-propriété-Fill)
+    + [La méthode IndexOf et la méthode GetValue](cours/018_tableaux/note.md#La-propriété-IndexOf-et-la-méthode-GetValue)
+    + [La méthode Sort](cours/018_tableaux/note.md#La-méthode-Sort)
+    + [La méthode Copy](cours/018_tableaux/note.md#La-méthode-Copy)
