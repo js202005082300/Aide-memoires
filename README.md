@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 26-02-2022
+> 🧭 Màj le 20-03-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -24,10 +24,10 @@
 ### [Prises de notes](#)
 ||notes|toDo
 -|:-|:-
-|:heavy_check_mark:|[Architecture](Architecture/README.md)|Séance 5 sur les processeurs est en ordre. Prochaine séance, les registres.|
+|:heavy_check_mark:|[Architecture](Architecture/README.md)|Séance 6, les registres.|
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)
 |:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)|Séance 18 sur les tableaux en ordre. Prochaine séance, la gestion des erreurs.|
+|:heavy_check_mark:|[C#](CSharp/README.md)|Séance 19 sur la gestion des erreurs.|
 |:heavy_check_mark:|[C++](C++/README.md)|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|

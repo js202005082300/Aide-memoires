@@ -23,6 +23,17 @@
 
 ---
 
+## [Bibliothèque statique](Bibliothèque_statique/main.c)
+```powershell
+gcc -c *.c
+7za a -t7z c.7z *.c
+
+cd lib
+ar -rsc libDraw2D.a *.o
+
+gcc -Wall -Wextra -pedantic src/main.c -I include -L lib -lDraw2D -o prog
+```
+
 ## [gcc](gcc.md)
 ### [Partie 1 - Les étapes de compilation](gcc.md#partie-1)
 + [1e étape : preprocessing](gcc.md#1e-preprocessing)
