@@ -8,10 +8,10 @@
 
 ---
 
-## Formations langues
+<!-- ## Formations langues
 :label: [guide néerlandais](https://www.nlfacile.com/guide/) -
 [guide anglais](https://www.anglaisfacile.com/guide/) -
-[guide allemand](https://www.allemandfacile.com/guide/)
+[guide allemand](https://www.allemandfacile.com/guide/) -->
 
 ## Formations Informatique
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
