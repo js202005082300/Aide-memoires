@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Text;
 
 namespace App
 {
@@ -6,13 +6,11 @@ namespace App
     {
         static void Main(string[] args)
         {
-            int[] arr = {2, 3, 4, 6, 1, 0};
-            int[] arr2 = new int[5];
+            StringBuilder sb = new StringBuilder("Hello");
 
-            Array.Copy(arr, arr2, 3);
+            sb.Remove(1, sb.Length - 1);
 
-            foreach(var el in arr2)
-                Console.WriteLine(el);
+            Console.WriteLine(sb);
         }
     }
 }

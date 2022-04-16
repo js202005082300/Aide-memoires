@@ -67,31 +67,42 @@ Fusionner plusieurs fichiers en un seul (sans ré-encodage) :
 * t <hh:mm:ss\> : temps que dure notre part1.
 * f <command\> : utiliser une autre commande.
 
+## Man page
++ [https://manpages.org/ffmpeg](https://manpages.org/ffmpeg)  
+
 ## Commands
 * ffmpeg
 * concat (fussionner les fichiers)
 
 ## Redimentionner
 
-	ffmpeg -i pic-large.jpg -vf scale=320:-1 pic-little.jpg
-	ffmpeg -i pic-large.jpg -vf scale=320:240 pic-little.jpg
-	
-	ffmpeg -i img2.png -vf scale=15:-1 img22.png
+ffmpeg -i pic-large.jpg -vf scale=320:-1 pic-little.jpg
+ffmpeg -i pic-large.jpg -vf scale=320:240 pic-little.jpg
+
+ffmpeg -i img2.png -vf scale=15:-1 img22.png
+
+## Recadrer
+
+ffmpeg -i in.png -filter:v "crop=10:10:10:10" out.png
+
+## Remplace une couleur par de la transparence
+ffmpeg -i .\SJ-Logo.png -vf colorkey=green out.png
+ffmpeg -i .\SJ-Logo.png -vf chromakeykey=green out.png
 
 + [Info source](https://trac.ffmpeg.org/wiki/Scaling)
 
 ## Rotation
 
-	ffmpeg -i pic.png -vf "transpose=2, transpose=2" pic-180degre.png
+ffmpeg -i pic.png -vf "transpose=2, transpose=2" pic-180degre.png
 
 + [Info source](https://stackoverflow.com/questions/3937387/rotating-videos-with-ffmpeg#:~:text=To%20rotate%20the%20picture%20clockwise%20you%20can%20use,out.mp4%20for%20counter-clockwise%20the%20angle%20must%20be%20negative)
 
 ## Alpha mask
 
-	ffmpeg -i in.png -filter_complex "color=white [alpha]" out.png  
-	ffmpeg -i in.png -filter_complex "color=black; alphaextract[alpha]" out.png  
-	ffmpeg -i in.png -filter_complex "color=white" alphaextract[alpha] out.png  
-	ffplay -i in.png -vf alphaextract out.png  
+ffmpeg -i in.png -filter_complex "color=white [alpha]" out.png  
+ffmpeg -i in.png -filter_complex "color=black; alphaextract[alpha]" out.png  
+ffmpeg -i in.png -filter_complex "color=white" alphaextract[alpha] out.png  
+ffplay -i in.png -vf alphaextract out.png  
 
 ## monochrome
 
@@ -100,3 +111,8 @@ ffmpeg -i couleur.png -vf hue=s=0 -c:a copy monochrome.png
 ## contraste
 
 ffmpeg -i input.png -vf curves=preset=increase_contrast -c:a copy output.png
+
+
+## divers
+
+ffmpeg -i in.png -filter_complex "[0:0]crop=100:100:0:0[img];color=c=0xffffff@0x00:s=1000x1000,format=rgba,drawtext=text='Hello, World!':fontcolor=white:fontsize=100:x=(w-text_w)/2:y=(h-text_h)/2[bg];[bg][img]overlay=0:0:format=rgb,format=rgba[out]" -map [out] -c:v png -frames:v 1 output.png

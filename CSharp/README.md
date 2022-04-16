@@ -24,7 +24,9 @@
 |:heavy_check_mark:|[15. Classes abstraites](cours/015_classes_abstraites/note.md)|-|[:memo:](#Classes-abstraites)
 |:heavy_check_mark:|[16. Interfaces](cours/016_interfaces/note.md)|-|[:memo:](#Interfaces)
 |:heavy_check_mark:|[17. Polymorphisme](cours/017_polymorphisme/note.md)|-|[:memo:](#Polymorphisme)
-||[18. Tableaux](cours/018_tableaux/note.md)|-|[:memo:](#Tableaux)
+|:heavy_check_mark:|[18. Tableaux](cours/018_tableaux/note.md)|-|[:memo:](#Tableaux)
+|:heavy_check_mark:|[19. Gestion d'erreurs](cours/019_gestion_erreurs/note.md)|-|[:memo:](#Gestion-erreurs)
+|:heavy_check_mark:|[20. Chaîne de caractères](cours/020_chaîne_de_caractères/note.md)|-|[:memo:](#Chaîne-de-caractères)
 
 ## Introduction
 
@@ -207,3 +209,47 @@
     + [La méthode IndexOf et la méthode GetValue](cours/018_tableaux/note.md#La-propriété-IndexOf-et-la-méthode-GetValue)
     + [La méthode Sort](cours/018_tableaux/note.md#La-méthode-Sort)
     + [La méthode Copy](cours/018_tableaux/note.md#La-méthode-Copy)
+
+## Gestion erreurs
+
++ [Mode Debug](cours/019_gestion_erreurs/note.md#Mode-Debug)
++ [Ignorer assertions faites en mode debug](cours/019_gestion_erreurs/note.md#Ignorer-assertions-faites-en-mode-debug)
++ [La méthode Trace](cours/019_gestion_erreurs/note.md#Trace)
++ [Blocs Try Catch](cours/019_gestion_erreurs/note.md#Try-Catch)
+    + [Gérer une exception](cours/019_gestion_erreurs/note.md#Gerer-une-exception)
+    + [Gérer plusieurs exception](cours/019_gestion_erreurs/note.md#Gerer-plusieurs-exceptions)
++ [Bloc finally](cours/019_gestion_erreurs/note.md#Try-Catch)
++ [Etendre une classe exception](cours/019_gestion_erreurs/note.md#Etendre-une-classe-exception)
+
+## Chaîne de caractères
+
++ [Comportement](cours/020_chaîne_de_caractères/note.md#Comportement)
+    + [immuable](cours/020_chaîne_de_caractères/note.md#immuable)
+    + [itérable](cours/020_chaîne_de_caractères/note.md#itérable)
++ [Déclaration et initialisation](cours/020_chaîne_de_caractères/note.md#Déclaration-et-initialisation)
+    + [La propriété Empty](cours/020_chaîne_de_caractères/note.md#La-propriété-Empty)
+    + [Classe String et type string](cours/020_chaîne_de_caractères/note.md#Classe-String-et-type-string)
++ [Initialisation](cours/020_chaîne_de_caractères/note.md#Initialisation)
+    + [Passer un tableau à la classe String](cours/020_chaîne_de_caractères/note.md#Passer-un-tableau-à-la-classe-String)
+    + [Remplir une chaîne par x caractères](cours/020_chaîne_de_caractères/note.md#Remplir-une-chaîne-par-x-caractères)
+    + [Chaîne verbatim](cours/020_chaîne_de_caractères/note.md#Chaîne-verbatim)
+    + [Interpollation](cours/020_chaîne_de_caractères/note.md#Interpollation)
+    + [Composition](cours/020_chaîne_de_caractères/note.md#Composition)
+    + [Concaténation](cours/020_chaîne_de_caractères/note.md#Concaténation)
++ [Propriétés et attributs](cours/020_chaîne_de_caractères/note.md#Propriétés-et-attributs)
+    + [Attribut Length](cours/020_chaîne_de_caractères/note.md#Attribut-Length)
++ [Méthodes type String](cours/020_chaîne_de_caractères/note.md#Méthodes-type-String)
+    + [Méthodes ToUpper et ToLower](cours/020_chaîne_de_caractères/note.md#Méthodes-ToUpper-et-ToLower)
+    + [Méthode Replace](cours/020_chaîne_de_caractères/note.md#Méthode-Replace)
+    + [Méthode Concat](cours/020_chaîne_de_caractères/note.md#Méthode-Concat)
+    + [Méthodes StartsWith et EndsWith](cours/020_chaîne_de_caractères/note.md#Méthodes-StartsWith-et-EndsWith)
+    + [Méthode IndexOf](cours/020_chaîne_de_caractères/note.md#Méthode-IndexOf)
+    + [Méthode Trim](cours/020_chaîne_de_caractères/note.md#Méthode-Trim)
+    + [Méthode Split](cours/020_chaîne_de_caractères/note.md#Méthode-Split)
+    + [Méthode Join](cours/020_chaîne_de_caractères/note.md#Méthode-Join)
++ [Méthodes type StringBuilder](cours/020_chaîne_de_caractères/note.md#Méthodes-type-StringBuilder)
+    + [Méthode Apend](cours/020_chaîne_de_caractères/note.md#Méthode-Apend)
+    + [Méthode AppendLine](cours/020_chaîne_de_caractères/note.md#Méthode-AppendLine)
+    + [Méthode Clear](cours/020_chaîne_de_caractères/note.md#Méthode-Clear)
+    + [Méthode Insert](cours/020_chaîne_de_caractères/note.md#Méthode-Insert)
+    + [Méthode Remove](cours/020_chaîne_de_caractères/note.md#Méthode-Remove)

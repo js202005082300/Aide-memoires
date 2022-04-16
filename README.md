@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 20-03-2022
+> 🧭 Màj le 16-04-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -24,19 +24,19 @@
 ### [Prises de notes](#)
 ||notes|toDo
 -|:-|:-
-|:heavy_check_mark:|[Architecture](Architecture/README.md)|Séance 6, les registres.|
-|:heavy_check_mark:|[Assembleur](Assembleur/README.md)
-|:heavy_check_mark:|[C](C/README.md)
-|:heavy_check_mark:|[C#](CSharp/README.md)|Séance 19 sur la gestion des erreurs.|
-|:heavy_check_mark:|[C++](C++/README.md)|
-|:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)
-|:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|
-|:heavy_check_mark:|[Java](Java/README.md)|
-|:heavy_check_mark:|[JavaScript](JavaScript/README.md)|
-|:heavy_check_mark:|[PHP](PHP/README.md)|
-|:heavy_check_mark:|[Python](Python/README.md)
-|:heavy_check_mark:|[SQL](SQL/README.md)
-|:heavy_check_mark:|[Windows](Windows/README.md)
-|:heavy_check_mark:|[DJANGO](Django)|
-|:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)|
-|:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)|
+|:heavy_check_mark:|[Architecture](Architecture/README.md)||
+|:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
+|:heavy_check_mark:|[C](C/README.md)||
+|:heavy_check_mark:|[C#](CSharp/README.md)||
+|:heavy_check_mark:|[C++](C++/README.md)||
+|:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
+|:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)|Nouveau tuto.|
+|:heavy_check_mark:|[Java](Java/README.md)||
+|:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
+|:heavy_check_mark:|[PHP](PHP/README.md)||
+|:heavy_check_mark:|[Python](Python/README.md)||
+|:heavy_check_mark:|[SQL](SQL/README.md)||
+|:heavy_check_mark:|[Windows](Windows/README.md)||
+|:heavy_check_mark:|[DJANGO](Django)||
+|:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)||
+|:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)||

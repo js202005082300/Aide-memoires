@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sam\\OneDrive\\Bureau\\Mementos\\CSharp\\cours\\FirstApp\\FirstApp.csproj": {}
+    "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sam\\OneDrive\\Bureau\\Mementos\\CSharp\\cours\\FirstApp\\FirstApp.csproj": {
+    "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sam\\OneDrive\\Bureau\\Mementos\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
+        "projectUniqueName": "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
         "projectName": "FirstApp",
-        "projectPath": "C:\\Users\\sam\\OneDrive\\Bureau\\Mementos\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
+        "projectPath": "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
         "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sam\\OneDrive\\Bureau\\Mementos\\CSharp\\cours\\FirstApp\\obj\\",
+        "outputPath": "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
