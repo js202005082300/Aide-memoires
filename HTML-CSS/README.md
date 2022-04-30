@@ -42,6 +42,7 @@
 
 ||notes|
 -|:-|
+|:heavy_check_mark:|[Accessibilité web](tutos/accessibilité_web.md)
 |:heavy_check_mark:|[Attributs universels](tutos/attributs_universels.md)
 |:heavy_check_mark:|[Balises obsolètes](tutos/balises_obsolètes.md)
 |:heavy_check_mark:|[Thème sombre](tutos/thème_sombre.md)

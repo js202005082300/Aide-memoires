@@ -1,0 +1,31 @@
+body
+{
+    background-color: #111;
+    color:#ddd;
+    margin:auto;
+    max-width:800px;
+    width:100%;
+}
+
+h1
+{
+    color:#5a8aF2;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+img
+{
+    height:auto;
+    max-width:100%;
+}
+
+a
+{
+    color:#cda343;
+}
+
+a:visited
+{
+    color:red;
+}
