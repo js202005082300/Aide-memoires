@@ -16,7 +16,7 @@ On commence par pré-compiler notre programme.
 > ls
 
 
-    Répertoire : C:\Users\sam\OneDrive\Aide-mémoires\Java\tutos\créer_exécutable_JAR\FV
+    Répertoire : \Aide-mémoires\Java\tutos\créer_exécutable_JAR\FV
 
 
 Mode                 LastWriteTime         Length Name
