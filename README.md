@@ -19,19 +19,19 @@
 > [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
 > [Notes d'aide](Aide/README.md) :wink:  
 
-:partying_face: Officiellement à jour ce 24/08/2021 :partying_face:
+<!-- :partying_face: Officiellement à jour ce 24/08/2021 :partying_face: -->
 
 ### [Prises de notes](#)
 ||notes|toDo
 -|:-|:-
-|:heavy_check_mark:|[Architecture](Architecture/README.md)||
+|:heavy_check_mark:|[Architecture](Architecture/README.md)|1 vidéo|
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
 |:heavy_check_mark:|[C](C/README.md)||
-|:heavy_check_mark:|[C#](CSharp/README.md)||
+|:heavy_check_mark:|[C#](CSharp/README.md)|1 vidéo|
 |:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
-|:heavy_check_mark:|[Java](Java/README.md)||
+|:heavy_check_mark:|[Java](Java/README.md)|1 tuto.|
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
 |:heavy_check_mark:|[PHP](PHP/README.md)||
 |:heavy_check_mark:|[Python](Python/README.md)||
