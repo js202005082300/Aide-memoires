@@ -1,16 +1,9 @@
-﻿using System.Text;
+﻿namespace App;
 
-namespace App
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            StringBuilder sb = new StringBuilder("Hello");
-
-            sb.Remove(1, sb.Length - 1);
-
-            Console.WriteLine(sb);
-        }
+        Console.WriteLine("Hello, World!");
     }
 }

@@ -27,6 +27,7 @@
 |:heavy_check_mark:|[18. Tableaux](cours/018_tableaux/note.md)|-|[:memo:](#Tableaux)
 |:heavy_check_mark:|[19. Gestion d'erreurs](cours/019_gestion_erreurs/note.md)|-|[:memo:](#Gestion-erreurs)
 |:heavy_check_mark:|[20. Chaîne de caractères](cours/020_chaîne_de_caractères/note.md)|-|[:memo:](#Chaîne-de-caractères)
+|:heavy_check_mark:|[21. Espaces de noms](cours/021_espaces_de_noms/note.md)|-|[:memo:](#Espaces-de-noms)
 
 ## Introduction
 
@@ -253,3 +254,10 @@
     + [Méthode Clear](cours/020_chaîne_de_caractères/note.md#Méthode-Clear)
     + [Méthode Insert](cours/020_chaîne_de_caractères/note.md#Méthode-Insert)
     + [Méthode Remove](cours/020_chaîne_de_caractères/note.md#Méthode-Remove)
+
+## Espaces de noms
+
++ [Introduction](cours/021_espaces_de_noms/note.md#Introduction)
++ [Appel](cours/021_espaces_de_noms/note.md#Appel)
++ [Alias](cours/021_espaces_de_noms/note.md#Alias)
++ [Création programme](cours/021_espaces_de_noms/note.md#Création-programme)

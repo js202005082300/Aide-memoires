@@ -1,0 +1,5 @@
+C:\_Projets\Aides-mémoires\CSharp\cours\FirstApp\obj\Debug\net5.0\FirstApp.csproj.AssemblyReference.cache
+C:\_Projets\Aides-mémoires\CSharp\cours\FirstApp\obj\Debug\net5.0\FirstApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Projets\Aides-mémoires\CSharp\cours\FirstApp\obj\Debug\net5.0\FirstApp.AssemblyInfoInputs.cache
+C:\_Projets\Aides-mémoires\CSharp\cours\FirstApp\obj\Debug\net5.0\FirstApp.AssemblyInfo.cs
+C:\_Projets\Aides-mémoires\CSharp\cours\FirstApp\obj\Debug\net5.0\FirstApp.csproj.CoreCompileInputs.cache
