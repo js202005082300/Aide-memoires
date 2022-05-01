@@ -24,7 +24,7 @@
 <!-- :partying_face: Officiellement à jour ce 24/08/2021 :partying_face: -->
 
 ### [Prises de notes](#)
-||notes|toDo
+||notes|todo
 -|:-|:-
 |:x:|[Architecture](Architecture/README.md)|1 vidéo|
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
