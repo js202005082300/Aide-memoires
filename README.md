@@ -17,7 +17,9 @@
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
 > [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)  
 > [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
-> [Notes d'aide](Aide/README.md) :wink:  
+> [Notes d'aide](Aide/README.md) | todo : [Zeal - documentation hors-ligne](https://www.youtube.com/watch?v=PmgO42dod7E)
+
+<!-- :wink:   -->
 
 <!-- :partying_face: Officiellement à jour ce 24/08/2021 :partying_face: -->
 
