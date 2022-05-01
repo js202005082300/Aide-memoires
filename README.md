@@ -31,7 +31,7 @@
 |:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
-|:x:|[Java](Java/README.md)||
+|:heavy_check_mark:|[Java](Java/README.md)||
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
 |:heavy_check_mark:|[PHP](PHP/README.md)||
 |:heavy_check_mark:|[Python](Python/README.md)||
