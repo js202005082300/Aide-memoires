@@ -8,6 +8,8 @@
 + [1. introduction](001_introduction/notes.md)
 + [2. dis bonjour !](002_dis_bonjour/notes.md)
 + [3. structure d'un programme](003_structure_d'un_programme/notes.md)
++ [4. conventions d'appel](004_conventions_d'appel/notes.md)
++ [5. variables](005_variables/notes.md)
 
 
 ```
