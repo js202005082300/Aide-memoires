@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 20-05-2022
+> 🧭 Màj le 22-05-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -27,13 +27,13 @@
 ||notes|todo
 -|:-|:-
 |:heavy_check_mark:|[Architecture](Architecture/README.md)||
-|:x:|[Assembleur](Assembleur/README.md)|variables|
+|:heavy_check_mark:|[Assembleur](Assembleur/README.md)|variables|
 |:heavy_check_mark:|[C](C/README.md)||
 |:heavy_check_mark:|[C#](CSharp/README.md)||
 |:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
-|:x:|[Java](Java/README.md)|-|
+|:x:|[Java](Java/README.md)|2 vidéos|
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
 |:heavy_check_mark:|[PHP](PHP/README.md)||
 |:heavy_check_mark:|[Python](Python/README.md)||
