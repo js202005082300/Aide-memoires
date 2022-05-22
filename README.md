@@ -27,7 +27,7 @@
 ||notes|todo
 -|:-|:-
 |:heavy_check_mark:|[Architecture](Architecture/README.md)||
-|:heavy_check_mark:|[Assembleur](Assembleur/README.md)|variables|
+|:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
 |:heavy_check_mark:|[C](C/README.md)||
 |:heavy_check_mark:|[C#](CSharp/README.md)||
 |:heavy_check_mark:|[C++](C++/README.md)||
