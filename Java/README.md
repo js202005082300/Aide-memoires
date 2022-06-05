@@ -33,6 +33,8 @@
 |:heavy_check_mark:|[24. Files](cours/024_files/note.md)
 |:heavy_check_mark:|[25. Ensembles](cours/025_ensembles/note.md)
 |:heavy_check_mark:|[26. Cartes (clé-valeur)](cours/026_cartes_clé-valeur/note.md)
+|:heavy_check_mark:|[27. Énumérations](cours/027_énumérations/note.md)
+|:heavy_check_mark:|[28. Fichiers](cours/028_fichiers/note.md)
 
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/java-tutoriels.md)  
 
