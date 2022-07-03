@@ -15,6 +15,8 @@
 |:heavy_check_mark:|[6. Opérations](cours/006_operations/note.md)
 |:heavy_check_mark:|[7. Conditions](cours/007_conditions/note.md)
 |:heavy_check_mark:|[8. Boucles](cours/008_boucles/note.md)
+|:heavy_check_mark:|[9. Fonctions](cours/009_fonctions/note.md)
+|:heavy_check_mark:|[10. Modularité](cours/010_modularité/note.md)
 
 ## [Playlist C++ cours ARCHIVE](https://youtube.com/playlist?list=PLrSOXFDHBtfG0Fb0g--43a0b47e9hrwlB)
 

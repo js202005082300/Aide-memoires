@@ -53,4 +53,4 @@ Pour Windows,
 
 Tutoriel Windows - 
 [installer MinGW (vidéo)](https://www.youtube.com/watch?v=y-i96kqT53A&t=504s) - 
-[installer MinGW (note)](https://github.com/js202005082300/Aide-memoires/blob/main/Windows/Tutoriel_Windows/installer_MinGW.md)
+[installer MinGW (note)](https://github.com/js202005082300/Aide-memoires/blob/main/Windows/tutoriels/installer_MinGW.md)
