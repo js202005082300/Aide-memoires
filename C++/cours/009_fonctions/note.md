@@ -1,7 +1,7 @@
 # [9. Fonctions](https://www.youtube.com/watch?v=2CzOycVN-FY)
 
 + [Introduction](#Introduction)
-+ [Qu'est-ce qu'une fonction ?](#Qu-est-ce-qu-une-fonction)
++ [Qu'est-ce qu'une fonction ?](#Qu-est-ce-qu-une-fonction-?)
 + [Utiliser des fonctions existantes](#Utiliser-des-fonctions-existantes)
 + [Créer notre propre fonction](#Créer-notre-propre-fonction)
 + [Fonction avec des paramètres (et retour)](#Fonction-avec-des-paramètres)
@@ -15,7 +15,7 @@
 
 Travailler à plusieurs, organiser et partager du code.
 
-## Qu est-ce qu une fonction
+## Qu est-ce qu une fonction ?
 
 Factorisation de code.
 
