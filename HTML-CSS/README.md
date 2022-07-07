@@ -54,7 +54,7 @@
 
 ||notes|
 -|:-|
-|:heavy_check_mark:|[1. Article de blog](exos/articles_de_blog/index.html)
+|:heavy_check_mark:|[1. Article de blog](exos/article_de_blog/index.html)
 |:heavy_check_mark:|[2. Tableau de données](exos/tableau_de_donnees/index.html)
 |:heavy_check_mark:|[3. Formulaire saisie patient](exos/formulaire_saisie_patient/index.html)
 |:heavy_check_mark:|[4. Un peu de style](exos/un_peu_de_style/index.html) - [style.css](exos/un_peu_de_style/style.css)
