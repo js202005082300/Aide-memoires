@@ -16,8 +16,6 @@
 ## Formations Informatique
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
 > [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)  
-> [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
-> [Notes d'aide](Aide/README.md) | todo : [Zeal - documentation hors-ligne](https://www.youtube.com/watch?v=PmgO42dod7E)
 
 <!-- :wink:   -->
 
@@ -42,3 +40,8 @@
 |:x:|[DJANGO](Django)|#5 - fichiers statiques|
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)||
 |:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)||
+
+---
+
+> [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
+> [Notes d'aide](Aide/README.md) | todo : [Zeal - documentation hors-ligne](https://www.youtube.com/watch?v=PmgO42dod7E)
