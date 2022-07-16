@@ -28,6 +28,7 @@
 |:heavy_check_mark:|[19. Gestion d'erreurs](cours/019_gestion_erreurs/note.md)|-|[:memo:](#Gestion-erreurs)
 |:heavy_check_mark:|[20. Chaîne de caractères](cours/020_chaîne_de_caractères/note.md)|-|[:memo:](#Chaîne-de-caractères)
 |:heavy_check_mark:|[21. Espaces de noms](cours/021_espaces_de_noms/note.md)|-|[:memo:](#Espaces-de-noms)
+|:heavy_check_mark:|[22. Fichiers](cours/022_fichiers/note.md)|-|[:memo:](#Fichiers)
 
 ## Introduction
 
@@ -261,3 +262,19 @@
 + [Appel](cours/021_espaces_de_noms/note.md#Appel)
 + [Alias](cours/021_espaces_de_noms/note.md#Alias)
 + [Création programme](cours/021_espaces_de_noms/note.md#Création-programme)
+
+## Fichiers
+
++ [Introduction](cours/022_fichiers/note.md#Introduction)
++ [Récupérer tout le contenu d'un fichier](cours/022_fichiers/note.md#Récupérer-tout-le-contenu-d-un-fichier)
++ [Récupérer toutes les lignes dans un tableau](cours/022_fichiers/note.md#Récupérer-toutes-les-lignes-dans-un-tableau)
++ [Gestion de l'encodage](cours/022_fichiers/note.md#Gestion-de-l-encodage)
++ [Écrire une chaîne (ou tableau) dans un fichier](cours/022_fichiers/note.md#Écrire-une-chaîne-dans-un-fichier)
++ [N'oubliez pas de gérer les erreurs !](cours/022_fichiers/note.md#N-oubliez-pas-de-gérer-les-erreurs)
++ [Gestion de ressources](cours/022_fichiers/note.md#Gestion-de-ressources)
++ [Lire un fichier ligne par ligne](cours/022_fichiers/note.md#Lire-un-fichier-ligne-par-ligne)
++ [Écrire une ligne dans un fichier](cours/022_fichiers/note.md#Écrire-une-ligne-dans-un-fichier)
++ [Méthodes usuelles pour les fichiers](cours/022_fichiers/note.md#Méthodes-usuelles-pour-les-fichiers)
++ [Méthodes usuelles pour les répertoires](cours/022_fichiers/note.md#Méthodes-usuelles-pour-les-répertoires)
++ [Bonus : d'autres outils pour les fichiers](cours/022_fichiers/note.md#Bonus---Autres-outils-pour-les-fichiers)
++ [Conclusion](cours/022_fichiers/note.md#Conclusion)

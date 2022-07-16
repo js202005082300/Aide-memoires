@@ -1,9 +1,32 @@
-﻿namespace App;
+using System.IO;
+using System;
 
-class Program
+/*
+    ReadAllText, ReadAllLines
+    XriteAllText, WriteAllLines
+    StreamReader, StreamWriter
+
+    File :
+        Exists(), Create(), Move(), Delete()
+    Directory :
+        Exists(), CreateDirectory(), Move(), Delete()
+        GetFiles(), GetDirectories()
+*/
+
+namespace App
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine(Directory.GetParent("data"));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }

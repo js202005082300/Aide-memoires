@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
+      "projectUniqueName": "C:\\MesProjets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
       "projectName": "FirstApp",
-      "projectPath": "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
+      "projectPath": "C:\\MesProjets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\FirstApp.csproj",
       "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-      "outputPath": "C:\\_Projets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\obj\\",
+      "outputPath": "C:\\MesProjets\\Aides-mémoires\\CSharp\\cours\\FirstApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

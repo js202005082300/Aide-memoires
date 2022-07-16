@@ -3,15 +3,26 @@
 ## [Powershell](https://ss64.com/ps/)
 > [Doc Scripting PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01?view=powershell-7.1)
 + Change le prompt
-```powershell
+```ps1
 function prompt {"> "}
 ```
 + Simple boucle
-```powershell
+```ps1
 for ($i=1;$i -le 10;$i++){echo dossier$i}
 for ($i=1;$i -le 10;$i++){mkdir dossier$i}
 for ($i=1;$i -le 10;$i++){rm dossier$i}
 Remove-Item test.txt
+```
++ Créer un fichier
+```ps1
+New-Item -Path 'Texte.txt' -ItemType File -Encoding "UTF8"
+```
++ Variable de préférence/d'encodage
+```ps1
+# Pour les sorties avec les opérateurs de redirection > et >>
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
+# Pour les commandes qui ont le paramètre Encoding
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
 ```
 
 ## [Batch](#)
