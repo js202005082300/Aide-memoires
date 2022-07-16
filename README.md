@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 07-07-2022
+> 🧭 Màj le 16-07-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -29,7 +29,7 @@
 |:heavy_check_mark:|[Architecture](Architecture/README.md)||
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
 |:heavy_check_mark:|[C](C/README.md)||
-|:heavy_check_mark:|[C#](CSharp/README.md)||
+|:x:|[C#](CSharp/README.md)|Tuto - projets et solutions|
 |:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
@@ -39,6 +39,6 @@
 |:heavy_check_mark:|[Python](Python/README.md)||
 |:heavy_check_mark:|[SQL](SQL/README.md)||
 |:heavy_check_mark:|[Windows](Windows/README.md)||
-|:x:|[DJANGO](Django)||
+|:x:|[DJANGO](Django)|#5 - fichiers statiques|
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)||
 |:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)||
