@@ -22,6 +22,27 @@ Get-Host
 ```ps1
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8' # Pour les sorties avec les opérateurs de redirection > et >>
 $PSDefaultParameterValues['*:Encoding'] = 'utf8' # Pour les commandes qui ont le paramètre Encoding
+
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
+
+# Zone
+[Threading.Thread]::CurrentThread.CurrentCulture = 'fr-BE'
+
+## Informations sur l'encodage
+[psobject].Assembly.GetTypes() | Where-Object { $_.Name -eq 'ClrFacade'} |
+ForEach-Object {
+    $_.GetMethod('GetDefaultEncoding', [System.Reflection.BindingFlags]'nonpublic,static').Invoke($null, @())
+}
+```
+
+### Créer un objet (une chaîne)
+```ps1
+$Filepath = Get-Item "C:\Users\52556\OneDrive - SPW\CODE\_PS1_\Imprimer"
+```
+
+### Saisie
+```ps1
+$test = Read-Host -Prompt 'Un messag?'
 ```
 
 ### Créer un fichier
@@ -37,6 +58,19 @@ Remove-Item test.txt
 ### Nombre de fichier
 ```ps1
 (Get-Item *.sql).Count
+```
+
+### Retourne les propriétés d'un fichier
+```ps1
+Get-Item -Path $Filepath | Get-Member -MemberType Properties
+
+echo $Filepath.Exists
+echo $Filepath.Length
+echo $Filepath.BaseName # [System.IO.Path]::GetFileNameWithoutExtension($Filepath)
+echo $Filepath.Extension
+echo $Filepath.Name
+echo $Filepath.DirectoryName # Split-Path $Filepath
+echo $Filepath.FullName
 ```
 
 ### La date du jour
@@ -118,6 +152,21 @@ $a -gt 7 # Members greater than 7
 $a -ge 7 # Members greater than or equal to 7
 $a -lt 7 # Members smaller than 7
 $a -le 7 # Members smaller than or equal to 7
+
+## Switch
+
+switch (3)
+{
+   1 {"Un."}
+   2 {"Deux."}
+   3 {"Trois."}
+   4 {"Quatre."}
+}
+```
+
+### Imprimer en pdf
+```ps1
+Get-Content -Path ./readme.txt | Out-Printer -name "Microsoft Print to PDF"
 ```
 
 ### Réécriture de System.IEquatable<T> pour comparer deux fichiers
@@ -180,6 +229,37 @@ Get-Process notepad && Stop-Process -Name notepad # si notepad est trouvé
 ### Install
 ```ps1
 npm install || Remove-Item -Recurse ./node_modules # si npm est installé
+```
+
+### Créer un fichier word
+```ps1
+[Threading.Thread]::CurrentThread.CurrentCulture = 'fr-BE'
+$word = New-Object -ComObject "Word.Application" # Lancement de MS Word
+$word.Visible = $True # Word se lance
+$doc = $word.documents.add() # créer un document vide
+$doc.content.text = "=== Computer report ==="
+# Quelques variables de remplissage
+$description = Get-WmiObject -Class Win32_OperatingSystem | Select Description
+$version = Get-WmiObject -Class Win32_OperatingSystem | Select Version
+$processor = Get-WmiObject win32_processor | Select Name
+$others = Get-WmiObject -Class Win32_ComputerSystem
+
+$doc.content.insertparagraphafter()
+$doc.Paragraphs.item(2).range.font.name = "Calibri"
+$doc.Paragraphs.item(2).range.font.size = 11
+$doc.Paragraphs.item(2).range.text = "Computer name : " + $env:computername + "`nDescription : " + $description.Description + "`nVersion OS : " + $version.Version + "`nProcesseur : " + $processor.Name + "`nManufacturer : " + $others.Manufacturer + "`nModel : " + $others.Model + "`nComputer Name : " + $others.Name + "`nPhysicial Memory (RAM) : " + $others.TotalPhysicalMemory + "`nCurrent user logged : " +  [Environment]::UserName + "`nFull login : " + $others.PrimaryOwnerName + "`nDomain : " + $others.Domain 
+
+$doc.SaveAs("C:\Users\Thibault\Desktop\Computer_Report.docx") # Pour éventuellement sauvegarder le fichier
+$doc.close() # Pour fermer le document en cours dans Word (Word reste démaré)
+$word.Quit() # Pour quitter Word
+$doc.SaveAs("C:\Users\52556\Desktop\Computer_Report.docx", $FormatPDF)
+$doc.close()
+$word.Quit()
+
+$null = [System.Runtime.InteropServices.Marshal]::ReleaseComObject([System.__ComObject]$word)
+[gc]::Collect()
+[gc]::WaitForPendingFinalizers()
+Remove-Variable word
 ```
 
 >
