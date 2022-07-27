@@ -197,6 +197,7 @@ Donc ça c'est la base et vous pouvez mettre un texte aussi à l'intérieur par 
 </html>
 ```
 ![05](img/05.jpeg)
+
 D'accord qu'il faudra bien sûr enlevé parce que c'est vraiment un texte écrit en dur.
 
 Si vous voulez faire un texte de remplacement vous avez comme vous le savez la balise universel 'placeholder'.
@@ -228,6 +229,7 @@ Et là automatiquement voilà, et 'placeholder' vient tout simplement dans la zo
 </html>
 ```
 ![06](img/06.jpeg)
+
 'placeholder' c'est juste une petite légende mais ce n'est pas écrit en dure au sein du champ de saisie donc ça peut être pratique pour ça.
 
 Voilà pour cette partie là donc je vais enlever 'placeholder' parce du coup ça rallonge mes lignes comme j'ai déjà zoomer sur l'éditeur au niveau du `<textarea>` donc ça c'est vachement pratique évidemment parce que vous allez vous en servir tout le temps dans les formules, surtout quand vous allez tenir un blog, un site voilà qui va avoir besoin de rédiger, de publier du contenu vous aurez toujours ce type de cahamp utile en plus du `<input>` donc il fallait évidemment que je vous montre mais je voulais le garder pour cette vidéo parce qu'on a beaucoup parlé du `<input>` dans la précédante et il y avait vraiment pas mal de choses à faire.
@@ -399,6 +401,7 @@ Le 'required' c'est pour rendre le champ obligatoires mais ça pareil je n'en pa
 </html>
 ```
 ![08](img/08.jpeg)
+
 A partir de là si vous ne compléter pas ce type de champ évidemment il va vous poser problème, voyez il vous dit sectionnez un élément dans la liste, c'est géré par le navigateur.
 
 Donc ce n'est pas une sécurité attention, ça ne va pas empêcher la personne de l'envoyer encore une fois, ça on le verra et vous le verrez en tout cas avec un langage de programmation que ce soit php, python, javascript, côté serveur.
@@ -454,6 +457,7 @@ Et à l'intérieur, on va rajouter nos options donc les options vous allez utili
 </html>
 ```
 ![09](img/09.jpeg)
+
 Voilà ce genre de choses donc ça c'est vraiment par défaut d'accord c'est vraiment le type par défaut du champ qu'on peut faire, on peut éventuellement parce que si vous allez plus tard envoyer le formulaire, vous verrez surtout avec un langage de programmation, vous allez récupérer la valeur de ce qui a ici d'accord dans la partie textuel.
 
 Dans certains cas, vous n'avez peut être pas envie de récupérer ça, a tester comme valeur parce que voyez que c'est des textes assez particulier.
@@ -493,8 +497,10 @@ Dans ce cas là vous pouvez utiliser l'attribut 'value' et là par exemple on po
 </html>
 ```
 ![09](img/09.jpeg)
+
 Evidemment on ne verra pas ça le traitement des données en html puisque ça ne se fait pas en html ni en css, ça se fait encore une fois avec un langage de programmation côté serveur donc si vous suivez une formation par exemple en php ou en langage de back-end pour le web, vous apprendrez justement à traiter les formulaires et vous verrez que c'est ça que nous récupérons du coup donc aucune différence bien évidemment visuel c'est purement au niveau de traitement des données que ça a un intérêt.
 ![09](img/09.jpeg)
+
 Ce qu'on peut faire aussi que j'ai pas montrer, c'est que vous pouvez ici définir un attribut 'size' qui permet de choisir vous allez voir je vais augmenterez à 2 et je vais vous montrer visuellement ce que ça fait.
 ```html
 	<select name="ChoixOS" size="2">
@@ -528,6 +534,7 @@ Ce qu'on peut faire aussi que j'ai pas montrer, c'est que vous pouvez ici défin
 </html>
 ```
 ![10](img/10.jpeg)
+
 J'ai mis 'zise' égal à 2 et la voilà vous voyez que tout simplement il affiche par défaut en fait deux parties du champ d'accord donc y en a évidemment toujours 3 mais par défaut il va en afficher 2, ça c'est un petit plus d'accord, ça peut être sympa des fois d'afficher plusieurs choses comme ça plutôt qu'un seul champ donc pourquoi pas.
 
 Alors j'essaye de ne rien oublier puisque sur `<select>` il n'y a pas mal de choses à dire donc je ne veux pas aller trop vite parce qu'on peut vite faire des bêtises et oublier la moitié des choses, alors qu'est ce qu'on peut également définir ? on peut définir aussi un label effectivement pour le `<option>` mais c'est pas non plus très très utilisé mais vous avez l'attribut 'label' bien évidemment qui est utilisable ici.
@@ -618,6 +625,7 @@ On va faire ça voilà, on actualise et là voilà ce qu'on a.
 </html>
 ```
 ![11](img/11.png)
+
 Alors c'est génial il nous met des textes par défaut ici en blanc c'est très beau mais il va peut être vouloir que je l'affiche quand même en fait au niveau de l'option du coup on va le remettre c'est pas grave, apparemment au niveau de l'aspect visuel chrome n'aime pas ça.
 ```html
 <!doctype html>
@@ -649,6 +657,7 @@ Alors c'est génial il nous met des textes par défaut ici en blanc c'est très 
 </html>
 ```
 ![12](img/12.png)
+
 Voilà donc on va juste mettre comme ceci voyez comme on a fait aux débuts et là du coup vous avez comme ça des options d'accord des groupes pour rassembler certains types de champs de saisie ici à la sélection de votre champ `<select>` donc ça c'est quand même vachement utile, ça vous permet comme ça de bien grouper les choses quand vous avez notamment beaucoup beaucoup beaucoup de champs de sélection.
 
 C'est utile de procéder comme ça.
@@ -697,6 +706,7 @@ Il y a une petite option aussi qui est utile à savoir c'est que là vous pouvez
 ```
 Donc ça se met par défaut comme ça et là vous pouvez sélectionner plusieurs chanps d'accord à l'intérieur.
 ![13](img/13.jpeg)
+
 Alors pour le faire il suffit d'appuyer sur la touche ctrl d'accord vous rester sur la touche ctrl est là vous voyez je peux sélectionner plusieurs champs.
 
 On ne peut évidemment pas sélectionner ça "RPG", "FPS" parce que c'est un label de groupe donc ça n'a rien à voir mais vous pouvez par exemple sélectionner les 4 et envoyer les 4.
@@ -739,6 +749,7 @@ Qu'est-ce qu'on peut également utiliser avec les `<option>` ? toujours pareil v
 </html>
 ```
 ![14](img/14.png)
+
 Ca évidemment c'est des choses qu'on a déjà vu aussi voilà on ne peut plus sélectionner "CS:GO", on peut sélectionner que les 3 autres donc ça c'est des petits attributs que vous pouvez utiliser sur pas mal pas mal de champs ou notamment pas mal de balises en tout cas au niveau html en particulier pour les formulaires donc vous avez pas mal de choix à ce niveau-là.
 
 Ca c'est bon pour cette partie là, je vais terminer sur un petit plus également au niveau des champs de sélection donc c'est encore un petit plus.
@@ -806,6 +817,7 @@ Ici on définit des options alors en mettant juste ça, il est censé me l'affic
 </html>
 ```
 ![15](img/15.png)
+
 Voilà juste `<option value="">`.
 
 On va faire ça, on va mettre un autre champ quand même donc admettons vous mettez quelques valeurs ici d'accord au niveau de votre champ et la différence comparé à ce qu'on a fait tout à l'heure d'accords déjà voyez qu'il est un petit peu différent au niveaux aspect.
@@ -841,8 +853,10 @@ On va faire ça, on va mettre un autre champ quand même donc admettons vous met
 </html>
 ```
 ![16](img/16.png)
+
 Vous voyez qu'il est déjà un peu différent au niveau aspect, c'est que les gens vont pouvoir choisir dans le champ ici de sélection une valeur qui existe et si jamais par exemple il veulent choisir un autre jeu donc là pour l'exemple que j'ai donnée qui n'est pas dans la liste ils peuvent le rentrer eux-mêmes d'accord voilà et c'est ce champ là qui va être envoyé.
 ![17](img/17.jpeg)
+
 Et c'est ce chanp là qui va être envoyé donc ça permet en fait d'avoir un champ de sélection parmi un choix possible qui est proposé mais si dans cette liste le choix de l'utilisateur qu'il veut n'est pas disponible, il va pouvoir le saisir lui-même donc attention encore une fois cela n'est pas compatible sur safari à l'heure actuelle où je fait cette vidéo, si vous êtes sur safari ce type de champ ne fonctionnera pas comme il faut donc à éviter évidemment dans la mesure du possible.
 
 Privilégiez le champ normal d'accord le sélect `<select>` qui fonctionne très bien mais c'est à savoir parce qu'il n'est pas encore une fois obsolète donc vous pouvez l'utiliser quand même mais à vous à vos risques.
@@ -898,6 +912,7 @@ On peut également bon le mettre dans plusieurs autres type d'accord on peut le 
 
 Vous pourrez gérer les événements javascript sur ce type de champ sans forcément utiliser un formulaire par exemple au moment où vous allez cliquer sur le bouton ça va déclencher certaines actions, ça peut être utile.
 ![18](img/18.jpeg)
+
 Là par défaut, mon bouton il fait rien du tout d'accord c'est bien il a un texte mais il ne fait rien.
 
 Donc je ne vais pas vous montrer puisque on ne fait pas de javascript sur cette formation il y aura une formation qui n'est pas encore faite au moment je fais cette vidéo en javascript sur la chaîne donc vous aurez l'occasion dé retrouver quand elle sera démarrée, publiée mais en attendant voilà il faudra vous contenter de ça pour cette partie là.
@@ -942,6 +957,7 @@ Et 'type', on peut mettre par exemple "submit" d'accord et là il va fonctionner
 </html>
 ```
 ![18](img/18.jpeg)
+
 Alors là vous n'aurez pas forcément l'utilité ce qui est normal, c'est surtout encore une fois utiles avec un langage comme par exemple javascript ça peut pas mal servir ou même dans d'autres langages pour gérer des événements mais je voulais vous présenter pour que vous sachiez que cette balise existe.
 
 `<button>`, je l'ai également mise dans le pdf que vous avez dans la description de vidéos donc voilà histoire que vous sachiez que ça existe, que c'est pas une mauvaise balise ou qui a été inventé par je ne sais qui, elle fait bien partie du langage html.

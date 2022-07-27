@@ -1,29 +1,188 @@
 # [shells Windows](#)
 
++ [Powershell](#Powershell)
++ [Batch](#Batch)
+
+>
+
 ## [Powershell](https://ss64.com/ps/)
-> [Doc Scripting PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01?view=powershell-7.1)
-+ Change le prompt
+> [Doc Scripting PowerShell](https://docs.microsoft.com/fr-fr/powershell/)
+
+### Change le prompt
 ```ps1
 function prompt {"> "}
 ```
-+ Simple boucle
+
+### Version
+```ps1
+Get-Host
+```
+
+### Variable de préférence/d'encodage
+```ps1
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8' # Pour les sorties avec les opérateurs de redirection > et >>
+$PSDefaultParameterValues['*:Encoding'] = 'utf8' # Pour les commandes qui ont le paramètre Encoding
+```
+
+### Créer un fichier
+```ps1
+New-Item -Path 'Texte.txt' -ItemType File -Encoding "UTF8"
+```
+
+### Détruire un fichier
+```ps1
+Remove-Item test.txt
+```
+
+### Nombre de fichier
+```ps1
+(Get-Item *.sql).Count
+```
+
+### La date du jour
+```ps1
+"Today is $(Get-Date)"
+[datetime]::Now # opérateur de classe
+(Get-Date).ToShortDateString()
+```
+
+### Autre exemple d'opérateur de classe :
+```ps1
+'MinValue', 'MaxValue' | Foreach-Object { [int]:: $_ }
+```
+
+### Créer un tableau
+```ps1
+$myArray = 1,2,3
+$SingleArray = ,1
+Write-Output (,1)
+```
+
+### Colletion & Index opérateur
+```ps1
+$a = 1, 2, 3
+$a[0]
+$a[-1]
+$a[2, 1, 0]
+
+(2,2,5)[2]
+(2)[1] -eq $null
+(2)[0,0] -eq $null
+
+$h = @{key="value"; name="PowerShell"; version="2.0"}
+$h["name"]
+
+$x = [xml]"<doc><intro>Once upon a time...</intro></doc>"
+$x["doc"]
+```
+
+### Conditions
+```ps1
+if ($a -gt 2) {
+    Write-Host "The value $a is greater than 2."
+}
+elseif ($a -eq 2) {
+    Write-Host "The value $a is equal to 2."
+}
+else {
+    Write-Host ("The value $a is less than 2 or" +
+        " was not created or initialized.")
+}
+```
+
+### Opérateurs logiques
+```ps1
+(1 -eq 1) -and (1 -eq 2) # False
+(1 -eq 1) -or (1 -eq 2) # True
+(1 -eq 1) -xor (2 -eq 2) # False
+-not (1 -eq 1) # False
+!(1 -eq 1) # False
+## [Opérateurs de comparaisons](https://docs.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2)
+# -eq       égal à
+# -ne       non égal
+# -gt       supérieur à
+# -ge       supérieur ou égal à
+# -lt       inférieur à
+# -le       inférieur ou égal à
+$a = (1, 2) -eq 3
+$a.GetType().Name # Object[]
+$a.Count # 0
+
+$a = 1, 2, $null, 4, $null, 6
+$a -ne $null # Output: 1, 2, 4, 6
+
+$a=5, 6, 7, 8, 9
+Write-Output "Test collection:`n"
+$a
+$a -gt 7 # Members greater than 7
+$a -ge 7 # Members greater than or equal to 7
+$a -lt 7 # Members smaller than 7
+$a -le 7 # Members smaller than or equal to 7
+```
+
+### Réécriture de System.IEquatable<T> pour comparer deux fichiers
+```ps1
+class MyFileInfoSet : System.IEquatable[Object] {
+    [String]$File
+    [Int64]$Size
+
+    [bool] Equals([Object] $obj) {
+        return ($this.File -eq $obj.File) -and ($this.Size -eq $obj.Size)
+    }
+}
+$a = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$b = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$a -eq $b
+```
+
+### Ternaire
+```ps1
+$message = (Test-Path $path) ? "Path exists" : "Path not found"
+
+$service = Get-Service BITS
+$service.Status -eq 'Running' ? (Stop-Service $service) : (Start-Service $service)
+```
+
+### Boucles
 ```ps1
 for ($i=1;$i -le 10;$i++){echo dossier$i}
 for ($i=1;$i -le 10;$i++){mkdir dossier$i}
 for ($i=1;$i -le 10;$i++){rm dossier$i}
-Remove-Item test.txt
+
+1..10 # Opérateur de plage ..
+foreach ($a in 1..$max) {Write-Host $a}
+10..1
+5..-5 | ForEach-Object {Write-Output $_}
+'a'..'f'
+'F'..'A'
 ```
-+ Créer un fichier
+
+### Chaîne de caractères
 ```ps1
-New-Item -Path 'Texte.txt' -ItemType File -Encoding "UTF8"
+Get-ChildItem *.txt | Rename-Item -NewName { $_.name -creplace '\.txt$','.log' }
+# -replace, -ireplace : case isentisitive
+# -creplace : case sensitive
 ```
-+ Variable de préférence/d'encodage
+
+### Exécuter un script dans l'étendue actuelle
 ```ps1
-# Pour les sorties avec les opérateurs de redirection > et >>
-$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
-# Pour les commandes qui ont le paramètre Encoding
-$PSDefaultParameterValues['*:Encoding'] = 'utf8'
+. c:\scripts\sample.ps1 1 2 -Also:3
 ```
+
+### Process
+```ps1
+Get-Process | Get-Member
+Get-Service | Where-Object {$_.StartType -eq 'Automatic'}
+Get-Process notepad && Stop-Process -Name notepad # si notepad est trouvé
+(Get-Process PowerShell).kill()
+```
+
+### Install
+```ps1
+npm install || Remove-Item -Recurse ./node_modules # si npm est installé
+```
+
+>
 
 ## [Batch](#)
 
