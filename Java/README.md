@@ -35,6 +35,7 @@
 |:heavy_check_mark:|[26. Cartes (clé-valeur)](cours/026_cartes_clé-valeur/note.md)
 |:heavy_check_mark:|[27. Énumérations](cours/027_énumérations/note.md)
 |:heavy_check_mark:|[28. Fichiers](cours/028_fichiers/note.md)
+|:heavy_check_mark:|[29. Généricité](cours/029_généricité/note.md)
 
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/java-tutoriels.md)  
 

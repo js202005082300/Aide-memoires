@@ -85,8 +85,8 @@ public class Vegetable
         return this.name;
     }
 
-    private int color;
-    public int getColor()
+    private Color color;
+    public Color getColor()
     {
         return this.color;
     }
@@ -210,18 +210,245 @@ public class App
     public static void main(String[] args)
     {
         Fruit f = new Fruit("Cerise", 15);
+        Basket<Fruit> bskf = new Basket(f);
+        System.out.println(bskf.getItem().getName());
+
         Vegetable v = new Vegetable("Endive", Color.WHITE);
-        Basket bsk = new Basket(f);
+        Basket<Vegetable> bskv = new Basket(v);
+        System.out.println(bskv.getItem().getName());
+    }
+}
+```
+```ps1
+> javac *.java
+Note: App.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+> java App
+Cerise
+Endive
+```
+
+Voilà on a un simplement un avertissement qui n'empêche pas la compilation.
+
+Entre chevron, on passe le type du panier de fruit : `Basket<Fruit>`.
+
+Une fois que le code est compilé par la machine virtuelle de Java, il n'y a plus de trace de généricité.
+
+Pour améliorer le concept du panier Basket.java, placer une liste à la place de `private E item;`, une liste qui fera office de panier pour y insérer les différents éléments. Le panier pourrait être une liste au niveau de ses attributs.
+
+Créons maintenant une classe Drink.java
+
++ Drink.java
+```java
+public class Drink
+{
+    private String name;
+    public String getName()
+    {
+        return this.name;
+    }
+
+    public Drink(String name)
+    {
+        this.name = name;
+    }
+}
+```
++ App.java
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Drink dr = new Drink("Eau gazeuze");
+
+        Basket<Drink> bdr = new Basket(dr);
+        System.out.println(bdr.getItem().getName());
+    }
+}
+```
+```ps1
+> javac *.java
+Note: App.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+> java App    
+Eau gazeuze
+```
+
+
+## Générique à plusieurs types paramétrés
+
+On peut placer plusieurs paramètres au niveau de notre constructeur `public class Basket<E1, E2>` donc créer un attribut E1 `private E item;` puis un attribut E2.
+
++ Basket.java
+```java
+public class Basket<E1, E2>
+{
+    // private E item;
+    // public E getItem()
+    // {
+    //     return this.item;
+    // }
+
+    public Basket(E1 item, E2 item2)
+    {
+        // this.item = item;
     }
 }
 ```
 
-8
+E1 et E2 sont des types qui seront spécifiés après entre chevrons `Basket<Drink> bdr = new Basket(dr);`
 
+Voir la doc [Interface List<E>](https://docs.oracle.com/javase/7/docs/api/java/util/List.html) car on peut faire de la généricité avec les interface et par convention la lettre E pour les éléments. On peut avoir une liste de chaînes de caractères, de personnes, d'entiers, et cetera.
 
-## Générique à plusieurs types paramétrés
 ## Types bornés avec les génériques
+
+On peut trouver ce type de syntaxe-là `addAll(Collection<? extends E> c)` donc avec `?` qui est un wildcard pour indiquer 'tout élément' donc n'importe quel élément et avec le `extends` il indique n'importe quel élément de type E ou une de ses sous-classes parce que extends signifie une extension de classe donc de l'héritage donc toute classe de ce type `E` ou une sous-classe de celle-ci peut être ajouté via cette méthode addAll().
+
+``super` signifie dans `sort(Comparator<? super E> c)` qu'on récupère tout élément de cette classe ou un élément parent.
+
+On pourrait décider de dire que Basket n'accepte que des éléments de Vegetable et tout ce qui l'étend : `public class Basket<? extends Vegetable>` càd tout ce qui est de la classe Vegetable ou tout ce qui l'étend, une sous-classe.
+
+Voilà avec la généricité, on peut travailler avec les différentes bornes.
+
 ## Précisions sur les génériques
+
+Attention si la classe B dérive de la classe A, avec la généricité les éléments sont indépendant, on ne peut pas retrouver cet héritage. Il faut distinguer un type de paramètre avec cette notion de généricité.
+
+```java
+/*
+    A ---> B
+    List<A> ---> List<B>
+*/
+```
+
+Ainsi quand la compilation est faite, il n'y a plus de trace de cette généricité qui est remplacé partout, le `<E>` est remplacé au niveau de notre code.
+
 ## Générique pour n importe quel type d objet
+
+Pour afficher l'ensemble de mes liste, de fruits, et de légumes.
+
++ Vegetable.java
+```java
+// On enlève la couleur pour le test car on en a pas besoin
+
+public class Vegetable
+{
+    private String name;
+    public String getName()
+    {
+        return this.name;
+    }
+
+    private Color color;
+    public Color getColor()
+    {
+        return this.color;
+    }
+
+    public Vegetable(String name)
+    {
+        this.name = name;
+        this.color = color.GREEN; // this.color = color;
+    }
+
+    @Override
+    public String toString()
+    {
+        return this.name + " de couleur : " + this.getColor();
+    }
+}
+```
++ App.java
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class App
+{
+    public static void printList(List<?> li)
+    {
+        for(Object o : li)
+            System.out.println("> " + o);
+    }
+    
+    public static void main(String[] args)
+    {
+        Fruit f1 = new Fruit("Cerise");
+        Fruit f2 = new Fruit("Myrtille");
+        Fruit f3 = new Fruit("Banane");
+
+        List<Fruit> lf = new ArrayList<>();
+        lf.add(f1);
+        lf.add(f2);
+        lf.add(f3);
+
+        //-------------------------------------------------------------
+
+        Vegetable v1 = new Vegetable("Choux");
+        Vegetable v2 = new Vegetable("Endive");
+        Vegetable v3 = new Vegetable("Poireau");
+
+        List<Vegetable> lv = new ArrayList<>();
+        lv.add(v1);
+        lv.add(v2);
+        lv.add(v3);
+
+        printList(lf);
+        printList(lv);
+    }
+}
+```
+```ps1
+Console> javac *.java
+Console> java App
+> Fruit@6b884d57
+> Fruit@38af3868
+> Fruit@77459877
+> Choux de couleur : Vert
+> Endive de couleur : Vert 
+> Poireau de couleur : Vert
+```
+
+On utilise le fameux opérateur wildcard `?` pour indiquer les élément de tout `public static void printList(List<?> li)`
+
+On affiche bien les instances de chaque Fruit, les objet, puis pour les légumes on affiche ce que j'ai redéfinit pour toString().
+
+Voilà on peut utiliser la généricité pour afficher nos éléments.
+
 ## Limites de la généricité
+
+La généricité est source d'erreur parce que cela opère au niveau de la compilation et passer la compilation il n'y a plus de généricité.
+
+Par exemple, ce qui fonctionne sans généricité ne fonctionnerons pas avec la généricité, on ne peut pas le faire avec les type primitif comme on le ferait avec les liste :
+
+```java
+List<int> lf = new ArrayList<>(); // ne fonctionne pas
+// List<Fruit> lf = new ArrayList<>();
+List<Integer> lf = new ArrayList<>(); // fonctionne avec l'équivalent de int
+```
+
+On ne peut pas faire non plus d'exception avec un typage générique, ça ne fonctionne pas non plus.
+
+On ne peut pas avoir d'attribut statique qui serait générique parce que ceci va être opéré au niveau de la compilation donc ca ne peut pas marcher.
+
+```java
+private E item // Oui on peut
+private static E item // Non on ne peut pas
+```
+
+On aura pas non plus de support pour les sous-types càd que si on a une relation d'héritage entre A et B, on a pas de relation d'héritage entre une liste d'élément A et une liste d'élément B car l'héritage ne fonctionne pas.
+
 ## Conclusion
+
+On risque d'avoir des erreurs au début avec la généricité alors qu'avec du code classique ça aurait fonctionné lorsqu'on va essayer de rendre le code générique.
+
+La généricité est utilisé notamment dans les collections et ça grâce à ça qu'on a pu utiliser les listes, des wildcards et cetera de pleins de types différents à chaque fois dans les séances précédentes.
+
+On pourrait avoir pleins d'exemples losrqu'on applique la généricité dans un code classique.
+
+Ciao
+
