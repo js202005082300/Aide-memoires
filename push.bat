@@ -24,7 +24,7 @@ git remote add origin https://github.com/js202005082300/%DEPOT%.git
 git branch -M main
 git pull %LIEN%
 git add *
-git commit -a -m "%d% %t%"
+git commit -a -m "%d% %t% : JavaScript #15 - Dates"
 git push %LIEN%
 
 @echo ON

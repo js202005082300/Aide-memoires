@@ -22,3 +22,4 @@
 |:heavy_check_mark:|[12. Nombres](cours/012_nombres/note.md)
 |:heavy_check_mark:|[13. Chaînes de caractères](cours/013_chaînes_de_caractères/note.md)
 |:heavy_check_mark:|[14. Tableaux](cours/014_tableaux/note.md)
+|:heavy_check_mark:|[15. Dates](cours/015_Dates/note.md)
