@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #11 - Gestion des erreurs"
+set "message=C++ #12 - Énumérations"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
@@ -27,7 +27,7 @@ git remote add origin https://github.com/js202005082300/%DEPOT%.git
 git branch -M main
 git pull %LIEN%
 git add *
-git commit -a -m "%d% %t% : %message%"
+git commit -a -m "%d% %t% | %message%"
 git push %LIEN%
 
 @echo ON
