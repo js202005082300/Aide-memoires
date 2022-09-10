@@ -8,6 +8,8 @@
 + [Définir une énumération fortement typée](#Définir-une-énumération-fortement-typée)
 + [Conclusion](#Conclusion)
 
+>
+
 ## Introduction
 
 L'énumération permet de définir un type et ce type pourra contenir des variables listées prédéfinies.
