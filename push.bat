@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=JavaScript #16 - ensembles"
+set "message=JavaScript #17 - map"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
