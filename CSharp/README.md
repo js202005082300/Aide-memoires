@@ -29,6 +29,8 @@
 |:heavy_check_mark:|[20. Chaîne de caractères](cours/020_chaîne_de_caractères/note.md)|-|[:memo:](#Chaîne-de-caractères)
 |:heavy_check_mark:|[21. Espaces de noms](cours/021_espaces_de_noms/note.md)|-|[:memo:](#Espaces-de-noms)
 |:heavy_check_mark:|[22. Fichiers](cours/022_fichiers/note.md)|-|[:memo:](#Fichiers)
+|:heavy_check_mark:|[23. Dates et heures (1/2)](cours/023_dates_et_heures_01/note.md)|-|[:memo:](#Dates-et-heures-01)
+||[24. Dates et heures (2/2)](cours/024_dates_et_heures_02/note.md)|-|[:memo:](#Dates-et-heures-02)
 
 ## Introduction
 
@@ -278,3 +280,30 @@
 + [Méthodes usuelles pour les répertoires](cours/022_fichiers/note.md#Méthodes-usuelles-pour-les-répertoires)
 + [Bonus : d'autres outils pour les fichiers](cours/022_fichiers/note.md#Bonus---Autres-outils-pour-les-fichiers)
 + [Conclusion](cours/022_fichiers/note.md#Conclusion)
+
+## Dates et heures 01
+
++ [Introduction](cours/023_dates_et_heures_01/note.md#Introduction)
++ [Quels outils pour manipuler des dates et temps ?](cours/023_dates_et_heures_01/note.md#Quels-outils-pour-manipuler-des-dates-et-temps)
++ [Définir une date/heure spécifique (locale ou UTC)](cours/023_dates_et_heures_01/note.md#Définir-une-date-heure-spécifique)
++ [Quelques méthodes de DateTime](cours/023_dates_et_heures_01/note.md#Quelques-méthodes-de-DateTime)
++ [Calcul avec des dates et intervalle de temps](cours/023_dates_et_heures_01/note.md#Calcul-avec-des-dates-et-intervalle-de-temps)
++ [Rappel sur les méthodes Equals et CompareTo](cours/023_dates_et_heures_01/note.md#Rappel-sur-les-méthodes-Equals-et-CompareTo)
++ [Nombre de jours d'un mois spécifique](cours/023_dates_et_heures_01/note.md#Nombre-de-jours-d-un-mois-spécifique)
++ [Conversion d'une chaîne en date](cours/023_dates_et_heures_01/note.md#Conversion-d-une-chaîne-en-date)
++ [Conclusion](cours/023_dates_et_heures_01/note.md#Conclusion)
+
+## Dates et heures 02
+
++ [Introduction](cours/024_dates_et_heures_02/note.md#Introduction)
++ [Quelques propriétés de DateTime](cours/024_dates_et_heures_02/note.md#Quelques-propriétés-de-DateTime)
++ [Définir une date avec un décalage de temps](cours/024_dates_et_heures_02/note.md#Définir-une-date-avec-un-décalage-de-temps)
++ [Propriétés et méthodes de DateTimeOffset](cours/024_dates_et_heures_02/note.md#Propriétés-et-méthodes-de-DateTimeOffset)
++ [Définir un jour de la semaine](cours/024_dates_et_heures_02/note.md#Définir-un-jour-de-la-semaine)
++ [Définir une date seule ou un temps seul](cours/024_dates_et_heures_02/note.md#Définir-une-date-seule-ou-un-temps-seul)
++ [Conversion vers un intervalle de temps](cours/024_dates_et_heures_02/note.md#Conversion-vers-un-intervalle-de-temps)
++ [Définir un fuseau horaire](cours/024_dates_et_heures_02/note.md#Définir-un-fuseau-horaire)
++ [Conversion en date avec fuseau horaire](cours/024_dates_et_heures_02/note.md#Conversion-en-date-avec-fuseau-horaire)
++ [Conversion depuis ou vert UTC](cours/024_dates_et_heures_02/note.md#Conversion-depuis-ou-vert-UTC)
++ [Récupération d'un fuseau horaire depuis le système](cours/024_dates_et_heures_02/note.md#Récupération-d-un-fuseau-horaire-depuis-le-système)
++ [Conclusion](cours/024_dates_et_heures_02/note.md#Conclusion)
