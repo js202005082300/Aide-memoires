@@ -30,7 +30,7 @@
 |:heavy_check_mark:|[21. Espaces de noms](cours/021_espaces_de_noms/note.md)|-|[:memo:](#Espaces-de-noms)
 |:heavy_check_mark:|[22. Fichiers](cours/022_fichiers/note.md)|-|[:memo:](#Fichiers)
 |:heavy_check_mark:|[23. Dates et heures (1/2)](cours/023_dates_et_heures_01/note.md)|-|[:memo:](#Dates-et-heures-01)
-||[24. Dates et heures (2/2)](cours/024_dates_et_heures_02/note.md)|-|[:memo:](#Dates-et-heures-02)
+|:heavy_check_mark:|[24. Dates et heures (2/2)](cours/024_dates_et_heures_02/note.md)|-|[:memo:](#Dates-et-heures-02)
 
 ## Introduction
 
