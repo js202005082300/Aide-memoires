@@ -1,14 +1,14 @@
 # [18. Modules](https://www.youtube.com/watch?v=uT80wq0TA98)
 
 + [Introduction](#Introduction)
-+ [Qu est-ce qu un module](#Qu-est-ce-qu-un-module)
-+ [Chargement d un script comme un module](#Chargement-d-un-script-comme-un-module)
-+ [Création d un module](#Création-d-un-module)
++ [Qu'est-ce qu'un module ?](#Qu-est-ce-qu-un-module)
++ [Chargement d'un script comme un module](#Chargement-d-un-script-comme-un-module)
++ [Création d'un module](#Création-d-un-module)
 + [Utilisation du module](#Utilisation-du-module)
 + [Exécution du programme via HTTP](#Exécution-du-programme-via-HTTP)
 + [Renommage des exports](#Renommage-des-exports)
-+ [Création d un objet module](#Création-d-un-objet-module)
-+ [Chargement dynamique d un module](#Chargement-dynamique-d-un-module)
++ [Création d'un objet module](#Création-d-un-objet-module)
++ [Chargement dynamique d'un module](#Chargement-dynamique-d-un-module)
 + [Conclusion](#Conclusion)
 
 >
