@@ -25,3 +25,4 @@
 |:heavy_check_mark:|[15. Dates](cours/015_Dates/note.md)
 |:heavy_check_mark:|[16. Ensembles](cours/016_ensembles/note.md)
 |:heavy_check_mark:|[17. Map](cours/017_map/note.md)
+|:heavy_check_mark:|[18. Modules](cours/018_modules/note.md)

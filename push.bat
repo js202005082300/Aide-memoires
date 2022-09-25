@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=CSharp #24 - dates et heures (2/2)"
+set "message=JavaScript #18 - modules"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
