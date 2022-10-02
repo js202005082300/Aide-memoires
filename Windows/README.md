@@ -1,6 +1,14 @@
 # [Windows](#)
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo) - [Ressource Windows](https://github.com/jasonchampagne/FormationVideo/tree/master/Ressources/Windows)
 
+## [Trucs et astuces](#)
+
++ [shell's Windows](shell.md)  
++ [double amorçage](double_amorcage.md)  
++ [regedit](regedit.md)  
++ [reseaux](reseaux.md)  
++ [config](configuration.md)  
++ [programmes](programmes.md)
 
 ## [Windows cours](cours)
 :label: [Playlist Windows cours](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/windows-cours.md)
@@ -15,12 +23,3 @@
 ```
 wmic path softwarelicensingservice get OA3xOriginalProductKey
 ```
-
-## [Trucs et astuces](#)
-
-+ [double amorçage](double_amorcage.md)  
-+ [shell's Windows](shell.md)  
-+ [regedit](regedit.md)  
-+ [reseaux](reseaux.md)  
-+ [config](configuration.md)  
-+ [programmes](programmes.md)

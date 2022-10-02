@@ -1,17 +1,17 @@
 #coding:utf-8
 
-title = "13. Fichiers"
+title = "projets et solutions"
 
 txt = """
 Introduction
-Qu'est-ce qu'un module ?
-Chargement d'un script comme un module
-Création d'un module
-Utilisation du module
-Exécution du programme via HTTP
-Renommage des exports
-Création d'un objet module
-Chargement dynamique d'un module
+Qu'est-ce qu'une solution ?
+Créer une solution
+Ajouter un projet à une solution
+Exécuter chaque projet séparément
+Compiler tous les projets d'une solution
+Retirer un projet d'une solution
+Communiquer entre différents projets d'une solution
+Organiser des bibliothèques de classes dans un dossier de solution
 Conclusion
 """
 

@@ -32,6 +32,14 @@
 |:heavy_check_mark:|[23. Dates et heures (1/2)](cours/023_dates_et_heures_01/note.md)|-|[:memo:](#Dates-et-heures-01)
 |:heavy_check_mark:|[24. Dates et heures (2/2)](cours/024_dates_et_heures_02/note.md)|-|[:memo:](#Dates-et-heures-02)
 
+## [Playlists C# tutoriels](https://raw.githubusercontent.com/jasonchampagne/FormationVideo/master/Playlists/csharp-tutoriels.md)  
+
+||notes de tutoriels
+-|:-
+|:heavy_check_mark:|[Projets et solutions](tutoriels/projets_et_solutions.md)
+
+>
+
 ## Introduction
 
 + [Installation](cours/001_introduction/note.md#Installation)

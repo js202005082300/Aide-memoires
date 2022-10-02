@@ -45,9 +45,14 @@ $Filepath = Get-Item "C:\Users\52556\OneDrive - SPW\CODE\_PS1_\Imprimer"
 $test = Read-Host -Prompt 'Un messag?'
 ```
 
-### Créer un fichier
+### Créer un fichier ou un répertoire
 ```ps1
 New-Item -Path 'Texte.txt' -ItemType File -Encoding "UTF8"
+```
+
+```ps1
+New-Item c:\directory -ItemType directory
+md c:\directory
 ```
 
 ### Détruire un fichier
