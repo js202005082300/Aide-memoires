@@ -1,17 +1,19 @@
 #coding:utf-8
 
-title = "projets et solutions"
+title = "14. espaces de noms"
 
 txt = """
 Introduction
-Qu'est-ce qu'une solution ?
-Créer une solution
-Ajouter un projet à une solution
-Exécuter chaque projet séparément
-Compiler tous les projets d'une solution
-Retirer un projet d'une solution
-Communiquer entre différents projets d'une solution
-Organiser des bibliothèques de classes dans un dossier de solution
+Qu'est-ce qu'un espace de nom ?
+L'espace de nom "std"
+Déclaration d'un espace de nom
+Implémentation des données de l'espace de nom
+Utilisation de l'espace de nom
+Espace de nom anonyme
+L'usage de "using namespace"
+Espaces de noms imbriqués
+Espace de nom en ligne ("inline")
+Création d'alias pour un espace de nom
 Conclusion
 """
 
@@ -72,6 +74,7 @@ def toText(summary, header):
 print("\n1. Nouvelle ligne pour README.md\n")
 
 name = (title.replace(". ", "_")).lower()
+name = name.replace(" ", "_")
 print("|:heavy_check_mark:|[{}](cours/0{}/note.md)".format(title,name))
 
 print("\n2. Table des matières pour note.md\n")

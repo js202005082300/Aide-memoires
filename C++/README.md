@@ -20,6 +20,7 @@
 |:heavy_check_mark:|[11. Gestion des erreurs](cours/011_gestion_des_erreurs/note.md)
 |:heavy_check_mark:|[12. Énumérations](cours/012_énumérations/note.md)
 |:heavy_check_mark:|[13. Fichiers](cours/013_fichiers/note.md)
+|:heavy_check_mark:|[14. espaces de noms](cours/014_espaces_de_noms/note.md)
 
 > ----------
 > ARCHIVES :
