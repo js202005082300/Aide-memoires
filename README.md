@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 23-10-2022
+> 🧭 Màj le 24-10-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir

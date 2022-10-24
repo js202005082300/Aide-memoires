@@ -1,19 +1,14 @@
 #coding:utf-8
 
-title = "14. espaces de noms"
+title = "15. Structures"
 
 txt = """
 Introduction
-Qu'est-ce qu'un espace de nom ?
-L'espace de nom "std"
-Déclaration d'un espace de nom
-Implémentation des données de l'espace de nom
-Utilisation de l'espace de nom
-Espace de nom anonyme
-L'usage de "using namespace"
-Espaces de noms imbriqués
-Espace de nom en ligne ("inline")
-Création d'alias pour un espace de nom
+Qu'est-ce qu'une structure ?
+Un code sans structures
+Définition d'une structure
+Utilisation de la structure définie
+Définition d'un alias
 Conclusion
 """
 

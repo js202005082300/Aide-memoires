@@ -21,6 +21,7 @@
 |:heavy_check_mark:|[12. Énumérations](cours/012_énumérations/note.md)
 |:heavy_check_mark:|[13. Fichiers](cours/013_fichiers/note.md)
 |:heavy_check_mark:|[14. espaces de noms](cours/014_espaces_de_noms/note.md)
+|:heavy_check_mark:|[15. Structures](cours/015_structures/note.md)
 
 > ----------
 > ARCHIVES :

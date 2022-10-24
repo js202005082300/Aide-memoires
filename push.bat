@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #14 - espaces de noms"
+set "message=C++ #15 - structures"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
