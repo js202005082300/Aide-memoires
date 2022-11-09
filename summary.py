@@ -1,14 +1,20 @@
 #coding:utf-8
 
-title = "15. Structures"
+title = "16. Classes et objets"
 
 txt = """
 Introduction
-Qu'est-ce qu'une structure ?
-Un code sans structures
-Définition d'une structure
-Utilisation de la structure définie
-Définition d'un alias
+Rappel sur les structures
+Principe de la programmation objet
+Abstraction des données
+Écriture d'une classe et instanciation
+Comment sont créés les objets ?
+Niveaux d'accès
+Constructeur par défaut
+Instance courante d'une classe
+Constructeur de copie
+Constructeur de déplacement
+Destructeur
 Conclusion
 """
 

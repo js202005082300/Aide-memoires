@@ -12,7 +12,7 @@ Alors la première boucle c'est le principal, c'est la boucle while et vous alle
 ```php
 while()
 ```
-À l'intérieur nous allons effectuer une condition tout simplement nous allons réaliser un test mais nous on peut faire sur un nombre et on va faire ``$number`=0`. Il atteste que nous allons réaliser c'est ce que `$number` est plus petit que 10 d'accord.
+À l'intérieur nous allons effectuer une condition tout simplement nous allons réaliser un test mais nous on peut faire sur un nombre et on va faire `$number=0`. Il atteste que nous allons réaliser c'est ce que `$number` est plus petit que 10 d'accord.
 ```php
 	$number =0;
 	
