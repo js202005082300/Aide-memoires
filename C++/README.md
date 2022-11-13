@@ -23,6 +23,7 @@
 |:heavy_check_mark:|[14. espaces de noms](cours/014_espaces_de_noms/note.md)
 |:heavy_check_mark:|[15. Structures](cours/015_structures/note.md)
 |:heavy_check_mark:|[16. Classes et objets](cours/016_classes_et_objets/note.md)
+|:heavy_check_mark:|[17 - attributs et méthodes](cours/017_-_attributs_et_méthodes/note.md)
 
 > ----------
 > ARCHIVES :

@@ -1,20 +1,17 @@
 #coding:utf-8
 
-title = "16. Classes et objets"
+title = "17 - attributs et méthodes"
 
 txt = """
 Introduction
-Rappel sur les structures
-Principe de la programmation objet
-Abstraction des données
-Écriture d'une classe et instanciation
-Comment sont créés les objets ?
-Niveaux d'accès
-Constructeur par défaut
-Instance courante d'une classe
-Constructeur de copie
-Constructeur de déplacement
-Destructeur
+Qu'est-ce qu'un attribut, une méthode ?
+Retour sur le constructeur par défaut
+Constructeur avec paramètres
+Application de "const" et "noexcept"
+Attributs de classe
+Liste d'initialisation
+Implémentation d'une méthode
+Accès à un attribut depuis un objet
 Conclusion
 """
 
@@ -26,6 +23,7 @@ def modif(txt):
     tmp = tmp.replace("+", "plus")
     tmp = tmp.replace("(", "")
     tmp = tmp.replace(")", "")
+    tmp = tmp.replace("\"", "")
     return tmp
 
 def toDash(txt):

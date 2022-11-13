@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #16 - classes et objets"
+set "message=C++ #17 - attributs et méthodes"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
