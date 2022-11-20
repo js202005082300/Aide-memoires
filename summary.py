@@ -1,17 +1,14 @@
 #coding:utf-8
 
-title = "17 - attributs et méthodes"
+title = "18 - encapsulation"
 
 txt = """
 Introduction
-Qu'est-ce qu'un attribut, une méthode ?
-Retour sur le constructeur par défaut
-Constructeur avec paramètres
-Application de "const" et "noexcept"
-Attributs de classe
-Liste d'initialisation
-Implémentation d'une méthode
-Accès à un attribut depuis un objet
+Qu'est-ce que l'encapsulation ?
+Accesseurs et modificateurs
+Définir un accesseur (lecture)
+Définir un modificateur (écriture)
+Précautions sur les méthodes
 Conclusion
 """
 
