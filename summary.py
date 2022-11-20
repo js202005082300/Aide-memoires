@@ -1,14 +1,22 @@
 #coding:utf-8
 
-title = "18 - encapsulation"
+title = "20 polymorphisme"
 
 txt = """
 Introduction
-Qu'est-ce que l'encapsulation ?
-Accesseurs et modificateurs
-Définir un accesseur (lecture)
-Définir un modificateur (écriture)
-Précautions sur les méthodes
+Qu'est-ce que le polymorphisme ?
+Code d'exemple
+Mise en place d'un héritage
+Méthode virtuelle dans une classe
+Redéfinition d'une méthode dans une sous-classe
+Ajout de nouveaux types pour le polymorphisme
+Accès aux attributs depuis une sous-classe
+Fonctionnement du polymorphisme
+Point sur le polymorphisme ad hoc
+Appel d'une méthode de la classe parente
+Classe abstraite
+Méthode virtuelle pure
+Quelle différence avec une interface ?
 Conclusion
 """
 

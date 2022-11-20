@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #18 - encapsulation"
+set "message=C++ #19 - héritage"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"

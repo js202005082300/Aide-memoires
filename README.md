@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 20-11-2022
+> 🧭 Màj le 21-11-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -28,7 +28,7 @@
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
 |:heavy_check_mark:|[C](C/README.md)||
 |:x:|[C#](CSharp/README.md)|Tuto - projets et solutions|
-|:heavy_check_mark:|[C++](C++/README.md)||
+|:x:|[C++](C++/README.md)|A voir : Polymorphisme, Tableaux, Chaînes de caractères, Piles|
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
 |:heavy_check_mark:|[Java](Java/README.md)||

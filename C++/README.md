@@ -23,8 +23,10 @@
 |:heavy_check_mark:|[14. espaces de noms](cours/014_espaces_de_noms/note.md)
 |:heavy_check_mark:|[15. Structures](cours/015_structures/note.md)
 |:heavy_check_mark:|[16. Classes et objets](cours/016_classes_et_objets/note.md)
-|:heavy_check_mark:|[17 - attributs et méthodes](cours/017_-_attributs_et_méthodes/note.md)
-|:heavy_check_mark:|[18 - encapsulation](cours/018_-_encapsulation/note.md)
+|:heavy_check_mark:|[17 - attributs et méthodes](cours/017_attributs_et_méthodes/note.md)
+|:heavy_check_mark:|[18 - encapsulation](cours/018_encapsulation/note.md)
+|:heavy_check_mark:|[19 - héritage](cours/019_héritage/note.md)
+|:x:|[20 - polymorphisme](cours/020_polymorphisme/note.md)
 
 > ----------
 > ARCHIVES :
