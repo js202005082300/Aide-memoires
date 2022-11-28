@@ -1,22 +1,16 @@
 #coding:utf-8
 
-title = "20 polymorphisme"
+title = "21 tableaux"
 
 txt = """
 Introduction
-Qu'est-ce que le polymorphisme ?
-Code d'exemple
-Mise en place d'un héritage
-Méthode virtuelle dans une classe
-Redéfinition d'une méthode dans une sous-classe
-Ajout de nouveaux types pour le polymorphisme
-Accès aux attributs depuis une sous-classe
-Fonctionnement du polymorphisme
-Point sur le polymorphisme ad hoc
-Appel d'une méthode de la classe parente
-Classe abstraite
-Méthode virtuelle pure
-Quelle différence avec une interface ?
+Qu'est-ce qu'un conteneur ?
+Tableau de taille fixe
+Méthode de classe et fonction libre
+Tableau de taille dynamique
+Ajout et suppression d'éléments
+Copie d'un tableau
+Polymorphisme avec les conteneurs
 Conclusion
 """
 

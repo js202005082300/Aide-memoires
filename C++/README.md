@@ -26,7 +26,7 @@
 |:heavy_check_mark:|[17 - attributs et méthodes](cours/017_attributs_et_méthodes/note.md)
 |:heavy_check_mark:|[18 - encapsulation](cours/018_encapsulation/note.md)
 |:heavy_check_mark:|[19 - héritage](cours/019_héritage/note.md)
-|:x:|[20 - polymorphisme](cours/020_polymorphisme/note.md)
+|:heavy_check_mark:|[20 - polymorphisme](cours/020_polymorphisme/note.md)
 
 > ----------
 > ARCHIVES :
