@@ -8,7 +8,7 @@
 + [regedit](regedit.md)  
 + [reseaux](reseaux.md)  
 + [config](configuration.md)  
-+ [programmes](programmes.md)
+<!-- + [programmes](programmes.md) -->
 
 ## [Windows cours](cours)
 :label: [Playlist Windows cours](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/windows-cours.md)
