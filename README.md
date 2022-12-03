@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 01-12-2022
+> 🧭 Màj le 04-12-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -24,7 +24,7 @@
 ### [Prises de notes](#)
 ||notes|todo
 -|:-|:-
-|:heavy_check_mark:|[Architecture](Architecture/README.md)||
+|:x:|[Architecture](Architecture/README.md)|modèle, vue, contrôleur|
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
 |:heavy_check_mark:|[C](C/README.md)||
 |:x:|[C#](CSharp/README.md)|Tuto - projets et solutions|

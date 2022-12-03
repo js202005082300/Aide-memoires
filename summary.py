@@ -1,16 +1,21 @@
 #coding:utf-8
 
-title = "21 tableaux"
+title = "22 chaînes de caractères"
 
 txt = """
 Introduction
-Qu'est-ce qu'un conteneur ?
-Tableau de taille fixe
-Méthode de classe et fonction libre
-Tableau de taille dynamique
-Ajout et suppression d'éléments
-Copie d'un tableau
-Polymorphisme avec les conteneurs
+Qu'est-ce qu'une chaîne de caractères ?
+Accès aux caractères d'une chaîne
+Nouvelle affectation de chaîne
+Ajout et retrait de caractères
+Parcours d'une chaîne
+Rappel sur les fonctions libres
+Ce qui se trouve derrière une std::string
+Test sur le début et la fin d'une chaîne
+Présence d'une chaîne dans une autre
+Extraction d'une sous-chaîne
+Inversion de chaînes
+Référence constante à une chaîne existante
 Conclusion
 """
 

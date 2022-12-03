@@ -28,6 +28,7 @@
 |:heavy_check_mark:|[19 - héritage](cours/019_héritage/note.md)
 |:heavy_check_mark:|[20 - polymorphisme](cours/020_polymorphisme/note.md)
 |:heavy_check_mark:|[21 - tableaux](cours/021_tableaux/note.md)
+|:heavy_check_mark:|[22 chaînes de caractères](cours/022_chaînes_de_caractères/note.md)
 
 > ----------
 > ARCHIVES :
