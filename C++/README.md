@@ -29,6 +29,7 @@
 |:heavy_check_mark:|[20 - polymorphisme](cours/020_polymorphisme/note.md)
 |:heavy_check_mark:|[21 - tableaux](cours/021_tableaux/note.md)
 |:heavy_check_mark:|[22 chaînes de caractères](cours/022_chaînes_de_caractères/note.md)
+|:heavy_check_mark:|[23 piles](cours/023_piles/note.md)
 
 > ----------
 > ARCHIVES :

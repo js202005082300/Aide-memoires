@@ -1,21 +1,16 @@
 #coding:utf-8
 
-title = "22 chaînes de caractères"
+title = "23 piles"
 
 txt = """
 Introduction
-Qu'est-ce qu'une chaîne de caractères ?
-Accès aux caractères d'une chaîne
-Nouvelle affectation de chaîne
-Ajout et retrait de caractères
-Parcours d'une chaîne
-Rappel sur les fonctions libres
-Ce qui se trouve derrière une std::string
-Test sur le début et la fin d'une chaîne
-Présence d'une chaîne dans une autre
-Extraction d'une sous-chaîne
-Inversion de chaînes
-Référence constante à une chaîne existante
+Fonctionnement d'une pile
+Déclaration d'une pile
+Taille de la pile et ses éléments
+Accès aux éléments
+Empiler un élément
+Dépiler un élément
+Parcourir une pile
 Conclusion
 """
 
