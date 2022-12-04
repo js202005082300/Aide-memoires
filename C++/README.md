@@ -23,13 +23,14 @@
 |:heavy_check_mark:|[14. espaces de noms](cours/014_espaces_de_noms/note.md)
 |:heavy_check_mark:|[15. Structures](cours/015_structures/note.md)
 |:heavy_check_mark:|[16. Classes et objets](cours/016_classes_et_objets/note.md)
-|:heavy_check_mark:|[17 - attributs et méthodes](cours/017_attributs_et_méthodes/note.md)
-|:heavy_check_mark:|[18 - encapsulation](cours/018_encapsulation/note.md)
-|:heavy_check_mark:|[19 - héritage](cours/019_héritage/note.md)
-|:heavy_check_mark:|[20 - polymorphisme](cours/020_polymorphisme/note.md)
-|:heavy_check_mark:|[21 - tableaux](cours/021_tableaux/note.md)
-|:heavy_check_mark:|[22 chaînes de caractères](cours/022_chaînes_de_caractères/note.md)
-|:heavy_check_mark:|[23 piles](cours/023_piles/note.md)
+|:heavy_check_mark:|[17. attributs et méthodes](cours/017_attributs_et_méthodes/note.md)
+|:heavy_check_mark:|[18. encapsulation](cours/018_encapsulation/note.md)
+|:heavy_check_mark:|[19. héritage](cours/019_héritage/note.md)
+|:heavy_check_mark:|[20. polymorphisme](cours/020_polymorphisme/note.md)
+|:heavy_check_mark:|[21. tableaux](cours/021_tableaux/note.md)
+|:heavy_check_mark:|[22. chaînes de caractères](cours/022_chaînes_de_caractères/note.md)
+|:heavy_check_mark:|[23. piles](cours/023_piles/note.md)
+|:heavy_check_mark:|[24. listes](cours/024_listes/note.md) 
 
 > ----------
 > ARCHIVES :

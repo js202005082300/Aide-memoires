@@ -1,16 +1,18 @@
 #coding:utf-8
 
-title = "23 piles"
+title = "24 listes"
 
 txt = """
 Introduction
-Fonctionnement d'une pile
-Déclaration d'une pile
-Taille de la pile et ses éléments
+Fonctionnement d'une liste
+Déclaration d'une liste
 Accès aux éléments
-Empiler un élément
-Dépiler un élément
-Parcourir une pile
+Taille de la liste et ses éléments
+Quel conteneur utiliser ?
+Parcours d'une liste
+Ajout d'éléments
+Suppression d'éléments
+Tri des éléments
 Conclusion
 """
 
