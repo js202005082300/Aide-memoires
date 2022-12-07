@@ -1,18 +1,16 @@
 #coding:utf-8
 
-title = "24 listes"
+title = "25 - cartes associatives"
 
 txt = """
 Introduction
-Fonctionnement d'une liste
-Déclaration d'une liste
-Accès aux éléments
-Taille de la liste et ses éléments
-Quel conteneur utiliser ?
-Parcours d'une liste
-Ajout d'éléments
-Suppression d'éléments
-Tri des éléments
+Fonctionnement d'une carte associative
+Déclaration d'une carte
+Parcours de la carte
+Accès et modification d'un élément
+Ajout et suppression d'éléments
+Taille de la carte et éléments
+Recherche d'éléments
 Conclusion
 """
 

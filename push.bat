@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #24 - listes"
+set "message=C++ #25 - cartes associatives"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"

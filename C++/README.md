@@ -31,6 +31,7 @@
 |:heavy_check_mark:|[22. chaînes de caractères](cours/022_chaînes_de_caractères/note.md)
 |:heavy_check_mark:|[23. piles](cours/023_piles/note.md)
 |:heavy_check_mark:|[24. listes](cours/024_listes/note.md) 
+|:heavy_check_mark:|[25. cartes associatives](cours/025_cartes_associatives/note.md)
 
 > ----------
 > ARCHIVES :
