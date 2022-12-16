@@ -1,16 +1,15 @@
 #coding:utf-8
 
-title = "25 - cartes associatives"
+title = "26 - ensembles"
 
 txt = """
 Introduction
-Fonctionnement d'une carte associative
-Déclaration d'une carte
-Parcours de la carte
-Accès et modification d'un élément
+Fonctionnement d'un ensemble
+Déclaration d'un ensemble
+Parcours d'un ensemble
 Ajout et suppression d'éléments
-Taille de la carte et éléments
-Recherche d'éléments
+Taille d'un ensemble et éléments
+Recherche d'élément
 Conclusion
 """
 
