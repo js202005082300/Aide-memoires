@@ -33,6 +33,7 @@
 |:heavy_check_mark:|[24. listes](cours/024_listes/note.md) 
 |:heavy_check_mark:|[25. cartes associatives](cours/025_cartes_associatives/note.md)
 |:heavy_check_mark:|[26. ensembles](cours/026_ensembles/note.md)  
+|:heavy_check_mark:|[27. itérateurs](cours/027_itérateurs/note.md)
 
 > ----------
 > ARCHIVES :

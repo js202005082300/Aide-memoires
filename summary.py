@@ -1,15 +1,21 @@
 #coding:utf-8
 
-title = "26 - ensembles"
+title = "27. itérateurs"
 
 txt = """
 Introduction
-Fonctionnement d'un ensemble
-Déclaration d'un ensemble
-Parcours d'un ensemble
-Ajout et suppression d'éléments
-Taille d'un ensemble et éléments
-Recherche d'élément
+Qu'est-ce qu'un itérateur ?
+Quel est leur utilité ?
+Types d'itérateurs
+Préparation du code d'exemple
+Itérateur non constant
+Itérateur constant
+Itérateur déclaré constant
+Itérateur constant déclaré constant
+Méthodes des itérateurs
+Opérateurs sur des itérateurs
+Parcours générique via un itérateur
+D'autres opérateurs
 Conclusion
 """
 
@@ -72,6 +78,7 @@ print("\n1. Nouvelle ligne pour README.md\n")
 
 name = (title.replace(". ", "_")).lower()
 name = name.replace(" ", "_")
+name = name.replace("_-_", "_")
 print("|:heavy_check_mark:|[{}](cours/0{}/note.md)".format(title,name))
 
 print("\n2. Table des matières pour note.md\n")

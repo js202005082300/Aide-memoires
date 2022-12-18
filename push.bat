@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #26 - ensembles"
+set "message=C++ #27 - itérateurs"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
