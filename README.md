@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 18-12-2022
+> 🧭 Màj le 23-12-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -28,7 +28,7 @@
 |:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
 |:heavy_check_mark:|[C](C/README.md)||
 |:x:|[C#](CSharp/README.md)|Tuto - projets et solutions|
-|:x:|[C++](C++/README.md)|A voir : algorithmes|
+|:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
 |:heavy_check_mark:|[Java](Java/README.md)||

@@ -1,21 +1,18 @@
 #coding:utf-8
 
-title = "27. itérateurs"
+title = "28. Algorithmes"
 
 txt = """
 Introduction
-Qu'est-ce qu'un itérateur ?
-Quel est leur utilité ?
-Types d'itérateurs
-Préparation du code d'exemple
-Itérateur non constant
-Itérateur constant
-Itérateur déclaré constant
-Itérateur constant déclaré constant
-Méthodes des itérateurs
-Opérateurs sur des itérateurs
-Parcours générique via un itérateur
-D'autres opérateurs
+Remplissage de valeur
+Égalité de deux collections
+Recherche de données
+Nombre d'occurrences
+Tri d'éléments
+Remplacement d'éléments
+Suppression d'éléments
+Inversion de valeurs
+Traitement sur des éléments
 Conclusion
 """
 

@@ -20,6 +20,7 @@
 + [_Rufus_](Rufus.md)
 + [_Ventoy_](Ventoy.md)
 + [_VScode_](VS_Code.md)
++ [_Expressions rationnelles_](expressions_rationnelles.md)
 
 ---
 
