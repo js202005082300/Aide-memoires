@@ -152,8 +152,6 @@ pattern = "[a-zA-Z]"
 
 Tout sauf des chiffres `[^0-9]` avec `^` pour la négation
 
-```
-
 Classe ASCI de ce que l'on recherche
 
 Capturer une lettre qui commence par une tabulation

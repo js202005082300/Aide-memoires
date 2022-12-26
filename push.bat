@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=Aide - Expressions rationnelles"
+set "message=C++ #28 - algorithmes"
 ::set "message="
 
 set "UTILISATEUR=js202005082300"
