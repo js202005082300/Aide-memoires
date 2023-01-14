@@ -3,8 +3,8 @@ chcp 65001
 
 ::@param token Github
 
-set "message=C++ #28 - algorithmes"
-::set "message="
+set "message=Java #30 - dates et durées"
+@REM set "message="
 
 set "UTILISATEUR=js202005082300"
 set "DEPOT=Aide-memoires"

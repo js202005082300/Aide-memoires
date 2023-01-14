@@ -1,18 +1,18 @@
 #coding:utf-8
 
-title = "28. Algorithmes"
+title = "30. dates et durées"
 
 txt = """
 Introduction
-Remplissage de valeur
-Égalité de deux collections
-Recherche de données
-Nombre d'occurrences
-Tri d'éléments
-Remplacement d'éléments
-Suppression d'éléments
-Inversion de valeurs
-Traitement sur des éléments
+Point de référence
+Date locale
+Heure locale
+Date et heure locales
+Durée
+Période
+Fuseau horaire
+Jours de la semaine et mois
+Formatage de dates
 Conclusion
 """
 

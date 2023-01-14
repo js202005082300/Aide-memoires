@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 26-12-2022
+> 🧭 Màj le 14-01-2022
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -31,7 +31,7 @@
 |:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
-|:heavy_check_mark:|[Java](Java/README.md)||
+|:x:|[Java](Java/README.md)||
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
 |:heavy_check_mark:|[PHP](PHP/README.md)||
 |:heavy_check_mark:|[Python](Python/README.md)||

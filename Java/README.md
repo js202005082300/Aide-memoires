@@ -36,6 +36,7 @@
 |:heavy_check_mark:|[27. Énumérations](cours/027_énumérations/note.md)
 |:heavy_check_mark:|[28. Fichiers](cours/028_fichiers/note.md)
 |:heavy_check_mark:|[29. Généricité](cours/029_généricité/note.md)
+|:heavy_check_mark:|[30. dates et durées](cours/030_dates_et_durées/note.md)
 
 ## [Playlist tutoriels](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/java-tutoriels.md)  
 

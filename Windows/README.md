@@ -10,6 +10,9 @@
 + [config](configuration.md)  
 <!-- + [programmes](programmes.md) -->
 
+## [Powershell](#)
++ [First Form](powershell/firstForm.ps1)
+
 ## [Windows cours](cours)
 :label: [Playlist Windows cours](https://github.com/jasonchampagne/FormationVideo/blob/master/Playlists/windows-cours.md)
 
