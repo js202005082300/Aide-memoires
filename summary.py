@@ -1,18 +1,14 @@
 #coding:utf-8
 
-title = "30. dates et durées"
+title = "31. threads"
 
 txt = """
 Introduction
-Point de référence
-Date locale
-Heure locale
-Date et heure locales
-Durée
-Période
-Fuseau horaire
-Jours de la semaine et mois
-Formatage de dates
+Définition d'un thread
+Utilisation de thread
+Élément exécutable
+Exécuteur de tâches
+Service d'exécution
 Conclusion
 """
 
