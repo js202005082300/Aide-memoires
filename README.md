@@ -1,6 +1,6 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj le 25-01-2023
+> 🧭 Màj le 28-01-2023
 >
 > :heavy_check_mark: A jour
 > :x: A (re)voir
@@ -25,18 +25,18 @@
 ||notes|todo
 -|:-|:-
 |:x:|[Architecture](Architecture/README.md)|modèle, vue, contrôleur|
-|:heavy_check_mark:|[Assembleur](Assembleur/README.md)||
+|:x:|[Assembleur](Assembleur/README.md)|#7 - conditions|
 |:heavy_check_mark:|[C](C/README.md)||
 |:x:|[C#](CSharp/README.md)|Tuto - projets et solutions|
 |:heavy_check_mark:|[C++](C++/README.md)||
 |:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
 |:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
-|:x:|[Java](Java/README.md)||
+|:heavy_check_mark:|[Java](Java/README.md)||
 |:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
-|:heavy_check_mark:|[PHP](PHP/README.md)||
+|:heavy_check_mark:|[PHP](PHP/README.md)|Tutos et exercices (si le temps!)|
 |:heavy_check_mark:|[Python](Python/README.md)||
 |:heavy_check_mark:|[SQL](SQL/README.md)||
-|:heavy_check_mark:|[Windows](Windows/README.md)||
+|:heavy_check_mark:|[Windows](Windows/README.md)|#18 - arborescence (si le temps!)|
 |:x:|[DJANGO](Django)|#5 - fichiers statiques|
 |:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)||
 |:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)||

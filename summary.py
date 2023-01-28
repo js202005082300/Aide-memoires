@@ -1,14 +1,15 @@
 #coding:utf-8
 
-title = "31. threads"
+title = "32. bases de données"
 
 txt = """
 Introduction
-Définition d'un thread
-Utilisation de thread
-Élément exécutable
-Exécuteur de tâches
-Service d'exécution
+Données utilisées
+L'API JDBC
+Requêtes sur une base SQLite
+Requêtes sur une base MySQL
+Requêtes sécurisées
+Point particulier sur les dates
 Conclusion
 """
 

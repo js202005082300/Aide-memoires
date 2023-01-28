@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=Java #31 - threads"
+set "message=Java #32 - bases de données"
 @REM set "message="
 
 set "UTILISATEUR=js202005082300"
