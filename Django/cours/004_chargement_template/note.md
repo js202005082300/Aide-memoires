@@ -21,7 +21,7 @@ Voilà un simple message on n'a même pas de code HTML bien qu'on pourrait.
 
 Voilà tout moment on peut envoyer du HTML puisque notre navigateur possède un moteur acheté ml il va pouvoir parfaitement interpréter ce code.
 
-Ajout de balise `<p></b>`
+Ajout de balise `<p></p>`
 
 .FV/mangalib/views.py
 ```py

@@ -1,15 +1,13 @@
 #coding:utf-8
 
-title = "32. bases de données"
+title = "5. fichiers statiques"
 
 txt = """
 Introduction
-Données utilisées
-L'API JDBC
-Requêtes sur une base SQLite
-Requêtes sur une base MySQL
-Requêtes sécurisées
-Point particulier sur les dates
+Petits rappels
+Qu'est-ce qu'un fichier statique ?
+Fichiers statiques pour une application
+Fichiers statiques du projet global
 Conclusion
 """
 
