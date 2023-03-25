@@ -3,7 +3,7 @@ chcp 65001
 
 ::@param token Github
 
-set "message=Java #32 - bases de données"
+set "message=Fin d'Aides-Mémoires sur FormationVidéo."
 @REM set "message="
 
 set "UTILISATEUR=js202005082300"

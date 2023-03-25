@@ -1,47 +1,38 @@
 ﻿# Aide-memoires
 
-> 🧭 Màj et fin ce 25-03-2023
->
-> :heavy_check_mark: A jour
-> :x: A (re)voir
-> :file_folder: Archivé (old)
+> 🧭 Fin ce 25-03-2023
 
 ---
-
-<!-- ## Formations langues
-:label: [guide néerlandais](https://www.nlfacile.com/guide/) -
-[guide anglais](https://www.anglaisfacile.com/guide/) -
-[guide allemand](https://www.allemandfacile.com/guide/) -->
 
 ## Formations Informatique
 :label: [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
 > [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)  
 
-<!-- :wink:   -->
-
-<!-- :partying_face: Officiellement à jour ce 24/08/2021 :partying_face: -->
-
-### [Prises de notes](#)
-||notes|todo
--|:-|:-
-|:x:|[Architecture](Architecture/README.md)|modèle, vue, contrôleur|
-|:x:|[Assembleur](Assembleur/README.md)|#7 - conditions|
-|:heavy_check_mark:|[C](C/README.md)||
-|:x:|[C#](CSharp/README.md)|Tuto - projets et solutions|
-|:heavy_check_mark:|[C++](C++/README.md)||
-|:heavy_check_mark:|[GNU-Linux](GNU-Linux/README.md)||
-|:heavy_check_mark:|[HTML-CSS](HTML-CSS/README.md)||
-|:heavy_check_mark:|[Java](Java/README.md)||
-|:heavy_check_mark:|[JavaScript](JavaScript/README.md)||
-|:heavy_check_mark:|[PHP](PHP/README.md)|Tutos et exercices (si le temps!)|
-|:heavy_check_mark:|[Python](Python/README.md)||
-|:heavy_check_mark:|[SQL](SQL/README.md)||
-|:heavy_check_mark:|[Windows](Windows/README.md)|#18 - arborescence (si le temps!)|
-|:x:|[DJANGO](Django)|#5 - fichiers statiques|
-|:file_folder:/:heavy_check_mark:|[Algorithmie (old)](Algorithmie/README.md)||
-|:file_folder:/:heavy_check_mark:|[Hacking (old)](Hacking/README.md)||
+### Prises de notes
+|||
+-|:-
+|[Architecture](Architecture/README.md) | Terminé |
+|[Assembleur](Assembleur/README.md) | Terminé |
+|[C](C/README.md) | Terminé |
+|[C#](CSharp/README.md) | Terminé |
+|[C++](C++/README.md) | Terminé |
+|[GNU-Linux](GNU-Linux/README.md) | Terminé |
+|[HTML-CSS](HTML-CSS/README.md) | Terminé |
+|[Java](Java/README.md) | Terminé |
+|[JavaScript](JavaScript/README.md) | Terminé |
+|[PHP](PHP/README.md) | Terminé |
+|[Python](Python/README.md) | Terminé |
+|[SQL](SQL/README.md) | Terminé |
+|[Windows](Windows/README.md) | Terminé |
+|[DJANGO](Django) | Terminé |
+|[Algorithmie (old)](Algorithmie/README.md) | Archivé |
+|[Hacking (old)](Hacking/README.md) | Archivé |
 
 ---
 
-> [FindMyDoc](https://github.com/jasonchampagne/FindMyDoc)  
-> [Notes d'aide](Aide/README.md) | todo : [Zeal - documentation hors-ligne](https://www.youtube.com/watch?v=PmgO42dod7E)
+> [FormationVidéo](https://github.com/jasonchampagne/FormationVideo)
+> [Playlists](https://www.youtube.com/c/Formationvid%C3%A9o8/playlists)
+
+C'est la fin de mes cours en ligne sur la programmation. Je me concentre désormais sur mes projets personnels. Les tableaux ci-dessus ont été mis à jour pour indiquer que tous les cours ont été terminés. Les liens vers FormationVidéo et les playlists ont été conservés pour référence future.
+
+Merci pour tout !
